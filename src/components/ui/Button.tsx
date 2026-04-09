@@ -8,6 +8,7 @@ interface ButtonProps {
   className?: string;
   type?: 'button' | 'submit';
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 const variants = {
@@ -33,8 +34,9 @@ export default function Button({
   className = '',
   type = 'button',
   onClick,
+  disabled = false,
 }: ButtonProps) {
-  const baseClasses = `inline-flex items-center justify-center font-medium tracking-wider uppercase transition-all duration-300 ${variants[variant]} ${sizes[size]} ${className}`;
+  const baseClasses = `inline-flex items-center justify-center font-medium tracking-wider uppercase transition-all duration-300 ${variants[variant]} ${sizes[size]} ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`;
 
   if (href) {
     return (
@@ -45,7 +47,7 @@ export default function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={baseClasses}>
+    <button type={type} onClick={onClick} disabled={disabled} className={baseClasses}>
       {children}
     </button>
   );

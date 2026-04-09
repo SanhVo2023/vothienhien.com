@@ -1,5 +1,9 @@
+import dns from 'dns'
 import path from 'path'
 import { fileURLToPath } from 'url'
+
+// Force Node.js to prefer IPv4 — fixes Supabase IPv6-only DNS on some networks
+dns.setDefaultResultOrder('ipv4first')
 import { buildConfig } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'

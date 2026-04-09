@@ -42,7 +42,7 @@ interface PracticeAreaData {
   subtitle: string;
   description: string[];
   approaches: string[];
-  matters: { title: string; year: string; excerpt: string }[];
+  matters: { title: string; year: string; excerpt: string; slug?: string }[];
   stats: { value: string; label: string }[];
   whyChoose: { title: string; description: string }[];
 }
@@ -69,7 +69,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
         'Đảm bảo thi hành án hiệu quả sau khi có bản án',
       ],
       matters: [
-        { title: 'Tranh chấp hợp đồng mua bán bất động sản trị giá 50 tỷ đồng', year: '2023', excerpt: 'Đại diện bên mua trong tranh chấp hợp đồng mua bán bất động sản, thành công bảo vệ toàn bộ quyền lợi khách hàng.' },
+        { title: 'Tranh chấp hợp đồng mua bán bất động sản trị giá 50 tỷ đồng', year: '2023', excerpt: 'Đại diện bên mua trong tranh chấp hợp đồng mua bán bất động sản, thành công bảo vệ toàn bộ quyền lợi khách hàng.', slug: 'tranh-chap-bat-dong-san-50-ty' },
         { title: 'Vụ tranh chấp thừa kế tài sản gia đình', year: '2022', excerpt: 'Giải quyết thành công tranh chấp thừa kế liên quan đến nhiều bên, đảm bảo phân chia tài sản công bằng.' },
       ],
       stats: [
@@ -105,7 +105,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
         'Ensuring effective judgment enforcement',
       ],
       matters: [
-        { title: 'Real estate purchase contract dispute valued at VND 50 billion', year: '2023', excerpt: 'Represented the buyer in a real estate purchase contract dispute, successfully protecting all client interests.' },
+        { title: 'Real estate purchase contract dispute valued at VND 50 billion', year: '2023', excerpt: 'Represented the buyer in a real estate purchase contract dispute, successfully protecting all client interests.', slug: 'commercial-real-estate-dispute-50b' },
         { title: 'Family inheritance dispute', year: '2022', excerpt: 'Successfully resolved a multi-party inheritance dispute, ensuring fair asset distribution.' },
       ],
       stats: [
@@ -144,7 +144,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
       ],
       matters: [
         { title: 'Tranh chấp quyền sử dụng đất 5.000m2 tại quận 9', year: '2023', excerpt: 'Thành công bảo vệ quyền sử dụng đất cho khách hàng trong vụ tranh chấp kéo dài 3 năm.' },
-        { title: 'Khiếu nại về bồi thường giải phóng mặt bằng dự án', year: '2021', excerpt: 'Đại diện cư dân khiếu nại thành công, tăng mức bồi thường lên 200% so với mức ban đầu.' },
+        { title: 'Khiếu nại về bồi thường giải phóng mặt bằng dự án', year: '2021', excerpt: 'Đại diện cư dân khiếu nại thành công, tăng mức bồi thường lên 200% so với mức ban đầu.', slug: 'khieu-nai-boi-thuong-giai-phong-mat-bang' },
       ],
       stats: [
         { value: '150+', label: 'Vụ tranh chấp đất đai đã xử lý' },
@@ -180,7 +180,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
       ],
       matters: [
         { title: '5,000 sqm land use rights dispute in District 9', year: '2023', excerpt: 'Successfully protected client\'s land use rights in a 3-year dispute.' },
-        { title: 'Project land clearance compensation complaint', year: '2021', excerpt: 'Successfully represented residents in complaint, increasing compensation by 200% from initial amount.' },
+        { title: 'Project land clearance compensation complaint', year: '2021', excerpt: 'Successfully represented residents in complaint, increasing compensation by 200% from initial amount.', slug: 'land-clearance-compensation-complaint' },
       ],
       stats: [
         { value: '150+', label: 'Land Disputes Handled' },
@@ -217,7 +217,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
         'Hỗ trợ thủ tục pháp lý nhanh chóng và hiệu quả',
       ],
       matters: [
-        { title: 'Giải quyết ly hôn và phân chia tài sản chung trị giá 30 tỷ đồng', year: '2023', excerpt: 'Thành công bảo vệ quyền lợi tài sản và quyền nuôi con cho khách hàng.' },
+        { title: 'Giải quyết ly hôn và phân chia tài sản chung trị giá 30 tỷ đồng', year: '2023', excerpt: 'Thành công bảo vệ quyền lợi tài sản và quyền nuôi con cho khách hàng.', slug: 'ly-hon-phan-chia-tai-san-30-ty' },
         { title: 'Tranh chấp quyền nuôi con quốc tế', year: '2022', excerpt: 'Giải quyết thành công vụ tranh chấp quyền nuôi con giữa công dân Việt Nam và nước ngoài.' },
       ],
       stats: [
@@ -253,7 +253,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
         'Swift and efficient legal procedure support',
       ],
       matters: [
-        { title: 'Divorce and VND 30 billion marital property division', year: '2023', excerpt: 'Successfully protected client\'s property rights and child custody.' },
+        { title: 'Divorce and VND 30 billion marital property division', year: '2023', excerpt: 'Successfully protected client\'s property rights and child custody.', slug: 'divorce-property-division-30b' },
         { title: 'International child custody dispute', year: '2022', excerpt: 'Successfully resolved custody dispute between Vietnamese and foreign nationals.' },
       ],
       stats: [
@@ -291,7 +291,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
         'Giải quyết tranh chấp thương mại nhanh chóng',
       ],
       matters: [
-        { title: 'Tư vấn M&A cho giao dịch trị giá 200 tỷ đồng', year: '2023', excerpt: 'Tư vấn pháp lý toàn diện cho giao dịch mua bán và sáp nhập doanh nghiệp trong lĩnh vực bất động sản.' },
+        { title: 'Tư vấn M&A cho giao dịch trị giá 200 tỷ đồng', year: '2023', excerpt: 'Tư vấn pháp lý toàn diện cho giao dịch mua bán và sáp nhập doanh nghiệp trong lĩnh vực bất động sản.', slug: 'tu-van-ma-tap-doan-200-ty' },
         { title: 'Tái cơ cấu tập đoàn đa ngành', year: '2022', excerpt: 'Hỗ trợ tái cơ cấu tổ chức và pháp lý cho tập đoàn với 5 công ty thành viên.' },
       ],
       stats: [
@@ -327,7 +327,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
         'Swift commercial dispute resolution',
       ],
       matters: [
-        { title: 'M&A advisory for VND 200 billion transaction', year: '2023', excerpt: 'Comprehensive legal advisory for a real estate sector acquisition and merger transaction.' },
+        { title: 'M&A advisory for VND 200 billion transaction', year: '2023', excerpt: 'Comprehensive legal advisory for a real estate sector acquisition and merger transaction.', slug: 'ma-advisory-200b-transaction' },
         { title: 'Multi-sector conglomerate restructuring', year: '2022', excerpt: 'Supported organizational and legal restructuring for a conglomerate with 5 subsidiaries.' },
       ],
       stats: [
@@ -366,7 +366,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
       ],
       matters: [
         { title: 'Tranh chấp sa thải trái pháp luật 50 người lao động', year: '2023', excerpt: 'Đại diện nhóm người lao động bị sa thải trái pháp luật, thành công yêu cầu bồi thường và phục hồi quyền lợi.' },
-        { title: 'Tư vấn giải quyết đình công tại nhà máy', year: '2022', excerpt: 'Tư vấn cho doanh nghiệp giải quyết đình công của 200 công nhân, đảm bảo quyền lợi cả hai bên.' },
+        { title: 'Tư vấn giải quyết đình công tại nhà máy', year: '2022', excerpt: 'Tư vấn cho doanh nghiệp giải quyết đình công của 200 công nhân, đảm bảo quyền lợi cả hai bên.', slug: 'giai-quyet-tranh-chap-lao-dong-tap-the' },
       ],
       stats: [
         { value: '120+', label: 'Vụ tranh chấp lao động đã xử lý' },
@@ -402,7 +402,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
       ],
       matters: [
         { title: 'Unlawful termination dispute for 50 workers', year: '2023', excerpt: 'Represented a group of unlawfully terminated workers, successfully securing compensation and rights restoration.' },
-        { title: 'Factory strike resolution advisory', year: '2022', excerpt: 'Advised employer on resolving a 200-worker strike, ensuring both parties\' rights.' },
+        { title: 'Factory strike resolution advisory', year: '2022', excerpt: 'Advised employer on resolving a 200-worker strike, ensuring both parties\' rights.', slug: 'collective-labor-dispute-200-workers' },
       ],
       stats: [
         { value: '120+', label: 'Labor Disputes Handled' },
@@ -439,7 +439,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
         'Đảm bảo thủ tục tố tụng đúng pháp luật',
       ],
       matters: [
-        { title: 'Bào chữa trong vụ án kinh tế lớn', year: '2023', excerpt: 'Thành công bào chữa cho thân chủ trong vụ án liên quan đến hoạt động kinh doanh, giảm nhẹ hình phạt đáng kể.' },
+        { title: 'Bào chữa trong vụ án kinh tế lớn', year: '2023', excerpt: 'Thành công bào chữa cho thân chủ trong vụ án liên quan đến hoạt động kinh doanh, giảm nhẹ hình phạt đáng kể.', slug: 'bao-chua-vu-an-kinh-te' },
         { title: 'Bảo vệ quyền lợi người bị hại trong vụ lừa đảo', year: '2022', excerpt: 'Đại diện người bị hại trong vụ lừa đảo chiếm đoạt tài sản, đảm bảo thu hồi tối đa tài sản bị chiếm đoạt.' },
       ],
       stats: [
@@ -475,7 +475,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
         'Ensuring lawful procedural compliance',
       ],
       matters: [
-        { title: 'Defense in major economic crime case', year: '2023', excerpt: 'Successfully defended client in a business-related criminal case, achieving significant sentence reduction.' },
+        { title: 'Defense in major economic crime case', year: '2023', excerpt: 'Successfully defended client in a business-related criminal case, achieving significant sentence reduction.', slug: 'criminal-defense-economic-case' },
         { title: 'Victim rights protection in fraud case', year: '2022', excerpt: 'Represented fraud victims, ensuring maximum recovery of misappropriated assets.' },
       ],
       stats: [
@@ -791,16 +791,37 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
             title={isVi ? 'Vụ việc tiêu biểu' : 'Representative Matters'}
           />
           <div className="mt-12 space-y-6">
-            {content.matters.map((matter, i) => (
-              <div
-                key={i}
-                className="bg-background border border-border-gold/20 p-8 hover:border-accent/40 transition-colors duration-300"
-              >
-                <span className="text-accent text-sm font-medium">{matter.year}</span>
-                <h3 className="text-xl font-heading font-semibold text-primary mt-2">{matter.title}</h3>
-                <p className="text-text-secondary mt-3">{matter.excerpt}</p>
-              </div>
-            ))}
+            {content.matters.map((matter, i) => {
+              const matterContent = (
+                <div
+                  className="bg-background border border-border-gold/20 p-8 hover:border-accent/40 transition-colors duration-300 group"
+                >
+                  <span className="text-accent text-sm font-medium">{matter.year}</span>
+                  <h3 className="text-xl font-heading font-semibold text-primary mt-2 group-hover:text-accent transition-colors duration-300">{matter.title}</h3>
+                  <p className="text-text-secondary mt-3">{matter.excerpt}</p>
+                  {matter.slug && (
+                    <span className="inline-flex items-center gap-2 text-accent text-sm font-medium mt-4 uppercase tracking-wider">
+                      {t('common.readMore')}
+                      <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  )}
+                </div>
+              );
+
+              return matter.slug ? (
+                <Link
+                  key={i}
+                  href={{ pathname: '/vu-viec-tieu-bieu/[slug]', params: { slug: matter.slug } }}
+                  className="block"
+                >
+                  {matterContent}
+                </Link>
+              ) : (
+                <div key={i}>{matterContent}</div>
+              );
+            })}
           </div>
         </div>
       </section>

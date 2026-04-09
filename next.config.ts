@@ -1,6 +1,10 @@
+import dns from 'node:dns';
 import type { NextConfig } from 'next';
 import { withPayload } from '@payloadcms/next/withPayload';
 import createNextIntlPlugin from 'next-intl/plugin';
+
+// Force IPv4 first — fixes Supabase IPv6-only DNS resolution on some networks
+dns.setDefaultResultOrder('ipv4first');
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
