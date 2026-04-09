@@ -13,21 +13,21 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen relative overflow-hidden flex">
       {/* Left dark panel - text side */}
-      <div className="relative w-full lg:w-[55%] bg-primary flex items-center">
+      <div className="relative w-full md:w-[55%] bg-primary flex items-center">
         {/* Marble texture overlay */}
         <div className="absolute inset-0 opacity-[0.06]">
           <Image src={IMAGES.bgMarble.cdn} alt="" fill className="object-cover" aria-hidden="true" />
         </div>
 
         {/* Gold brushstroke decorative */}
-        <div className="absolute bottom-16 right-0 w-72 opacity-[0.05] pointer-events-none hidden lg:block">
+        <div className="absolute bottom-16 right-0 w-72 opacity-[0.05] pointer-events-none hidden md:block">
           <Image src={IMAGES.accentGoldStroke.cdn} alt="" width={800} height={450} aria-hidden="true" />
         </div>
 
-        <div className="relative z-10 w-full px-8 md:px-14 lg:px-20 xl:px-28 py-32 lg:py-20">
-          {/* Mobile portrait */}
-          <div className="flex justify-center mb-10 lg:hidden hero-fade" style={{ animationDelay: '0.1s' }}>
-            <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-2 border-accent/40 shadow-[0_0_40px_rgba(197,165,90,0.15)]">
+        <div className="relative z-10 w-full px-8 md:px-12 lg:px-20 xl:px-28 py-32 md:py-20">
+          {/* Mobile-only portrait — small screens only */}
+          <div className="flex justify-center mb-10 md:hidden hero-fade" style={{ animationDelay: '0.1s' }}>
+            <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-accent/40 shadow-[0_0_40px_rgba(197,165,90,0.15)]">
               <Image
                 src={IMAGES.heroPortrait.cdn}
                 alt={t('name')}
@@ -57,7 +57,7 @@ export default function HeroSection() {
                 className="hero-fade-up inline-block mr-4"
                 style={{ animationDelay: `${0.4 + i * 0.15}s` }}
               >
-                <span className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
+                <span className="text-5xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
                   {word}
                 </span>
               </span>
@@ -71,7 +71,7 @@ export default function HeroSection() {
           />
 
           <p
-            className="hero-fade font-[family-name:var(--font-accent)] italic text-3xl md:text-4xl lg:text-5xl text-white/40 mt-5"
+            className="hero-fade font-[family-name:var(--font-accent)] italic text-2xl md:text-3xl lg:text-5xl text-white/40 mt-5"
             style={{ animationDelay: '0.7s' }}
           >
             {t('nameEn')}
@@ -83,7 +83,7 @@ export default function HeroSection() {
           </div>
 
           <p
-            className="hero-fade text-white/60 text-lg md:text-xl max-w-lg leading-loose mt-4"
+            className="hero-fade text-white/60 text-base md:text-lg lg:text-xl max-w-lg leading-loose mt-4"
             style={{ animationDelay: '0.9s' }}
           >
             {t('tagline')}
@@ -100,7 +100,7 @@ export default function HeroSection() {
 
         {/* Scroll indicator */}
         <div
-          className="hero-fade absolute bottom-8 left-1/2 -translate-x-1/2 lg:left-20 lg:translate-x-0 flex flex-col items-center gap-2 scroll-indicator"
+          className="hero-fade absolute bottom-8 left-1/2 -translate-x-1/2 md:left-12 lg:left-20 md:translate-x-0 flex flex-col items-center gap-2 scroll-indicator"
           style={{ animationDelay: '1.4s' }}
         >
           <span className="text-[10px] uppercase tracking-[0.3em] text-accent/50 font-[family-name:var(--font-inter)]">
@@ -112,26 +112,27 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Right panel - full-bleed portrait (desktop only) */}
-      <div className="hidden lg:block w-[45%] min-h-screen relative">
+      {/* Right panel - portrait (tablet + desktop) */}
+      <div className="hidden md:block w-[45%] min-h-screen relative">
         <div className="absolute inset-0 img-zoom hero-fade" style={{ animationDelay: '0.3s' }}>
           <Image
             src={IMAGES.heroPortrait.cdn}
             alt={t('name')}
             fill
             className="object-cover object-top"
-            sizes="(min-width: 1024px) 45vw, 0px"
+            sizes="(min-width: 768px) 45vw, 0px"
             priority
           />
           <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-primary/70 to-transparent" />
           <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-primary/30 to-transparent" />
         </div>
 
-        <div className="absolute top-8 left-8 right-8 bottom-8 border border-accent/15 pointer-events-none z-10" />
-        <div className="absolute top-4 left-4 w-12 h-12 border-t-2 border-l-2 border-accent/40 pointer-events-none z-10" />
-        <div className="absolute bottom-4 right-4 w-12 h-12 border-b-2 border-r-2 border-accent/40 pointer-events-none z-10" />
+        {/* Gold inset frame */}
+        <div className="absolute top-6 left-6 right-6 bottom-6 md:top-8 md:left-8 md:right-8 md:bottom-8 border border-accent/15 pointer-events-none z-10" />
+        <div className="absolute top-3 left-3 md:top-4 md:left-4 w-10 h-10 md:w-12 md:h-12 border-t-2 border-l-2 border-accent/40 pointer-events-none z-10" />
+        <div className="absolute bottom-3 right-3 md:bottom-4 md:right-4 w-10 h-10 md:w-12 md:h-12 border-b-2 border-r-2 border-accent/40 pointer-events-none z-10" />
 
-        <div className="absolute bottom-12 right-12 text-right z-10">
+        <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 text-right z-10">
           <span className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-[family-name:var(--font-inter)]">
             Managing Partner
           </span>

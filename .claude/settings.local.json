@@ -23,7 +23,9 @@
       "Bash(grep -n \"hero\\\\.\" src/app/[locale]/gioi-thieu-luat-su/page.tsx)",
       "Bash(tasklist //FI 'IMAGENAME eq node.exe' //FO CSV)",
       "Bash(sed -i 's/pub-d7f47f0c70712c6934b79a0745c94ca1\\\\.r2\\\\.dev/pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/g' src/lib/images.ts)",
-      "Bash(sed -i '/    src: \"\"https:\\\\/\\\\/[^\"\"]*\"\" || \"\"[^\"\"]*\"\",/d' src/lib/images.ts)"
+      "Bash(sed -i '/    src: \"\"https:\\\\/\\\\/[^\"\"]*\"\" || \"\"[^\"\"]*\"\",/d' src/lib/images.ts)",
+      "Bash(grep -n \"lg:grid-cols\\\\|lg:flex\\\\|hidden lg:\" src/app/[locale]/linh-vuc-hanh-nghe/[slug]/page.tsx)",
+      "Bash(grep -n \"grid-cols\" src/app/[locale]/linh-vuc-hanh-nghe/[slug]/page.tsx)"
     ]
   }
 }
