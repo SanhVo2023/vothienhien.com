@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --yes)",
+      "Bash(mv CLAUDE.md CLAUDE.md.bak)",
+      "Bash(mv PRD.md PRD.md.bak)",
+      "Bash(mkdir -p /tmp/vth-backup)",
+      "Bash(cp CLAUDE.md PRD.md /tmp/vth-backup/)",
+      "Bash(rm CLAUDE.md PRD.md)",
+      "Bash(mv CLAUDE.md.bak /tmp/vth-backup/CLAUDE.md)",
+      "Bash(mv PRD.md.bak /tmp/vth-backup/PRD.md)",
+      "Bash(mv .claude /tmp/vth-backup/)",
+      "Bash(npm install:*)",
+      "Bash(npm view:*)",
+      "Bash(npx tsc:*)",
+      "Bash(timeout 30 npx next build)",
+      "Bash(npx next:*)",
+      "Bash(curl:*)",
+      "Bash(node scripts/implement-assets.js)",
+      "Bash(npx payload:*)",
+      "Bash(npx tsx:*)",
+      "Bash(cd:*)",
+      "Bash(grep -n \"hero\\\\.\" src/app/[locale]/gioi-thieu-luat-su/page.tsx)",
+      "Bash(tasklist //FI 'IMAGENAME eq node.exe' //FO CSV)"
+    ]
+  }
+}

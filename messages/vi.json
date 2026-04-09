@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "profile": "Giới thiệu Luật sư",
+    "practiceAreas": "Lĩnh vực hành nghề",
+    "representativeMatters": "Vụ việc tiêu biểu",
+    "publications": "Bài viết chuyên môn",
+    "perspectives": "Quan điểm nghề luật",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "subtitle": "THÀNH VIÊN ĐIỀU HÀNH · APOLO LAWYERS",
+    "name": "Võ Thiện Hiển",
+    "nameEn": "Henry Vo",
+    "tagline": "Đồng hành pháp lý đáng tin cậy cho doanh nghiệp và cá nhân",
+    "cta": "Đặt Lịch Tư Vấn"
+  },
+  "stats": {
+    "yearsExperience": "20",
+    "yearsExperienceLabel": "Năm Kinh Nghiệm",
+    "casesHandled": "500",
+    "casesHandledLabel": "Vụ Việc Đã Thụ Lý",
+    "jurisdictions": "3",
+    "jurisdictionsLabel": "Khu Vực Pháp Lý"
+  },
+  "sections": {
+    "practiceAreas": "Lĩnh Vực Hành Nghề",
+    "practiceAreasSubtitle": "Chuyên môn",
+    "practiceAreasDescription": "Đội ngũ pháp lý giàu kinh nghiệm, am hiểu sâu rộng trong nhiều lĩnh vực",
+    "representativeMatters": "Vụ việc tiêu biểu",
+    "latestPublications": "Bài Viết Mới Nhất",
+    "latestPublicationsSubtitle": "Chuyên môn & Tư duy",
+    "latestPublicationsDescription": "Chia sẻ kiến thức pháp lý và góc nhìn chuyên sâu",
+    "about": "Về Luật sư Võ Thiện Hiển",
+    "contact": "Liên hệ tư vấn"
+  },
+  "practiceAreas": {
+    "civil": "Tranh Chấp Dân Sự",
+    "civilDesc": "Tư vấn và đại diện trong các tranh chấp hợp đồng, bồi thường thiệt hại và quyền sở hữu tài sản.",
+    "land": "Tranh Chấp Đất Đai",
+    "landDesc": "Giải quyết tranh chấp đất đai, bất động sản và quyền sử dụng đất phức tạp.",
+    "family": "Hôn Nhân & Gia Đình",
+    "familyDesc": "Tư vấn ly hôn, quyền nuôi con, phân chia tài sản và các vấn đề gia đình.",
+    "corporate": "Pháp Luật Doanh Nghiệp",
+    "corporateDesc": "Tư vấn thành lập, mua bán sáp nhập, quản trị doanh nghiệp và đầu tư nước ngoài.",
+    "labor": "Tranh Chấp Lao Động",
+    "laborDesc": "Đại diện giải quyết tranh chấp lao động, hợp đồng lao động và quyền lợi người lao động.",
+    "criminal": "Bào Chữa Hình Sự",
+    "criminalDesc": "Bào chữa trong các vụ án hình sự, bảo vệ quyền và lợi ích hợp pháp của thân chủ.",
+    "viewAll": "Xem Tất Cả Lĩnh Vực"
+  },
+  "publications": {
+    "category1": "Pháp Luật Doanh Nghiệp",
+    "title1": "Những Thay Đổi Quan Trọng Trong Luật Doanh Nghiệp 2024",
+    "excerpt1": "Phân tích các điểm mới đáng chú ý trong Luật Doanh Nghiệp sửa đổi và tác động đến hoạt động kinh doanh.",
+    "date1": "15 Tháng 3, 2026",
+    "category2": "Đất Đai & Bất Động Sản",
+    "title2": "Giải Quyết Tranh Chấp Đất Đai: Hướng Dẫn Thực Tiễn",
+    "excerpt2": "Hướng dẫn chi tiết quy trình giải quyết tranh chấp đất đai từ hòa giải đến khởi kiện tại tòa án.",
+    "date2": "28 Tháng 2, 2026",
+    "category3": "Đầu Tư Nước Ngoài",
+    "title3": "Hướng Dẫn Đầu Tư Tại Việt Nam Cho Nhà Đầu Tư Nước Ngoài",
+    "excerpt3": "Tổng quan về khung pháp lý, ưu đãi đầu tư và các bước thành lập doanh nghiệp có vốn nước ngoài.",
+    "date3": "10 Tháng 2, 2026",
+    "viewAll": "Xem Tất Cả Bài Viết"
+  },
+  "testimonial": {
+    "quote": "Luật sư Hiển không chỉ am hiểu pháp luật mà còn thấu hiểu tâm tư của thân chủ. Sự tận tâm và chuyên nghiệp của anh đã giúp chúng tôi vượt qua vụ tranh chấp phức tạp nhất.",
+    "author": "Nguyễn Văn Minh",
+    "role": "Giám đốc Điều hành, Công ty XYZ",
+    "accepting": "Hiện đang nhận vụ việc mới"
+  },
+  "cta": {
+    "heading": "Sẵn sàng thảo luận vấn đề pháp lý của bạn?",
+    "description": "Đặt lịch tư vấn riêng để nhận đánh giá ban đầu về vụ việc của bạn. Mọi thông tin được bảo mật tuyệt đối.",
+    "contact": "Liên Hệ",
+    "whatsapp": "WhatsApp"
+  },
+  "contact": {
+    "name": "Họ và tên",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "matterType": "Loại vụ việc",
+    "message": "Nội dung tin nhắn",
+    "submit": "Gửi yêu cầu tư vấn",
+    "languagePreference": "Ngôn ngữ ưu tiên",
+    "matterTypes": {
+      "civil": "Dân sự",
+      "land": "Đất đai",
+      "family": "Hôn nhân & Gia đình",
+      "corporate": "Doanh nghiệp",
+      "criminal": "Hình sự",
+      "labor": "Lao động",
+      "other": "Khác"
+    },
+    "responseCommitment": "Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc"
+  },
+  "footer": {
+    "copyright": "Bản quyền",
+    "allRightsReserved": "Tất cả quyền được bảo lưu",
+    "managingPartner": "Luật sư Thành viên Điều hành",
+    "firmName": "Công ty Luật TNHH Apolo Lawyers"
+  },
+  "common": {
+    "readMore": "Đọc thêm",
+    "viewAll": "Xem tất cả",
+    "scheduleConsultation": "Đặt lịch tư vấn",
+    "backTo": "Quay lại",
+    "share": "Chia sẻ"
+  },
+  "profile": {
+    "education": "Học vấn",
+    "credentials": "Chứng chỉ hành nghề",
+    "timeline": "Quá trình công tác",
+    "memberships": "Thành viên tổ chức"
+  },
+  "meta": {
+    "defaultTitle": "Luật sư Võ Thiện Hiển - Luật sư Thành viên Điều hành | Apolo Lawyers",
+    "defaultDescription": "Luật sư Võ Thiện Hiển - Luật sư Thành viên Điều hành tại Công ty Luật TNHH Apolo Lawyers. Chuyên tư vấn pháp luật dân sự, đất đai, doanh nghiệp và tranh tụng."
+  }
+}

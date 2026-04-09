@@ -1,0 +1,172 @@
+{
+  "site": "vothienhien.com",
+  "generated_by": "site-agent",
+  "created_at": "2026-04-09",
+  "batch": "v2-enhancement",
+  "notes": "Additional images for enhanced service pages, article thumbnails, and section backgrounds. Uses same R2 bucket as v1.",
+  "images": [
+    {
+      "id": "article-corporate-law",
+      "name": "Article Thumbnail - Corporate Law Analysis",
+      "type": "text-to-image",
+      "prompt": "Top-down flat lay on a dark walnut desk: a leather-bound law book open to a page with highlighted text, a gold-nibbed fountain pen, corporate seal stamps, a stack of signed contracts with red wax seals, and a pair of reading glasses. Warm amber desk lamp light from top-left. Shallow depth of field, editorial still-life photography. Color palette: dark wood, cream paper, gold pen, warm amber light. No people, no text. Ultra-clean, luxury brand editorial style.",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "high"
+    },
+    {
+      "id": "article-land-dispute",
+      "name": "Article Thumbnail - Land & Property Disputes",
+      "type": "text-to-image",
+      "prompt": "Aerial photograph of a Vietnamese urban neighborhood meeting a modern high-rise development zone, clearly showing the boundary/contrast between traditional tile-roof houses and glass skyscrapers. Golden hour light, long shadows. Ho Chi Minh City style architecture. Professional drone photography, warm color grading. The composition emphasizes the tension between old and new — the core of land disputes.",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "high"
+    },
+    {
+      "id": "article-foreign-investment",
+      "name": "Article Thumbnail - Foreign Investment in Vietnam",
+      "type": "text-to-image",
+      "prompt": "Close-up of two business professionals (one Asian, one Western) shaking hands across a conference table. Only their hands, suit cuffs, and the table surface are visible — no faces. On the table: printed documents, a Vietnam flag miniature, and an FDI certificate folder. Warm boardroom lighting, shallow depth of field. The handshake is in sharp focus. Color palette: navy suits, white shirts, gold cufflinks, warm oak table. Professional corporate photography.",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "high"
+    },
+    {
+      "id": "article-divorce-international",
+      "name": "Article Thumbnail - International Divorce",
+      "type": "text-to-image",
+      "prompt": "Minimalist still life: two passports (one Vietnamese, one generic foreign) placed side by side on a white marble surface, with a thin gold wedding band resting between them. A single white rose petal nearby. Soft diffused natural light from a window. Extremely shallow depth of field, only the ring in sharp focus. Emotional yet restrained, editorial luxury photography. Color palette: white marble, burgundy passport, gold ring, soft shadows.",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "medium"
+    },
+    {
+      "id": "article-labor-rights",
+      "name": "Article Thumbnail - Labor Rights & Employment",
+      "type": "text-to-image",
+      "prompt": "Abstract composition: a construction hard hat (yellow) and a business briefcase (black leather) placed on opposite ends of a polished dark wood conference table, with a legal document and pen centered between them. The composition symbolizes employer-employee negotiation. Clean, editorial photography with warm side lighting. No people. Shallow depth of field focusing on the document. Professional, balanced, neutral tone.",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "medium"
+    },
+    {
+      "id": "article-criminal-defense",
+      "name": "Article Thumbnail - Criminal Defense & Rights",
+      "type": "text-to-image",
+      "prompt": "Dramatic close-up of a wooden judge's gavel resting on its sound block on a dark mahogany bench surface. A single beam of warm golden light illuminates the gavel from the left, casting a long shadow to the right. Dark, moody atmosphere with rich wood tones. The brass band on the gavel catches the light with a golden highlight. No text, no people. Cinematic legal photography, 85mm lens feel.",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "medium"
+    },
+    {
+      "id": "section-consultation",
+      "name": "Consultation Room - Practice Area Pages",
+      "type": "text-to-image",
+      "prompt": "Premium private consultation room in a Vietnamese law office. Two leather armchairs facing each other across a small dark wood coffee table. A glass wall on one side shows a blurred Ho Chi Minh City skyline. On the table: two porcelain tea cups, a leather portfolio folder. Warm ambient lighting, a small desk lamp with green banker shade visible in background. Empty room, no people. The mood conveys confidential, premium, one-on-one consultation. Interior photography, 24mm wide angle.",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "high"
+    },
+    {
+      "id": "section-courtroom",
+      "name": "Vietnamese Courtroom Interior",
+      "type": "text-to-image",
+      "prompt": "Interior of a Vietnamese courtroom (phòng xử án). The judge's elevated bench with the Vietnamese national emblem (gold star on red) mounted above. Wooden counsel tables in foreground, empty chairs. Warm natural light coming through tall windows on the left side. Clean, well-maintained government building interior. No people. The atmosphere conveys the weight of justice — formal, solemn, authoritative. Architectural interior photography, natural light.",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "high"
+    },
+    {
+      "id": "section-document-signing",
+      "name": "Legal Document Signing Close-up",
+      "type": "text-to-image",
+      "prompt": "Cinematic overhead shot of hands signing a legal document on a dark desk. Multiple copies of the same contract stacked neatly, with gold paper clips. A notary stamp and red ink pad visible in the corner. The signing hand holds an expensive gold pen. Warm desk lamp lighting creating dramatic shadows. Only hands and forearms visible, wearing a premium dark suit. Color palette: dark wood, cream paper, gold accents, warm amber light. Legal editorial photography.",
+      "category": "content",
+      "aspect": "3:2",
+      "width": 1200,
+      "priority": "medium"
+    },
+    {
+      "id": "section-client-meeting",
+      "name": "Attorney-Client Meeting",
+      "type": "image-to-image",
+      "prompt": "Professional photograph of this Vietnamese male lawyer in a navy suit sitting across from a client (seen from behind, blurred) in a premium office consultation setting. The lawyer is gesturing while explaining something, with documents and a laptop on the table. Floor-to-ceiling windows with Ho Chi Minh City skyline in soft bokeh background. Warm natural light. The mood conveys trust, expertise, and attentive counsel. Environmental portrait, medium shot, 50mm lens.",
+      "reference_image": "./references/mr-hien-portrait.jpg",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "high"
+    },
+    {
+      "id": "section-team-discussion",
+      "name": "Legal Team Discussion",
+      "type": "image-to-image",
+      "prompt": "Professional photograph of this Vietnamese male lawyer standing at the head of a conference table, leading a discussion with 3 colleagues (backs to camera or in profile, slightly blurred). Whiteboards with legal diagrams in background. He is pointing at a document while explaining. Modern office with glass walls. Warm lighting. The mood conveys leadership, collaboration, and strategic thinking. Editorial corporate photography.",
+      "reference_image": "./references/mr-hien-portrait.jpg",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "medium"
+    },
+    {
+      "id": "perspective-thought",
+      "name": "Thoughtful Lawyer Portrait - Perspectives",
+      "type": "image-to-image",
+      "prompt": "Intimate portrait of this Vietnamese male lawyer in a charcoal turtleneck (no suit), sitting in a modern leather chair in a private library/study. He is looking slightly off-camera with a thoughtful, reflective expression. A book is open in his lap. Warm reading lamp light, bookshelves out of focus behind. The mood is personal, intellectual, approachable — this is the thinker behind the lawyer. Portrait photography, 85mm f/1.8, shallow depth of field.",
+      "reference_image": "./references/mr-hien-portrait.jpg",
+      "category": "content",
+      "aspect": "3:2",
+      "width": 1200,
+      "priority": "medium"
+    },
+    {
+      "id": "bg-legal-books",
+      "name": "Legal Books Close-up Background",
+      "type": "text-to-image",
+      "prompt": "Extreme close-up of leather-bound Vietnamese legal code books lined up on a dark wood shelf. The spine titles are blurred but the texture of the leather and gold-embossed lettering is visible. Shallow depth of field, with only 2-3 books in focus and the rest blurring into a warm bokeh. Warm amber library lighting. Rich burgundy, navy, and forest green leather tones with gold text. Suitable as a website section background with text overlay. Bibliophile aesthetic.",
+      "category": "background",
+      "aspect": "16:9",
+      "width": 1920,
+      "priority": "medium"
+    },
+    {
+      "id": "bg-office-hallway",
+      "name": "Law Office Hallway - Premium Interior",
+      "type": "text-to-image",
+      "prompt": "Long perspective shot down a premium law office hallway. Dark wood paneling on walls, recessed warm lighting in the ceiling creating pools of light. At the end of the hallway, a large window shows the city skyline. Polished marble floor reflecting the lights. No people. The composition creates depth and conveys prestige, like walking into power. Architectural interior photography, 24mm lens, symmetrical composition. Color palette: dark wood, warm amber light, marble gray.",
+      "category": "background",
+      "aspect": "21:9",
+      "width": 1920,
+      "priority": "low"
+    },
+    {
+      "id": "icon-scales-gold",
+      "name": "Gold Scales of Justice Icon",
+      "type": "text-to-image",
+      "prompt": "Minimalist 3D render of balanced scales of justice made of polished gold metal, floating against a pure black (#0A0A0A) background. The scales are perfectly balanced and catch dramatic side lighting from the left, creating elegant reflections and shadows. Ultra-clean, no extra elements. Luxury brand icon style. Think Apple product photography but for a legal symbol. High contrast, metallic gold (#C5A55A) on pure black.",
+      "category": "icon",
+      "aspect": "1:1",
+      "width": 512,
+      "priority": "low"
+    },
+    {
+      "id": "map-hcmc-office",
+      "name": "Stylized HCMC Office Location Map",
+      "type": "text-to-image",
+      "prompt": "Elegant stylized map of Ho Chi Minh City District 1 area, rendered in a luxury brand aesthetic. Dark charcoal (#1A1A1A) background with gold (#C5A55A) line work for streets and landmarks. Key landmarks labeled in small gold text: Bitexco Tower, Notre Dame Cathedral, Ben Thanh Market. A gold pin marker at the office location (Trần Đình Xu street area). The Saigon River shown as a flowing gold line. Minimalist, cartographic art style. No satellite imagery — purely illustrated/stylized.",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "medium"
+    }
+  ]
+}

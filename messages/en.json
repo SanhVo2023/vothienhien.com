@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "home": "Home",
+    "profile": "Lawyer Profile",
+    "practiceAreas": "Practice Areas",
+    "representativeMatters": "Representative Experience",
+    "publications": "Legal Insights",
+    "perspectives": "Professional Perspective",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "MANAGING PARTNER \u00b7 APOLO LAWYERS",
+    "name": "Vo Thien Hien",
+    "title": "Managing Partner · Apolo Lawyers",
+    "nameEn": "Henry Vo",
+    "tagline": "Trusted legal counsel for businesses and individuals",
+    "cta": "Schedule a Consultation"
+  },
+  "stats": {
+    "yearsExperience": "20",
+    "yearsExperienceLabel": "Years of Experience",
+    "casesHandled": "500",
+    "casesHandledLabel": "Cases Handled",
+    "jurisdictions": "3",
+    "jurisdictionsLabel": "Jurisdictions"
+  },
+  "sections": {
+    "practiceAreas": "Practice Areas",
+    "practiceAreasSubtitle": "Expertise",
+    "practiceAreasDescription": "Deep expertise across multiple legal disciplines, serving clients with precision and care",
+    "representativeMatters": "Representative Experience",
+    "latestPublications": "Latest Publications",
+    "latestPublicationsSubtitle": "Insights & Thought Leadership",
+    "latestPublicationsDescription": "Sharing legal knowledge and in-depth perspectives",
+    "about": "About Lawyer Vo Thien Hien",
+    "contact": "Contact Us"
+  },
+  "practiceAreas": {
+    "civil": "Civil Disputes",
+    "civilDesc": "Advising and representing clients in contract disputes, damages claims, and property rights matters.",
+    "land": "Land Disputes",
+    "landDesc": "Resolving complex land disputes, real estate matters, and land use rights conflicts.",
+    "family": "Family Law",
+    "familyDesc": "Advising on divorce, child custody, asset division, and family-related legal matters.",
+    "corporate": "Corporate Law",
+    "corporateDesc": "Advising on formation, M&A, corporate governance, and foreign investment in Vietnam.",
+    "labor": "Labor Disputes",
+    "laborDesc": "Representing clients in labor disputes, employment contracts, and employee rights matters.",
+    "criminal": "Criminal Defense",
+    "criminalDesc": "Defending clients in criminal cases, protecting their legal rights and interests.",
+    "viewAll": "View All Practice Areas"
+  },
+  "publications": {
+    "category1": "Corporate Law",
+    "title1": "Key Changes in Vietnam's Enterprise Law 2024",
+    "excerpt1": "Analysis of notable amendments in the revised Enterprise Law and their impact on business operations.",
+    "date1": "March 15, 2026",
+    "category2": "Land & Real Estate",
+    "title2": "Resolving Land Disputes: A Practical Guide",
+    "excerpt2": "A detailed guide on the land dispute resolution process from mediation to court litigation.",
+    "date2": "February 28, 2026",
+    "category3": "Foreign Investment",
+    "title3": "Guide to Investing in Vietnam for Foreign Investors",
+    "excerpt3": "An overview of the legal framework, investment incentives, and steps to establish a foreign-invested enterprise.",
+    "date3": "February 10, 2026",
+    "viewAll": "View All Publications"
+  },
+  "testimonial": {
+    "quote": "Lawyer Hien not only understands the law but also deeply empathizes with his clients. His dedication and professionalism helped us navigate through the most complex dispute we have ever faced.",
+    "author": "Nguyen Van Minh",
+    "role": "CEO, XYZ Corporation",
+    "accepting": "Currently accepting new matters"
+  },
+  "cta": {
+    "heading": "Ready to discuss your legal matter?",
+    "description": "Schedule a private consultation for an initial assessment of your case. All information is kept strictly confidential.",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp"
+  },
+  "contact": {
+    "name": "Full Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "matterType": "Matter Type",
+    "message": "Message",
+    "submit": "Submit Consultation Request",
+    "languagePreference": "Preferred Language",
+    "matterTypes": {
+      "civil": "Civil",
+      "land": "Land & Real Estate",
+      "family": "Marriage & Family",
+      "corporate": "Corporate",
+      "criminal": "Criminal",
+      "labor": "Labor",
+      "other": "Other"
+    },
+    "responseCommitment": "We will respond within 24 business hours"
+  },
+  "footer": {
+    "copyright": "Copyright",
+    "allRightsReserved": "All Rights Reserved",
+    "managingPartner": "Managing Partner",
+    "firmName": "Apolo Lawyers LLC"
+  },
+  "common": {
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "scheduleConsultation": "Schedule a Consultation",
+    "backTo": "Back to",
+    "share": "Share"
+  },
+  "profile": {
+    "education": "Education",
+    "credentials": "Credentials",
+    "timeline": "Career Timeline",
+    "memberships": "Memberships"
+  },
+  "meta": {
+    "defaultTitle": "Vo Thien Hien - Managing Partner | Apolo Lawyers",
+    "defaultDescription": "Vo Thien Hien - Managing Partner at Apolo Lawyers LLC. Specializing in civil law, land & real estate, corporate advisory, and litigation in Vietnam."
+  }
+}

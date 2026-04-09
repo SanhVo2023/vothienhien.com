@@ -1,26 +1,221 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colors - Executive Luxury Palette */
+  --color-primary: #0A0A0A;
+  --color-secondary: #1A1A1A;
+  --color-accent: #C5A55A;
+  --color-accent-secondary: #B8924C;
+  --color-background: #FFFFFF;
+  --color-surface: #FAFAF8;
+  --color-text-primary: #111111;
+  --color-text-secondary: #666666;
+  --color-border-gold: #E5D5B0;
+
+  /* Fonts */
+  --font-body: var(--font-body);
+  --font-heading: var(--font-heading);
+  --font-accent: var(--font-accent);
+  --font-inter: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base styles */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Gold divider line */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-accent) 20%,
+    var(--color-accent) 80%,
+    transparent 100%
+  );
+}
+
+/* Gold accent line animation */
+.gold-line-draw {
+  background: var(--color-accent);
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+/* Heading styles */
+h1, h2, h3 {
+  font-family: var(--font-heading), Georgia, serif;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-gold);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ========== MICRO-INTERACTIONS ========== */
+
+/* Fade-up animation for scroll reveals */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button gold shimmer sweep */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.15) 40%,
+    rgba(255,255,255,0.3) 50%,
+    rgba(255,255,255,0.15) 60%,
+    transparent 100%
+  );
+  transition: left 0.6s ease;
+}
+.btn-shimmer:hover::before {
+  left: 100%;
+}
+
+/* Title hover underline animation */
+.title-underline {
+  position: relative;
+  display: inline;
+}
+.title-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.title-underline:hover::after {
+  width: 100%;
+}
+
+/* WhatsApp pulse ring */
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.6; }
+  80%, 100% { transform: scale(1.6); opacity: 0; }
+}
+.whatsapp-pulse {
+  position: relative;
+}
+.whatsapp-pulse::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  border: 2px solid #25D366;
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Scroll indicator bounce */
+@keyframes scroll-bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(8px); }
+  60% { transform: translateY(4px); }
+}
+.scroll-indicator {
+  animation: scroll-bounce 2.5s ease infinite;
+}
+
+/* Image zoom on hover */
+.img-zoom {
+  overflow: hidden;
+}
+.img-zoom img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.img-zoom:hover img {
+  transform: scale(1.04);
+}
+
+/* Gold glow effect */
+.gold-glow {
+  transition: filter 0.3s ease;
+}
+.gold-glow:hover {
+  filter: drop-shadow(0 0 8px rgba(197, 165, 90, 0.4));
+}
+
+/* Hero entrance animations — CSS-only, works with client-side navigation */
+@keyframes heroFade {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(40px) rotateX(-20deg); }
+  to { opacity: 1; transform: translateY(0) rotateX(0); }
+}
+@keyframes heroScaleX {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.hero-fade {
+  animation: heroFade 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.hero-fade-up {
+  animation: heroFadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  perspective: 600px;
+}
+.hero-scale-x {
+  animation: heroScaleX 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Simple fade in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Radial gold gradient overlay */
+.radial-gold {
+  background: radial-gradient(ellipse at center, rgba(197,165,90,0.12) 0%, transparent 70%);
 }
