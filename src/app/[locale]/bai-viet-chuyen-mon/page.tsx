@@ -42,12 +42,12 @@ const categories = {
 
 // Thumbnail images mapped by article index
 const articleThumbnails = [
-  { src: IMAGES.practiceCorporate.cdn, alt: IMAGES.practiceCorporate.alt },
-  { src: IMAGES.practiceLand.cdn, alt: IMAGES.practiceLand.alt },
-  { src: IMAGES.bgSpeaking.cdn, alt: IMAGES.bgSpeaking.alt },
-  { src: IMAGES.detailHands.cdn, alt: IMAGES.detailHands.alt },
-  { src: IMAGES.practiceCivil.cdn, alt: IMAGES.practiceCivil.alt },
-  { src: IMAGES.practiceFamily.cdn, alt: IMAGES.practiceFamily.alt },
+  { src: IMAGES.articleLandDispute.cdn, alt: IMAGES.articleLandDispute.alt },
+  { src: IMAGES.articleCorporateLaw.cdn, alt: IMAGES.articleCorporateLaw.alt },
+  { src: IMAGES.articleLaborRights.cdn, alt: IMAGES.articleLaborRights.alt },
+  { src: IMAGES.articleLandDispute.cdn, alt: IMAGES.articleLandDispute.alt },
+  { src: IMAGES.articleDivorceInternational.cdn, alt: IMAGES.articleDivorceInternational.alt },
+  { src: IMAGES.articleCorporateLaw.cdn, alt: IMAGES.articleCorporateLaw.alt },
 ];
 
 function getArticleThumbnail(index: number) {

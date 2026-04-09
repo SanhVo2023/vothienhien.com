@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Auto-generated asset implementation script for vothienhien.com
- * Generated: 2026-04-08T10:39:46.457Z
+ * Generated: 2026-04-09T10:56:51.671Z
  *
  * This script copies all generated images into public/images/
  * and outputs a mapping file the site code can import.
@@ -192,6 +192,166 @@ const ASSETS = [
     "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/icon/favicon-vh-8cdbcafc.webp",
     "local_path": "assets/icon/favicon-vh.webp",
     "alt": "VH Monogram Favicon/App Icon - vothienhien.com"
+  },
+  {
+    "id": "article-corporate-law",
+    "name": "Article Thumbnail - Corporate Law Analysis",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-corporate-law-cd404779.webp",
+    "local_path": "assets/content/article-corporate-law.webp",
+    "alt": "Article Thumbnail - Corporate Law Analysis - vothienhien.com"
+  },
+  {
+    "id": "article-land-dispute",
+    "name": "Article Thumbnail - Land & Property Disputes",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-land-dispute-28b8d87f.webp",
+    "local_path": "assets/content/article-land-dispute.webp",
+    "alt": "Article Thumbnail - Land & Property Disputes - vothienhien.com"
+  },
+  {
+    "id": "article-foreign-investment",
+    "name": "Article Thumbnail - Foreign Investment in Vietnam",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-foreign-investment-087a2566.webp",
+    "local_path": "assets/content/article-foreign-investment.webp",
+    "alt": "Article Thumbnail - Foreign Investment in Vietnam - vothienhien.com"
+  },
+  {
+    "id": "article-divorce-international",
+    "name": "Article Thumbnail - International Divorce",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-divorce-international-66f796f8.webp",
+    "local_path": "assets/content/article-divorce-international.webp",
+    "alt": "Article Thumbnail - International Divorce - vothienhien.com"
+  },
+  {
+    "id": "article-labor-rights",
+    "name": "Article Thumbnail - Labor Rights & Employment",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-labor-rights-f201efee.webp",
+    "local_path": "assets/content/article-labor-rights.webp",
+    "alt": "Article Thumbnail - Labor Rights & Employment - vothienhien.com"
+  },
+  {
+    "id": "article-criminal-defense",
+    "name": "Article Thumbnail - Criminal Defense & Rights",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-criminal-defense-3fb4bf85.webp",
+    "local_path": "assets/content/article-criminal-defense.webp",
+    "alt": "Article Thumbnail - Criminal Defense & Rights - vothienhien.com"
+  },
+  {
+    "id": "section-consultation",
+    "name": "Consultation Room - Practice Area Pages",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-consultation-09ce3923.webp",
+    "local_path": "assets/content/section-consultation.webp",
+    "alt": "Consultation Room - Practice Area Pages - vothienhien.com"
+  },
+  {
+    "id": "section-courtroom",
+    "name": "Vietnamese Courtroom Interior",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-courtroom-e20bbb8d.webp",
+    "local_path": "assets/content/section-courtroom.webp",
+    "alt": "Vietnamese Courtroom Interior - vothienhien.com"
+  },
+  {
+    "id": "section-document-signing",
+    "name": "Legal Document Signing Close-up",
+    "category": "content",
+    "width": 1200,
+    "aspect": "3:2",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-document-signing-63dc5758.webp",
+    "local_path": "assets/content/section-document-signing.webp",
+    "alt": "Legal Document Signing Close-up - vothienhien.com"
+  },
+  {
+    "id": "section-client-meeting",
+    "name": "Attorney-Client Meeting",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-client-meeting-e1f7235e.webp",
+    "local_path": "assets/content/section-client-meeting.webp",
+    "alt": "Attorney-Client Meeting - vothienhien.com"
+  },
+  {
+    "id": "section-team-discussion",
+    "name": "Legal Team Discussion",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-team-discussion-8b1a2a78.webp",
+    "local_path": "assets/content/section-team-discussion.webp",
+    "alt": "Legal Team Discussion - vothienhien.com"
+  },
+  {
+    "id": "perspective-thought",
+    "name": "Thoughtful Lawyer Portrait - Perspectives",
+    "category": "content",
+    "width": 1200,
+    "aspect": "3:2",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/perspective-thought-740b9752.webp",
+    "local_path": "assets/content/perspective-thought.webp",
+    "alt": "Thoughtful Lawyer Portrait - Perspectives - vothienhien.com"
+  },
+  {
+    "id": "bg-legal-books",
+    "name": "Legal Books Close-up Background",
+    "category": "background",
+    "width": 1920,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-legal-books-abdaa863.webp",
+    "local_path": "assets/background/bg-legal-books.webp",
+    "alt": "Legal Books Close-up Background - vothienhien.com"
+  },
+  {
+    "id": "bg-office-hallway",
+    "name": "Law Office Hallway - Premium Interior",
+    "category": "background",
+    "width": 1920,
+    "aspect": "21:9",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-office-hallway-e2bffaa5.webp",
+    "local_path": "assets/background/bg-office-hallway.webp",
+    "alt": "Law Office Hallway - Premium Interior - vothienhien.com"
+  },
+  {
+    "id": "icon-scales-gold",
+    "name": "Gold Scales of Justice Icon",
+    "category": "icon",
+    "width": 512,
+    "aspect": "1:1",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/icon/icon-scales-gold-b8487acf.webp",
+    "local_path": "assets/icon/icon-scales-gold.webp",
+    "alt": "Gold Scales of Justice Icon - vothienhien.com"
+  },
+  {
+    "id": "map-hcmc-office",
+    "name": "Stylized HCMC Office Location Map",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/map-hcmc-office-58683e9b.webp",
+    "local_path": "assets/content/map-hcmc-office.webp",
+    "alt": "Stylized HCMC Office Location Map - vothienhien.com"
   }
 ];
 
@@ -224,7 +384,7 @@ function main() {
 
   // Generate TypeScript image map for the site code
   const tsMap = `// Auto-generated image asset map for vothienhien.com
-// Generated: 2026-04-08T10:39:46.458Z
+// Generated: 2026-04-09T10:56:51.672Z
 // Usage: import { IMAGES } from "@/lib/images";
 //        <Image src={IMAGES.heroPortrait.cdn} alt={IMAGES.heroPortrait.alt} />
 

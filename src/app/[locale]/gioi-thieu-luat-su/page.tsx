@@ -1,10 +1,12 @@
 import { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import Image from 'next/image';
 import JsonLd from '@/components/JsonLd';
 import SectionHeading from '@/components/ui/SectionHeading';
 import GoldDivider from '@/components/ui/GoldDivider';
 import Button from '@/components/ui/Button';
 import { Link } from '@/i18n/navigation';
+import { IMAGES } from '@/lib/images';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -173,6 +175,18 @@ export default async function LawyerProfilePage({ params }: Props) {
         </div>
       </section>
 
+      {/* Visual Break - Client Meeting */}
+      <section className="relative h-[250px] md:h-[350px] overflow-hidden">
+        <Image
+          src={IMAGES.sectionClientMeeting.cdn}
+          alt={IMAGES.sectionClientMeeting.alt}
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-primary/50" />
+      </section>
+
       {/* Career Timeline */}
       <section className="py-20 md:py-28 bg-surface">
         <div className="max-w-4xl mx-auto px-6">
@@ -208,6 +222,18 @@ export default async function LawyerProfilePage({ params }: Props) {
         </div>
       </section>
 
+      {/* Visual Break - Consultation */}
+      <section className="relative h-[250px] md:h-[350px] overflow-hidden">
+        <Image
+          src={IMAGES.sectionConsultation.cdn}
+          alt={IMAGES.sectionConsultation.alt}
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-primary/50" />
+      </section>
+
       {/* Education & Credentials */}
       <section className="py-20 md:py-28 bg-background">
         <div className="max-w-4xl mx-auto px-6">
@@ -228,6 +254,18 @@ export default async function LawyerProfilePage({ params }: Props) {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Visual Break - Team Discussion */}
+      <section className="relative h-[250px] md:h-[350px] overflow-hidden">
+        <Image
+          src={IMAGES.sectionTeamDiscussion.cdn}
+          alt={IMAGES.sectionTeamDiscussion.alt}
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-primary/50" />
       </section>
 
       {/* Memberships */}

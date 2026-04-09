@@ -557,6 +557,7 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
   const t = await getTranslations();
   const isVi = locale === 'vi';
   const canonicalSlug = getCanonicalSlug(slug);
+  const viSlug = canonicalSlug;
   const data = practiceAreaData[canonicalSlug];
 
   if (!data) notFound();
@@ -651,11 +652,27 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Visual Break - Hands with Pen */}
+      {/* Visual Break - Context Image */}
       <section className="relative h-[300px] md:h-[400px] overflow-hidden">
         <Image
-          src={IMAGES.detailHands.cdn}
-          alt={IMAGES.detailHands.alt}
+          src={
+            viSlug === 'luat-hinh-su'
+              ? IMAGES.sectionCourtroom.cdn
+              : viSlug === 'tranh-chap-dan-su'
+              ? IMAGES.sectionConsultation.cdn
+              : viSlug === 'luat-doanh-nghiep'
+              ? IMAGES.sectionDocumentSigning.cdn
+              : IMAGES.sectionClientMeeting.cdn
+          }
+          alt={
+            viSlug === 'luat-hinh-su'
+              ? IMAGES.sectionCourtroom.alt
+              : viSlug === 'tranh-chap-dan-su'
+              ? IMAGES.sectionConsultation.alt
+              : viSlug === 'luat-doanh-nghiep'
+              ? IMAGES.sectionDocumentSigning.alt
+              : IMAGES.sectionClientMeeting.alt
+          }
           fill
           className="object-cover"
           sizes="100vw"

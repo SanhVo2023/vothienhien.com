@@ -21,10 +21,10 @@ interface PerspectiveData {
 
 // Map slugs to hero images
 const slugImageMap: Record<string, { src: string; alt: string }> = {
-  'dao-duc-nghe-luat-su': { src: IMAGES.detailHands.cdn, alt: IMAGES.detailHands.alt },
-  'luat-su-va-cong-ly-xa-hoi': { src: IMAGES.bgSpeaking.cdn, alt: IMAGES.bgSpeaking.alt },
-  'tuong-lai-nghe-luat-viet-nam': { src: IMAGES.bgLibrary.cdn, alt: IMAGES.bgLibrary.alt },
-  'xay-dung-long-tin-khach-hang': { src: IMAGES.profileHero.cdn, alt: IMAGES.profileHero.alt },
+  'dao-duc-nghe-luat-su': { src: IMAGES.perspectiveThought.cdn, alt: IMAGES.perspectiveThought.alt },
+  'luat-su-va-cong-ly-xa-hoi': { src: IMAGES.perspectiveThought.cdn, alt: IMAGES.perspectiveThought.alt },
+  'tuong-lai-nghe-luat-viet-nam': { src: IMAGES.perspectiveThought.cdn, alt: IMAGES.perspectiveThought.alt },
+  'xay-dung-long-tin-khach-hang': { src: IMAGES.perspectiveThought.cdn, alt: IMAGES.perspectiveThought.alt },
 };
 
 const perspectivesData: Record<string, { vi: PerspectiveData; en: PerspectiveData }> = {
@@ -172,7 +172,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!data) return { title: 'Not Found' };
 
   const content = isVi ? data.vi : data.en;
-  const heroImage = slugImageMap[canonical] || { src: IMAGES.detailHands.cdn, alt: IMAGES.detailHands.alt };
+  const heroImage = slugImageMap[canonical] || { src: IMAGES.perspectiveThought.cdn, alt: IMAGES.perspectiveThought.alt };
 
   return {
     title: `${content.title} | ${isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}`,
@@ -204,7 +204,7 @@ export default async function PerspectiveDetailPage({ params }: Props) {
   if (!data) notFound();
 
   const content = isVi ? data.vi : data.en;
-  const heroImage = slugImageMap[canonical] || { src: IMAGES.detailHands.cdn, alt: IMAGES.detailHands.alt };
+  const heroImage = slugImageMap[canonical] || { src: IMAGES.perspectiveThought.cdn, alt: IMAGES.perspectiveThought.alt };
 
   const relatedPerspectives = content.relatedSlugs
     .map((rs) => {
@@ -379,7 +379,7 @@ export default async function PerspectiveDetailPage({ params }: Props) {
               {relatedPerspectives.map((p) => {
                 if (!p) return null;
                 const relCanonical = getCanonicalSlug(p.slug);
-                const relImage = slugImageMap[relCanonical] || { src: IMAGES.detailHands.cdn, alt: IMAGES.detailHands.alt };
+                const relImage = slugImageMap[relCanonical] || { src: IMAGES.perspectiveThought.cdn, alt: IMAGES.perspectiveThought.alt };
                 return (
                   <Link
                     key={p.slug}

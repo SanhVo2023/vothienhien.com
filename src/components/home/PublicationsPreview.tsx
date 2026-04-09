@@ -21,9 +21,9 @@ const cardVariants = {
 };
 
 const articleImages = [
-  IMAGES.detailHands,
-  IMAGES.bgSpeaking,
-  IMAGES.detailHands,
+  IMAGES.articleLandDispute,
+  IMAGES.articleCorporateLaw,
+  IMAGES.articleLaborRights,
 ];
 
 export default function PublicationsPreview() {

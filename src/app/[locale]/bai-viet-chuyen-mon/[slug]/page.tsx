@@ -20,14 +20,36 @@ interface ArticleData {
   relatedSlugs: string[];
 }
 
-// Map slugs to hero images
+// Map slugs to hero images based on topic
+function getArticleImage(slug: string): { src: string; alt: string } {
+  if (slug.includes('doanh-nghiep') || slug.includes('corporate')) {
+    return { src: IMAGES.articleCorporateLaw.cdn, alt: IMAGES.articleCorporateLaw.alt };
+  }
+  if (slug.includes('dat-dai') || slug.includes('dat') || slug.includes('land')) {
+    return { src: IMAGES.articleLandDispute.cdn, alt: IMAGES.articleLandDispute.alt };
+  }
+  if (slug.includes('dau-tu') || slug.includes('invest')) {
+    return { src: IMAGES.articleForeignInvestment.cdn, alt: IMAGES.articleForeignInvestment.alt };
+  }
+  if (slug.includes('ly-hon') || slug.includes('divorce')) {
+    return { src: IMAGES.articleDivorceInternational.cdn, alt: IMAGES.articleDivorceInternational.alt };
+  }
+  if (slug.includes('lao-dong') || slug.includes('labor') || slug.includes('employee')) {
+    return { src: IMAGES.articleLaborRights.cdn, alt: IMAGES.articleLaborRights.alt };
+  }
+  if (slug.includes('hinh-su') || slug.includes('criminal')) {
+    return { src: IMAGES.articleCriminalDefense.cdn, alt: IMAGES.articleCriminalDefense.alt };
+  }
+  return { src: IMAGES.detailHands.cdn, alt: IMAGES.detailHands.alt };
+}
+
 const slugImageMap: Record<string, { src: string; alt: string }> = {
-  'phan-tich-luat-dat-dai-2024': { src: IMAGES.practiceLand.cdn, alt: IMAGES.practiceLand.alt },
-  'huong-dan-thanh-lap-doanh-nghiep': { src: IMAGES.practiceCorporate.cdn, alt: IMAGES.practiceCorporate.alt },
-  'quyen-loi-nguoi-lao-dong-nghi-viec': { src: IMAGES.practiceLabor.cdn, alt: IMAGES.practiceLabor.alt },
-  'binh-luan-an-le-tranh-chap-dat': { src: IMAGES.practiceLand.cdn, alt: IMAGES.practiceLand.alt },
-  'huong-dan-ly-hon-thuan-tinh': { src: IMAGES.practiceFamily.cdn, alt: IMAGES.practiceFamily.alt },
-  'binh-luan-sua-doi-luat-doanh-nghiep': { src: IMAGES.practiceCorporate.cdn, alt: IMAGES.practiceCorporate.alt },
+  'phan-tich-luat-dat-dai-2024': { src: IMAGES.articleLandDispute.cdn, alt: IMAGES.articleLandDispute.alt },
+  'huong-dan-thanh-lap-doanh-nghiep': { src: IMAGES.articleCorporateLaw.cdn, alt: IMAGES.articleCorporateLaw.alt },
+  'quyen-loi-nguoi-lao-dong-nghi-viec': { src: IMAGES.articleLaborRights.cdn, alt: IMAGES.articleLaborRights.alt },
+  'binh-luan-an-le-tranh-chap-dat': { src: IMAGES.articleLandDispute.cdn, alt: IMAGES.articleLandDispute.alt },
+  'huong-dan-ly-hon-thuan-tinh': { src: IMAGES.articleDivorceInternational.cdn, alt: IMAGES.articleDivorceInternational.alt },
+  'binh-luan-sua-doi-luat-doanh-nghiep': { src: IMAGES.articleCorporateLaw.cdn, alt: IMAGES.articleCorporateLaw.alt },
 };
 
 // Thumbnails for related articles
@@ -256,7 +278,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!data) return { title: 'Not Found' };
 
   const content = isVi ? data.vi : data.en;
-  const heroImage = slugImageMap[canonical] || { src: IMAGES.detailHands.cdn, alt: IMAGES.detailHands.alt };
+  const heroImage = slugImageMap[canonical] || getArticleImage(slug);
 
   return {
     title: `${content.title} | ${isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}`,
@@ -288,7 +310,7 @@ export default async function PublicationDetailPage({ params }: Props) {
   if (!data) notFound();
 
   const content = isVi ? data.vi : data.en;
-  const heroImage = slugImageMap[canonical] || { src: IMAGES.detailHands.cdn, alt: IMAGES.detailHands.alt };
+  const heroImage = slugImageMap[canonical] || getArticleImage(slug);
 
   const relatedArticles = content.relatedSlugs
     .map((rs) => {

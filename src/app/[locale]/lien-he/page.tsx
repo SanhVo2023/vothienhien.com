@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import Image from 'next/image';
 import JsonLd from '@/components/JsonLd';
 import SectionHeading from '@/components/ui/SectionHeading';
 import GoldDivider from '@/components/ui/GoldDivider';
 import ContactForm from '@/components/contact/ContactForm';
+import { IMAGES } from '@/lib/images';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -224,6 +226,18 @@ export default async function ContactPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Consultation Visual */}
+      <section className="relative h-[250px] md:h-[350px] overflow-hidden">
+        <Image
+          src={IMAGES.sectionConsultation.cdn}
+          alt={IMAGES.sectionConsultation.alt}
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-primary/50" />
+      </section>
+
       {/* Office Location */}
       <section className="py-16 md:py-20 bg-surface">
         <div className="max-w-6xl mx-auto px-6">
@@ -248,16 +262,15 @@ export default async function ContactPage({ params }: Props) {
                 </p>
               </div>
             </div>
-            <div className="bg-background border border-border-gold/20 p-8 flex items-center justify-center text-text-secondary">
-              <div className="text-center">
-                <svg className="w-12 h-12 text-accent/30 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <p className="text-sm">
-                  {isVi ? 'Bản đồ sẽ được cập nhật sau' : 'Map will be updated later'}
-                </p>
-              </div>
+            <div className="bg-background border border-border-gold/20 overflow-hidden relative">
+              <Image
+                src={IMAGES.mapHcmcOffice.cdn}
+                alt={IMAGES.mapHcmcOffice.alt}
+                width={600}
+                height={400}
+                className="object-cover w-full h-full"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>

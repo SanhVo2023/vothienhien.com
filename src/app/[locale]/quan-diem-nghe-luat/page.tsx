@@ -36,10 +36,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // Alternate thumbnails for perspective cards
 const perspectiveThumbnails = [
-  { src: IMAGES.detailHands.cdn, alt: IMAGES.detailHands.alt },
-  { src: IMAGES.profileHero.cdn, alt: IMAGES.profileHero.alt },
+  { src: IMAGES.perspectiveThought.cdn, alt: IMAGES.perspectiveThought.alt },
+  { src: IMAGES.sectionClientMeeting.cdn, alt: IMAGES.sectionClientMeeting.alt },
+  { src: IMAGES.sectionTeamDiscussion.cdn, alt: IMAGES.sectionTeamDiscussion.alt },
   { src: IMAGES.bgSpeaking.cdn, alt: IMAGES.bgSpeaking.alt },
-  { src: IMAGES.detailHands.cdn, alt: IMAGES.detailHands.alt },
 ];
 
 const perspectives = {
