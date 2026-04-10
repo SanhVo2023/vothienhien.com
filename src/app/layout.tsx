@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { beVietnamPro, inter, playfairDisplay, cormorantGaramond } from '@/lib/fonts';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -24,13 +23,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html suppressHydrationWarning>
-      <body
-        className={`${beVietnamPro.variable} ${inter.variable} ${playfairDisplay.variable} ${cormorantGaramond.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+  // No <html>/<body> here — each route group provides its own.
+  // (payload) group: PayloadCMS RootLayout renders <html>
+  // [locale] group: our layout renders <html> with fonts
+  return children;
 }
