@@ -29,7 +29,8 @@
       "Bash(nslookup db.vvzpvkjlkmjjnhapsrxq.supabase.co)",
       "Bash(node -e \":*)",
       "Bash(node:*)",
-      "Bash(nslookup aws-0-ap-northeast-2.pooler.supabase.com)"
+      "Bash(nslookup aws-0-ap-northeast-2.pooler.supabase.com)",
+      "Bash(NODE_OPTIONS=\"--require dotenv/config\" npx tsx scripts/seed-local.mts)"
     ]
   }
 }
