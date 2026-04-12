@@ -30,7 +30,12 @@
       "Bash(node -e \":*)",
       "Bash(node:*)",
       "Bash(nslookup aws-0-ap-northeast-2.pooler.supabase.com)",
-      "Bash(NODE_OPTIONS=\"--require dotenv/config\" npx tsx scripts/seed-local.mts)"
+      "Bash(NODE_OPTIONS=\"--require dotenv/config\" npx tsx scripts/seed-local.mts)",
+      "Bash(cp \"assets/provide/Logo - Apolo Lawyers - 2021Aug14 - nen trong suot.PNG\" public/asset/logo-transparent.png)",
+      "Bash(cp \"assets/provide/Logo-Ccbe.png\" public/asset/logo-ccbe.png)",
+      "Bash(cp \"assets/provide/lien-doan-luat-su-viet-nam.png\" public/asset/logo-lsvn.png)",
+      "Bash(cp \"assets/provide/aea-01v001.svg\" public/asset/logo-aea.svg)",
+      "Bash(grep -n \"slugMap\\\\|viSlugs\\\\|enSlugs\\\\|slugToImage\" src/app/[locale]/linh-vuc-hanh-nghe/[slug]/page.tsx)"
     ]
   }
 }

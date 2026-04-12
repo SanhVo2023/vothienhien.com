@@ -9,7 +9,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "subtitle": "MANAGING PARTNER \u00b7 APOLO LAWYERS",
+    "subtitle": "MANAGING PARTNER · APOLO LAWYERS",
     "name": "Vo Thien Hien",
     "title": "Managing Partner · Apolo Lawyers",
     "nameEn": "Henry Vo",
@@ -46,6 +46,8 @@
     "corporateDesc": "Advising on formation, M&A, corporate governance, and foreign investment in Vietnam.",
     "labor": "Labor Disputes",
     "laborDesc": "Representing clients in labor disputes, employment contracts, and employee rights matters.",
+    "commercial": "Commercial Disputes",
+    "commercialDesc": "Representing clients in commercial litigation at courts and commercial arbitration proceedings.",
     "criminal": "Criminal Defense",
     "criminalDesc": "Defending clients in criminal cases, protecting their legal rights and interests.",
     "viewAll": "View All Practice Areas"
@@ -68,7 +70,7 @@
   "testimonial": {
     "quote": "Lawyer Hien not only understands the law but also deeply empathizes with his clients. His dedication and professionalism helped us navigate through the most complex dispute we have ever faced.",
     "author": "Nguyen Van Minh",
-    "role": "CEO, XYZ Corporation",
+    "role": "CEO, Samsung Electronics Vietnam",
     "accepting": "Currently accepting new matters"
   },
   "cta": {
@@ -92,6 +94,7 @@
       "corporate": "Corporate",
       "criminal": "Criminal",
       "labor": "Labor",
+      "commercial": "Commercial Disputes",
       "other": "Other"
     },
     "responseCommitment": "We will respond within 24 business hours"
@@ -100,7 +103,7 @@
     "copyright": "Copyright",
     "allRightsReserved": "All Rights Reserved",
     "managingPartner": "Managing Partner",
-    "firmName": "Apolo Lawyers LLC"
+    "firmName": "Apolo Lawyers - Solicitors & Litigators"
   },
   "common": {
     "readMore": "Read More",
@@ -116,7 +119,7 @@
     "memberships": "Memberships"
   },
   "meta": {
-    "defaultTitle": "Vo Thien Hien - Managing Partner | Apolo Lawyers",
+    "defaultTitle": "Attorney Vo Thien Hien - Managing Partner | Apolo Lawyers",
     "defaultDescription": "Vo Thien Hien - Managing Partner at Apolo Lawyers LLC. Specializing in civil law, land & real estate, corporate advisory, and litigation in Vietnam."
   }
 }

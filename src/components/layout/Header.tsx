@@ -52,7 +52,7 @@ export default function Header({ locale }: { locale: string }) {
                 alt="VH"
                 width={36}
                 height={36}
-                className="rounded-sm"
+                className="rounded-full"
               />
               <div className="flex flex-col">
                 <span

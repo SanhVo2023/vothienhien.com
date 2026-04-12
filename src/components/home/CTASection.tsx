@@ -59,7 +59,7 @@ export default async function CTASection() {
               <Button
                 variant="outline"
                 size="lg"
-                href="https://wa.me/84903419479"
+                href="https://wa.me/84913479179"
                 className="border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white"
               >
                 {t('whatsapp')}

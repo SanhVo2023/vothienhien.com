@@ -51,7 +51,7 @@ export default async function ContactPage({ params }: Props) {
       '@type': 'Person',
       name: 'Vo Thien Hien',
       jobTitle: isVi ? 'Luật sư Thành viên Điều hành' : 'Managing Partner',
-      telephone: '+84-28-xxxx-xxxx',
+      telephone: '+84913479179',
       email: 'hien.vo@apololawyers.com',
       url: 'https://vothienhien.com',
       worksFor: {
@@ -61,7 +61,7 @@ export default async function ContactPage({ params }: Props) {
       },
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Placeholder Address, District 1',
+        streetAddress: '108 Tran Dinh Xu Street, Cau Ong Lanh Ward',
         addressLocality: 'Ho Chi Minh City',
         addressCountry: 'VN',
       },
@@ -149,7 +149,18 @@ export default async function ContactPage({ params }: Props) {
                       <p className="text-xs uppercase tracking-wider text-text-secondary mb-1">
                         {isVi ? 'Công ty' : 'Firm'}
                       </p>
-                      <p className="text-primary font-medium">{t('footer.firmName')}</p>
+                      <p className="text-primary font-medium">
+                        {isVi ? 'Công ty Luật Apolo Lawyers' : 'Apolo Lawyers - Solicitors & Litigators'}
+                      </p>
+                      <div className="mt-3">
+                        <Image
+                          src="/asset/logo-transparent.png"
+                          alt="Apolo Lawyers - Solicitors & Litigators"
+                          width={120}
+                          height={48}
+                          className="opacity-80"
+                        />
+                      </div>
                     </div>
                   </div>
 
@@ -167,8 +178,8 @@ export default async function ContactPage({ params }: Props) {
                       </p>
                       <p className="text-primary">
                         {isVi
-                          ? 'Tầng X, Tòa nhà ABC, Đường XYZ, Quận 1, TP. Hồ Chí Minh'
-                          : 'Floor X, ABC Building, XYZ Street, District 1, Ho Chi Minh City'}
+                          ? '108 Trần Đình Xu, Phường Cầu Ông Lãnh, Quận 1, TP. Hồ Chí Minh'
+                          : '108 Tran Dinh Xu Street, Cau Ong Lanh Ward, District 1, Ho Chi Minh City, Vietnam'}
                       </p>
                     </div>
                   </div>
@@ -184,8 +195,8 @@ export default async function ContactPage({ params }: Props) {
                       <p className="text-xs uppercase tracking-wider text-text-secondary mb-1">
                         {isVi ? 'Điện thoại' : 'Phone'}
                       </p>
-                      <a href="tel:+842812345678" className="text-primary hover:text-accent transition-colors">
-                        +84 28 1234 5678
+                      <a href="tel:+84913479179" className="text-primary hover:text-accent transition-colors">
+                        {isVi ? '0913 479 179' : '(+84 913) 479 179'}
                       </a>
                     </div>
                   </div>
@@ -208,7 +219,7 @@ export default async function ContactPage({ params }: Props) {
                   {/* WhatsApp */}
                   <div className="mt-8 pt-6 border-t border-border-gold/20">
                     <a
-                      href="https://wa.me/84xxxxxxxxxx"
+                      href="https://wa.me/84913479179"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-3 bg-[#25D366] text-white px-6 py-3 font-medium hover:bg-[#20BD5C] transition-colors w-full justify-center"
@@ -251,9 +262,8 @@ export default async function ContactPage({ params }: Props) {
                 {isVi ? 'Văn phòng TP. Hồ Chí Minh' : 'Ho Chi Minh City Office'}
               </h3>
               <div className="space-y-3 text-text-secondary">
-                <p>{isVi ? 'Tầng X, Tòa nhà ABC' : 'Floor X, ABC Building'}</p>
-                <p>{isVi ? 'Đường XYZ, Quận 1' : 'XYZ Street, District 1'}</p>
-                <p>{isVi ? 'TP. Hồ Chí Minh, Việt Nam' : 'Ho Chi Minh City, Vietnam'}</p>
+                <p>{isVi ? '108 Trần Đình Xu, Phường Cầu Ông Lãnh' : '108 Tran Dinh Xu Street, Cau Ong Lanh Ward'}</p>
+                <p>{isVi ? 'Quận 1, TP. Hồ Chí Minh, Việt Nam' : 'District 1, Ho Chi Minh City, Vietnam'}</p>
               </div>
               <div className="mt-4 pt-4 border-t border-border-gold/20">
                 <p className="text-sm text-text-secondary">

@@ -12,6 +12,7 @@ const practiceAreas = [
   { key: 'land', image: IMAGES.practiceLand, slug: 'tranh-chap-dat-dai' },
   { key: 'family', image: IMAGES.practiceFamily, slug: 'hon-nhan-gia-dinh' },
   { key: 'corporate', image: IMAGES.practiceCorporate, slug: 'luat-doanh-nghiep' },
+  { key: 'commercial', image: IMAGES.practiceCivil, slug: 'tranh-chap-thuong-mai' },
   { key: 'labor', image: IMAGES.practiceLabor, slug: 'tranh-chap-lao-dong' },
   { key: 'criminal', image: IMAGES.practiceCriminal, slug: 'luat-hinh-su' },
 ] as const;

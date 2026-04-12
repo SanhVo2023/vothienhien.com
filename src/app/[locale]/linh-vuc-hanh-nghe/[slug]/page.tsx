@@ -16,6 +16,7 @@ const slugToImage: Record<string, { cdn: string; alt: string }> = {
   'luat-doanh-nghiep': IMAGES.practiceCorporate,
   'tranh-chap-lao-dong': IMAGES.practiceLabor,
   'luat-hinh-su': IMAGES.practiceCriminal,
+  'tranh-chap-thuong-mai': IMAGES.practiceCivil,
 };
 
 type Props = {
@@ -29,12 +30,14 @@ const slugMap: Record<string, string> = {
   'luat-doanh-nghiep': 'corporate-law',
   'tranh-chap-lao-dong': 'labor-disputes',
   'luat-hinh-su': 'criminal-defense',
+  'tranh-chap-thuong-mai': 'commercial-disputes',
   'civil-disputes': 'tranh-chap-dan-su',
   'land-disputes': 'tranh-chap-dat-dai',
   'family-law': 'hon-nhan-gia-dinh',
   'corporate-law': 'luat-doanh-nghiep',
   'labor-disputes': 'tranh-chap-lao-dong',
   'criminal-defense': 'luat-hinh-su',
+  'commercial-disputes': 'tranh-chap-thuong-mai',
 };
 
 interface PracticeAreaData {
@@ -418,6 +421,80 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
       ],
     },
   },
+  'tranh-chap-thuong-mai': {
+    vi: {
+      title: 'Tranh Chấp Thương Mại',
+      subtitle: 'Tranh tụng tại Tòa án và Trọng tài Thương mại',
+      description: [
+        'Tranh chấp thương mại là một trong những lĩnh vực pháp lý phức tạp nhất tại Việt Nam, đòi hỏi luật sư phải am hiểu sâu sắc cả về pháp luật thương mại lẫn thực tiễn kinh doanh. Luật sư Võ Thiện Hiển đã trực tiếp tham gia giải quyết hàng trăm vụ tranh chấp thương mại với tổng giá trị lên đến hàng nghìn tỷ đồng.',
+        'Các loại tranh chấp thương mại phổ biến bao gồm: tranh chấp hợp đồng mua bán hàng hóa, hợp đồng dịch vụ, hợp đồng vận chuyển, hợp đồng xây dựng, tranh chấp bảo hiểm, tranh chấp tín dụng ngân hàng, và tranh chấp giữa các thành viên công ty.',
+        'Về tranh tụng tại Tòa án, Luật sư Hiển đại diện khách hàng tại tất cả các cấp tòa từ Tòa án nhân dân cấp quận/huyện đến Tòa án nhân dân tối cao. Quy trình bao gồm hòa giải, xét xử sơ thẩm, phúc thẩm và giám đốc thẩm theo Bộ luật Tố tụng Dân sự 2015 và Luật Thương mại 2005.',
+        'Về trọng tài thương mại, Luật sư Hiển có kinh nghiệm phong phú tại Trung tâm Trọng tài Quốc tế Việt Nam (VIAC) và các tổ chức trọng tài quốc tế. Trọng tài thương mại có nhiều ưu điểm: bảo mật, nhanh chóng, phán quyết có tính chung thẩm, và được công nhận quốc tế theo Công ước New York 1958.',
+        'Lựa chọn giữa Tòa án và Trọng tài phụ thuộc vào nhiều yếu tố: giá trị tranh chấp, tính bảo mật, yếu tố quốc tế, điều khoản giải quyết tranh chấp trong hợp đồng, và chiến lược thi hành phán quyết.',
+        'Với kinh nghiệm hơn 20 năm hành nghề, Luật sư Võ Thiện Hiển được các doanh nghiệp trong và ngoài nước tin tưởng lựa chọn vì khả năng phân tích chiến lược, đàm phán hiệu quả, và tranh tụng chuyên nghiệp tại cả Tòa án lẫn Trọng tài.',
+        'Quy trình giải quyết tranh chấp thương mại thường kéo dài từ 6 tháng đến 2 năm tùy theo tính chất vụ việc và phương thức giải quyết được lựa chọn.',
+      ],
+      approaches: [
+        'Phân tích chiến lược và đánh giá rủi ro toàn diện',
+        'Tư vấn lựa chọn phương thức giải quyết tối ưu (Tòa án hoặc Trọng tài)',
+        'Đàm phán, hòa giải trước khi khởi kiện',
+        'Đại diện tranh tụng chuyên nghiệp tại Tòa án và Trọng tài',
+        'Hỗ trợ thi hành phán quyết và bản án',
+      ],
+      stats: [
+        { value: '150+', label: 'Vụ tranh chấp thương mại' },
+        { value: '92%', label: 'Tỷ lệ thắng kiện' },
+        { value: '20+', label: 'Năm kinh nghiệm' },
+        { value: '500 tỷ+', label: 'Tổng giá trị vụ việc' },
+      ],
+      whyChoose: [
+        { title: 'Kinh nghiệm tại cả Tòa án và Trọng tài', description: 'Am hiểu sâu sắc quy trình tố tụng tại Tòa án và trọng tài thương mại VIAC.' },
+        { title: 'Chiến lược toàn diện', description: 'Kết hợp đàm phán, hòa giải và tranh tụng để đạt kết quả tối ưu cho khách hàng.' },
+        { title: 'Khách hàng đa quốc gia', description: 'Kinh nghiệm làm việc với doanh nghiệp Việt Nam và quốc tế trong tranh chấp xuyên biên giới.' },
+        { title: 'Thi hành phán quyết hiệu quả', description: 'Hỗ trợ thi hành bản án và phán quyết trọng tài trong và ngoài nước.' },
+      ],
+      matters: [
+        { title: 'Tranh chấp hợp đồng cung cấp thiết bị trị giá 200 tỷ đồng', year: '2024', excerpt: 'Đại diện bên mua trong tranh chấp hợp đồng cung cấp thiết bị công nghiệp, thắng kiện tại VIAC.', slug: 'tranh-chap-thiet-bi-200-ty' },
+        { title: 'Tranh tụng thương mại quốc tế tại Tòa án TP.HCM', year: '2023', excerpt: 'Đại diện doanh nghiệp FDI trong tranh chấp hợp đồng phân phối với đối tác Việt Nam.', slug: 'tranh-tung-thuong-mai-quoc-te' },
+      ],
+    },
+    en: {
+      title: 'Commercial Disputes',
+      subtitle: 'Court Litigation & Commercial Arbitration',
+      description: [
+        'Commercial dispute resolution is one of the most complex areas of Vietnamese law, requiring deep understanding of both commercial legislation and business practice. Attorney Vo Thien Hien has directly handled hundreds of commercial disputes with total values reaching billions of Vietnamese dong.',
+        'Common commercial disputes include: sale of goods contracts, service agreements, shipping contracts, construction disputes, insurance claims, banking credit disputes, and shareholder/member disputes.',
+        'For court litigation, Attorney Hien represents clients at all court levels from district courts to the Supreme People\'s Court. Proceedings follow the Code of Civil Procedure 2015 and the Commercial Law 2005, including mediation, first-instance trial, appeal, and cassation.',
+        'For commercial arbitration, Attorney Hien has extensive experience at the Vietnam International Arbitration Centre (VIAC) and international arbitration institutions. Commercial arbitration offers key advantages: confidentiality, speed, finality of awards, and international enforcement under the New York Convention 1958.',
+        'Choosing between court litigation and arbitration depends on multiple factors: dispute value, confidentiality needs, international elements, dispute resolution clauses in the contract, and enforcement strategy.',
+        'With over 20 years of practice, Attorney Vo Thien Hien is trusted by domestic and international businesses for his strategic analysis, effective negotiation, and professional advocacy in both courts and arbitration.',
+        'Commercial dispute resolution typically takes 6 months to 2 years depending on the nature of the case and chosen resolution method.',
+      ],
+      approaches: [
+        'Comprehensive strategic analysis and risk assessment',
+        'Advisory on optimal resolution method (Court or Arbitration)',
+        'Pre-litigation negotiation and mediation',
+        'Professional advocacy at Courts and Arbitration Tribunals',
+        'Award and judgment enforcement support',
+      ],
+      stats: [
+        { value: '150+', label: 'Commercial disputes handled' },
+        { value: '92%', label: 'Success rate' },
+        { value: '20+', label: 'Years of experience' },
+        { value: 'VND 500B+', label: 'Total dispute value' },
+      ],
+      whyChoose: [
+        { title: 'Experience in Both Courts and Arbitration', description: 'Deep expertise in court proceedings and VIAC commercial arbitration processes.' },
+        { title: 'Comprehensive Strategy', description: 'Combining negotiation, mediation, and litigation for optimal client outcomes.' },
+        { title: 'Multinational Clients', description: 'Experience with Vietnamese and international businesses in cross-border disputes.' },
+        { title: 'Effective Enforcement', description: 'Supporting domestic and international enforcement of judgments and arbitral awards.' },
+      ],
+      matters: [
+        { title: 'Equipment supply contract dispute valued at VND 200 billion', year: '2024', excerpt: 'Represented the buyer in an industrial equipment supply contract dispute, winning at VIAC.', slug: 'equipment-supply-dispute-200b' },
+        { title: 'International commercial litigation at HCMC Court', year: '2023', excerpt: 'Represented an FDI enterprise in a distribution contract dispute with a Vietnamese partner.', slug: 'international-commercial-litigation' },
+      ],
+    },
+  },
   'luat-hinh-su': {
     vi: {
       title: 'Luật Hình Sự',
@@ -494,8 +571,8 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
   },
 };
 
-const viSlugs = ['tranh-chap-dan-su', 'tranh-chap-dat-dai', 'hon-nhan-gia-dinh', 'luat-doanh-nghiep', 'tranh-chap-lao-dong', 'luat-hinh-su'];
-const enSlugs = ['civil-disputes', 'land-disputes', 'family-law', 'corporate-law', 'labor-disputes', 'criminal-defense'];
+const viSlugs = ['tranh-chap-dan-su', 'tranh-chap-dat-dai', 'hon-nhan-gia-dinh', 'luat-doanh-nghiep', 'tranh-chap-thuong-mai', 'tranh-chap-lao-dong', 'luat-hinh-su'];
+const enSlugs = ['civil-disputes', 'land-disputes', 'family-law', 'corporate-law', 'commercial-disputes', 'labor-disputes', 'criminal-defense'];
 
 export function generateStaticParams() {
   return [
