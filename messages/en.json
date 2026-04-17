@@ -12,7 +12,6 @@
     "subtitle": "MANAGING PARTNER · APOLO LAWYERS",
     "name": "Vo Thien Hien",
     "title": "Managing Partner · Apolo Lawyers",
-    "nameEn": "Henry Vo",
     "tagline": "Trusted legal counsel for businesses and individuals",
     "cta": "Schedule a Consultation"
   },
@@ -32,7 +31,7 @@
     "latestPublications": "Latest Publications",
     "latestPublicationsSubtitle": "Insights & Thought Leadership",
     "latestPublicationsDescription": "Sharing legal knowledge and in-depth perspectives",
-    "about": "About Lawyer Vo Thien Hien",
+    "about": "About Vo Thien Hien",
     "contact": "Contact Us"
   },
   "practiceAreas": {
@@ -67,11 +66,40 @@
     "date3": "February 10, 2026",
     "viewAll": "View All Publications"
   },
-  "testimonial": {
-    "quote": "Lawyer Hien not only understands the law but also deeply empathizes with his clients. His dedication and professionalism helped us navigate through the most complex dispute we have ever faced.",
-    "author": "Nguyen Van Minh",
-    "role": "CEO, Samsung Electronics Vietnam",
-    "accepting": "Currently accepting new matters"
+  "testimonials": {
+    "sectionLabel": "Client Voices",
+    "items": [
+      {
+        "quote": "When a supplier breached our distribution agreement, Attorney Vo Thien Hien guided us through arbitration with clarity and calm. He recovered nearly the full contract value in under eight months.",
+        "author": "Raj Patel",
+        "initials": "RP",
+        "role": "Founder, Patel & Co Trading (HCMC SME)"
+      },
+      {
+        "quote": "My divorce involved property in two countries and a shared business. Vo Thien Hien's team explained each step in English, worked closely with my foreign counsel, and protected my interests throughout.",
+        "author": "David Chen",
+        "initials": "DC",
+        "role": "American expat, Thao Dien"
+      },
+      {
+        "quote": "I was buying my first apartment in Ho Chi Minh City and was worried about the paperwork. Vo Thien Hien reviewed the developer's contract, flagged two risky clauses, and negotiated them out before I signed.",
+        "author": "Hannah Lindqvist",
+        "initials": "HL",
+        "role": "Consultant, Nordic–Vietnam trade"
+      },
+      {
+        "quote": "After my father passed away, our family had inherited land in three provinces and no will. Vo Thien Hien patiently brought everyone to an agreement without a single court hearing.",
+        "author": "Emily Tran",
+        "initials": "ET",
+        "role": "Vietnamese-Australian, family estate matter"
+      },
+      {
+        "quote": "Opening a foreign-owned restaurant in District 3 was more complicated than I expected. Vo Thien Hien handled the investment registration, lease review and employment contracts so I could focus on the kitchen.",
+        "author": "Marco Vitale",
+        "initials": "MV",
+        "role": "Owner, Italian restaurant, District 3"
+      }
+    ]
   },
   "cta": {
     "heading": "Ready to discuss your legal matter?",
@@ -119,7 +147,7 @@
     "memberships": "Memberships"
   },
   "meta": {
-    "defaultTitle": "Attorney Vo Thien Hien - Managing Partner | Apolo Lawyers",
+    "defaultTitle": "Vo Thien Hien - Managing Partner | Apolo Lawyers",
     "defaultDescription": "Vo Thien Hien - Managing Partner at Apolo Lawyers LLC. Specializing in civil law, land & real estate, corporate advisory, and litigation in Vietnam."
   }
 }

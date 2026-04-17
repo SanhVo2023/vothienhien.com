@@ -56,6 +56,8 @@ export default function Footer({ locale }: { locale: string }) {
               <p className="text-[10px] uppercase tracking-[0.2em] text-white/30 mb-2">
                 {locale === 'vi' ? 'Thành viên của' : 'A member of'}
               </p>
+              {/* Apolo Lawyers firm logo. Owner (F-005) will provide a revised asset;
+                  drop the new PNG at /public/asset/logo-transparent.png to swap. */}
               <Image
                 src="/asset/logo-transparent.png"
                 alt="Apolo Lawyers - Solicitors & Litigators"

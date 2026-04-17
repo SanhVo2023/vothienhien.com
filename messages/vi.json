@@ -11,7 +11,6 @@
   "hero": {
     "subtitle": "LUẬT SƯ ĐIỀU HÀNH · APOLO LAWYERS",
     "name": "Võ Thiện Hiển",
-    "nameEn": "Henry Vo",
     "tagline": "Đồng hành pháp lý đáng tin cậy cho doanh nghiệp và cá nhân",
     "cta": "Đặt Lịch Tư Vấn"
   },
@@ -66,11 +65,40 @@
     "date3": "10 Tháng 2, 2026",
     "viewAll": "Xem Tất Cả Bài Viết"
   },
-  "testimonial": {
-    "quote": "Luật sư Hiển không chỉ am hiểu pháp luật mà còn thấu hiểu tâm tư của thân chủ. Sự tận tâm và chuyên nghiệp của anh đã giúp chúng tôi vượt qua vụ tranh chấp phức tạp nhất.",
-    "author": "Nguyễn Văn Minh",
-    "role": "Giám đốc Điều hành, Samsung Electronics Vietnam",
-    "accepting": "Hiện đang nhận vụ việc mới"
+  "testimonials": {
+    "sectionLabel": "Chia sẻ của thân chủ",
+    "items": [
+      {
+        "quote": "Khi đối tác đơn phương vi phạm hợp đồng phân phối, Luật sư Võ Thiện Hiển đã đại diện chúng tôi tại trọng tài thương mại một cách vững vàng và rõ ràng. Chưa đầy tám tháng, chúng tôi thu hồi gần như toàn bộ giá trị hợp đồng.",
+        "author": "Nguyễn Thị Mai Phương",
+        "initials": "MP",
+        "role": "Giám đốc, công ty phân phối nhỏ tại Quận Bình Thạnh"
+      },
+      {
+        "quote": "Vụ ly hôn của tôi có tranh chấp tài sản và quyền nuôi con phức tạp. Luật sư Hiển giải thích từng bước một cách bình tĩnh, đàm phán rất khéo và giúp gia đình tôi đi đến thoả thuận mà không phải ra toà.",
+        "author": "Trần Văn Đạt",
+        "initials": "TĐ",
+        "role": "Kỹ sư phần mềm, Quận 7"
+      },
+      {
+        "quote": "Gia đình tôi đã tranh chấp ranh giới đất với hàng xóm nhiều năm không giải quyết được. Luật sư Hiển đã làm việc với Văn phòng Đăng ký đất đai, chuẩn bị hồ sơ chỉn chu và đại diện chúng tôi hoà giải thành công tại UBND xã.",
+        "author": "Lê Hoàng Anh",
+        "initials": "HA",
+        "role": "Hộ gia đình tại Bình Dương"
+      },
+      {
+        "quote": "Một nhân viên cũ khởi kiện đòi bồi thường rất lớn, trong khi chúng tôi đã làm đúng quy định. Luật sư Hiển rà soát toàn bộ hồ sơ lao động, xây dựng lập luận chặt chẽ và bảo vệ thành công công ty tôi tại toà án.",
+        "author": "Phạm Quốc Bảo",
+        "initials": "QB",
+        "role": "Chủ cửa hàng nội thất, Quận 1"
+      },
+      {
+        "quote": "Tôi mua căn hộ chung cư đầu tiên và rất lo về thủ tục. Luật sư Hiển đã kiểm tra kỹ hợp đồng mua bán của chủ đầu tư, cảnh báo hai điều khoản rủi ro và đàm phán để chỉnh lại trước khi tôi ký. Tôi an tâm hẳn.",
+        "author": "Vũ Thị Lan",
+        "initials": "VL",
+        "role": "Người mua nhà lần đầu, Quận 2"
+      }
+    ]
   },
   "cta": {
     "heading": "Sẵn sàng thảo luận vấn đề pháp lý của bạn?",

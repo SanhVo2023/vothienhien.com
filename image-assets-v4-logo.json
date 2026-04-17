@@ -1,0 +1,73 @@
+{
+  "site": "vothienhien.com",
+  "generated_by": "site-agent",
+  "created_at": "2026-04-17",
+  "batch": "v4-personal-logo-redesign",
+  "notes": "Personal logo redesign for Luật sư Võ Thiện Hiển per owner feedback (F-004): 'gentle curves, elegant'. Generate ALL variations; owner will select one. Each prompt yields a single monogram mark on a transparent-looking backdrop so it can be vectorized/cleaned up afterward. Keep compositions centered, symmetrical, and suitable for use at 48px (header), 400px (hero portrait badge), and 1200px (OG image). Deliver as PNG with an alpha channel where possible. After selection, the chosen winner will replace src/lib/images.ts::logo and the favicon under public/images/icon/.",
+  "design_direction": {
+    "aesthetic": "Executive luxury, restrained elegance, old-money-European. Avoid tech / startup / minimalist-geometric looks. Think: private banking, haute couture maison, heritage law firms (Slaughter and May, Cravath).",
+    "letterforms": "Monogram uses either VH (Võ Hiển) or VTH (Võ Thiện Hiển). The letters should feel calligraphic — as if drawn by a trained hand rather than assembled from geometry.",
+    "curves": "PRIMARY REQUIREMENT from owner. Gentle arcs, graceful terminals, serif-style flourishes. No sharp corners. Any intersections should kiss softly, not cut.",
+    "weight": "Hairline to medium. Avoid bold / heavy strokes. Contrast in stroke width (classic Didone or Copperplate traits) is welcome.",
+    "palette": "Gold (#c5a55a) as primary, on off-black / charcoal (#1a1a1a) or cream (#f5f0e6). Keep the logo color-legible in both directions — it will sit on a dark header AND on a cream print business card.",
+    "negative_space": "Encouraged. A clever ligature between V and H that creates intentional negative space reads more elegant than a full fill.",
+    "what_to_avoid": [
+      "gothic/blackletter (too heavy)",
+      "script fonts that feel like wedding invitations",
+      "geometric sans (Avenir/Futura vibe)",
+      "rainbow gradients or any color beyond the gold/dark/cream palette",
+      "drop shadows, glows, 3D bevels",
+      "laurel wreaths, gavels, scales, or other literal legal iconography — this is a personal mark, not a firm crest",
+      "the word 'LAW' or 'ATTORNEY' — no typography beyond the monogram itself"
+    ]
+  },
+  "images": [
+    {
+      "id": "logo-variation-1-ligature-vh",
+      "name": "Logo Variation 1 — Ligature VH (Didone flourish)",
+      "type": "text-to-image",
+      "prompt": "Elegant monogram logo of the letters V and H interlocked as a calligraphic ligature, rendered in refined gold against a pure black square background. Didone-style letterforms with high stroke contrast: hairline horizontals and medium-weight verticals. The right leg of the V flows gracefully into the left stem of the H as a single continuous curve, with soft rounded terminals. Gentle swash extending from the crossbar of the H. Symmetric and balanced composition, centered. Feels hand-drawn by a master engraver. No text, no border, no shadow, no gradient. Style references: private banking logotype, haute horlogerie brand mark. Ultra-sharp vector-ready quality.",
+      "category": "brand",
+      "aspect": "1:1",
+      "width": 2000,
+      "priority": "high"
+    },
+    {
+      "id": "logo-variation-2-copperplate-vh",
+      "name": "Logo Variation 2 — Copperplate VH (restrained swash)",
+      "type": "text-to-image",
+      "prompt": "Personal monogram of the letters V and H in a Copperplate engraving style, rendered in warm gold on a deep charcoal background. The letters sit side by side rather than overlapping, joined by a single thin horizontal ligature at mid-height. Graceful swash curves extend from the top of the V and the foot of the H, mirror-image. Small serifs on all terminals. Stroke contrast is elegant but not extreme. Feels like a monogram embossed on a leather portfolio or an ex libris bookplate. Symmetric, centered, clean negative space. Vector-clean edges, no anti-aliasing artifacts, no shadow.",
+      "category": "brand",
+      "aspect": "1:1",
+      "width": 2000,
+      "priority": "high"
+    },
+    {
+      "id": "logo-variation-3-enclosed-vth",
+      "name": "Logo Variation 3 — VTH inside a soft oval cartouche",
+      "type": "text-to-image",
+      "prompt": "A softly rounded vertical oval cartouche drawn in a single gold hairline, containing the initials V·T·H stacked or interlocked inside it. The oval itself is gentle and slightly tall, never geometric-circle perfect. The letters are in a refined serif with subtle calligraphic flourishes — feels like a 19th-century notary seal or a European family crest minus the iconography. Two thin decorative dots separating V, T, and H. Gold foil appearance on a cream paper background. Symmetric, centered, breathable margins around the cartouche. No text outside the cartouche, no drop shadow, no texture noise.",
+      "category": "brand",
+      "aspect": "1:1",
+      "width": 2000,
+      "priority": "high"
+    },
+    {
+      "id": "logo-variation-4-single-curve-vh",
+      "name": "Logo Variation 4 — Minimalist single-curve VH",
+      "type": "text-to-image",
+      "prompt": "Highly minimalist monogram where a single continuous gold brushstroke traces out both V and H with one flowing gesture. The V is formed by an ascending-then-descending diagonal; the line continues into the H as a soft loop, then finishes with a gentle curve. Weight is uniformly medium — think brush-pen calligraphy, not Western serif. Warm metallic gold on a deep midnight-navy background. Feels contemporary-luxury, sculptural, almost like a signature. Symmetric balance but asymmetric linework. Centered composition, generous negative space. No shadows, no multi-color, no extra marks.",
+      "category": "brand",
+      "aspect": "1:1",
+      "width": 2000,
+      "priority": "high"
+    }
+  ],
+  "post_generation_tasks": [
+    "Owner (Mr Hiển) selects the winning variation.",
+    "Vectorize the selected PNG (Illustrator Image Trace or manual redraw) and save as SVG.",
+    "Export PNG variants: 48×48 (header), 400×400 (hero portrait badge), 1200×630 OG image (monogram centered on dark backdrop with name/title typography added in editor).",
+    "Replace src/lib/images.ts::logo entry and public/images/icon/favicon-vh.webp.",
+    "File a follow-up feedback item (F-NNN) confirming the chosen variation and linking the commit."
+  ]
+}

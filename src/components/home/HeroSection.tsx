@@ -70,15 +70,8 @@ export default function HeroSection() {
             style={{ animationDelay: '0.8s' }}
           />
 
-          <p
-            className="hero-fade font-[family-name:var(--font-accent)] italic text-2xl md:text-3xl lg:text-5xl text-white/40 mt-5"
-            style={{ animationDelay: '0.7s' }}
-          >
-            {t('nameEn')}
-          </p>
-
           {/* Gold dot divider */}
-          <div className="flex items-center gap-3 mt-6">
+          <div className="flex items-center gap-3 mt-8">
             <span className="w-1 h-1 rounded-full bg-accent" />
           </div>
 

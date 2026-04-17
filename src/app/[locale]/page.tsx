@@ -44,14 +44,14 @@ export default async function HomePage({ params }: Props) {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: 'Vo Thien Hien - Attorney at Law',
+      name: 'Vo Thien Hien - Managing Partner',
       alternateName: 'Luật sư Võ Thiện Hiển',
       url: 'https://vothienhien.com',
       inLanguage: ['vi', 'en'],
       publisher: {
         '@type': 'Person',
         name: 'Vo Thien Hien',
-        alternateName: 'Henry Vo',
+        alternateName: 'Võ Thiện Hiển',
         jobTitle: 'Managing Partner',
         worksFor: {
           '@type': 'LegalService',

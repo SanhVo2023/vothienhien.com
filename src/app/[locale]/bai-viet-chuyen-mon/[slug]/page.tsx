@@ -332,7 +332,7 @@ export default async function PublicationDetailPage({ params }: Props) {
       author: {
         '@type': 'Person',
         name: 'Vo Thien Hien',
-        jobTitle: isVi ? 'Luật sư Thành viên Điều hành' : 'Managing Partner',
+        jobTitle: isVi ? 'Luật sư Điều hành' : 'Managing Partner',
         url: 'https://vothienhien.com',
       },
       publisher: {
@@ -416,7 +416,7 @@ export default async function PublicationDetailPage({ params }: Props) {
                 {isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}
               </p>
               <p className="text-text-secondary text-sm">
-                {isVi ? 'Luật sư Thành viên Điều hành - Apolo Lawyers' : 'Managing Partner - Apolo Lawyers'}
+                {isVi ? 'Luật sư Điều hành - Apolo Lawyers' : 'Managing Partner - Apolo Lawyers'}
               </p>
             </div>
           </div>
@@ -472,12 +472,12 @@ export default async function PublicationDetailPage({ params }: Props) {
                 {isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}
               </p>
               <p className="text-accent text-sm font-medium mt-1">
-                {isVi ? 'Luật sư Thành viên Điều hành - Apolo Lawyers' : 'Managing Partner - Apolo Lawyers'}
+                {isVi ? 'Luật sư Điều hành - Apolo Lawyers' : 'Managing Partner - Apolo Lawyers'}
               </p>
               <p className="text-text-secondary text-sm mt-3 leading-relaxed">
                 {isVi
                   ? 'Hơn 15 năm kinh nghiệm hành nghề luật sư. Chuyên tư vấn dân sự, đất đai, doanh nghiệp và tranh tụng tại các cấp tòa án. Luật sư Hiển đã xử lý thành công hàng trăm vụ việc trong nhiều lĩnh vực pháp lý khác nhau.'
-                  : 'Over 15 years of legal practice experience. Specializing in civil, land, corporate advisory, and litigation at all court levels. Attorney Hien has successfully handled hundreds of matters across diverse legal domains.'}
+                  : 'Over 15 years of legal practice experience. Specializing in civil, land, corporate advisory, and litigation at all court levels. Attorney Vo Thien Hien has successfully handled hundreds of matters across diverse legal domains.'}
               </p>
             </div>
           </div>

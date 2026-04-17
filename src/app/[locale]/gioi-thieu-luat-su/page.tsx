@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? 'Giới Thiệu Luật Sư Võ Thiện Hiển | Apolo Lawyers'
       : 'Attorney Profile - Vo Thien Hien | Apolo Lawyers',
     description: isVi
-      ? 'Tìm hiểu về Luật sư Võ Thiện Hiển - Luật sư Thành viên Điều hành tại Công ty Luật TNHH Apolo Lawyers. Hơn 15 năm kinh nghiệm trong lĩnh vực pháp luật dân sự, đất đai và doanh nghiệp.'
+      ? 'Tìm hiểu về Luật sư Võ Thiện Hiển - Luật sư Điều hành tại Công ty Luật TNHH Apolo Lawyers. Hơn 15 năm kinh nghiệm trong lĩnh vực pháp luật dân sự, đất đai và doanh nghiệp.'
       : 'Learn about Attorney Vo Thien Hien - Managing Partner at Apolo Lawyers LLC. Over 15 years of experience in civil law, land disputes, and corporate advisory in Vietnam.',
     alternates: {
       canonical: isVi ? '/vi/gioi-thieu-luat-su' : '/en/lawyer-profile',
@@ -40,7 +40,7 @@ const timelineData = {
     { year: '2011', title: 'Gia nhập Đoàn Luật sư', description: 'Trở thành thành viên Đoàn Luật sư TP. Hồ Chí Minh' },
     { year: '2014', title: 'Luật sư Thành viên', description: 'Trở thành Luật sư Thành viên tại Công ty Luật TNHH Apolo Lawyers' },
     { year: '2018', title: 'Thạc sĩ Luật Kinh tế', description: 'Hoàn thành chương trình Thạc sĩ Luật Kinh tế tại Đại học Luật TP. Hồ Chí Minh' },
-    { year: '2020', title: 'Luật sư Thành viên Điều hành', description: 'Được bổ nhiệm làm Luật sư Thành viên Điều hành, dẫn dắt đội ngũ luật sư và mở rộng lĩnh vực hành nghề' },
+    { year: '2020', title: 'Luật sư Điều hành', description: 'Được bổ nhiệm làm Luật sư Điều hành, dẫn dắt đội ngũ luật sư và mở rộng lĩnh vực hành nghề' },
   ],
   en: [
     { year: '2008', title: 'Bachelor of Laws', description: 'Ho Chi Minh City University of Law - Bachelor of Laws, Honors' },
@@ -95,8 +95,8 @@ export default async function LawyerProfilePage({ params }: Props) {
       '@context': 'https://schema.org',
       '@type': 'Person',
       name: 'Vo Thien Hien',
-      alternateName: 'Vo Thien Hien (Henry Vo)',
-      jobTitle: isVi ? 'Luật sư Thành viên Điều hành' : 'Managing Partner',
+      alternateName: 'Võ Thiện Hiển',
+      jobTitle: isVi ? 'Luật sư Điều hành' : 'Managing Partner',
       worksFor: {
         '@type': 'LegalService',
         name: 'Apolo Lawyers',
@@ -130,7 +130,7 @@ export default async function LawyerProfilePage({ params }: Props) {
             {isVi ? 'Võ Thiện Hiển' : 'Vo Thien Hien'}
           </h1>
           <p className="text-xl text-white/80 font-light">
-            {isVi ? 'Luật sư Thành viên Điều hành · Apolo Lawyers' : 'Managing Partner · Apolo Lawyers'}
+            {isVi ? 'Luật sư Điều hành · Apolo Lawyers' : 'Managing Partner · Apolo Lawyers'}
           </p>
           <div className="flex justify-center mt-6">
             <GoldDivider width="w-24 mx-auto" />
@@ -149,7 +149,7 @@ export default async function LawyerProfilePage({ params }: Props) {
             {isVi ? (
               <>
                 <p>
-                  Luật sư Võ Thiện Hiển (Henry Vo) là Luật sư Thành viên Điều hành tại Công ty Luật TNHH Apolo Lawyers, một trong những công ty luật uy tín hàng đầu tại TP. Hồ Chí Minh. Với hơn 15 năm kinh nghiệm hành nghề, Luật sư Hiển đã trực tiếp tham gia giải quyết hàng trăm vụ việc pháp lý phức tạp trong các lĩnh vực dân sự, đất đai, doanh nghiệp và hình sự.
+                  Luật sư Võ Thiện Hiển là Luật sư Điều hành tại Công ty Luật TNHH Apolo Lawyers, một trong những công ty luật uy tín hàng đầu tại TP. Hồ Chí Minh. Với hơn 15 năm kinh nghiệm hành nghề, Luật sư Hiển đã trực tiếp tham gia giải quyết hàng trăm vụ việc pháp lý phức tạp trong các lĩnh vực dân sự, đất đai, doanh nghiệp và hình sự.
                 </p>
                 <p>
                   Tốt nghiệp xuất sắc từ Đại học Luật TP. Hồ Chí Minh và hoàn thành chương trình Thạc sĩ Luật Kinh tế, Luật sư Hiển kết hợp nền tảng học thuật vững chắc với kinh nghiệm thực tiễn phong phú. Ông được biết đến với phong cách tư vấn chuyên nghiệp, tận tâm và luôn đặt quyền lợi của khách hàng lên hàng đầu.
@@ -161,13 +161,13 @@ export default async function LawyerProfilePage({ params }: Props) {
             ) : (
               <>
                 <p>
-                  Attorney Vo Thien Hien (Henry Vo) is the Managing Partner at Apolo Lawyers LLC, one of the leading law firms in Ho Chi Minh City, Vietnam. With over 15 years of legal practice, Attorney Hien has directly handled hundreds of complex legal matters across civil law, land disputes, corporate advisory, and criminal defense.
+                  Attorney Vo Thien Hien is the Managing Partner at Apolo Lawyers LLC, one of the leading law firms in Ho Chi Minh City, Vietnam. With over 15 years of legal practice, Attorney Vo Thien Hien has directly handled hundreds of complex legal matters across civil law, land disputes, corporate advisory, and criminal defense.
                 </p>
                 <p>
-                  Having graduated with honors from Ho Chi Minh City University of Law and completed a Master of Economic Law, Attorney Hien combines a strong academic foundation with extensive practical experience. He is recognized for his professional, dedicated approach and unwavering commitment to protecting his clients&apos; interests.
+                  Having graduated with honors from Ho Chi Minh City University of Law and completed a Master of Economic Law, Attorney Vo Thien Hien combines a strong academic foundation with extensive practical experience. He is recognized for his professional, dedicated approach and unwavering commitment to protecting his clients&apos; interests.
                 </p>
                 <p>
-                  Beyond his legal practice, Attorney Hien actively participates in legal education, publishes professional legal articles, and contributes to legislative drafting consultations. He holds memberships in numerous domestic and international professional organizations.
+                  Beyond his legal practice, Attorney Vo Thien Hien actively participates in legal education, publishes professional legal articles, and contributes to legislative drafting consultations. He holds memberships in numerous domestic and international professional organizations.
                 </p>
               </>
             )}

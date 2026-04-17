@@ -7,15 +7,20 @@ import Image from 'next/image';
 import { IMAGES } from '@/lib/images';
 import SectionHeading from '@/components/ui/SectionHeading';
 
+// Home page surfaces the first 6 for a clean 3×2 grid. The full 7-practice
+// listing (including anything beyond this slice) lives on /linh-vuc-hanh-nghe.
+// Reorder this array to change which 6 appear on the home page.
 const practiceAreas = [
   { key: 'civil', image: IMAGES.practiceCivil, slug: 'tranh-chap-dan-su' },
+  { key: 'commercial', image: IMAGES.practiceCivil, slug: 'tranh-chap-thuong-mai' },
+  { key: 'corporate', image: IMAGES.practiceCorporate, slug: 'luat-doanh-nghiep' },
   { key: 'land', image: IMAGES.practiceLand, slug: 'tranh-chap-dat-dai' },
   { key: 'family', image: IMAGES.practiceFamily, slug: 'hon-nhan-gia-dinh' },
-  { key: 'corporate', image: IMAGES.practiceCorporate, slug: 'luat-doanh-nghiep' },
-  { key: 'commercial', image: IMAGES.practiceCivil, slug: 'tranh-chap-thuong-mai' },
   { key: 'labor', image: IMAGES.practiceLabor, slug: 'tranh-chap-lao-dong' },
   { key: 'criminal', image: IMAGES.practiceCriminal, slug: 'luat-hinh-su' },
 ] as const;
+
+const FEATURED_COUNT = 6;
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -44,7 +49,7 @@ export default function PracticeAreasPreview() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-16">
-          {practiceAreas.map((area, index) => (
+          {practiceAreas.slice(0, FEATURED_COUNT).map((area, index) => (
             <Link
               key={area.key}
               href={{ pathname: '/linh-vuc-hanh-nghe/[slug]', params: { slug: area.slug } }}

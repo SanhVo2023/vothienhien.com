@@ -1,5 +1,15 @@
 # vothienhien.com - Personal Authority
 
+> **PM NOTICE (2026-04-16)** — Owner review cycle. Read:
+> - `./HIEN_FEEDBACK.md` — log every piece of Mr Hien's feedback here BEFORE fixing. Interview the user (Thach) to collect what Mr Hien has said so far.
+> - `../../shared-assets/HIEN_FEEDBACK_PROTOCOL.md` — format and severity rubric
+> - `../../shared-assets/PAYLOAD_SETUP_SPEC.md` — canonical Payload config (content-format rules, Lexical features)
+>
+> **Known concerns to verify before sign-off**:
+> - Publications `content` field: confirm it's Lexical JSON in DB, not markdown string. Spot-check one article in `/admin` and on the frontend.
+> - `lexicalEditor()` is called with no features — authoring new richText from the admin yields limited formatting. Consider upgrading per `PAYLOAD_SETUP_SPEC.md` §1.
+> - `tablePrefix` is intentionally empty here (grandfathered first site). Do NOT add one.
+
 ## Project Overview
 - **Domain**: vothienhien.com
 - **Role in Ecosystem**: Managing Partner Vo Thien Hien personal brand. Professional profile, representative matters, publications, thought leadership.

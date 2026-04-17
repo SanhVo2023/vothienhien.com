@@ -1,0 +1,70 @@
+{
+  "site": "vothienhien.com",
+  "generated_by": "site-agent",
+  "created_at": "2026-04-12",
+  "batch": "v3-commercial-disputes",
+  "notes": "New image for Commercial Disputes practice area + additional assets for enhanced pages",
+  "images": [
+    {
+      "id": "practice-commercial",
+      "name": "Practice Area - Commercial Disputes",
+      "type": "text-to-image",
+      "prompt": "Abstract minimalist representation of commercial arbitration and litigation. A large polished dark wood gavel and a gold balance scale placed on opposite sides of a long conference table, viewed from above at a dramatic angle. Between them, scattered legal documents and a contract with visible signature lines. Pure black background fading into the scene. Luxury brand aesthetic, high contrast, warm gold and dark wood tones. Clean geometric composition, editorial legal photography. No people, no text.",
+      "category": "content",
+      "aspect": "3:2",
+      "width": 1200,
+      "priority": "high"
+    },
+    {
+      "id": "article-commercial-arbitration",
+      "name": "Article Thumbnail - Commercial Arbitration at VIAC",
+      "type": "text-to-image",
+      "prompt": "Interior of a modern arbitration hearing room. A curved dark wood tribunal bench for three arbitrators at the front, two counsel tables facing each other, microphones on each table, Vietnamese and international flags in the background. Clean, modern, well-lit room with warm wood paneling and glass partitions. No people. The atmosphere conveys formality, neutrality, and international standard. Architectural interior photography, wide angle 24mm lens. Color palette: warm wood, neutral gray walls, brass accents.",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "high"
+    },
+    {
+      "id": "article-commercial-litigation",
+      "name": "Article Thumbnail - Commercial Court Litigation",
+      "type": "text-to-image",
+      "prompt": "Close-up of a lawyer's hand placing a thick legal brief document onto a polished courtroom desk. The brief has a red binding spine and official stamps visible. Behind it, slightly out of focus, is a Vietnamese courtroom setting with wooden furniture and formal atmosphere. Warm side lighting creating dramatic shadows on the document. Only the hand, cuff of a dark navy suit, and the document are in sharp focus. Cinematic legal photography, 85mm lens. Color palette: dark wood, cream paper, navy suit, warm amber light.",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "high"
+    },
+    {
+      "id": "section-arbitration-hearing",
+      "name": "Arbitration Hearing in Progress",
+      "type": "image-to-image",
+      "prompt": "Professional photograph of this Vietnamese male lawyer in a dark navy suit standing at a counsel table in a modern arbitration hearing room, presenting arguments. He is holding documents and gesturing toward a presentation screen. The arbitration panel (3 people, seen from behind in soft blur) sits at the tribunal bench. Clean, modern interior with warm lighting. The mood conveys authority, preparation, and professional advocacy. Environmental photography, medium shot.",
+      "reference_image": "./references/mr-hien-portrait.jpg",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "medium"
+    },
+    {
+      "id": "bg-commercial-skyline",
+      "name": "HCMC Financial District - Commercial Context",
+      "type": "text-to-image",
+      "prompt": "Eye-level photograph of Ho Chi Minh City's financial district at dusk. Modern glass office towers (Bitexco Tower, Landmark 81 visible), busy Nguyen Hue boulevard with traffic light trails. The sky transitions from deep blue to warm orange at the horizon. Street-level perspective showing both the grandeur of the buildings and the energy of commerce. This represents the commercial heart of Vietnam. Professional cityscape photography, 35mm lens. Color grading: cool blue shadows, warm golden building lights, teal sky.",
+      "category": "background",
+      "aspect": "16:9",
+      "width": 1920,
+      "priority": "medium"
+    },
+    {
+      "id": "og-commercial",
+      "name": "Commercial Disputes OG Image",
+      "type": "text-to-image",
+      "prompt": "Social media card on black (#0A0A0A) background. Top: thin gold horizontal line. Center-left: minimalist gold gavel icon (line art, 80px). Center-right: minimalist gold balance scale icon (line art, 80px). Between them: a thin vertical gold line. Below: 'COMMERCIAL DISPUTES' in white small caps with wide letter spacing. Below: 'Court Litigation & Arbitration' in smaller gold text. Bottom: thin gold line, then 'VÕ THIỆN HIỂN | ATTORNEY AT LAW' in tiny gold text. Ultra-minimal, luxury law brand aesthetic.",
+      "category": "og",
+      "aspect": "1200:630",
+      "width": 1200,
+      "priority": "low"
+    }
+  ]
+}

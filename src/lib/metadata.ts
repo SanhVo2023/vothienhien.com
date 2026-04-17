@@ -38,7 +38,7 @@ export function generatePageMetadata({
       title,
       description,
       url,
-      siteName: 'Võ Thiện Hiển - Attorney at Law',
+      siteName: locale === 'vi' ? 'Võ Thiện Hiển - Luật sư Điều hành' : 'Vo Thien Hien - Managing Partner',
       locale: locale === 'vi' ? 'vi_VN' : 'en_US',
       type: 'website',
       images: ogImage
@@ -72,7 +72,7 @@ export function generatePersonJsonLd(locale: string) {
   return {
     '@context': 'https://schema.org',
     '@type': ['Person', 'Attorney'],
-    name: locale === 'vi' ? 'Võ Thiện Hiển' : 'Henry Vo',
+    name: locale === 'vi' ? 'Võ Thiện Hiển' : 'Vo Thien Hien',
     jobTitle: locale === 'vi' ? 'Luật sư Điều hành' : 'Managing Partner',
     worksFor: {
       '@type': 'LegalService',

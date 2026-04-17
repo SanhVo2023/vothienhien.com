@@ -50,7 +50,7 @@ export default async function ContactPage({ params }: Props) {
       '@context': 'https://schema.org',
       '@type': 'Person',
       name: 'Vo Thien Hien',
-      jobTitle: isVi ? 'Luật sư Thành viên Điều hành' : 'Managing Partner',
+      jobTitle: isVi ? 'Luật sư Điều hành' : 'Managing Partner',
       telephone: '+84913479179',
       email: 'hien.vo@apololawyers.com',
       url: 'https://vothienhien.com',
@@ -129,10 +129,10 @@ export default async function ContactPage({ params }: Props) {
                   {/* Name & Title */}
                   <div>
                     <h3 className="font-heading font-semibold text-primary text-lg">
-                      {isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien (Henry Vo)'}
+                      {isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}
                     </h3>
                     <p className="text-text-secondary text-sm">
-                      {isVi ? 'Luật sư Thành viên Điều hành, Apolo Lawyers' : 'Managing Partner, Apolo Lawyers'}
+                      {isVi ? 'Luật sư Điều hành, Apolo Lawyers' : 'Managing Partner, Apolo Lawyers'}
                     </p>
                   </div>
 
