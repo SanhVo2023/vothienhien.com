@@ -17,6 +17,8 @@ const slugToImage: Record<string, { cdn: string; alt: string }> = {
   'tranh-chap-lao-dong': IMAGES.practiceLabor,
   'luat-hinh-su': IMAGES.practiceCriminal,
   'tranh-chap-thuong-mai': IMAGES.practiceCommercial,
+  'tranh-tung-tai-toa-an': IMAGES.articleCommercialLitigation,
+  'trong-tai-thuong-mai': IMAGES.articleCommercialArbitration,
 };
 
 type Props = {
@@ -31,6 +33,8 @@ const slugMap: Record<string, string> = {
   'tranh-chap-lao-dong': 'labor-disputes',
   'luat-hinh-su': 'criminal-defense',
   'tranh-chap-thuong-mai': 'commercial-disputes',
+  'tranh-tung-tai-toa-an': 'court-litigation',
+  'trong-tai-thuong-mai': 'commercial-arbitration',
   'civil-disputes': 'tranh-chap-dan-su',
   'land-disputes': 'tranh-chap-dat-dai',
   'family-law': 'hon-nhan-gia-dinh',
@@ -38,6 +42,8 @@ const slugMap: Record<string, string> = {
   'labor-disputes': 'tranh-chap-lao-dong',
   'criminal-defense': 'luat-hinh-su',
   'commercial-disputes': 'tranh-chap-thuong-mai',
+  'court-litigation': 'tranh-tung-tai-toa-an',
+  'commercial-arbitration': 'trong-tai-thuong-mai',
 };
 
 interface PracticeAreaData {
@@ -569,10 +575,158 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
       ],
     },
   },
+  'tranh-tung-tai-toa-an': {
+    vi: {
+      title: 'Tranh Tụng Tại Tòa Án',
+      subtitle: 'Đại diện chuyên nghiệp tại mọi cấp tòa án Việt Nam',
+      description: [
+        'Tranh tụng tại tòa án là hoạt động pháp lý đòi hỏi sự kết hợp giữa chiến lược sắc bén, kỹ năng tranh luận thuyết phục và sự am hiểu sâu sắc về thủ tục tố tụng. Luật sư Võ Thiện Hiển có hơn 15 năm kinh nghiệm đại diện khách hàng tại tất cả các cấp tòa án Việt Nam — từ Tòa án Nhân dân cấp quận, huyện đến Tòa án Nhân dân Tối cao — trong các vụ án dân sự, thương mại, hành chính và hình sự.',
+        'Hoạt động tranh tụng của Luật sư Hiển được điều chỉnh bởi Bộ luật Tố tụng Dân sự 2015 (Luật số 92/2015/QH13), Luật Tố tụng Hành chính 2015, Bộ luật Tố tụng Hình sự 2015, cùng các nghị quyết hướng dẫn của Hội đồng Thẩm phán Tòa án Nhân dân Tối cao. Việc cập nhật liên tục án lệ, nghị quyết và các thay đổi về thủ tục tố tụng là nguyên tắc làm việc hàng ngày của ông.',
+        'Phạm vi dịch vụ tranh tụng tại tòa án bao gồm: soạn thảo đơn khởi kiện và hồ sơ phản tố; đại diện khách hàng trong giai đoạn hòa giải bắt buộc; tham gia phiên tòa sơ thẩm và phúc thẩm; xây dựng chiến lược chứng cứ và thẩm vấn nhân chứng; soạn thảo kháng cáo, kháng nghị và hồ sơ giám đốc thẩm, tái thẩm; đại diện trong thủ tục thi hành án; và xử lý các biện pháp khẩn cấp tạm thời khi cần thiết.',
+        'Trong thực tiễn, Luật sư Hiển đã tham gia tranh tụng thành công các vụ án có giá trị tranh chấp lớn, tính chất phức tạp về chứng cứ và nhiều bên tham gia. Ông có kinh nghiệm đặc biệt trong việc xử lý các vụ việc có yếu tố liên tỉnh, liên ngành và có nhiều quan điểm pháp lý khác nhau giữa các cấp tòa.',
+        'Phương pháp tranh tụng của Luật sư Hiển dựa trên ba trụ cột: chuẩn bị kỹ lưỡng từng chi tiết pháp lý và chứng cứ trước phiên tòa; lập luận chặt chẽ và thuyết phục dựa trên pháp luật và án lệ; và khả năng ứng biến linh hoạt trước các tình huống bất ngờ tại tòa. Sự kết hợp này tạo nên tỷ lệ thành công cao trong các vụ việc khó.',
+        'Điểm mạnh đặc biệt của Luật sư Hiển là khả năng phân tích bản án sơ thẩm một cách toàn diện để xây dựng chiến lược kháng cáo và giám đốc thẩm hiệu quả. Nhiều bản án bất lợi ở cấp sơ thẩm đã được sửa đổi hoặc hủy bỏ ở cấp phúc thẩm nhờ lập luận pháp lý sắc bén mà ông trình bày.',
+        'Về thời gian, một vụ tranh tụng điển hình tại tòa án kéo dài từ 6 đến 18 tháng cho giai đoạn sơ thẩm, 4 đến 8 tháng cho giai đoạn phúc thẩm, và có thể kéo dài thêm nếu đi vào giám đốc thẩm hoặc tái thẩm. Luật sư Hiển cam kết theo sát mọi giai đoạn và thông báo tiến độ thường xuyên cho khách hàng.',
+      ],
+      approaches: [
+        'Đánh giá khả năng thắng kiện trước khi khởi kiện',
+        'Chuẩn bị hồ sơ tố tụng chặt chẽ và toàn diện',
+        'Tham gia hòa giải để tiết kiệm thời gian khi phù hợp',
+        'Tranh tụng quyết liệt nhưng tuân thủ đạo đức nghề nghiệp',
+        'Kháng cáo và giám đốc thẩm khi có căn cứ pháp lý rõ ràng',
+      ],
+      matters: [
+        { title: 'Kháng cáo thành công vụ tranh chấp hợp đồng 80 tỷ đồng', year: '2024', excerpt: 'Đại diện bị đơn kháng cáo bản án sơ thẩm, Tòa Phúc thẩm sửa bản án và chấp nhận toàn bộ yêu cầu kháng cáo.', slug: 'khang-cao-hop-dong-80-ty' },
+        { title: 'Tranh tụng vụ án hành chính về thu hồi đất', year: '2023', excerpt: 'Đại diện người dân kiện quyết định hành chính, buộc cơ quan nhà nước phải điều chỉnh mức bồi thường giải phóng mặt bằng.' },
+      ],
+      stats: [
+        { value: '300+', label: 'Vụ tranh tụng tại tòa' },
+        { value: '88%', label: 'Tỷ lệ thắng kiện' },
+        { value: '4', label: 'Cấp tòa đã tham gia' },
+        { value: '15+', label: 'Năm kinh nghiệm' },
+      ],
+      whyChoose: [
+        { title: 'Kinh nghiệm tranh tụng đa cấp', description: 'Đại diện khách hàng tại sơ thẩm, phúc thẩm, giám đốc thẩm và tái thẩm tại mọi cấp tòa án trên cả nước.' },
+        { title: 'Thành thạo thủ tục tố tụng', description: 'Nắm vững Bộ luật Tố tụng Dân sự, Hình sự, Hành chính và các án lệ mới nhất để áp dụng chính xác trong từng vụ việc.' },
+        { title: 'Chiến lược chứng cứ bài bản', description: 'Xây dựng hồ sơ chứng cứ chặt chẽ, thẩm vấn nhân chứng hiệu quả và trình bày lập luận có sức thuyết phục cao tại tòa.' },
+        { title: 'Bảo vệ quyền lợi đến cùng', description: 'Sẵn sàng kháng cáo, kháng nghị và theo đuổi mọi biện pháp pháp lý khi quyền lợi hợp pháp của khách hàng chưa được bảo vệ thỏa đáng.' },
+      ],
+    },
+    en: {
+      title: 'Court Litigation',
+      subtitle: 'Professional advocacy at every level of Vietnamese courts',
+      description: [
+        'Court litigation demands the combination of sharp strategy, persuasive advocacy, and deep procedural command. Attorney Vo Thien Hien has over 15 years of experience representing clients at every level of Vietnamese courts — from district and provincial People\'s Courts to the Supreme People\'s Court — across civil, commercial, administrative, and criminal matters.',
+        'His litigation practice is governed by the 2015 Code of Civil Procedure (Law No. 92/2015/QH13), the 2015 Administrative Procedure Code, the 2015 Criminal Procedure Code, and the guiding resolutions of the Judicial Council of the Supreme People\'s Court. Continuous tracking of case precedents, resolutions, and procedural developments is a daily discipline.',
+        'Court litigation services include: drafting statements of claim and counterclaims; representing clients in mandatory mediation; advocacy at first-instance and appellate hearings; building evidentiary strategy and witness examination plans; drafting appeals, protests, and cassation petitions; representation in judgment enforcement proceedings; and urgent preliminary measures when required.',
+        'In practice, Attorney Vo Thien Hien has successfully litigated cases involving substantial dispute values, complex evidentiary issues, and multiple parties. He brings particular experience to multi-jurisdictional matters and cases where courts at different levels have taken conflicting legal positions.',
+        'The litigation method rests on three pillars: thorough preparation of every legal and evidentiary detail before trial; tight, precedent-grounded argumentation; and the agility to adapt on the stand when a case takes an unexpected turn. This combination produces a strong success rate in difficult matters.',
+        'A distinctive strength is the ability to dissect an unfavorable first-instance judgment and build an effective appellate and cassation strategy. Many adverse trial-court rulings have been modified or set aside on appeal through the precise legal reasoning he brings before higher courts.',
+        'Timeline-wise, a typical litigation spans 6 to 18 months at the first-instance level, 4 to 8 months on appeal, with additional time if the matter proceeds to cassation or retrial. Attorney Vo Thien Hien stays close to every phase and reports progress to clients on a regular cadence.',
+      ],
+      approaches: [
+        'Merits assessment before filing suit',
+        'Tight and comprehensive case file preparation',
+        'Engaging mediation when it genuinely saves time',
+        'Aggressive advocacy within strict ethical bounds',
+        'Appeal and cassation when grounds are clear',
+      ],
+      matters: [
+        { title: 'Successful appeal in a VND 80 billion contract dispute', year: '2024', excerpt: 'Representing the defendant-appellant, the court of appeal reversed the first-instance judgment and granted all appellate claims.', slug: 'khang-cao-hop-dong-80-ty' },
+        { title: 'Administrative litigation on land acquisition', year: '2023', excerpt: 'Represented a landowner challenging an acquisition decision, forcing the authority to revise the compensation package.' },
+      ],
+      stats: [
+        { value: '300+', label: 'Court Litigations' },
+        { value: '88%', label: 'Win Rate' },
+        { value: '4', label: 'Court Levels Represented' },
+        { value: '15+', label: 'Years of Advocacy' },
+      ],
+      whyChoose: [
+        { title: 'Experience Across Court Levels', description: 'Representation at first-instance, appellate, cassation, and retrial proceedings at every court level nationwide.' },
+        { title: 'Procedural Mastery', description: 'Command of the Codes of Civil, Criminal, and Administrative Procedure, plus the latest precedents, applied precisely to each matter.' },
+        { title: 'Disciplined Evidentiary Strategy', description: 'Tightly constructed evidence files, effective witness examination, and compelling legal argument delivered in court.' },
+        { title: 'Protecting Client Rights to the End', description: 'Ready to appeal, seek cassation, and exhaust every legal avenue when a client\'s legitimate interests remain unresolved.' },
+      ],
+    },
+  },
+  'trong-tai-thuong-mai': {
+    vi: {
+      title: 'Tranh Tụng Trọng Tài Thương Mại',
+      subtitle: 'VIAC, ICC, SIAC — đại diện chuyên nghiệp trong trọng tài trong nước và quốc tế',
+      description: [
+        'Trọng tài thương mại đã trở thành phương thức giải quyết tranh chấp được ưa chuộng trong cộng đồng doanh nghiệp Việt Nam và quốc tế. Luật sư Võ Thiện Hiển có kinh nghiệm phong phú đại diện khách hàng tại Trung tâm Trọng tài Quốc tế Việt Nam (VIAC) cũng như các tổ chức trọng tài quốc tế như ICC (Phòng Thương mại Quốc tế Paris), SIAC (Trung tâm Trọng tài Quốc tế Singapore), và HKIAC (Trung tâm Trọng tài Quốc tế Hồng Kông).',
+        'Hoạt động trọng tài tại Việt Nam được điều chỉnh bởi Luật Trọng tài Thương mại 2010 (Luật số 54/2010/QH12), Quy tắc Tố tụng Trọng tài của VIAC, và Công ước New York 1958 về công nhận và thi hành phán quyết trọng tài nước ngoài — công ước mà Việt Nam là thành viên từ năm 1995. Việc thông thạo cả pháp luật trọng tài trong nước lẫn quy tắc trọng tài quốc tế là điều kiện bắt buộc để đại diện khách hàng hiệu quả.',
+        'Phạm vi dịch vụ trọng tài thương mại của Luật sư Hiển bao gồm: tư vấn soạn thảo điều khoản trọng tài trong hợp đồng; khởi kiện trọng tài và soạn thảo bản tự bảo vệ; đề cử và phản đối trọng tài viên; chuẩn bị hồ sơ chứng cứ và bản trình bày pháp lý; tham gia phiên điều trần trọng tài; yêu cầu công nhận và thi hành phán quyết trọng tài tại Việt Nam và ở nước ngoài; và khiếu nại hủy phán quyết khi có căn cứ pháp lý.',
+        'Trong thực tiễn, Luật sư Hiển thường xử lý các loại tranh chấp như: hợp đồng mua bán hàng hóa quốc tế; hợp đồng phân phối, đại lý; hợp đồng xây dựng và FIDIC; hợp đồng liên doanh và hợp tác kinh doanh; tranh chấp mua bán sáp nhập doanh nghiệp; và tranh chấp liên quan đến đầu tư nước ngoài. Giá trị tranh chấp điển hình dao động từ vài tỷ đến hàng trăm triệu đô la Mỹ.',
+        'Ưu điểm nổi bật của trọng tài thương mại so với tòa án bao gồm: tính bảo mật cao (không công khai); thời gian giải quyết nhanh hơn (thường 6-12 tháng); phán quyết có tính chung thẩm và không kháng cáo; được thi hành quốc tế tại 172 quốc gia theo Công ước New York 1958; và các bên được tự do lựa chọn trọng tài viên có chuyên môn phù hợp với tính chất vụ việc.',
+        'Phương pháp làm việc của Luật sư Hiển trong trọng tài bao gồm: phân tích kỹ lưỡng thỏa thuận trọng tài và xác định thẩm quyền; xây dựng chiến lược chứng cứ phù hợp với quy tắc trọng tài được áp dụng; lập luận pháp lý kết hợp giữa luật nội dung và thực tiễn thương mại; chuẩn bị nhân chứng chuyên môn (expert witness) khi cần thiết; và theo đuổi việc thi hành phán quyết tại các quốc gia liên quan.',
+        'Một phiên trọng tài điển hình tại VIAC kéo dài từ 6 đến 12 tháng kể từ khi nộp đơn khởi kiện, trong khi trọng tài quốc tế tại ICC hoặc SIAC có thể kéo dài từ 12 đến 24 tháng do tính phức tạp cao hơn và sự tham gia của nhiều luật sư quốc tế. Luật sư Hiển có khả năng làm việc song ngữ tiếng Việt và tiếng Anh, giúp khách hàng tiết kiệm chi phí luật sư quốc tế trong nhiều trường hợp.',
+      ],
+      approaches: [
+        'Tư vấn soạn thảo điều khoản trọng tài chặt chẽ trong hợp đồng',
+        'Lựa chọn tổ chức trọng tài và trọng tài viên phù hợp',
+        'Xây dựng chiến lược chứng cứ theo quy tắc trọng tài áp dụng',
+        'Làm việc song ngữ Việt - Anh trong trọng tài quốc tế',
+        'Theo đuổi thi hành phán quyết trong nước và quốc tế',
+      ],
+      matters: [
+        { title: 'Tranh chấp hợp đồng cung cấp thiết bị trị giá 200 tỷ đồng tại VIAC', year: '2024', excerpt: 'Đại diện bên mua trong tranh chấp hợp đồng cung cấp thiết bị công nghiệp, thắng kiện và thu hồi toàn bộ thiệt hại.', slug: 'tranh-chap-thiet-bi-200-ty' },
+        { title: 'Trọng tài quốc tế ICC về hợp đồng phân phối độc quyền', year: '2023', excerpt: 'Đại diện doanh nghiệp Việt Nam trong vụ trọng tài ICC với giá trị tranh chấp 25 triệu USD, đạt được thỏa thuận có lợi.' },
+      ],
+      stats: [
+        { value: '60+', label: 'Vụ trọng tài đã xử lý' },
+        { value: '3', label: 'Tổ chức trọng tài quốc tế' },
+        { value: '85%', label: 'Tỷ lệ thắng kiện VIAC' },
+        { value: '25 triệu USD', label: 'Giá trị tranh chấp lớn nhất' },
+      ],
+      whyChoose: [
+        { title: 'Kinh nghiệm VIAC sâu rộng', description: 'Tham gia hàng chục vụ trọng tài tại VIAC với tư cách luật sư đại diện, am hiểu quy tắc tố tụng và thực tiễn của trung tâm.' },
+        { title: 'Năng lực trọng tài quốc tế', description: 'Đại diện khách hàng tại ICC, SIAC, HKIAC với khả năng làm việc song ngữ Việt - Anh, tiết kiệm chi phí luật sư nước ngoài.' },
+        { title: 'Thi hành phán quyết hiệu quả', description: 'Hỗ trợ công nhận và thi hành phán quyết trọng tài tại Việt Nam và các quốc gia thành viên Công ước New York 1958.' },
+        { title: 'Tư vấn chiến lược toàn diện', description: 'Từ giai đoạn soạn điều khoản trọng tài trong hợp đồng đến khi thi hành phán quyết, đồng hành cùng khách hàng suốt quy trình.' },
+      ],
+    },
+    en: {
+      title: 'Commercial Arbitration',
+      subtitle: 'VIAC, ICC, SIAC — professional advocacy in domestic and international arbitration',
+      description: [
+        'Commercial arbitration has become the preferred dispute resolution forum for both Vietnamese and international businesses. Attorney Vo Thien Hien has extensive experience representing clients before the Vietnam International Arbitration Centre (VIAC), as well as leading international institutions such as the ICC (International Chamber of Commerce, Paris), SIAC (Singapore International Arbitration Centre), and HKIAC (Hong Kong International Arbitration Centre).',
+        'Arbitration practice in Vietnam is governed by the 2010 Law on Commercial Arbitration (Law No. 54/2010/QH12), the VIAC Arbitration Rules, and the 1958 New York Convention on the Recognition and Enforcement of Foreign Arbitral Awards — to which Vietnam has been a party since 1995. Mastery of both domestic arbitration law and international institutional rules is a prerequisite for effective advocacy.',
+        'Commercial arbitration services include: advising on arbitration clauses during contract drafting; filing requests for arbitration and statements of defense; nominating and challenging arbitrators; preparing evidentiary submissions and legal memorials; advocacy at arbitral hearings; pursuing recognition and enforcement of awards both in Vietnam and abroad; and filing set-aside applications when legal grounds exist.',
+        'In practice, the typical matters handled include: international sale of goods contracts; distribution and agency agreements; construction and FIDIC contracts; joint venture and business cooperation agreements; M&A disputes; and foreign-investment-related disputes. Dispute values typically range from several billion VND to hundreds of millions of USD.',
+        'Arbitration\'s advantages over court litigation include: strong confidentiality (no public record); faster resolution (typically 6-12 months); finality of awards with no appeal on the merits; international enforceability in 172 countries under the New York Convention 1958; and the parties\' ability to select arbitrators with specific subject-matter expertise.',
+        'The arbitration method includes: thorough analysis of the arbitration agreement and jurisdictional questions; evidentiary strategy calibrated to the chosen arbitral rules; legal argumentation that fuses substantive law with commercial realities; expert witness preparation where appropriate; and enforcement pursuit in all relevant jurisdictions.',
+        'A typical VIAC arbitration runs 6 to 12 months from filing, while ICC or SIAC matters can span 12 to 24 months due to higher complexity and multi-jurisdictional counsel teams. Bilingual Vietnamese-English capability allows clients to avoid engaging separate international counsel in many situations, producing meaningful cost savings.',
+      ],
+      approaches: [
+        'Advising on robust arbitration clauses at contract stage',
+        'Selecting the right institution and arbitrators',
+        'Evidentiary strategy aligned with applicable arbitral rules',
+        'Bilingual Vietnamese-English advocacy in international arbitration',
+        'Pursuing domestic and cross-border award enforcement',
+      ],
+      matters: [
+        { title: 'VND 200 billion equipment supply dispute at VIAC', year: '2024', excerpt: 'Represented the buyer in an industrial-equipment supply dispute at VIAC; award granted with full damages recovery.', slug: 'tranh-chap-thiet-bi-200-ty' },
+        { title: 'ICC arbitration on exclusive distribution contract', year: '2023', excerpt: 'Represented a Vietnamese enterprise in an ICC arbitration valued at USD 25 million; secured a favorable settlement mid-proceedings.' },
+      ],
+      stats: [
+        { value: '60+', label: 'Arbitrations Handled' },
+        { value: '3', label: 'International Institutions' },
+        { value: '85%', label: 'VIAC Win Rate' },
+        { value: 'USD 25M', label: 'Largest Dispute Value' },
+      ],
+      whyChoose: [
+        { title: 'Deep VIAC Experience', description: 'Dozens of VIAC arbitrations as counsel of record; fluent in institutional rules and practice norms.' },
+        { title: 'International Arbitration Capability', description: 'Representation before ICC, SIAC, and HKIAC with bilingual Vietnamese-English advocacy — meaningful cost savings versus hiring separate foreign counsel.' },
+        { title: 'Effective Award Enforcement', description: 'Support for recognition and enforcement of arbitral awards in Vietnam and in states party to the New York Convention 1958.' },
+        { title: 'End-to-End Strategic Counsel', description: 'From drafting the arbitration clause at contract stage to enforcing the final award — present at every step.' },
+      ],
+    },
+  },
 };
 
-const viSlugs = ['tranh-chap-dan-su', 'tranh-chap-dat-dai', 'hon-nhan-gia-dinh', 'luat-doanh-nghiep', 'tranh-chap-thuong-mai', 'tranh-chap-lao-dong', 'luat-hinh-su'];
-const enSlugs = ['civil-disputes', 'land-disputes', 'family-law', 'corporate-law', 'commercial-disputes', 'labor-disputes', 'criminal-defense'];
+const viSlugs = ['tranh-chap-dan-su', 'tranh-chap-dat-dai', 'hon-nhan-gia-dinh', 'luat-doanh-nghiep', 'tranh-chap-thuong-mai', 'tranh-chap-lao-dong', 'luat-hinh-su', 'tranh-tung-tai-toa-an', 'trong-tai-thuong-mai'];
+const enSlugs = ['civil-disputes', 'land-disputes', 'family-law', 'corporate-law', 'commercial-disputes', 'labor-disputes', 'criminal-defense', 'court-litigation', 'commercial-arbitration'];
 
 export function generateStaticParams() {
   return [
@@ -599,6 +753,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const enSlug = slugMap[canonicalSlug] || slug;
   const slugToOg: Record<string, string> = {
     'tranh-chap-thuong-mai': IMAGES.ogCommercial.cdn,
+    'tranh-tung-tai-toa-an': IMAGES.ogCommercial.cdn,
+    'trong-tai-thuong-mai': IMAGES.ogCommercial.cdn,
   };
   const ogImage = slugToOg[canonicalSlug] || IMAGES.ogPractice.cdn;
 
@@ -736,24 +892,24 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
       <section className="relative h-[300px] md:h-[400px] overflow-hidden">
         <Image
           src={
-            viSlug === 'luat-hinh-su'
+            viSlug === 'luat-hinh-su' || viSlug === 'tranh-tung-tai-toa-an'
               ? IMAGES.sectionCourtroom.cdn
               : viSlug === 'tranh-chap-dan-su'
               ? IMAGES.sectionConsultation.cdn
               : viSlug === 'luat-doanh-nghiep'
               ? IMAGES.sectionDocumentSigning.cdn
-              : viSlug === 'tranh-chap-thuong-mai'
+              : viSlug === 'tranh-chap-thuong-mai' || viSlug === 'trong-tai-thuong-mai'
               ? IMAGES.sectionArbitrationHearing.cdn
               : IMAGES.sectionClientMeeting.cdn
           }
           alt={
-            viSlug === 'luat-hinh-su'
+            viSlug === 'luat-hinh-su' || viSlug === 'tranh-tung-tai-toa-an'
               ? IMAGES.sectionCourtroom.alt
               : viSlug === 'tranh-chap-dan-su'
               ? IMAGES.sectionConsultation.alt
               : viSlug === 'luat-doanh-nghiep'
               ? IMAGES.sectionDocumentSigning.alt
-              : viSlug === 'tranh-chap-thuong-mai'
+              : viSlug === 'tranh-chap-thuong-mai' || viSlug === 'trong-tai-thuong-mai'
               ? IMAGES.sectionArbitrationHearing.alt
               : IMAGES.sectionClientMeeting.alt
           }
@@ -914,7 +1070,7 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
       <section className="relative py-24 md:py-32 overflow-hidden">
         <Image
           src={
-            viSlug === 'tranh-chap-thuong-mai'
+            viSlug === 'tranh-chap-thuong-mai' || viSlug === 'trong-tai-thuong-mai'
               ? IMAGES.bgCommercialSkyline.cdn
               : IMAGES.bgSkyline.cdn
           }

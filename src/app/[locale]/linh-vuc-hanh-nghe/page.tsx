@@ -49,6 +49,12 @@ const practiceAreaImages: Record<string, { src: string; alt: string }> = {
   'labor-disputes': { src: IMAGES.practiceLabor.cdn, alt: IMAGES.practiceLabor.alt },
   'luat-hinh-su': { src: IMAGES.practiceCriminal.cdn, alt: IMAGES.practiceCriminal.alt },
   'criminal-defense': { src: IMAGES.practiceCriminal.cdn, alt: IMAGES.practiceCriminal.alt },
+  'tranh-chap-thuong-mai': { src: IMAGES.practiceCommercial.cdn, alt: IMAGES.practiceCommercial.alt },
+  'commercial-disputes': { src: IMAGES.practiceCommercial.cdn, alt: IMAGES.practiceCommercial.alt },
+  'tranh-tung-tai-toa-an': { src: IMAGES.articleCommercialLitigation.cdn, alt: IMAGES.articleCommercialLitigation.alt },
+  'court-litigation': { src: IMAGES.articleCommercialLitigation.cdn, alt: IMAGES.articleCommercialLitigation.alt },
+  'trong-tai-thuong-mai': { src: IMAGES.articleCommercialArbitration.cdn, alt: IMAGES.articleCommercialArbitration.alt },
+  'commercial-arbitration': { src: IMAGES.articleCommercialArbitration.cdn, alt: IMAGES.articleCommercialArbitration.alt },
 };
 
 const practiceAreas = {
@@ -83,6 +89,21 @@ const practiceAreas = {
       title: 'Luật Hình Sự',
       description: 'Bào chữa và đại diện trong các vụ án hình sự, bảo vệ quyền và lợi ích hợp pháp của thân chủ trước cơ quan tố tụng.',
     },
+    {
+      slug: 'tranh-chap-thuong-mai',
+      title: 'Tranh Chấp Thương Mại',
+      description: 'Đại diện khách hàng trong tranh chấp thương mại phức tạp, kết hợp tranh tụng tại tòa án và trọng tài thương mại.',
+    },
+    {
+      slug: 'tranh-tung-tai-toa-an',
+      title: 'Tranh Tụng Tại Tòa Án',
+      description: 'Đại diện tranh tụng tại mọi cấp tòa án Việt Nam, từ sơ thẩm, phúc thẩm đến giám đốc thẩm và tái thẩm.',
+    },
+    {
+      slug: 'trong-tai-thuong-mai',
+      title: 'Tranh Tụng Trọng Tài Thương Mại',
+      description: 'Đại diện tại VIAC, ICC, SIAC và các tổ chức trọng tài quốc tế, xử lý tranh chấp thương mại xuyên biên giới.',
+    },
   ],
   en: [
     {
@@ -114,6 +135,21 @@ const practiceAreas = {
       slug: 'criminal-defense',
       title: 'Criminal Defense',
       description: 'Defense and representation in criminal cases, protecting the legitimate rights and interests of clients before judicial authorities.',
+    },
+    {
+      slug: 'commercial-disputes',
+      title: 'Commercial Disputes',
+      description: 'Representation in complex commercial disputes combining court litigation and commercial arbitration strategies.',
+    },
+    {
+      slug: 'court-litigation',
+      title: 'Court Litigation',
+      description: 'Advocacy at every level of Vietnamese courts — first instance, appellate, cassation, and retrial proceedings.',
+    },
+    {
+      slug: 'commercial-arbitration',
+      title: 'Commercial Arbitration',
+      description: 'Representation before VIAC, ICC, SIAC, and other international arbitration institutions for cross-border commercial disputes.',
     },
   ],
 };
