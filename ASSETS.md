@@ -13,40 +13,40 @@ Use the CDN URL in your Next.js components:
 
 | ID | Name | Category | Size | CDN URL | Local Path |
 |----|------|----------|------|---------|------------|
-| hero-portrait | Homepage Hero Portrait | hero | 1920px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/hero/hero-portrait-8ed7de4d.webp | N/A |
-| profile-hero | Profile Page Hero - Desk Portrait | hero | 1600px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/hero/profile-hero-6c5a93e0.webp | assets/hero/profile-hero.webp |
-| detail-hands | Detail Accent Shot - Hands with Pen | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/detail-hands-34b089bb.webp | assets/content/detail-hands.webp |
-| practice-civil | Practice Area - Civil Disputes | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-civil-9e32fb02.webp | assets/content/practice-civil.webp |
-| practice-land | Practice Area - Land & Real Estate | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-land-bbc1cc7f.webp | assets/content/practice-land.webp |
-| practice-family | Practice Area - Family Law & Divorce | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-family-c50dd275.webp | assets/content/practice-family.webp |
-| practice-corporate | Practice Area - Corporate Law | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-corporate-5f2c5501.webp | assets/content/practice-corporate.webp |
-| practice-labor | Practice Area - Labor Disputes | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-labor-aec105be.webp | assets/content/practice-labor.webp |
-| practice-criminal | Practice Area - Criminal Defense | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-criminal-59f8f545.webp | assets/content/practice-criminal.webp |
-| bg-library | Library / Publications Background | background | 1920px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-library-f8675605.webp | assets/background/bg-library.webp |
-| bg-skyline | HCMC Skyline Panoramic | background | 1920px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-skyline-4d8d3819.webp | assets/background/bg-skyline.webp |
-| accent-gold-stroke | Gold Brushstroke Decorative Element | content | 800px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/accent-gold-stroke-4de2a341.webp | assets/content/accent-gold-stroke.webp |
-| bg-marble | Dark Marble Texture Background | background | 1920px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-marble-5a92903f.webp | assets/background/bg-marble.webp |
-| bg-speaking | Conference / Speaking Event | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/bg-speaking-d2c1c550.webp | assets/content/bg-speaking.webp |
-| bg-district1 | District 1 HCMC Aerial | background | 1600px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-district1-83512275.webp | assets/background/bg-district1.webp |
-| og-default | Default OG / Social Sharing Image | og | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/og/og-default-a229973b.webp | assets/og/og-default.webp |
-| og-practice | Practice Areas OG Image | og | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/og/og-practice-f106e559.webp | assets/og/og-practice.webp |
-| favicon-vh | VH Monogram Favicon/App Icon | icon | 512px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/icon/favicon-vh-8cdbcafc.webp | assets/icon/favicon-vh.webp |
-| article-corporate-law | Article Thumbnail - Corporate Law Analysis | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-corporate-law-cd404779.webp | assets/content/article-corporate-law.webp |
-| article-land-dispute | Article Thumbnail - Land & Property Disputes | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-land-dispute-28b8d87f.webp | assets/content/article-land-dispute.webp |
-| article-foreign-investment | Article Thumbnail - Foreign Investment in Vietnam | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-foreign-investment-087a2566.webp | assets/content/article-foreign-investment.webp |
-| article-divorce-international | Article Thumbnail - International Divorce | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-divorce-international-66f796f8.webp | assets/content/article-divorce-international.webp |
-| article-labor-rights | Article Thumbnail - Labor Rights & Employment | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-labor-rights-f201efee.webp | assets/content/article-labor-rights.webp |
-| article-criminal-defense | Article Thumbnail - Criminal Defense & Rights | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-criminal-defense-3fb4bf85.webp | assets/content/article-criminal-defense.webp |
-| section-consultation | Consultation Room - Practice Area Pages | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-consultation-09ce3923.webp | assets/content/section-consultation.webp |
-| section-courtroom | Vietnamese Courtroom Interior | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-courtroom-e20bbb8d.webp | assets/content/section-courtroom.webp |
-| section-document-signing | Legal Document Signing Close-up | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-document-signing-63dc5758.webp | assets/content/section-document-signing.webp |
-| section-client-meeting | Attorney-Client Meeting | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-client-meeting-e1f7235e.webp | assets/content/section-client-meeting.webp |
-| section-team-discussion | Legal Team Discussion | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-team-discussion-8b1a2a78.webp | assets/content/section-team-discussion.webp |
-| perspective-thought | Thoughtful Lawyer Portrait - Perspectives | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/perspective-thought-740b9752.webp | assets/content/perspective-thought.webp |
-| bg-legal-books | Legal Books Close-up Background | background | 1920px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-legal-books-abdaa863.webp | assets/background/bg-legal-books.webp |
-| bg-office-hallway | Law Office Hallway - Premium Interior | background | 1920px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-office-hallway-e2bffaa5.webp | assets/background/bg-office-hallway.webp |
-| icon-scales-gold | Gold Scales of Justice Icon | icon | 512px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/icon/icon-scales-gold-b8487acf.webp | assets/icon/icon-scales-gold.webp |
-| map-hcmc-office | Stylized HCMC Office Location Map | content | 1200px | https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/map-hcmc-office-58683e9b.webp | assets/content/map-hcmc-office.webp |
+| hero-portrait | Homepage Hero Portrait | hero | 1920px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/hero/hero-portrait-8ed7de4d.webp | N/A |
+| profile-hero | Profile Page Hero - Desk Portrait | hero | 1600px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/hero/profile-hero-6c5a93e0.webp | assets/hero/profile-hero.webp |
+| detail-hands | Detail Accent Shot - Hands with Pen | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/detail-hands-34b089bb.webp | assets/content/detail-hands.webp |
+| practice-civil | Practice Area - Civil Disputes | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-civil-9e32fb02.webp | assets/content/practice-civil.webp |
+| practice-land | Practice Area - Land & Real Estate | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-land-bbc1cc7f.webp | assets/content/practice-land.webp |
+| practice-family | Practice Area - Family Law & Divorce | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-family-c50dd275.webp | assets/content/practice-family.webp |
+| practice-corporate | Practice Area - Corporate Law | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-corporate-5f2c5501.webp | assets/content/practice-corporate.webp |
+| practice-labor | Practice Area - Labor Disputes | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-labor-aec105be.webp | assets/content/practice-labor.webp |
+| practice-criminal | Practice Area - Criminal Defense | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-criminal-59f8f545.webp | assets/content/practice-criminal.webp |
+| bg-library | Library / Publications Background | background | 1920px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-library-f8675605.webp | assets/background/bg-library.webp |
+| bg-skyline | HCMC Skyline Panoramic | background | 1920px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-skyline-4d8d3819.webp | assets/background/bg-skyline.webp |
+| accent-gold-stroke | Gold Brushstroke Decorative Element | content | 800px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/accent-gold-stroke-4de2a341.webp | assets/content/accent-gold-stroke.webp |
+| bg-marble | Dark Marble Texture Background | background | 1920px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-marble-5a92903f.webp | assets/background/bg-marble.webp |
+| bg-speaking | Conference / Speaking Event | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/bg-speaking-d2c1c550.webp | assets/content/bg-speaking.webp |
+| bg-district1 | District 1 HCMC Aerial | background | 1600px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-district1-83512275.webp | assets/background/bg-district1.webp |
+| og-default | Default OG / Social Sharing Image | og | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/og/og-default-a229973b.webp | assets/og/og-default.webp |
+| og-practice | Practice Areas OG Image | og | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/og/og-practice-f106e559.webp | assets/og/og-practice.webp |
+| favicon-vh | VH Monogram Favicon/App Icon | icon | 512px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/favicon-vh-8cdbcafc.webp | assets/icon/favicon-vh.webp |
+| article-corporate-law | Article Thumbnail - Corporate Law Analysis | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-corporate-law-cd404779.webp | assets/content/article-corporate-law.webp |
+| article-land-dispute | Article Thumbnail - Land & Property Disputes | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-land-dispute-28b8d87f.webp | assets/content/article-land-dispute.webp |
+| article-foreign-investment | Article Thumbnail - Foreign Investment in Vietnam | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-foreign-investment-087a2566.webp | assets/content/article-foreign-investment.webp |
+| article-divorce-international | Article Thumbnail - International Divorce | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-divorce-international-66f796f8.webp | assets/content/article-divorce-international.webp |
+| article-labor-rights | Article Thumbnail - Labor Rights & Employment | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-labor-rights-f201efee.webp | assets/content/article-labor-rights.webp |
+| article-criminal-defense | Article Thumbnail - Criminal Defense & Rights | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-criminal-defense-3fb4bf85.webp | assets/content/article-criminal-defense.webp |
+| section-consultation | Consultation Room - Practice Area Pages | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-consultation-09ce3923.webp | assets/content/section-consultation.webp |
+| section-courtroom | Vietnamese Courtroom Interior | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-courtroom-e20bbb8d.webp | assets/content/section-courtroom.webp |
+| section-document-signing | Legal Document Signing Close-up | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-document-signing-63dc5758.webp | assets/content/section-document-signing.webp |
+| section-client-meeting | Attorney-Client Meeting | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-client-meeting-e1f7235e.webp | assets/content/section-client-meeting.webp |
+| section-team-discussion | Legal Team Discussion | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-team-discussion-8b1a2a78.webp | assets/content/section-team-discussion.webp |
+| perspective-thought | Thoughtful Lawyer Portrait - Perspectives | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/perspective-thought-740b9752.webp | assets/content/perspective-thought.webp |
+| bg-legal-books | Legal Books Close-up Background | background | 1920px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-legal-books-abdaa863.webp | assets/background/bg-legal-books.webp |
+| bg-office-hallway | Law Office Hallway - Premium Interior | background | 1920px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-office-hallway-e2bffaa5.webp | assets/background/bg-office-hallway.webp |
+| icon-scales-gold | Gold Scales of Justice Icon | icon | 512px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/icon-scales-gold-b8487acf.webp | assets/icon/icon-scales-gold.webp |
+| map-hcmc-office | Stylized HCMC Office Location Map | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/map-hcmc-office-58683e9b.webp | assets/content/map-hcmc-office.webp |
 | practice-commercial | Practice Area - Commercial Disputes | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-commercial-b5a1a6d9.webp | assets/content/practice-commercial.webp |
 | article-commercial-arbitration | Article Thumbnail - Commercial Arbitration at VIAC | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-commercial-arbitration-d880f072.webp | assets/content/article-commercial-arbitration.webp |
 | article-commercial-litigation | Article Thumbnail - Commercial Court Litigation | content | 1200px | https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-commercial-litigation-5b2e9165.webp | assets/content/article-commercial-litigation.webp |
@@ -65,7 +65,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: hero
 - **Dimensions**: 1920px wide, 16:9 aspect ratio
 - **Type**: image-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/hero/hero-portrait-8ed7de4d.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/hero/hero-portrait-8ed7de4d.webp`
 - **Local**: `not saved`
 - **Description**: Professional portrait of this Vietnamese male lawyer in his 40s wearing a premium tailored dark navy suit with a subtle gold tie clip, standing confid...
 - **Alt text suggestion**: Homepage Hero Portrait - vothienhien.com
@@ -75,7 +75,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: hero
 - **Dimensions**: 1600px wide, 16:9 aspect ratio
 - **Type**: image-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/hero/profile-hero-6c5a93e0.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/hero/profile-hero-6c5a93e0.webp`
 - **Local**: `assets/hero/profile-hero.webp`
 - **Description**: Professional environmental portrait of this Vietnamese male lawyer seated at a premium dark walnut executive desk in a luxury law office. He is review...
 - **Alt text suggestion**: Profile Page Hero - Desk Portrait - vothienhien.com
@@ -85,7 +85,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 3:2 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/detail-hands-34b089bb.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/detail-hands-34b089bb.webp`
 - **Local**: `assets/content/detail-hands.webp`
 - **Description**: Cinematic close-up of a lawyer's hands in premium dark suit cuffs with subtle gold cufflinks, holding a gold Mont Blanc pen while reviewing a legal do...
 - **Alt text suggestion**: Detail Accent Shot - Hands with Pen - vothienhien.com
@@ -95,7 +95,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 3:2 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-civil-9e32fb02.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-civil-9e32fb02.webp`
 - **Local**: `assets/content/practice-civil.webp`
 - **Description**: Abstract minimalist representation of justice and civil law. Elegant intertwined gold metallic lines forming balanced scales of justice on a pure blac...
 - **Alt text suggestion**: Practice Area - Civil Disputes - vothienhien.com
@@ -105,7 +105,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 3:2 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-land-bbc1cc7f.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-land-bbc1cc7f.webp`
 - **Local**: `assets/content/practice-land.webp`
 - **Description**: Aerial photograph of Ho Chi Minh City District 2 (Thu Duc City) real estate development at golden hour. Modern glass towers, riverside developments, a...
 - **Alt text suggestion**: Practice Area - Land & Real Estate - vothienhien.com
@@ -115,7 +115,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 3:2 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-family-c50dd275.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-family-c50dd275.webp`
 - **Local**: `assets/content/practice-family.webp`
 - **Description**: Elegant artistic still life of two gold wedding rings resting on the corner of a legal document on a white marble surface. Soft diffused warm lighting...
 - **Alt text suggestion**: Practice Area - Family Law & Divorce - vothienhien.com
@@ -125,7 +125,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 3:2 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-corporate-5f2c5501.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-corporate-5f2c5501.webp`
 - **Local**: `assets/content/practice-corporate.webp`
 - **Description**: Modern premium corporate boardroom in a Ho Chi Minh City high-rise. Long polished dark glass conference table, 12 black leather executive chairs, floo...
 - **Alt text suggestion**: Practice Area - Corporate Law - vothienhien.com
@@ -135,7 +135,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 3:2 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-labor-aec105be.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-labor-aec105be.webp`
 - **Local**: `assets/content/practice-labor.webp`
 - **Description**: Abstract minimalist composition: two silhouetted hands reaching toward each other to shake, formed entirely by thin gold metallic lines on a pure blac...
 - **Alt text suggestion**: Practice Area - Labor Disputes - vothienhien.com
@@ -145,7 +145,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 3:2 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-criminal-59f8f545.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-criminal-59f8f545.webp`
 - **Local**: `assets/content/practice-criminal.webp`
 - **Description**: Dramatic low-angle photograph looking upward at grand courthouse columns and entrance. Classical architecture with Corinthian columns. Black and white...
 - **Alt text suggestion**: Practice Area - Criminal Defense - vothienhien.com
@@ -155,7 +155,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: background
 - **Dimensions**: 1920px wide, 16:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-library-f8675605.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-library-f8675605.webp`
 - **Local**: `assets/background/bg-library.webp`
 - **Description**: Premium law office private library interior. Dark mahogany wood bookshelves from floor to ceiling on both sides, filled with leather-bound legal volum...
 - **Alt text suggestion**: Library / Publications Background - vothienhien.com
@@ -165,7 +165,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: background
 - **Dimensions**: 1920px wide, 21:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-skyline-4d8d3819.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-skyline-4d8d3819.webp`
 - **Local**: `assets/background/bg-skyline.webp`
 - **Description**: Panoramic photograph of Ho Chi Minh City skyline at twilight/blue hour. Bitexco Financial Tower prominently visible. City lights reflecting golden on ...
 - **Alt text suggestion**: HCMC Skyline Panoramic - vothienhien.com
@@ -175,7 +175,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 800px wide, 16:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/accent-gold-stroke-4de2a341.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/accent-gold-stroke-4de2a341.webp`
 - **Local**: `assets/content/accent-gold-stroke.webp`
 - **Description**: Single elegant gold brushstroke on a pure black background. Japanese/Chinese calligraphy-inspired sweeping horizontal stroke from left to right. Real ...
 - **Alt text suggestion**: Gold Brushstroke Decorative Element - vothienhien.com
@@ -185,7 +185,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: background
 - **Dimensions**: 1920px wide, 16:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-marble-5a92903f.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-marble-5a92903f.webp`
 - **Local**: `assets/background/bg-marble.webp`
 - **Description**: Seamless dark marble texture with subtle gold veining. Near-black marble (#1A1A1A base) with thin branching gold (#C5A55A) and warm brass (#B8924C) ve...
 - **Alt text suggestion**: Dark Marble Texture Background - vothienhien.com
@@ -195,7 +195,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 3:2 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/bg-speaking-d2c1c550.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/bg-speaking-d2c1c550.webp`
 - **Local**: `assets/content/bg-speaking.webp`
 - **Description**: Professional conference stage with a single podium and microphone. Warm spotlight illuminating the podium from above. Audience in soft bokeh blur in f...
 - **Alt text suggestion**: Conference / Speaking Event - vothienhien.com
@@ -205,7 +205,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: background
 - **Dimensions**: 1600px wide, 16:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-district1-83512275.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-district1-83512275.webp`
 - **Local**: `assets/background/bg-district1.webp`
 - **Description**: Aerial photograph of District 1, Ho Chi Minh City on a clear sunny day. Bitexco Tower, Notre Dame Cathedral, Central Post Office, and Nguyen Hue Walki...
 - **Alt text suggestion**: District 1 HCMC Aerial - vothienhien.com
@@ -215,7 +215,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: og
 - **Dimensions**: 1200px wide, 1200:630 aspect ratio
 - **Type**: image-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/og/og-default-a229973b.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/og/og-default-a229973b.webp`
 - **Local**: `assets/og/og-default.webp`
 - **Description**: Create a professional social media card on black (#0A0A0A) background. Place this person's face in a circular crop with thin gold ring border on the l...
 - **Alt text suggestion**: Default OG / Social Sharing Image - vothienhien.com
@@ -225,7 +225,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: og
 - **Dimensions**: 1200px wide, 1200:630 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/og/og-practice-f106e559.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/og/og-practice-f106e559.webp`
 - **Local**: `assets/og/og-practice.webp`
 - **Description**: Social media card on black (#0A0A0A) background. Top: thin gold horizontal line. Center: elegant gold scales of justice icon (minimalist line art, 120...
 - **Alt text suggestion**: Practice Areas OG Image - vothienhien.com
@@ -235,7 +235,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: icon
 - **Dimensions**: 512px wide, 1:1 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/icon/favicon-vh-8cdbcafc.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/favicon-vh-8cdbcafc.webp`
 - **Local**: `assets/icon/favicon-vh.webp`
 - **Description**: Minimalist monogram logo for a luxury law brand. The letters 'VH' intertwined in elegant thin gold (#C5A55A) lines on a pure black (#0A0A0A) square ba...
 - **Alt text suggestion**: VH Monogram Favicon/App Icon - vothienhien.com
@@ -245,7 +245,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 16:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-corporate-law-cd404779.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-corporate-law-cd404779.webp`
 - **Local**: `assets/content/article-corporate-law.webp`
 - **Description**: Top-down flat lay on a dark walnut desk: a leather-bound law book open to a page with highlighted text, a gold-nibbed fountain pen, corporate seal sta...
 - **Alt text suggestion**: Article Thumbnail - Corporate Law Analysis - vothienhien.com
@@ -255,7 +255,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 16:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-land-dispute-28b8d87f.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-land-dispute-28b8d87f.webp`
 - **Local**: `assets/content/article-land-dispute.webp`
 - **Description**: Aerial photograph of a Vietnamese urban neighborhood meeting a modern high-rise development zone, clearly showing the boundary/contrast between tradit...
 - **Alt text suggestion**: Article Thumbnail - Land & Property Disputes - vothienhien.com
@@ -265,7 +265,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 16:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-foreign-investment-087a2566.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-foreign-investment-087a2566.webp`
 - **Local**: `assets/content/article-foreign-investment.webp`
 - **Description**: Close-up of two business professionals (one Asian, one Western) shaking hands across a conference table. Only their hands, suit cuffs, and the table s...
 - **Alt text suggestion**: Article Thumbnail - Foreign Investment in Vietnam - vothienhien.com
@@ -275,7 +275,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 16:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-divorce-international-66f796f8.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-divorce-international-66f796f8.webp`
 - **Local**: `assets/content/article-divorce-international.webp`
 - **Description**: Minimalist still life: two passports (one Vietnamese, one generic foreign) placed side by side on a white marble surface, with a thin gold wedding ban...
 - **Alt text suggestion**: Article Thumbnail - International Divorce - vothienhien.com
@@ -285,7 +285,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 16:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-labor-rights-f201efee.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-labor-rights-f201efee.webp`
 - **Local**: `assets/content/article-labor-rights.webp`
 - **Description**: Abstract composition: a construction hard hat (yellow) and a business briefcase (black leather) placed on opposite ends of a polished dark wood confer...
 - **Alt text suggestion**: Article Thumbnail - Labor Rights & Employment - vothienhien.com
@@ -295,7 +295,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 16:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-criminal-defense-3fb4bf85.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-criminal-defense-3fb4bf85.webp`
 - **Local**: `assets/content/article-criminal-defense.webp`
 - **Description**: Dramatic close-up of a wooden judge's gavel resting on its sound block on a dark mahogany bench surface. A single beam of warm golden light illuminate...
 - **Alt text suggestion**: Article Thumbnail - Criminal Defense & Rights - vothienhien.com
@@ -305,7 +305,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 16:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-consultation-09ce3923.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-consultation-09ce3923.webp`
 - **Local**: `assets/content/section-consultation.webp`
 - **Description**: Premium private consultation room in a Vietnamese law office. Two leather armchairs facing each other across a small dark wood coffee table. A glass w...
 - **Alt text suggestion**: Consultation Room - Practice Area Pages - vothienhien.com
@@ -315,7 +315,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 16:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-courtroom-e20bbb8d.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-courtroom-e20bbb8d.webp`
 - **Local**: `assets/content/section-courtroom.webp`
 - **Description**: Interior of a Vietnamese courtroom (phòng xử án). The judge's elevated bench with the Vietnamese national emblem (gold star on red) mounted above. Woo...
 - **Alt text suggestion**: Vietnamese Courtroom Interior - vothienhien.com
@@ -325,7 +325,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 3:2 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-document-signing-63dc5758.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-document-signing-63dc5758.webp`
 - **Local**: `assets/content/section-document-signing.webp`
 - **Description**: Cinematic overhead shot of hands signing a legal document on a dark desk. Multiple copies of the same contract stacked neatly, with gold paper clips. ...
 - **Alt text suggestion**: Legal Document Signing Close-up - vothienhien.com
@@ -335,7 +335,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 16:9 aspect ratio
 - **Type**: image-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-client-meeting-e1f7235e.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-client-meeting-e1f7235e.webp`
 - **Local**: `assets/content/section-client-meeting.webp`
 - **Description**: Professional photograph of this Vietnamese male lawyer in a navy suit sitting across from a client (seen from behind, blurred) in a premium office con...
 - **Alt text suggestion**: Attorney-Client Meeting - vothienhien.com
@@ -345,7 +345,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 16:9 aspect ratio
 - **Type**: image-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-team-discussion-8b1a2a78.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-team-discussion-8b1a2a78.webp`
 - **Local**: `assets/content/section-team-discussion.webp`
 - **Description**: Professional photograph of this Vietnamese male lawyer standing at the head of a conference table, leading a discussion with 3 colleagues (backs to ca...
 - **Alt text suggestion**: Legal Team Discussion - vothienhien.com
@@ -355,7 +355,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 3:2 aspect ratio
 - **Type**: image-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/perspective-thought-740b9752.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/perspective-thought-740b9752.webp`
 - **Local**: `assets/content/perspective-thought.webp`
 - **Description**: Intimate portrait of this Vietnamese male lawyer in a charcoal turtleneck (no suit), sitting in a modern leather chair in a private library/study. He ...
 - **Alt text suggestion**: Thoughtful Lawyer Portrait - Perspectives - vothienhien.com
@@ -365,7 +365,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: background
 - **Dimensions**: 1920px wide, 16:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-legal-books-abdaa863.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-legal-books-abdaa863.webp`
 - **Local**: `assets/background/bg-legal-books.webp`
 - **Description**: Extreme close-up of leather-bound Vietnamese legal code books lined up on a dark wood shelf. The spine titles are blurred but the texture of the leath...
 - **Alt text suggestion**: Legal Books Close-up Background - vothienhien.com
@@ -375,7 +375,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: background
 - **Dimensions**: 1920px wide, 21:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-office-hallway-e2bffaa5.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-office-hallway-e2bffaa5.webp`
 - **Local**: `assets/background/bg-office-hallway.webp`
 - **Description**: Long perspective shot down a premium law office hallway. Dark wood paneling on walls, recessed warm lighting in the ceiling creating pools of light. A...
 - **Alt text suggestion**: Law Office Hallway - Premium Interior - vothienhien.com
@@ -385,7 +385,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: icon
 - **Dimensions**: 512px wide, 1:1 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/icon/icon-scales-gold-b8487acf.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/icon-scales-gold-b8487acf.webp`
 - **Local**: `assets/icon/icon-scales-gold.webp`
 - **Description**: Minimalist 3D render of balanced scales of justice made of polished gold metal, floating against a pure black (#0A0A0A) background. The scales are per...
 - **Alt text suggestion**: Gold Scales of Justice Icon - vothienhien.com
@@ -395,7 +395,7 @@ Use the CDN URL in your Next.js components:
 - **Category**: content
 - **Dimensions**: 1200px wide, 16:9 aspect ratio
 - **Type**: text-to-image
-- **CDN URL**: `https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/map-hcmc-office-58683e9b.webp`
+- **CDN URL**: `https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/map-hcmc-office-58683e9b.webp`
 - **Local**: `assets/content/map-hcmc-office.webp`
 - **Description**: Elegant stylized map of Ho Chi Minh City District 1 area, rendered in a luxury brand aesthetic. Dark charcoal (#1A1A1A) background with gold (#C5A55A)...
 - **Alt text suggestion**: Stylized HCMC Office Location Map - vothienhien.com

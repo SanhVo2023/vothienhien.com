@@ -5,7 +5,7 @@
     "category": "hero",
     "width": 1920,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/hero/hero-portrait-8ed7de4d.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/hero/hero-portrait-8ed7de4d.webp",
     "local_path": null,
     "alt": "Homepage Hero Portrait - vothienhien.com",
     "description": "Professional portrait of this Vietnamese male lawyer in his 40s wearing a premium tailored dark navy suit with a subtle gold tie clip, standing confidently with arms slightly crossed in a modern high-"
@@ -16,7 +16,7 @@
     "category": "hero",
     "width": 1600,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/hero/profile-hero-6c5a93e0.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/hero/profile-hero-6c5a93e0.webp",
     "local_path": "assets/hero/profile-hero.webp",
     "alt": "Profile Page Hero - Desk Portrait - vothienhien.com",
     "description": "Professional environmental portrait of this Vietnamese male lawyer seated at a premium dark walnut executive desk in a luxury law office. He is reviewing a legal document with a thoughtful, focused ex"
@@ -27,7 +27,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/detail-hands-34b089bb.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/detail-hands-34b089bb.webp",
     "local_path": "assets/content/detail-hands.webp",
     "alt": "Detail Accent Shot - Hands with Pen - vothienhien.com",
     "description": "Cinematic close-up of a lawyer's hands in premium dark suit cuffs with subtle gold cufflinks, holding a gold Mont Blanc pen while reviewing a legal document on a polished dark marble desk surface. Sha"
@@ -38,7 +38,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-civil-9e32fb02.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-civil-9e32fb02.webp",
     "local_path": "assets/content/practice-civil.webp",
     "alt": "Practice Area - Civil Disputes - vothienhien.com",
     "description": "Abstract minimalist representation of justice and civil law. Elegant intertwined gold metallic lines forming balanced scales of justice on a pure black background. Luxury brand aesthetic, clean geomet"
@@ -49,7 +49,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-land-bbc1cc7f.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-land-bbc1cc7f.webp",
     "local_path": "assets/content/practice-land.webp",
     "alt": "Practice Area - Land & Real Estate - vothienhien.com",
     "description": "Aerial photograph of Ho Chi Minh City District 2 (Thu Duc City) real estate development at golden hour. Modern glass towers, riverside developments, and traditional neighborhoods visible. Warm golden "
@@ -60,7 +60,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-family-c50dd275.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-family-c50dd275.webp",
     "local_path": "assets/content/practice-family.webp",
     "alt": "Practice Area - Family Law & Divorce - vothienhien.com",
     "description": "Elegant artistic still life of two gold wedding rings resting on the corner of a legal document on a white marble surface. Soft diffused warm lighting from above right. Extremely shallow depth of fiel"
@@ -71,7 +71,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-corporate-5f2c5501.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-corporate-5f2c5501.webp",
     "local_path": "assets/content/practice-corporate.webp",
     "alt": "Practice Area - Corporate Law - vothienhien.com",
     "description": "Modern premium corporate boardroom in a Ho Chi Minh City high-rise. Long polished dark glass conference table, 12 black leather executive chairs, floor-to-ceiling windows showing city skyline. No peop"
@@ -82,7 +82,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-labor-aec105be.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-labor-aec105be.webp",
     "local_path": "assets/content/practice-labor.webp",
     "alt": "Practice Area - Labor Disputes - vothienhien.com",
     "description": "Abstract minimalist composition: two silhouetted hands reaching toward each other to shake, formed entirely by thin gold metallic lines on a pure black background. The handshake is not yet complete - "
@@ -93,7 +93,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-criminal-59f8f545.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-criminal-59f8f545.webp",
     "local_path": "assets/content/practice-criminal.webp",
     "alt": "Practice Area - Criminal Defense - vothienhien.com",
     "description": "Dramatic low-angle photograph looking upward at grand courthouse columns and entrance. Classical architecture with Corinthian columns. Black and white photography with selective gold accent lighting o"
@@ -104,7 +104,7 @@
     "category": "background",
     "width": 1920,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-library-f8675605.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-library-f8675605.webp",
     "local_path": "assets/background/bg-library.webp",
     "alt": "Library / Publications Background - vothienhien.com",
     "description": "Premium law office private library interior. Dark mahogany wood bookshelves from floor to ceiling on both sides, filled with leather-bound legal volumes in burgundy, navy, and forest green. A rolling "
@@ -115,7 +115,7 @@
     "category": "background",
     "width": 1920,
     "aspect": "21:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-skyline-4d8d3819.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-skyline-4d8d3819.webp",
     "local_path": "assets/background/bg-skyline.webp",
     "alt": "HCMC Skyline Panoramic - vothienhien.com",
     "description": "Panoramic photograph of Ho Chi Minh City skyline at twilight/blue hour. Bitexco Financial Tower prominently visible. City lights reflecting golden on the Saigon River in foreground. Deep blue sky tran"
@@ -126,7 +126,7 @@
     "category": "content",
     "width": 800,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/accent-gold-stroke-4de2a341.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/accent-gold-stroke-4de2a341.webp",
     "local_path": "assets/content/accent-gold-stroke.webp",
     "alt": "Gold Brushstroke Decorative Element - vothienhien.com",
     "description": "Single elegant gold brushstroke on a pure black background. Japanese/Chinese calligraphy-inspired sweeping horizontal stroke from left to right. Real metallic gold paint texture with visible brush hai"
@@ -137,7 +137,7 @@
     "category": "background",
     "width": 1920,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-marble-5a92903f.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-marble-5a92903f.webp",
     "local_path": "assets/background/bg-marble.webp",
     "alt": "Dark Marble Texture Background - vothienhien.com",
     "description": "Seamless dark marble texture with subtle gold veining. Near-black marble (#1A1A1A base) with thin branching gold (#C5A55A) and warm brass (#B8924C) veins running diagonally. Polished surface with subt"
@@ -148,7 +148,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/bg-speaking-d2c1c550.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/bg-speaking-d2c1c550.webp",
     "local_path": "assets/content/bg-speaking.webp",
     "alt": "Conference / Speaking Event - vothienhien.com",
     "description": "Professional conference stage with a single podium and microphone. Warm spotlight illuminating the podium from above. Audience in soft bokeh blur in foreground/sides. Dark auditorium with warm amber a"
@@ -159,7 +159,7 @@
     "category": "background",
     "width": 1600,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-district1-83512275.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-district1-83512275.webp",
     "local_path": "assets/background/bg-district1.webp",
     "alt": "District 1 HCMC Aerial - vothienhien.com",
     "description": "Aerial photograph of District 1, Ho Chi Minh City on a clear sunny day. Bitexco Tower, Notre Dame Cathedral, Central Post Office, and Nguyen Hue Walking Street all visible. Warm afternoon light, sligh"
@@ -170,7 +170,7 @@
     "category": "og",
     "width": 1200,
     "aspect": "1200:630",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/og/og-default-a229973b.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/og/og-default-a229973b.webp",
     "local_path": "assets/og/og-default.webp",
     "alt": "Default OG / Social Sharing Image - vothienhien.com",
     "description": "Create a professional social media card on black (#0A0A0A) background. Place this person's face in a circular crop with thin gold ring border on the left side. Right side: elegant gold serif text 'VO "
@@ -181,7 +181,7 @@
     "category": "og",
     "width": 1200,
     "aspect": "1200:630",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/og/og-practice-f106e559.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/og/og-practice-f106e559.webp",
     "local_path": "assets/og/og-practice.webp",
     "alt": "Practice Areas OG Image - vothienhien.com",
     "description": "Social media card on black (#0A0A0A) background. Top: thin gold horizontal line. Center: elegant gold scales of justice icon (minimalist line art, 120px). Below: 'PRACTICE AREAS' in white small caps w"
@@ -192,7 +192,7 @@
     "category": "icon",
     "width": 512,
     "aspect": "1:1",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/icon/favicon-vh-8cdbcafc.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/favicon-vh-8cdbcafc.webp",
     "local_path": "assets/icon/favicon-vh.webp",
     "alt": "VH Monogram Favicon/App Icon - vothienhien.com",
     "description": "Minimalist monogram logo for a luxury law brand. The letters 'VH' intertwined in elegant thin gold (#C5A55A) lines on a pure black (#0A0A0A) square background. Think Chanel or Louis Vuitton monogram s"
@@ -203,7 +203,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-corporate-law-cd404779.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-corporate-law-cd404779.webp",
     "local_path": "assets/content/article-corporate-law.webp",
     "alt": "Article Thumbnail - Corporate Law Analysis - vothienhien.com",
     "description": "Top-down flat lay on a dark walnut desk: a leather-bound law book open to a page with highlighted text, a gold-nibbed fountain pen, corporate seal stamps, a stack of signed contracts with red wax seal"
@@ -214,7 +214,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-land-dispute-28b8d87f.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-land-dispute-28b8d87f.webp",
     "local_path": "assets/content/article-land-dispute.webp",
     "alt": "Article Thumbnail - Land & Property Disputes - vothienhien.com",
     "description": "Aerial photograph of a Vietnamese urban neighborhood meeting a modern high-rise development zone, clearly showing the boundary/contrast between traditional tile-roof houses and glass skyscrapers. Gold"
@@ -225,7 +225,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-foreign-investment-087a2566.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-foreign-investment-087a2566.webp",
     "local_path": "assets/content/article-foreign-investment.webp",
     "alt": "Article Thumbnail - Foreign Investment in Vietnam - vothienhien.com",
     "description": "Close-up of two business professionals (one Asian, one Western) shaking hands across a conference table. Only their hands, suit cuffs, and the table surface are visible — no faces. On the table: print"
@@ -236,7 +236,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-divorce-international-66f796f8.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-divorce-international-66f796f8.webp",
     "local_path": "assets/content/article-divorce-international.webp",
     "alt": "Article Thumbnail - International Divorce - vothienhien.com",
     "description": "Minimalist still life: two passports (one Vietnamese, one generic foreign) placed side by side on a white marble surface, with a thin gold wedding band resting between them. A single white rose petal "
@@ -247,7 +247,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-labor-rights-f201efee.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-labor-rights-f201efee.webp",
     "local_path": "assets/content/article-labor-rights.webp",
     "alt": "Article Thumbnail - Labor Rights & Employment - vothienhien.com",
     "description": "Abstract composition: a construction hard hat (yellow) and a business briefcase (black leather) placed on opposite ends of a polished dark wood conference table, with a legal document and pen centered"
@@ -258,7 +258,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-criminal-defense-3fb4bf85.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-criminal-defense-3fb4bf85.webp",
     "local_path": "assets/content/article-criminal-defense.webp",
     "alt": "Article Thumbnail - Criminal Defense & Rights - vothienhien.com",
     "description": "Dramatic close-up of a wooden judge's gavel resting on its sound block on a dark mahogany bench surface. A single beam of warm golden light illuminates the gavel from the left, casting a long shadow t"
@@ -269,7 +269,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-consultation-09ce3923.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-consultation-09ce3923.webp",
     "local_path": "assets/content/section-consultation.webp",
     "alt": "Consultation Room - Practice Area Pages - vothienhien.com",
     "description": "Premium private consultation room in a Vietnamese law office. Two leather armchairs facing each other across a small dark wood coffee table. A glass wall on one side shows a blurred Ho Chi Minh City s"
@@ -280,7 +280,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-courtroom-e20bbb8d.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-courtroom-e20bbb8d.webp",
     "local_path": "assets/content/section-courtroom.webp",
     "alt": "Vietnamese Courtroom Interior - vothienhien.com",
     "description": "Interior of a Vietnamese courtroom (phòng xử án). The judge's elevated bench with the Vietnamese national emblem (gold star on red) mounted above. Wooden counsel tables in foreground, empty chairs. Wa"
@@ -291,7 +291,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-document-signing-63dc5758.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-document-signing-63dc5758.webp",
     "local_path": "assets/content/section-document-signing.webp",
     "alt": "Legal Document Signing Close-up - vothienhien.com",
     "description": "Cinematic overhead shot of hands signing a legal document on a dark desk. Multiple copies of the same contract stacked neatly, with gold paper clips. A notary stamp and red ink pad visible in the corn"
@@ -302,7 +302,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-client-meeting-e1f7235e.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-client-meeting-e1f7235e.webp",
     "local_path": "assets/content/section-client-meeting.webp",
     "alt": "Attorney-Client Meeting - vothienhien.com",
     "description": "Professional photograph of this Vietnamese male lawyer in a navy suit sitting across from a client (seen from behind, blurred) in a premium office consultation setting. The lawyer is gesturing while e"
@@ -313,7 +313,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-team-discussion-8b1a2a78.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-team-discussion-8b1a2a78.webp",
     "local_path": "assets/content/section-team-discussion.webp",
     "alt": "Legal Team Discussion - vothienhien.com",
     "description": "Professional photograph of this Vietnamese male lawyer standing at the head of a conference table, leading a discussion with 3 colleagues (backs to camera or in profile, slightly blurred). Whiteboards"
@@ -324,7 +324,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/perspective-thought-740b9752.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/perspective-thought-740b9752.webp",
     "local_path": "assets/content/perspective-thought.webp",
     "alt": "Thoughtful Lawyer Portrait - Perspectives - vothienhien.com",
     "description": "Intimate portrait of this Vietnamese male lawyer in a charcoal turtleneck (no suit), sitting in a modern leather chair in a private library/study. He is looking slightly off-camera with a thoughtful, "
@@ -335,7 +335,7 @@
     "category": "background",
     "width": 1920,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-legal-books-abdaa863.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-legal-books-abdaa863.webp",
     "local_path": "assets/background/bg-legal-books.webp",
     "alt": "Legal Books Close-up Background - vothienhien.com",
     "description": "Extreme close-up of leather-bound Vietnamese legal code books lined up on a dark wood shelf. The spine titles are blurred but the texture of the leather and gold-embossed lettering is visible. Shallow"
@@ -346,7 +346,7 @@
     "category": "background",
     "width": 1920,
     "aspect": "21:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-office-hallway-e2bffaa5.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-office-hallway-e2bffaa5.webp",
     "local_path": "assets/background/bg-office-hallway.webp",
     "alt": "Law Office Hallway - Premium Interior - vothienhien.com",
     "description": "Long perspective shot down a premium law office hallway. Dark wood paneling on walls, recessed warm lighting in the ceiling creating pools of light. At the end of the hallway, a large window shows the"
@@ -357,7 +357,7 @@
     "category": "icon",
     "width": 512,
     "aspect": "1:1",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/icon/icon-scales-gold-b8487acf.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/icon-scales-gold-b8487acf.webp",
     "local_path": "assets/icon/icon-scales-gold.webp",
     "alt": "Gold Scales of Justice Icon - vothienhien.com",
     "description": "Minimalist 3D render of balanced scales of justice made of polished gold metal, floating against a pure black (#0A0A0A) background. The scales are perfectly balanced and catch dramatic side lighting f"
@@ -368,7 +368,7 @@
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/map-hcmc-office-58683e9b.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/map-hcmc-office-58683e9b.webp",
     "local_path": "assets/content/map-hcmc-office.webp",
     "alt": "Stylized HCMC Office Location Map - vothienhien.com",
     "description": "Elegant stylized map of Ho Chi Minh City District 1 area, rendered in a luxury brand aesthetic. Dark charcoal (#1A1A1A) background with gold (#C5A55A) line work for streets and landmarks. Key landmark"

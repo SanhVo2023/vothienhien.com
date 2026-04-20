@@ -19,7 +19,7 @@ const ASSETS = [
     "category": "hero",
     "width": 1920,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/hero/hero-portrait-8ed7de4d.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/hero/hero-portrait-8ed7de4d.webp",
     "local_path": null,
     "alt": "Homepage Hero Portrait - vothienhien.com"
   },
@@ -29,7 +29,7 @@ const ASSETS = [
     "category": "hero",
     "width": 1600,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/hero/profile-hero-6c5a93e0.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/hero/profile-hero-6c5a93e0.webp",
     "local_path": "assets/hero/profile-hero.webp",
     "alt": "Profile Page Hero - Desk Portrait - vothienhien.com"
   },
@@ -39,7 +39,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/detail-hands-34b089bb.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/detail-hands-34b089bb.webp",
     "local_path": "assets/content/detail-hands.webp",
     "alt": "Detail Accent Shot - Hands with Pen - vothienhien.com"
   },
@@ -49,7 +49,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-civil-9e32fb02.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-civil-9e32fb02.webp",
     "local_path": "assets/content/practice-civil.webp",
     "alt": "Practice Area - Civil Disputes - vothienhien.com"
   },
@@ -59,7 +59,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-land-bbc1cc7f.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-land-bbc1cc7f.webp",
     "local_path": "assets/content/practice-land.webp",
     "alt": "Practice Area - Land & Real Estate - vothienhien.com"
   },
@@ -69,7 +69,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-family-c50dd275.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-family-c50dd275.webp",
     "local_path": "assets/content/practice-family.webp",
     "alt": "Practice Area - Family Law & Divorce - vothienhien.com"
   },
@@ -79,7 +79,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-corporate-5f2c5501.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-corporate-5f2c5501.webp",
     "local_path": "assets/content/practice-corporate.webp",
     "alt": "Practice Area - Corporate Law - vothienhien.com"
   },
@@ -89,7 +89,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-labor-aec105be.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-labor-aec105be.webp",
     "local_path": "assets/content/practice-labor.webp",
     "alt": "Practice Area - Labor Disputes - vothienhien.com"
   },
@@ -99,7 +99,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/practice-criminal-59f8f545.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-criminal-59f8f545.webp",
     "local_path": "assets/content/practice-criminal.webp",
     "alt": "Practice Area - Criminal Defense - vothienhien.com"
   },
@@ -109,7 +109,7 @@ const ASSETS = [
     "category": "background",
     "width": 1920,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-library-f8675605.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-library-f8675605.webp",
     "local_path": "assets/background/bg-library.webp",
     "alt": "Library / Publications Background - vothienhien.com"
   },
@@ -119,7 +119,7 @@ const ASSETS = [
     "category": "background",
     "width": 1920,
     "aspect": "21:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-skyline-4d8d3819.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-skyline-4d8d3819.webp",
     "local_path": "assets/background/bg-skyline.webp",
     "alt": "HCMC Skyline Panoramic - vothienhien.com"
   },
@@ -129,7 +129,7 @@ const ASSETS = [
     "category": "content",
     "width": 800,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/accent-gold-stroke-4de2a341.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/accent-gold-stroke-4de2a341.webp",
     "local_path": "assets/content/accent-gold-stroke.webp",
     "alt": "Gold Brushstroke Decorative Element - vothienhien.com"
   },
@@ -139,7 +139,7 @@ const ASSETS = [
     "category": "background",
     "width": 1920,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-marble-5a92903f.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-marble-5a92903f.webp",
     "local_path": "assets/background/bg-marble.webp",
     "alt": "Dark Marble Texture Background - vothienhien.com"
   },
@@ -149,7 +149,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/bg-speaking-d2c1c550.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/bg-speaking-d2c1c550.webp",
     "local_path": "assets/content/bg-speaking.webp",
     "alt": "Conference / Speaking Event - vothienhien.com"
   },
@@ -159,7 +159,7 @@ const ASSETS = [
     "category": "background",
     "width": 1600,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-district1-83512275.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-district1-83512275.webp",
     "local_path": "assets/background/bg-district1.webp",
     "alt": "District 1 HCMC Aerial - vothienhien.com"
   },
@@ -169,7 +169,7 @@ const ASSETS = [
     "category": "og",
     "width": 1200,
     "aspect": "1200:630",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/og/og-default-a229973b.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/og/og-default-a229973b.webp",
     "local_path": "assets/og/og-default.webp",
     "alt": "Default OG / Social Sharing Image - vothienhien.com"
   },
@@ -179,7 +179,7 @@ const ASSETS = [
     "category": "og",
     "width": 1200,
     "aspect": "1200:630",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/og/og-practice-f106e559.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/og/og-practice-f106e559.webp",
     "local_path": "assets/og/og-practice.webp",
     "alt": "Practice Areas OG Image - vothienhien.com"
   },
@@ -189,7 +189,7 @@ const ASSETS = [
     "category": "icon",
     "width": 512,
     "aspect": "1:1",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/icon/favicon-vh-8cdbcafc.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/favicon-vh-8cdbcafc.webp",
     "local_path": "assets/icon/favicon-vh.webp",
     "alt": "VH Monogram Favicon/App Icon - vothienhien.com"
   },
@@ -199,7 +199,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-corporate-law-cd404779.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-corporate-law-cd404779.webp",
     "local_path": "assets/content/article-corporate-law.webp",
     "alt": "Article Thumbnail - Corporate Law Analysis - vothienhien.com"
   },
@@ -209,7 +209,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-land-dispute-28b8d87f.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-land-dispute-28b8d87f.webp",
     "local_path": "assets/content/article-land-dispute.webp",
     "alt": "Article Thumbnail - Land & Property Disputes - vothienhien.com"
   },
@@ -219,7 +219,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-foreign-investment-087a2566.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-foreign-investment-087a2566.webp",
     "local_path": "assets/content/article-foreign-investment.webp",
     "alt": "Article Thumbnail - Foreign Investment in Vietnam - vothienhien.com"
   },
@@ -229,7 +229,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-divorce-international-66f796f8.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-divorce-international-66f796f8.webp",
     "local_path": "assets/content/article-divorce-international.webp",
     "alt": "Article Thumbnail - International Divorce - vothienhien.com"
   },
@@ -239,7 +239,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-labor-rights-f201efee.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-labor-rights-f201efee.webp",
     "local_path": "assets/content/article-labor-rights.webp",
     "alt": "Article Thumbnail - Labor Rights & Employment - vothienhien.com"
   },
@@ -249,7 +249,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/article-criminal-defense-3fb4bf85.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-criminal-defense-3fb4bf85.webp",
     "local_path": "assets/content/article-criminal-defense.webp",
     "alt": "Article Thumbnail - Criminal Defense & Rights - vothienhien.com"
   },
@@ -259,7 +259,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-consultation-09ce3923.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-consultation-09ce3923.webp",
     "local_path": "assets/content/section-consultation.webp",
     "alt": "Consultation Room - Practice Area Pages - vothienhien.com"
   },
@@ -269,7 +269,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-courtroom-e20bbb8d.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-courtroom-e20bbb8d.webp",
     "local_path": "assets/content/section-courtroom.webp",
     "alt": "Vietnamese Courtroom Interior - vothienhien.com"
   },
@@ -279,7 +279,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-document-signing-63dc5758.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-document-signing-63dc5758.webp",
     "local_path": "assets/content/section-document-signing.webp",
     "alt": "Legal Document Signing Close-up - vothienhien.com"
   },
@@ -289,7 +289,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-client-meeting-e1f7235e.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-client-meeting-e1f7235e.webp",
     "local_path": "assets/content/section-client-meeting.webp",
     "alt": "Attorney-Client Meeting - vothienhien.com"
   },
@@ -299,7 +299,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/section-team-discussion-8b1a2a78.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-team-discussion-8b1a2a78.webp",
     "local_path": "assets/content/section-team-discussion.webp",
     "alt": "Legal Team Discussion - vothienhien.com"
   },
@@ -309,7 +309,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "3:2",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/perspective-thought-740b9752.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/perspective-thought-740b9752.webp",
     "local_path": "assets/content/perspective-thought.webp",
     "alt": "Thoughtful Lawyer Portrait - Perspectives - vothienhien.com"
   },
@@ -319,7 +319,7 @@ const ASSETS = [
     "category": "background",
     "width": 1920,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-legal-books-abdaa863.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-legal-books-abdaa863.webp",
     "local_path": "assets/background/bg-legal-books.webp",
     "alt": "Legal Books Close-up Background - vothienhien.com"
   },
@@ -329,7 +329,7 @@ const ASSETS = [
     "category": "background",
     "width": 1920,
     "aspect": "21:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/background/bg-office-hallway-e2bffaa5.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-office-hallway-e2bffaa5.webp",
     "local_path": "assets/background/bg-office-hallway.webp",
     "alt": "Law Office Hallway - Premium Interior - vothienhien.com"
   },
@@ -339,7 +339,7 @@ const ASSETS = [
     "category": "icon",
     "width": 512,
     "aspect": "1:1",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/icon/icon-scales-gold-b8487acf.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/icon-scales-gold-b8487acf.webp",
     "local_path": "assets/icon/icon-scales-gold.webp",
     "alt": "Gold Scales of Justice Icon - vothienhien.com"
   },
@@ -349,7 +349,7 @@ const ASSETS = [
     "category": "content",
     "width": 1200,
     "aspect": "16:9",
-    "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/map-hcmc-office-58683e9b.webp",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/map-hcmc-office-58683e9b.webp",
     "local_path": "assets/content/map-hcmc-office.webp",
     "alt": "Stylized HCMC Office Location Map - vothienhien.com"
   },
