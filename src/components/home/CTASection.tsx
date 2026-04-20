@@ -27,16 +27,27 @@ export default async function CTASection() {
         }}
       />
 
+      {/* Logo 1 (Bold Scales) — large low-opacity decorative emblem */}
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] md:w-[680px] opacity-[0.05] pointer-events-none">
+        <Image
+          src={IMAGES.logoSymbolic1Scales.cdn}
+          alt=""
+          width={680}
+          height={680}
+          aria-hidden="true"
+        />
+      </div>
+
       <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
-        {/* Decorative ornament instead of 1px line */}
+        {/* Decorative ornament — Logo 4 laurel mark */}
         <div className="flex items-center justify-center gap-4 mb-14">
           <div className="w-16 h-px bg-accent/40" />
           <Image
-            src="/images/icon/favicon-vh.webp"
+            src={IMAGES.logoSymbolic4LaurelScales.cdn}
             alt=""
-            width={28}
-            height={28}
-            className="opacity-50"
+            width={32}
+            height={32}
+            className="opacity-60"
             aria-hidden="true"
           />
           <div className="w-16 h-px bg-accent/40" />

@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
+import { IMAGES } from '@/lib/images';
 
 const navItems = [
   { key: 'home' as const, href: '/' as const },
@@ -33,11 +34,11 @@ export default function Footer({ locale }: { locale: string }) {
           <div className="lg:pr-8">
             <div className="flex items-center gap-3">
               <Image
-                src="/images/icon/favicon-vh.webp"
-                alt="VH"
-                width={40}
-                height={40}
-                className="rounded-full gold-glow"
+                src={IMAGES.logoSymbolic4LaurelScales.cdn}
+                alt="Vo Thien Hien — Managing Partner mark"
+                width={44}
+                height={44}
+                className="rounded-full gold-glow ring-1 ring-accent/25"
               />
               <span className="font-[family-name:var(--font-heading)] text-xl font-semibold tracking-[0.15em] text-accent">
                 VÕ THIỆN HIỂN

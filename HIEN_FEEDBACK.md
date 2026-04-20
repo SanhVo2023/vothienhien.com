@@ -71,8 +71,8 @@
   > "You should start remake the logo for Mr Hiển. He tell the logo should have some gentle curve and elegant. Please make me a couple of variations."
 - **Evidence / reproduction**: Current VH monogram in the header (rounded-square with sharp geometric letterforms) does not convey the luxury/elegance positioning. Mr Hien wants something softer — gentle curves, elegant, still a monogram based on "VH" or "VTH". Image generation is out-of-process (CLAUDE.md § Tech Stack: "AI Images: Generated with Nano Banana 2 (Google Gemini 3.1 Flash Image)") so the builder agent produces prompt specs, user runs generation, then user drops files into R2.
 - **Proposed fix**: Write 3–4 variation prompts into `image-assets-v4-logo.json` following the prompt schema used in `image-assets-v3.json`. Each variation should specify: color (gold on dark / dark on cream), line weight, curve treatment (calligraphic, art-deco, serif-derived flourish), negative space handling, SVG-friendly simplicity, social-avatar and header-sized legibility. Defer integration to a follow-up F-NNN after user selects a winner.
-- **Status**: prompts ready — awaiting owner selection
-- **Artifact**: `image-assets-v4-logo.json` (4 variations written)
+- **Status**: superseded by F-010 (Mr Hien rejected letter-based direction after seeing generated variants)
+- **Artifact**: `image-assets-v4-logo.json` (4 letter-based variations — obsolete; kept for reference)
 - **Generalizable?**: no — specific to Mr Hien's personal brand mark.
 - **PM action on sign-off**: _(PM fills)_
 
@@ -142,3 +142,61 @@
 - **Applied in**: `messages/en.json` + `messages/vi.json` (key removed). `src/components/home/TestimonialSection.tsx` — removed the `{t('accepting')}` render block that used to sit below the testimonial citation. PRD.md left intact per plan.
 - **Generalizable?**: partial — sites in the "luxury / authority" tier should NOT display availability indicators. Sites in the "funnel / conversion" tier MAY want them. This is a per-tier rule. Note it against the site tiering in the template.
 - **PM action on sign-off**: _(PM fills)_
+
+---
+
+## F-009: English lawyer-related terminology must be consistent site-wide
+
+- **Date**: 2026-04-20
+- **Source**: Thach relaying Mr Hien (Vietnamese message to PM, 2026-04-20)
+- **Severity**: high
+- **Category**: copy tone
+- **Feedback (verbatim, translated if needed)**:
+  > "Anh muốn các từ Tiếng Anh về luật sư phải consistant kiểu như xưng là gì thì cả cái web phải xài từ đó."
+  >
+  > Translation: "I want the English lawyer-related terms to be consistent — whatever term is used to refer to him, the whole site must use that term."
+- **Evidence / reproduction**: F-003 already standardized the proper name ("Vo Thien Hien"). This feedback is broader — it targets the *profession noun / honorific / title / practice-area phrase* too. Likely inconsistencies to audit across `messages/en.json`, `src/**/*.{ts,tsx}`, `src/lib/metadata.ts`, SEO JSON-LD, and frontend copy:
+  - "Attorney" vs "Lawyer" vs "Counsel" (US-English canonical = **Attorney**)
+  - Honorific: "Attorney Vo Thien Hien" (canonical per F-003) vs bare "Mr Vo Thien Hien"
+  - "Managing Partner" (canonical per F-003) vs "Senior Partner" / "Managing Lawyer"
+  - "practice areas" vs "areas of practice" vs "specialties"
+  - "law firm" vs "law office" vs "legal practice"
+  - "clients" vs "customers" vs "matters"
+- **Proposed fix**: Two-step.
+  1. Write `TERMINOLOGY_GLOSSARY.md` in the site root — one canonical English term per concept, with banned synonyms listed. Thach/PM confirms the canonical list before step 2.
+  2. Builder agent does a site-wide audit: grep for each banned synonym, replace with the canonical form, run `npx tsc --noEmit`, spot-check `/admin` and key pages. Add a CI-style check (lint rule or simple grep script) that fails build if a banned synonym shows up in shipped copy.
+- **Status**: open — awaiting canonical glossary from Thach/Mr Hien
+- **Generalizable?**: yes — every EN or VN+EN site in the ecosystem needs a `TERMINOLOGY_GLOSSARY.md`. The glossary file format and audit script should ship as a template in `shared-assets/`. Add a "Terminology Consistency" section to `CLAUDE_TEMPLATE.md`.
+- **PM action on sign-off**: _(PM fills)_
+
+---
+
+## F-010: Logo direction pivot — symbolic imagery (not letters), strong/sturdy, transparent background
+
+- **Date**: 2026-04-20
+- **Source**: Thach relaying Mr Hien after he reviewed the 4 letter-based variants from F-004 (screenshot shared; Messenger quote below)
+- **Severity**: high
+- **Category**: design
+- **Feedback (verbatim, translated if needed)**:
+  > Mr Hien: "Logo khoẻ mạnh, cứng cáp cho nghề luật sư"
+  > Thach/PM paraphrase: "Not letter-based — wants a set of logos using **hình tượng tượng trưng cho nghề luật sư** (symbolic imagery representing the legal profession). And transparent background."
+  >
+  > Translation of key phrase: "Strong, sturdy/firm logo for the legal profession."
+- **Evidence / reproduction**: F-004 delivered 4 letter-based monograms (VH / VTH ligature, copperplate, enclosed, single-curve). Mr Hien's Messenger reply indicates the letter direction is not the final answer. He wants:
+  1. **Symbolic imagery** — scales of justice, classical pillar, gavel + book, laurel wreath, etc. No letters, no VH/VTH monograms.
+  2. **Strong / sturdy** (khoẻ mạnh, cứng cáp) — weighty proportions, confident lines, heraldic gravitas. This flips F-004's "gentle curves, elegant" direction.
+  3. **Transparent background** — PNG with alpha, so the logo reads on header (dark navy), footer (gold accent), social avatars, and print collateral without a solid box.
+- **Proposed fix**: Wrote `image-assets-v5-logo-symbolic.json` with 4 new prompts:
+  1. `logo-symbolic-1-scales` — bold scales of justice, weighty beam, broad pans, solid base
+  2. `logo-symbolic-2-pillar` — single classical column (Doric/Corinthian), sturdy proportions
+  3. `logo-symbolic-3-gavel-book` — gavel resting on open law book, heraldic crest silhouette
+  4. `logo-symbolic-4-laurel-scales` — laurel wreath encircling small stylized scales
+  All four specify: solid antique gold, flat vector aesthetic, NO letters, NO text, fully transparent PNG with alpha channel, 1024×1024, category=icon. Merged into `image-assets.json` in place of the 4 obsolete `logo-variation-*` letter entries.
+- **Status**: prompts ready — user generating in image-generator-ui `/batch`, awaiting Mr Hien's selection of winner(s)
+- **Artifact**: `image-assets-v5-logo-symbolic.json` (reference); 4 entries live in `image-assets.json` with status=pending
+- **Generalizable?**: partial — the specific symbols are personal-brand, but two patterns generalize:
+  1. For "legal profession" visual language across the ecosystem, prefer symbolic marks (scales, pillar, gavel, laurel) over letter monograms, unless the site explicitly calls for a Western-style initials mark. Add to `shared-assets/brand-guidelines/`.
+  2. All new logo/icon generations should specify "transparent PNG, alpha channel, no background" in the prompt so the output works on any surface. Update `IMAGE_MANIFEST_SCHEMA.md` with a note.
+- **PM action on sign-off**: _(PM fills)_
+
+

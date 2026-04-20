@@ -16,7 +16,7 @@ const slugToImage: Record<string, { cdn: string; alt: string }> = {
   'luat-doanh-nghiep': IMAGES.practiceCorporate,
   'tranh-chap-lao-dong': IMAGES.practiceLabor,
   'luat-hinh-su': IMAGES.practiceCriminal,
-  'tranh-chap-thuong-mai': IMAGES.practiceCivil,
+  'tranh-chap-thuong-mai': IMAGES.practiceCommercial,
 };
 
 type Props = {
@@ -597,7 +597,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const content = isVi ? data.vi : data.en;
   const viSlug = canonicalSlug;
   const enSlug = slugMap[canonicalSlug] || slug;
-  const ogImage = slugToImage[canonicalSlug]?.cdn || IMAGES.ogPractice.cdn;
+  const slugToOg: Record<string, string> = {
+    'tranh-chap-thuong-mai': IMAGES.ogCommercial.cdn,
+  };
+  const ogImage = slugToOg[canonicalSlug] || IMAGES.ogPractice.cdn;
 
   return {
     title: `${content.title} | ${isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}`,
@@ -739,6 +742,8 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
               ? IMAGES.sectionConsultation.cdn
               : viSlug === 'luat-doanh-nghiep'
               ? IMAGES.sectionDocumentSigning.cdn
+              : viSlug === 'tranh-chap-thuong-mai'
+              ? IMAGES.sectionArbitrationHearing.cdn
               : IMAGES.sectionClientMeeting.cdn
           }
           alt={
@@ -748,6 +753,8 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
               ? IMAGES.sectionConsultation.alt
               : viSlug === 'luat-doanh-nghiep'
               ? IMAGES.sectionDocumentSigning.alt
+              : viSlug === 'tranh-chap-thuong-mai'
+              ? IMAGES.sectionArbitrationHearing.alt
               : IMAGES.sectionClientMeeting.alt
           }
           fill
@@ -906,7 +913,11 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
       {/* CTA with skyline background */}
       <section className="relative py-24 md:py-32 overflow-hidden">
         <Image
-          src={IMAGES.bgSkyline.cdn}
+          src={
+            viSlug === 'tranh-chap-thuong-mai'
+              ? IMAGES.bgCommercialSkyline.cdn
+              : IMAGES.bgSkyline.cdn
+          }
           alt=""
           fill
           className="object-cover"

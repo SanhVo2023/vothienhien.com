@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import Image from 'next/image';
 import MobileMenu from './MobileMenu';
+import { IMAGES } from '@/lib/images';
 
 const navItems = [
   { key: 'home' as const, href: '/' as const },
@@ -48,11 +49,11 @@ export default function Header({ locale }: { locale: string }) {
             {/* Logo */}
             <Link href="/" className="group flex items-center gap-3">
               <Image
-                src="/images/icon/favicon-vh.webp"
-                alt="VH"
-                width={36}
-                height={36}
-                className="rounded-full"
+                src={IMAGES.logoSymbolic4LaurelScales.cdn}
+                alt="Vo Thien Hien — Managing Partner mark"
+                width={40}
+                height={40}
+                className="rounded-full ring-1 ring-accent/20"
               />
               <div className="flex flex-col">
                 <span

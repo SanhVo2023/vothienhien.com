@@ -235,8 +235,18 @@ export default async function LawyerProfilePage({ params }: Props) {
       </section>
 
       {/* Education & Credentials */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="relative py-20 md:py-28 bg-background overflow-hidden">
+        {/* Logo 2 (Classical Pillar) — decorative credentials emblem */}
+        <div className="pointer-events-none absolute right-[-120px] top-1/2 -translate-y-1/2 w-[440px] opacity-[0.04]">
+          <Image
+            src={IMAGES.logoSymbolic2Pillar.cdn}
+            alt=""
+            width={440}
+            height={440}
+            aria-hidden="true"
+          />
+        </div>
+        <div className="relative max-w-4xl mx-auto px-6">
           <SectionHeading
             subtitle={isVi ? 'Trình độ' : 'Qualifications'}
             title={`${t('profile.education')} & ${t('profile.credentials')}`}

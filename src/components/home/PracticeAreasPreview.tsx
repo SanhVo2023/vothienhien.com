@@ -12,7 +12,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 // Reorder this array to change which 6 appear on the home page.
 const practiceAreas = [
   { key: 'civil', image: IMAGES.practiceCivil, slug: 'tranh-chap-dan-su' },
-  { key: 'commercial', image: IMAGES.practiceCivil, slug: 'tranh-chap-thuong-mai' },
+  { key: 'commercial', image: IMAGES.practiceCommercial, slug: 'tranh-chap-thuong-mai' },
   { key: 'corporate', image: IMAGES.practiceCorporate, slug: 'luat-doanh-nghiep' },
   { key: 'land', image: IMAGES.practiceLand, slug: 'tranh-chap-dat-dai' },
   { key: 'family', image: IMAGES.practiceFamily, slug: 'hon-nhan-gia-dinh' },
@@ -40,8 +40,18 @@ export default function PracticeAreasPreview() {
   const ts = useTranslations('sections');
 
   return (
-    <section className="bg-background py-20 md:py-28">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20">
+    <section className="relative bg-background py-20 md:py-28 overflow-hidden">
+      {/* Logo 3 (Gavel + Open Book) — decorative section header emblem */}
+      <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-8 w-[380px] md:w-[520px] opacity-[0.05]">
+        <Image
+          src={IMAGES.logoSymbolic3GavelBook.cdn}
+          alt=""
+          width={520}
+          height={520}
+          aria-hidden="true"
+        />
+      </div>
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative">
         <SectionHeading
           subtitle={ts('practiceAreasSubtitle')}
           title={ts('practiceAreas')}

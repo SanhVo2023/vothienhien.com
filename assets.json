@@ -372,5 +372,115 @@
     "local_path": "assets/content/map-hcmc-office.webp",
     "alt": "Stylized HCMC Office Location Map - vothienhien.com",
     "description": "Elegant stylized map of Ho Chi Minh City District 1 area, rendered in a luxury brand aesthetic. Dark charcoal (#1A1A1A) background with gold (#C5A55A) line work for streets and landmarks. Key landmark"
+  },
+  {
+    "id": "practice-commercial",
+    "name": "Practice Area - Commercial Disputes",
+    "category": "content",
+    "width": 1200,
+    "aspect": "3:2",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-commercial-b5a1a6d9.webp",
+    "local_path": "assets/content/practice-commercial.webp",
+    "alt": "Practice Area - Commercial Disputes - vothienhien.com",
+    "description": "Abstract minimalist representation of commercial arbitration and litigation. A large polished dark wood gavel and a gold balance scale placed on opposite sides of a long conference table, viewed from "
+  },
+  {
+    "id": "article-commercial-arbitration",
+    "name": "Article Thumbnail - Commercial Arbitration at VIAC",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-commercial-arbitration-d880f072.webp",
+    "local_path": "assets/content/article-commercial-arbitration.webp",
+    "alt": "Article Thumbnail - Commercial Arbitration at VIAC - vothienhien.com",
+    "description": "Interior of a modern arbitration hearing room. A curved dark wood tribunal bench for three arbitrators at the front, two counsel tables facing each other, microphones on each table, Vietnamese and int"
+  },
+  {
+    "id": "article-commercial-litigation",
+    "name": "Article Thumbnail - Commercial Court Litigation",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-commercial-litigation-5b2e9165.webp",
+    "local_path": "assets/content/article-commercial-litigation.webp",
+    "alt": "Article Thumbnail - Commercial Court Litigation - vothienhien.com",
+    "description": "Close-up of a lawyer's hand placing a thick legal brief document onto a polished courtroom desk. The brief has a red binding spine and official stamps visible. Behind it, slightly out of focus, is a V"
+  },
+  {
+    "id": "section-arbitration-hearing",
+    "name": "Arbitration Hearing in Progress",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-arbitration-hearing-16452da6.webp",
+    "local_path": "assets/content/section-arbitration-hearing.webp",
+    "alt": "Arbitration Hearing in Progress - vothienhien.com",
+    "description": "Professional photograph of this Vietnamese male lawyer in a dark navy suit standing at a counsel table in a modern arbitration hearing room, presenting arguments. He is holding documents and gesturing"
+  },
+  {
+    "id": "bg-commercial-skyline",
+    "name": "HCMC Financial District - Commercial Context",
+    "category": "background",
+    "width": 1920,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-commercial-skyline-b4d48c2b.webp",
+    "local_path": "assets/background/bg-commercial-skyline.webp",
+    "alt": "HCMC Financial District - Commercial Context - vothienhien.com",
+    "description": "Eye-level photograph of Ho Chi Minh City's financial district at dusk. Modern glass office towers (Bitexco Tower, Landmark 81 visible), busy Nguyen Hue boulevard with traffic light trails. The sky tra"
+  },
+  {
+    "id": "og-commercial",
+    "name": "Commercial Disputes OG Image",
+    "category": "og",
+    "width": 1200,
+    "aspect": "1200:630",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/og/og-commercial-2c393856.webp",
+    "local_path": "assets/og/og-commercial.webp",
+    "alt": "Commercial Disputes OG Image - vothienhien.com",
+    "description": "Social media card on black (#0A0A0A) background. Top: thin gold horizontal line. Center-left: minimalist gold gavel icon (line art, 80px). Center-right: minimalist gold balance scale icon (line art, 8"
+  },
+  {
+    "id": "logo-symbolic-1-scales",
+    "name": "Logo Variation 1 — Bold Scales of Justice",
+    "category": "icon",
+    "width": 1024,
+    "aspect": "1:1",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/logo-symbolic-1-scales-e3a0ad3c.webp",
+    "local_path": "assets/icon/logo-symbolic-1-scales.webp",
+    "alt": "Logo Variation 1 — Bold Scales of Justice - vothienhien.com",
+    "description": "Emblematic logo mark of the scales of justice for a premier Vietnamese law firm. Bold, weighty, sturdy proportions (khoẻ mạnh, cứng cáp) — a heavy central beam, broad balanced pans, solid base plinth."
+  },
+  {
+    "id": "logo-symbolic-2-pillar",
+    "name": "Logo Variation 2 — Classical Pillar of Law",
+    "category": "icon",
+    "width": 1024,
+    "aspect": "1:1",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/logo-symbolic-2-pillar-591535f2.webp",
+    "local_path": "assets/icon/logo-symbolic-2-pillar.webp",
+    "alt": "Logo Variation 2 — Classical Pillar of Law - vothienhien.com",
+    "description": "Emblematic logo mark: a single classical column (Corinthian or Doric order) symbolizing the pillar of law, for a top-tier Vietnamese law firm. Strong and sturdy — substantial shaft, solid capital, wei"
+  },
+  {
+    "id": "logo-symbolic-3-gavel-book",
+    "name": "Logo Variation 3 — Gavel and Open Book Crest",
+    "category": "icon",
+    "width": 1024,
+    "aspect": "1:1",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/logo-symbolic-3-gavel-book-dd31767a.webp",
+    "local_path": "assets/icon/logo-symbolic-3-gavel-book.webp",
+    "alt": "Logo Variation 3 — Gavel and Open Book Crest - vothienhien.com",
+    "description": "Heraldic logo mark combining a gavel resting atop an open law book, symbolizing jurisprudence and judgment, for a Vietnamese law firm. Bold silhouette, thick confident lines, symmetrical composition, "
+  },
+  {
+    "id": "logo-symbolic-4-laurel-scales",
+    "name": "Logo Variation 4 — Laurel Wreath Around Scales",
+    "category": "icon",
+    "width": 1024,
+    "aspect": "1:1",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/logo-symbolic-4-laurel-scales-9484800b.webp",
+    "local_path": "assets/icon/logo-symbolic-4-laurel-scales.webp",
+    "alt": "Logo Variation 4 — Laurel Wreath Around Scales - vothienhien.com",
+    "description": "Emblematic logo mark: a laurel wreath encircling a small stylized scales of justice at its center, symbolizing victory of justice and legal achievement, for a Vietnamese law firm. Strong and stately ("
   }
 ]

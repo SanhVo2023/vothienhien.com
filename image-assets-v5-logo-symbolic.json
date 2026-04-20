@@ -1,0 +1,52 @@
+{
+  "site": "vothienhien.com",
+  "generated_by": "pm-session",
+  "created_at": "2026-04-20T16:15:00.000Z",
+  "notes": "Supersedes image-assets-v4-logo.json after Mr Hien feedback (2026-04-20 / F-010): NOT letter-based. Symbolic imagery for the legal profession. Strong, sturdy (khoẻ mạnh, cứng cáp). Transparent PNG background for use on any surface (header, footer, social avatars).",
+  "images": [
+    {
+      "id": "logo-symbolic-1-scales",
+      "name": "Logo Variation 1 — Bold Scales of Justice",
+      "type": "text-to-image",
+      "prompt": "Emblematic logo mark of the scales of justice for a premier Vietnamese law firm. Bold, weighty, sturdy proportions (khoẻ mạnh, cứng cáp) — a heavy central beam, broad balanced pans, solid base plinth. Strong geometric lines, symmetrical composition, confident silhouette. Rendered in solid antique gold with a subtle metallic sheen. NO letters, NO text, NO monogram. NO background — fully transparent PNG with alpha channel, the mark perfectly isolated, centered with generous margins. Flat vector-style, sharp crisp edges, suitable for scaling to tiny favicon or large header. Museum-quality heraldic gravitas.",
+      "style": "icon",
+      "category": "icon",
+      "aspect": "1:1",
+      "width": 1024,
+      "status": "pending"
+    },
+    {
+      "id": "logo-symbolic-2-pillar",
+      "name": "Logo Variation 2 — Classical Pillar of Law",
+      "type": "text-to-image",
+      "prompt": "Emblematic logo mark: a single classical column (Corinthian or Doric order) symbolizing the pillar of law, for a top-tier Vietnamese law firm. Strong and sturdy — substantial shaft, solid capital, weighty base (khoẻ mạnh, cứng cáp). Clean architectural silhouette, balanced proportions, authoritative presence. Rendered in solid antique gold with minimal shading, flat vector aesthetic. NO letters, NO text, NO monogram. NO background — fully transparent PNG with alpha channel, the column isolated, centered with generous margins. Crisp edges, scales cleanly from favicon to banner.",
+      "style": "icon",
+      "category": "icon",
+      "aspect": "1:1",
+      "width": 1024,
+      "status": "pending"
+    },
+    {
+      "id": "logo-symbolic-3-gavel-book",
+      "name": "Logo Variation 3 — Gavel and Open Book Crest",
+      "type": "text-to-image",
+      "prompt": "Heraldic logo mark combining a gavel resting atop an open law book, symbolizing jurisprudence and judgment, for a Vietnamese law firm. Bold silhouette, thick confident lines, symmetrical composition, strong and sturdy (khoẻ mạnh, cứng cáp) — chunky gavel head, substantial book thickness, solid base line. Rendered in solid antique gold, flat minimal vector style. NO letters, NO text, NO monogram. NO background — fully transparent PNG with alpha channel, the crest isolated, centered with generous margins. Crisp edges, professional and authoritative, reads at any size.",
+      "style": "icon",
+      "category": "icon",
+      "aspect": "1:1",
+      "width": 1024,
+      "status": "pending"
+    },
+    {
+      "id": "logo-symbolic-4-laurel-scales",
+      "name": "Logo Variation 4 — Laurel Wreath Around Scales",
+      "type": "text-to-image",
+      "prompt": "Emblematic logo mark: a laurel wreath encircling a small stylized scales of justice at its center, symbolizing victory of justice and legal achievement, for a Vietnamese law firm. Strong and stately (khoẻ mạnh, cứng cáp) — bold thick laurel leaves, substantial wreath silhouette, confident central scales. Perfectly symmetrical, heraldic gravitas. Rendered in solid antique gold, flat vector minimal style. NO letters, NO text, NO monogram. NO background — fully transparent PNG with alpha channel, the mark isolated, centered with generous margins. Crisp edges, museum-quality authority, scales from favicon to header.",
+      "style": "icon",
+      "category": "icon",
+      "aspect": "1:1",
+      "width": 1024,
+      "status": "pending"
+    }
+  ]
+}

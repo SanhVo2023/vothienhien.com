@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   description:
     'Luật sư Võ Thiện Hiển (Vo Thien Hien) - Managing Partner tại Apolo Lawyers. Chuyên gia tranh tụng, tư vấn pháp lý doanh nghiệp và giải quyết tranh chấp tại TP.HCM.',
   icons: {
-    icon: '/images/icon/favicon-vh.webp',
-    apple: '/images/icon/favicon-vh.webp',
+    icon: '/images/icon/logo-symbolic-4-laurel-scales.webp',
+    apple: '/images/icon/logo-symbolic-4-laurel-scales.webp',
   },
   openGraph: {
     images: [{

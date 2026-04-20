@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Auto-generated asset implementation script for vothienhien.com
- * Generated: 2026-04-09T10:56:51.671Z
+ * Generated: 2026-04-20T09:32:32.846Z
  *
  * This script copies all generated images into public/images/
  * and outputs a mapping file the site code can import.
@@ -352,6 +352,106 @@ const ASSETS = [
     "cdn_url": "https://pub-d7f47f0c70712c6934b79a0745c94ca1.r2.dev/vothienhien.com/content/map-hcmc-office-58683e9b.webp",
     "local_path": "assets/content/map-hcmc-office.webp",
     "alt": "Stylized HCMC Office Location Map - vothienhien.com"
+  },
+  {
+    "id": "practice-commercial",
+    "name": "Practice Area - Commercial Disputes",
+    "category": "content",
+    "width": 1200,
+    "aspect": "3:2",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-commercial-b5a1a6d9.webp",
+    "local_path": "assets/content/practice-commercial.webp",
+    "alt": "Practice Area - Commercial Disputes - vothienhien.com"
+  },
+  {
+    "id": "article-commercial-arbitration",
+    "name": "Article Thumbnail - Commercial Arbitration at VIAC",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-commercial-arbitration-d880f072.webp",
+    "local_path": "assets/content/article-commercial-arbitration.webp",
+    "alt": "Article Thumbnail - Commercial Arbitration at VIAC - vothienhien.com"
+  },
+  {
+    "id": "article-commercial-litigation",
+    "name": "Article Thumbnail - Commercial Court Litigation",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/article-commercial-litigation-5b2e9165.webp",
+    "local_path": "assets/content/article-commercial-litigation.webp",
+    "alt": "Article Thumbnail - Commercial Court Litigation - vothienhien.com"
+  },
+  {
+    "id": "section-arbitration-hearing",
+    "name": "Arbitration Hearing in Progress",
+    "category": "content",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/section-arbitration-hearing-16452da6.webp",
+    "local_path": "assets/content/section-arbitration-hearing.webp",
+    "alt": "Arbitration Hearing in Progress - vothienhien.com"
+  },
+  {
+    "id": "bg-commercial-skyline",
+    "name": "HCMC Financial District - Commercial Context",
+    "category": "background",
+    "width": 1920,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/background/bg-commercial-skyline-b4d48c2b.webp",
+    "local_path": "assets/background/bg-commercial-skyline.webp",
+    "alt": "HCMC Financial District - Commercial Context - vothienhien.com"
+  },
+  {
+    "id": "og-commercial",
+    "name": "Commercial Disputes OG Image",
+    "category": "og",
+    "width": 1200,
+    "aspect": "1200:630",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/og/og-commercial-2c393856.webp",
+    "local_path": "assets/og/og-commercial.webp",
+    "alt": "Commercial Disputes OG Image - vothienhien.com"
+  },
+  {
+    "id": "logo-symbolic-1-scales",
+    "name": "Logo Variation 1 — Bold Scales of Justice",
+    "category": "icon",
+    "width": 1024,
+    "aspect": "1:1",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/logo-symbolic-1-scales-e3a0ad3c.webp",
+    "local_path": "assets/icon/logo-symbolic-1-scales.webp",
+    "alt": "Logo Variation 1 — Bold Scales of Justice - vothienhien.com"
+  },
+  {
+    "id": "logo-symbolic-2-pillar",
+    "name": "Logo Variation 2 — Classical Pillar of Law",
+    "category": "icon",
+    "width": 1024,
+    "aspect": "1:1",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/logo-symbolic-2-pillar-591535f2.webp",
+    "local_path": "assets/icon/logo-symbolic-2-pillar.webp",
+    "alt": "Logo Variation 2 — Classical Pillar of Law - vothienhien.com"
+  },
+  {
+    "id": "logo-symbolic-3-gavel-book",
+    "name": "Logo Variation 3 — Gavel and Open Book Crest",
+    "category": "icon",
+    "width": 1024,
+    "aspect": "1:1",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/logo-symbolic-3-gavel-book-dd31767a.webp",
+    "local_path": "assets/icon/logo-symbolic-3-gavel-book.webp",
+    "alt": "Logo Variation 3 — Gavel and Open Book Crest - vothienhien.com"
+  },
+  {
+    "id": "logo-symbolic-4-laurel-scales",
+    "name": "Logo Variation 4 — Laurel Wreath Around Scales",
+    "category": "icon",
+    "width": 1024,
+    "aspect": "1:1",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/icon/logo-symbolic-4-laurel-scales-9484800b.webp",
+    "local_path": "assets/icon/logo-symbolic-4-laurel-scales.webp",
+    "alt": "Logo Variation 4 — Laurel Wreath Around Scales - vothienhien.com"
   }
 ];
 
@@ -384,13 +484,13 @@ function main() {
 
   // Generate TypeScript image map for the site code
   const tsMap = `// Auto-generated image asset map for vothienhien.com
-// Generated: 2026-04-09T10:56:51.672Z
+// Generated: 2026-04-20T09:32:32.847Z
 // Usage: import { IMAGES } from "@/lib/images";
 //        <Image src={IMAGES.heroPortrait.cdn} alt={IMAGES.heroPortrait.alt} />
 
 export const IMAGES = {
 ${ASSETS.map(a => {
-    const key = a.id.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
+    const key = a.id.replace(/-([a-z0-9])/g, (_, c) => c.toUpperCase()).replace(/-/g, '');
     const cdn = a.cdn_url ? `"${a.cdn_url}"` : "null";
     const local = `"/images/${a.category}/${a.id}.webp"`;
     return `  ${key}: {
@@ -399,7 +499,7 @@ ${ASSETS.map(a => {
     category: "${a.category}",
     cdn: ${cdn},
     local: ${local},
-    src: ${cdn} || ${local},
+    src: ${cdn},
     alt: "${a.alt}",
     width: ${a.width},
     aspect: "${a.aspect}",
