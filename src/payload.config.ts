@@ -6,7 +6,22 @@ import { fileURLToPath } from 'url'
 dns.setDefaultResultOrder('ipv4first')
 import { buildConfig } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import {
+  lexicalEditor,
+  HeadingFeature,
+  BlockquoteFeature,
+  LinkFeature,
+  UnorderedListFeature,
+  OrderedListFeature,
+  BoldFeature,
+  ItalicFeature,
+  UnderlineFeature,
+  StrikethroughFeature,
+  InlineCodeFeature,
+  HorizontalRuleFeature,
+  UploadFeature,
+  FixedToolbarFeature,
+} from '@payloadcms/richtext-lexical'
 import { seoPlugin } from '@payloadcms/plugin-seo'
 import sharp from 'sharp'
 
@@ -77,7 +92,23 @@ export default buildConfig({
     fallback: true,
   },
 
-  editor: lexicalEditor(),
+  editor: lexicalEditor({
+    features: () => [
+      HeadingFeature({ enabledHeadingSizes: ['h1', 'h2', 'h3', 'h4'] }),
+      BlockquoteFeature(),
+      LinkFeature({ enabledCollections: ['pages'] }),
+      UnorderedListFeature(),
+      OrderedListFeature(),
+      BoldFeature(),
+      ItalicFeature(),
+      UnderlineFeature(),
+      StrikethroughFeature(),
+      InlineCodeFeature(),
+      HorizontalRuleFeature(),
+      UploadFeature({ collections: { media: { fields: [] } } }),
+      FixedToolbarFeature(),
+    ],
+  }),
 
   db: postgresAdapter({
     push: process.env.NODE_ENV !== 'production',
