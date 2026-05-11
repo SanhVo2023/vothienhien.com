@@ -1,0 +1,12 @@
+{
+  "mode": "dry-run",
+  "timestamp": "2026-05-11T09:39:59.646Z",
+  "totals": {
+    "linksStripped": 0,
+    "paragraphsDropped": 0,
+    "articlesChanged": 0
+  },
+  "nonAllowlistHosts": {},
+  "allowlistHosts": {},
+  "changedRecords": []
+}

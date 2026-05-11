@@ -61,6 +61,16 @@ export const Publications: CollectionConfig = {
       relationTo: 'practice-areas',
     },
     {
+      name: 'author',
+      type: 'relationship',
+      relationTo: 'authors',
+      admin: {
+        position: 'sidebar',
+        description:
+          'Byline. Default to "Apolo Editorial Team" — only set Vo Thien Hien for articles he personally authored.',
+      },
+    },
+    {
       name: 'featuredImage',
       type: 'upload',
       relationTo: 'media',

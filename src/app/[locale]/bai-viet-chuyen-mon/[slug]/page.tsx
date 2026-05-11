@@ -7,6 +7,7 @@ import GoldDivider from '@/components/ui/GoldDivider';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { Link } from '@/i18n/navigation';
 import { IMAGES } from '@/lib/images';
+import { SHORT_NAME_VN, SHORT_NAME_EN, parentBrandUrl } from '@/lib/address';
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -337,8 +338,8 @@ export default async function PublicationDetailPage({ params }: Props) {
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Apolo Lawyers',
-        url: 'https://apololawyers.com',
+        name: isVi ? SHORT_NAME_VN : SHORT_NAME_EN,
+        url: parentBrandUrl(locale),
       },
     },
     {

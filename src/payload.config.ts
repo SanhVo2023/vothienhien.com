@@ -28,6 +28,7 @@ import sharp from 'sharp'
 // Collections
 import { Media } from './collections/Media'
 import { Users } from './collections/Users'
+import { Authors } from './collections/Authors'
 import { Pages } from './collections/Pages'
 import { PracticeAreas } from './collections/PracticeAreas'
 import { RepresentativeMatters } from './collections/RepresentativeMatters'
@@ -60,6 +61,7 @@ export default buildConfig({
   collections: [
     Media,
     Users,
+    Authors,
     Pages,
     PracticeAreas,
     RepresentativeMatters,

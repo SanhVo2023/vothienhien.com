@@ -7,6 +7,7 @@ import PublicationsPreview from '@/components/home/PublicationsPreview';
 import TestimonialSection from '@/components/home/TestimonialSection';
 import CTASection from '@/components/home/CTASection';
 import JsonLd from '@/components/JsonLd';
+import { SHORT_NAME_VN, SHORT_NAME_EN, parentBrandUrl } from '@/lib/address';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -39,6 +40,7 @@ export async function generateMetadata({ params }: Props) {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const isVi = locale === 'vi';
 
   const jsonLd = [
     {
@@ -55,8 +57,8 @@ export default async function HomePage({ params }: Props) {
         jobTitle: 'Managing Partner',
         worksFor: {
           '@type': 'LegalService',
-          name: 'Apolo Lawyers',
-          url: 'https://apololawyers.com',
+          name: isVi ? SHORT_NAME_VN : SHORT_NAME_EN,
+          url: parentBrandUrl(locale),
         },
       },
     },

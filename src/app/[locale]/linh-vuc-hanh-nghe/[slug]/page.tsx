@@ -163,7 +163,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
       ],
       whyChoose: [
         { title: 'Chuyên sâu pháp luật đất đai', description: 'Nắm vững toàn bộ hệ thống pháp luật đất đai qua các thời kỳ, từ trước 1975 đến Luật Đất đai 2024 mới nhất.' },
-        { title: 'Hiểu biết thực tiễn địa phương', description: 'Am hiểu sâu sắc thực tiễn quản lý đất đai tại TP.HCM và các tỉnh Đông Nam Bộ, có quan hệ làm việc chuyên nghiệp với các cơ quan liên quan.' },
+        { title: 'Hiểu biết thực tiễn địa phương', description: 'Am hiểu sâu sắc thực tiễn quản lý đất đai tại TP. Hồ Chí Minh và các tỉnh Đông Nam Bộ, có quan hệ làm việc chuyên nghiệp với các cơ quan liên quan.' },
         { title: 'Khảo sát thực địa kỹ lưỡng', description: 'Luôn tiến hành khảo sát thực địa, đối chiếu hồ sơ địa chính gốc và bản đồ qua các thời kỳ để xây dựng chứng cứ vững chắc.' },
         { title: 'Kiên trì theo đuổi đến cùng', description: 'Cam kết đồng hành cùng khách hàng qua mọi giai đoạn tố tụng, từ hòa giải tại UBND đến giám đốc thẩm tại Tòa án Tối cao.' },
       ],
@@ -461,7 +461,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
       ],
       matters: [
         { title: 'Tranh chấp hợp đồng cung cấp thiết bị trị giá 200 tỷ đồng', year: '2024', excerpt: 'Đại diện bên mua trong tranh chấp hợp đồng cung cấp thiết bị công nghiệp, thắng kiện tại VIAC.', slug: 'tranh-chap-thiet-bi-200-ty' },
-        { title: 'Tranh tụng thương mại quốc tế tại Tòa án TP.HCM', year: '2023', excerpt: 'Đại diện doanh nghiệp FDI trong tranh chấp hợp đồng phân phối với đối tác Việt Nam.', slug: 'tranh-tung-thuong-mai-quoc-te' },
+        { title: 'Tranh tụng thương mại quốc tế tại Tòa án TP. Hồ Chí Minh', year: '2023', excerpt: 'Đại diện doanh nghiệp FDI trong tranh chấp hợp đồng phân phối với đối tác Việt Nam.', slug: 'tranh-tung-thuong-mai-quoc-te' },
       ],
     },
     en: {

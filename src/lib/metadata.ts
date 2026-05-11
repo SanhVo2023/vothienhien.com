@@ -1,4 +1,12 @@
 import type { Metadata } from 'next';
+import {
+  CALL_CENTER_E164,
+  EMAIL,
+  POSTAL_ADDRESS,
+  SHORT_NAME_EN,
+  SHORT_NAME_VN,
+  parentBrandUrl,
+} from '@/lib/address';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vothienhien.com';
 
@@ -69,25 +77,30 @@ export function generateBreadcrumbJsonLd(
 }
 
 export function generatePersonJsonLd(locale: string) {
+  const isVi = locale === 'vi';
+  const postal = isVi ? POSTAL_ADDRESS.vi : POSTAL_ADDRESS.en;
+  const firmName = isVi ? SHORT_NAME_VN : SHORT_NAME_EN;
+  const brandUrl = parentBrandUrl(locale);
+
   return {
     '@context': 'https://schema.org',
     '@type': ['Person', 'Attorney'],
-    name: locale === 'vi' ? 'Võ Thiện Hiển' : 'Vo Thien Hien',
-    jobTitle: locale === 'vi' ? 'Luật sư Điều hành' : 'Managing Partner',
+    name: isVi ? 'Võ Thiện Hiển' : 'Vo Thien Hien',
+    jobTitle: isVi ? 'Luật sư Điều hành' : 'Managing Partner',
     worksFor: {
       '@type': 'LegalService',
-      name: 'Apolo Lawyers',
-      url: 'https://apololawyers.com',
+      name: firmName,
+      url: brandUrl,
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '108 Trần Đình Xu, Phường Nguyễn Cư Trinh',
-      addressLocality: 'Quận 1, TP. Hồ Chí Minh',
-      addressCountry: 'VN',
+      streetAddress: postal.streetAddress,
+      addressLocality: postal.addressLocality,
+      addressCountry: postal.addressCountry,
     },
-    telephone: '+84903419479',
-    email: 'contact@apolo.com.vn',
+    telephone: CALL_CENTER_E164,
+    email: EMAIL,
     url: siteUrl,
-    sameAs: ['https://apololawyers.com'],
+    sameAs: [brandUrl],
   };
 }

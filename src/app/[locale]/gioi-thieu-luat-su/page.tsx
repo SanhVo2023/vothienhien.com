@@ -7,6 +7,7 @@ import GoldDivider from '@/components/ui/GoldDivider';
 import Button from '@/components/ui/Button';
 import { Link } from '@/i18n/navigation';
 import { IMAGES } from '@/lib/images';
+import { SHORT_NAME_VN, SHORT_NAME_EN, parentBrandUrl } from '@/lib/address';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -99,11 +100,11 @@ export default async function LawyerProfilePage({ params }: Props) {
       jobTitle: isVi ? 'Luật sư Điều hành' : 'Managing Partner',
       worksFor: {
         '@type': 'LegalService',
-        name: 'Apolo Lawyers',
-        url: 'https://apololawyers.com',
+        name: isVi ? SHORT_NAME_VN : SHORT_NAME_EN,
+        url: parentBrandUrl(locale),
       },
       url: 'https://vothienhien.com',
-      sameAs: ['https://apololawyers.com'],
+      sameAs: [parentBrandUrl(locale)],
     },
     {
       '@context': 'https://schema.org',

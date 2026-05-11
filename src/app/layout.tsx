@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Luật sư Võ Thiện Hiển | Vo Thien Hien - Managing Partner',
   description:
-    'Luật sư Võ Thiện Hiển (Vo Thien Hien) - Managing Partner tại Apolo Lawyers. Chuyên gia tranh tụng, tư vấn pháp lý doanh nghiệp và giải quyết tranh chấp tại TP.HCM.',
+    'Luật sư Võ Thiện Hiển (Vo Thien Hien) - Managing Partner tại Apolo Lawyers. Chuyên gia tranh tụng, tư vấn pháp lý doanh nghiệp và giải quyết tranh chấp tại TP. Hồ Chí Minh.',
   icons: {
     icon: '/images/icon/logo-symbolic-4-laurel-scales.webp',
     apple: '/images/icon/logo-symbolic-4-laurel-scales.webp',

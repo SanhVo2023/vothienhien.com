@@ -200,4 +200,101 @@
   2. All new logo/icon generations should specify "transparent PNG, alpha channel, no background" in the prompt so the output works on any surface. Update `IMAGE_MANIFEST_SCHEMA.md` with a note.
 - **PM action on sign-off**: _(PM fills)_
 
+---
+
+## F-011: Remove 3rd-party publisher sources/credits from articles (govt sources OK)
+
+- **Date**: 2026-05-04
+- **Source**: Thach relaying Mr Hien (Phase 1 owner-review)
+- **Severity**: high
+- **Category**: content
+- **Feedback (verbatim, translated if needed)**:
+  > "He don't want any of the blog or artical have 3 party source or credit of it. A gov publication is okie else articles are paterned should be remove the source — especially a 3rd publisher party. Keep the post but don't mention the source."
+- **Evidence / reproduction**: Articles imported via `scripts/import-seo-content.mjs` from `seo-articles-vi.json` / `seo-articles-en.json` may contain inline citation links / footer "Nguồn:" lines. Initial grep found no `Nguồn:` / `Source:` matches in vothienhien.com content scripts — so most likely clean, but a full audit of every article body's Lexical content is needed (some 3rd-party hyperlinks may exist inline). 100 articles to audit.
+- **Proposed fix**: Three-step audit:
+  1. Query Payload `publications` collection (both VI + EN locales) → dump `content` JSON
+  2. Walk every Lexical node tree looking for `type: 'link'` whose `fields.url` host is NOT `*.gov.vn` / `*.chinhphu.vn` / `vbpl.vn` / `quochoi.vn` / `toaan.gov.vn` (and similar official Vietnamese govt domains). Also scan text content for "Nguồn:" / "Source:" / "Theo [publisher]" patterns.
+  3. For each non-govt source: strip the inline link (keep the surrounding text) and remove any trailing "Nguồn: ..." line. Re-PATCH the article via REST.
+- **Status**: fixed (2026-05-11 — verified clean, no DB changes needed)
+- **Applied in**:
+  - **New audit infra**: `scripts/audit-source-strip.mjs` — Payload REST walker. Logs into the admin API, paginates through every publication, calls `?locale=vi` + `?locale=en` on each, recursively transforms the Lexical tree: (a) strips `type: 'link'` nodes whose host fails the allowlist (preserves the surrounding inline text), (b) drops `type: 'paragraph'` whose first text token matches `/^(Nguồn|Source)\s*:/i`. Writes a `F011-report-{dryrun|apply}.json` audit trail. Re-runnable with `--apply` for the actual PATCH pass.
+  - **Allowlist hardcoded** in the script: `*.gov.vn` (any subdomain) + `vbpl.vn` + internal ecosystem (`vothienhien.com`, `law.org.vn`, `law.pro.vn`, `lawyer.id.vn`, `luatsutructuyen.net`, `apolo.com.vn`, `apololawyers.com`, `apololegal.com`, `lawyersinvietnam.com`) with their `www.` variants. URLs that fail to parse (relative, `mailto:`, `tel:`) treated as allowed (not 3rd-party publisher refs).
+  - The "Theo [publisher]" inline heuristic was deliberately skipped per the prompt's "be conservative" instruction — too high false-positive rate on legitimate phrases like "Theo Bộ luật Dân sự 2015" (referring to the Civil Code, not a publisher).
+- **Audit result**:
+  - Dry-run scanned all 58 publications × 2 locales = 116 entries.
+  - **0** non-allowlist hosts found. **0** "Nguồn:"/"Source:" paragraphs found. **0** articles flagged for change.
+  - Cross-verified directly against the DB: `SELECT COUNT(*) FROM publications_locales WHERE content::text LIKE '%"type":"link"%'` returns 0; same regex check for `Ngu(o|ô)n\s*:|Source\s*:` token returns 0.
+  - Conclusion: my `scripts/import-seo-content.mjs` (used for the 58 articles in F-001) produced source-free content from day one — the articles never contained `[text](url)` markdown links or trailing "Nguồn:" lines. Nothing to strip on this site.
+  - Report saved at `F011-report-dryrun.json` for the audit trail.
+- **Generalizable?**: yes — same audit script (with the same allowlist) applies to law.org.vn (`thuvienphapluat.vn` references expected), law.pro.vn (25 articles), and any Phase 2+ site with CMS-backed content. lawyer.id.vn uses static TypeScript data files instead of a CMS, so its version of the audit walks `src/data/insights*.ts` directly. Ship `audit-source-strip.mjs` as a template script under `shared-assets/scripts/` and a `audit-source-strip-static.mjs` variant for static-data sites. Per `SITE_BUILD_FEEDBACK.md` Issue 9.
+- **PM action on sign-off**: _(PM fills)_
+
+---
+
+## F-012: Articles credited to Mr Hien that he didn't personally write → reattribute to a fictional author
+
+- **Date**: 2026-05-04
+- **Source**: Thach relaying Mr Hien (Phase 1 owner-review)
+- **Severity**: high
+- **Category**: content
+- **Feedback (verbatim, translated if needed)**:
+  > "All post that have Mr Hiển credit but not him personaly write should be change to other author — make a fictional one."
+- **Evidence / reproduction**: This site is Mr Hien's personal brand — by default many imported SEO articles likely show Hien as the author. He only wants HIS name on content he actually authored. `seo-articles-vi.json` doesn't contain `"author"` fields (grep returned 0 hits) — so author assignment likely happens in `import-seo-content.mjs` (default = Hien) or in the Payload `users` / `authors` relation. Need to: (a) identify how many articles are currently credited to Hien, (b) get from Thach which (if any) Hien actually wrote, (c) reattribute the rest to a new fictional author.
+- **Proposed fix**:
+  1. **Decide fictional author identity** with Thach: name, email (fake), photo (AI-gen via image-generator-ui), short bio. Suggested default: a plausibly-named Apolo senior associate (e.g., "LS. Nguyễn Thanh Hà") or reuse "Apolo Editorial Team" (already exists on law.pro.vn — canonical "team byline" across the ecosystem)
+  2. Create the author record in Payload `users` (or `authors`) collection with role `editor` and slug
+  3. Bulk PATCH every article whose author == hien AND whose `name` is NOT in Thach's allowlist of "really Hien-authored" → set author = new fictional author
+  4. Spot-check 3 articles on the frontend to confirm byline + author bio swapped
+- **Status**: in progress (2026-05-11 — schema + author records ready; blocked on Thach for the Hien-authored allowlist)
+- **Infrastructure applied** (safe to land before allowlist arrives):
+  - **New collection**: `src/collections/Authors.ts` — public byline records (slug, localized `name`, localized `role`, localized `bio`, optional photo upload). Two canonical slugs in this ecosystem: `editorial-team` and `vo-thien-hien`. Separate from the auth-only `users` collection.
+  - **Schema wiring**: `src/payload.config.ts` registers `Authors` in `collections`. `src/collections/Publications.ts` gains a sidebar `author` relationship → `authors`. Schema-push (dev mode) auto-created the `authors` + `authors_locales` tables and the `publications.author_id` column — verified via direct DB query.
+  - **Bootstrap script**: `scripts/bootstrap-authors.mjs` — idempotent REST upsert of the two canonical authors. Ran once; results:
+    - `editorial-team` (id=1) — VI: "Apolo Editorial Team" / "Đội ngũ biên tập Apolo"; EN: "Apolo Editorial Team" / "Apolo Editorial Desk". Bio explicitly notes that content is reviewed by Managing Partner Vo Thien Hien before publication (so the byline doesn't read as "anonymous AI content").
+    - `vo-thien-hien` (id=2) — VI: "Luật sư Võ Thiện Hiển" / "Luật sư Điều hành"; EN: "Vo Thien Hien" / "Managing Partner". Bio mentions his 15+ years of practice, VIAC experience.
+- **Still to do** (after Thach delivers the allowlist):
+  1. REST PATCH every publication (58 records × 2 locales) → `author = vo-thien-hien` for the slugs in Thach's allowlist; `author = editorial-team` for all others.
+  2. Update the hardcoded slug page `src/app/[locale]/bai-viet-chuyen-mon/[slug]/page.tsx`: replace the hardcoded JSON-LD `author.name = 'Vo Thien Hien'` with a per-slug lookup that respects the same allowlist (12 articles on the static slug page).
+  3. Add a visible byline strip + author bio card to the article detail page that reads from the author relation.
+  4. Spot-check 3 article URLs on the frontend after PATCH lands.
+- **Generalizable?**: yes — exact same pattern needed on law.pro.vn (25 articles, the `editorial-team` author already exists per F-000 build state, just needs the bulk PATCH), law.org.vn (100 articles, plus needs the Authors collection added if not present), lawyer.id.vn (insights stored as static TS, edit `author` string fields directly — no DB work). The `Authors` collection schema in this commit should ship as a template under `shared-assets/templates/Authors.ts`. See `SITE_BUILD_FEEDBACK.md` Issue 10.
+- **PM action on sign-off**: _(PM fills)_
+
+---
+
+## F-013: Use the official post-merger address word-by-word, site-wide
+
+- **Date**: 2026-05-04
+- **Source**: Thach relaying Mr Hien (Phase 1 owner-review)
+- **Severity**: high
+- **Category**: content (legal accuracy + brand consistency)
+- **Feedback (verbatim, translated if needed)**:
+  > "In all website this is the official address and make sure it true, word by word, check the file on the root directory name 'address'. Basically he is a lawyer what he want is very consistent highly professional use of words/name."
+  >
+  > Context: "Sát nhập cơ quan hành chính 2025" — the 2025 Vietnamese administrative merger combined provinces and replaced ~100% of administrative addresses. Old ward/district names are obsolete.
+- **Evidence / reproduction**: vothienhien.com renders an address somewhere in `Footer.tsx` / `lien-he/page.tsx` / `metadata.ts` (organization JSON-LD). Current values likely use pre-2025 ward/district nomenclature (e.g., "P. Nguyễn Cư Trinh, Q. 1"). The workspace-root `address.txt` is currently empty — Thach must populate it with the official post-merger text before site-wide sweep can run.
+- **Proposed fix**:
+  1. Wait for Thach to fill `address.txt` (workspace root) with the official Vietnamese + English address text per Mr Hien
+  2. Run word-by-word audit: grep every occurrence of "Trần Đình Xu", "Nguyễn Cư Trinh", "Q. 1", "Quận 1", "108 Trần", "HCM", "Hồ Chí Minh", "TP.HCM" across the site
+  3. Replace with the canonical post-merger string from `address.txt`. ZERO formatting drift: same comma placement, same VN diacritics, same VN-format phone, same email.
+  4. Touch points: `src/components/layout/Footer.tsx`, `src/app/[locale]/lien-he/page.tsx`, `src/lib/metadata.ts` (Organization schema), `messages/vi.json` + `messages/en.json` if any address strings live there
+- **Status**: fixed (2026-05-11)
+- **Applied in**:
+  - **New SSOT module**: `src/lib/address.ts` — mirrors `address.txt` VERBATIM. Exposes `COMPANY_NAME_VN/EN`, `SHORT_NAME_VN/EN`, `MAIN_OFFICE.{vi,en}` (address + phones + EN hotline), `EAST_SAIGON_BRANCH_EN` (EN-only), `EMAIL`, `CALL_CENTER.{vi,en}`, `CALL_CENTER_E164`, `CALL_CENTER_WA`, `POSTAL_ADDRESS.{vi,en}`, `PARENT_BRAND.{vi,en}`, helper `parentBrandUrl(locale)`. All future edits go through this module — no string-literal addresses anywhere.
+  - `src/lib/metadata.ts` — `generatePersonJsonLd()` now pulls postal address + telephone + email + worksFor.{name,url} + sameAs from the SSOT, all locale-aware.
+  - `src/components/layout/Footer.tsx` — address, phone, email, WhatsApp link, and the ecosystem block all switched to SSOT. Ecosystem block now splits per Issue 13: VN locale renders `https://www.apolo.com.vn`, EN renders `https://www.apololawyers.com` (the two parent brands never cross-link).
+  - `src/app/[locale]/lien-he/page.tsx` — Person + ContactPage JSON-LD, contact card (firm/address/phone/email/WhatsApp), and Office Location block all switched to SSOT. Added EN-only East Saigon branch block below the main HCMC office card per Mr Hien's "branch surfaced on EN only" rule. Added EN hotline rendering (`(+84) 903.600.347`) on the EN locale.
+  - `src/app/[locale]/page.tsx` — home-page WebSite JSON-LD `worksFor.{name,url}` now locale-aware via SSOT.
+  - `src/app/[locale]/gioi-thieu-luat-su/page.tsx` — Person JSON-LD `worksFor.{name,url}` + `sameAs` switched to SSOT.
+  - `src/app/[locale]/bai-viet-chuyen-mon/[slug]/page.tsx` — Article publisher `{name,url}` switched to SSOT.
+  - `src/components/home/CTASection.tsx` — WhatsApp `wa.me` link switched to SSOT.
+  - `src/app/layout.tsx` — root metadata description `TP.HCM` → `TP. Hồ Chí Minh` (Mr Hien's consistency rule, even in descriptive copy).
+  - `src/app/[locale]/linh-vuc-hanh-nghe/[slug]/page.tsx` — two descriptive `TP.HCM` strings → `TP. Hồ Chí Minh`.
+- **Verification**:
+  - Grep for all stale tokens (`Nguyễn Cư Trinh`, `Q.1`, `Quận 1`, `0913 479 179`, `913479179`, `hien.vo@apololawyers`, `wa.me/84913479179`, `https://apololawyers.com` hardcoded) returns ZERO matches in `src/`.
+  - `npx tsc --noEmit` clean. `npx next build` produces 71 static pages.
+  - Production-server spot-check (`npx next start -p 3001` then curl): `/vi/lien-he` renders `108 Trần Đình Xu, Phường Cầu Ông Lãnh, TP. Hồ Chí Minh` + phones `(028) 66.701.709`, `0908.043.086`; `/en/contact` renders `108 Tran Dinh Xu Street, Cau Ong Lanh Ward, Ho Chi Minh City, Vietnam` + EN hotline `(+84) 903.600.347` + the EAST SAI GON branch card; `/vi` JSON-LD links to `https://www.apolo.com.vn` (apololawyers.com NOT present on VN home — Issue 13 satisfied).
+- **Generalizable?**: yes — applies to ALL 4 Phase 1 sites + every Phase 2+ site. The pattern is: each site exposes a typed `src/lib/address.ts` mirror of workspace-root `address.txt`, and every component imports from there rather than hardcoding. Encode Issue 13 (parent-brand cross-link rule) as a `parentBrandUrl(locale)` helper so it's structurally impossible to cross-link by mistake. Document in `CLAUDE_TEMPLATE.md` and `SITE_BUILD_CHECKLIST.md`.
+- **PM action on sign-off**: _(PM fills)_
+
 

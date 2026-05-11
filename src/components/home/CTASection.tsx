@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { IMAGES } from '@/lib/images';
 import Button from '@/components/ui/Button';
+import { CALL_CENTER_WA } from '@/lib/address';
 
 export default async function CTASection() {
   const t = await getTranslations('cta');
@@ -70,7 +71,7 @@ export default async function CTASection() {
               <Button
                 variant="outline"
                 size="lg"
-                href="https://wa.me/84913479179"
+                href={`https://wa.me/${CALL_CENTER_WA}`}
                 className="border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white"
               >
                 {t('whatsapp')}

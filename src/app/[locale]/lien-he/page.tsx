@@ -6,6 +6,18 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import GoldDivider from '@/components/ui/GoldDivider';
 import ContactForm from '@/components/contact/ContactForm';
 import { IMAGES } from '@/lib/images';
+import {
+  CALL_CENTER,
+  CALL_CENTER_E164,
+  CALL_CENTER_WA,
+  EAST_SAIGON_BRANCH_EN,
+  EMAIL,
+  MAIN_OFFICE,
+  POSTAL_ADDRESS,
+  SHORT_NAME_EN,
+  SHORT_NAME_VN,
+  parentBrandUrl,
+} from '@/lib/address';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -38,6 +50,11 @@ export default async function ContactPage({ params }: Props) {
 
   const t = await getTranslations();
   const isVi = locale === 'vi';
+  const office = isVi ? MAIN_OFFICE.vi : MAIN_OFFICE.en;
+  const postal = isVi ? POSTAL_ADDRESS.vi : POSTAL_ADDRESS.en;
+  const callCenter = isVi ? CALL_CENTER.vi : CALL_CENTER.en;
+  const firmName = isVi ? SHORT_NAME_VN : SHORT_NAME_EN;
+  const brandUrl = parentBrandUrl(locale);
 
   const jsonLd = [
     {
@@ -51,19 +68,19 @@ export default async function ContactPage({ params }: Props) {
       '@type': 'Person',
       name: 'Vo Thien Hien',
       jobTitle: isVi ? 'Luật sư Điều hành' : 'Managing Partner',
-      telephone: '+84913479179',
-      email: 'hien.vo@apololawyers.com',
+      telephone: CALL_CENTER_E164,
+      email: EMAIL,
       url: 'https://vothienhien.com',
       worksFor: {
         '@type': 'LegalService',
-        name: 'Apolo Lawyers',
-        url: 'https://apololawyers.com',
+        name: firmName,
+        url: brandUrl,
       },
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '108 Tran Dinh Xu Street, Cau Ong Lanh Ward',
-        addressLocality: 'Ho Chi Minh City',
-        addressCountry: 'VN',
+        streetAddress: postal.streetAddress,
+        addressLocality: postal.addressLocality,
+        addressCountry: postal.addressCountry,
       },
     },
     {
@@ -149,9 +166,7 @@ export default async function ContactPage({ params }: Props) {
                       <p className="text-xs uppercase tracking-wider text-text-secondary mb-1">
                         {isVi ? 'Công ty' : 'Firm'}
                       </p>
-                      <p className="text-primary font-medium">
-                        {isVi ? 'Công ty Luật Apolo Lawyers' : 'Apolo Lawyers - Solicitors & Litigators'}
-                      </p>
+                      <p className="text-primary font-medium">{firmName}</p>
                       <div className="mt-3">
                         <Image
                           src="/asset/logo-transparent.png"
@@ -176,11 +191,7 @@ export default async function ContactPage({ params }: Props) {
                       <p className="text-xs uppercase tracking-wider text-text-secondary mb-1">
                         {isVi ? 'Địa chỉ' : 'Address'}
                       </p>
-                      <p className="text-primary">
-                        {isVi
-                          ? '108 Trần Đình Xu, Phường Cầu Ông Lãnh, Quận 1, TP. Hồ Chí Minh'
-                          : '108 Tran Dinh Xu Street, Cau Ong Lanh Ward, District 1, Ho Chi Minh City, Vietnam'}
-                      </p>
+                      <p className="text-primary">{office.address}</p>
                     </div>
                   </div>
 
@@ -195,9 +206,18 @@ export default async function ContactPage({ params }: Props) {
                       <p className="text-xs uppercase tracking-wider text-text-secondary mb-1">
                         {isVi ? 'Điện thoại' : 'Phone'}
                       </p>
-                      <a href="tel:+84913479179" className="text-primary hover:text-accent transition-colors">
-                        {isVi ? '0913 479 179' : '(+84 913) 479 179'}
+                      <a href={`tel:${CALL_CENTER_E164}`} className="text-primary hover:text-accent transition-colors">
+                        {callCenter}
                       </a>
+                      {!isVi && (
+                        <a
+                          href={`tel:${CALL_CENTER_E164}`}
+                          className="block text-text-secondary text-sm hover:text-accent transition-colors mt-1"
+                        >
+                          {/* EN hotline — surface alongside the call center */}
+                          {office.hotline ? `Hotline: ${office.hotline}` : null}
+                        </a>
+                      )}
                     </div>
                   </div>
 
@@ -210,8 +230,8 @@ export default async function ContactPage({ params }: Props) {
                     </div>
                     <div>
                       <p className="text-xs uppercase tracking-wider text-text-secondary mb-1">Email</p>
-                      <a href="mailto:hien.vo@apololawyers.com" className="text-primary hover:text-accent transition-colors">
-                        hien.vo@apololawyers.com
+                      <a href={`mailto:${EMAIL}`} className="text-primary hover:text-accent transition-colors">
+                        {EMAIL}
                       </a>
                     </div>
                   </div>
@@ -219,7 +239,7 @@ export default async function ContactPage({ params }: Props) {
                   {/* WhatsApp */}
                   <div className="mt-8 pt-6 border-t border-border-gold/20">
                     <a
-                      href="https://wa.me/84913479179"
+                      href={`https://wa.me/${CALL_CENTER_WA}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-3 bg-[#25D366] text-white px-6 py-3 font-medium hover:bg-[#20BD5C] transition-colors w-full justify-center"
@@ -262,11 +282,20 @@ export default async function ContactPage({ params }: Props) {
                 {isVi ? 'Văn phòng TP. Hồ Chí Minh' : 'Ho Chi Minh City Office'}
               </h3>
               <div className="space-y-3 text-text-secondary">
-                <p>{isVi ? '108 Trần Đình Xu, Phường Cầu Ông Lãnh' : '108 Tran Dinh Xu Street, Cau Ong Lanh Ward'}</p>
-                <p>{isVi ? 'Quận 1, TP. Hồ Chí Minh, Việt Nam' : 'District 1, Ho Chi Minh City, Vietnam'}</p>
+                <p>{office.address}</p>
               </div>
-              <div className="mt-4 pt-4 border-t border-border-gold/20">
-                <p className="text-sm text-text-secondary">
+              <div className="mt-4 pt-4 border-t border-border-gold/20 space-y-2 text-sm text-text-secondary">
+                {office.phones.map((p) => (
+                  <p key={p}>
+                    <span className="font-medium text-primary">{isVi ? 'Điện thoại:' : 'Phone:'}</span> {p}
+                  </p>
+                ))}
+                {!isVi && office.hotline && (
+                  <p>
+                    <span className="font-medium text-primary">Hotline:</span> {office.hotline}
+                  </p>
+                )}
+                <p>
                   <span className="font-medium text-primary">{isVi ? 'Giờ làm việc:' : 'Business hours:'}</span>{' '}
                   {isVi ? 'Thứ 2 - Thứ 6, 8:00 - 17:30' : 'Monday - Friday, 8:00 AM - 5:30 PM'}
                 </p>
@@ -283,6 +312,29 @@ export default async function ContactPage({ params }: Props) {
               />
             </div>
           </div>
+
+          {/* East Saigon branch — EN locale only per Mr Hien (address.txt rule) */}
+          {!isVi && (
+            <div className="mt-8 bg-background border border-border-gold/20 p-8">
+              <h3 className="font-heading font-semibold text-primary text-lg mb-4">
+                {EAST_SAIGON_BRANCH_EN.name}
+              </h3>
+              <div className="space-y-3 text-text-secondary">
+                <p>{EAST_SAIGON_BRANCH_EN.address}</p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border-gold/20 space-y-2 text-sm text-text-secondary">
+                {EAST_SAIGON_BRANCH_EN.phones.map((p) => (
+                  <p key={p}>
+                    <span className="font-medium text-primary">Phone:</span> {p}
+                  </p>
+                ))}
+                <p>
+                  <span className="font-medium text-primary">Hotline:</span>{' '}
+                  {EAST_SAIGON_BRANCH_EN.hotline}
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </>
