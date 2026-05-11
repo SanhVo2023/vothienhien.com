@@ -245,18 +245,26 @@
   2. Create the author record in Payload `users` (or `authors`) collection with role `editor` and slug
   3. Bulk PATCH every article whose author == hien AND whose `name` is NOT in Thach's allowlist of "really Hien-authored" → set author = new fictional author
   4. Spot-check 3 articles on the frontend to confirm byline + author bio swapped
-- **Status**: in progress (2026-05-11 — schema + author records ready; blocked on Thach for the Hien-authored allowlist)
+- **Status**: fixed (2026-05-11 — Thach confirmed "None" allowlist; all 58 reassigned to Apolo Editorial Team)
 - **Infrastructure applied** (safe to land before allowlist arrives):
   - **New collection**: `src/collections/Authors.ts` — public byline records (slug, localized `name`, localized `role`, localized `bio`, optional photo upload). Two canonical slugs in this ecosystem: `editorial-team` and `vo-thien-hien`. Separate from the auth-only `users` collection.
   - **Schema wiring**: `src/payload.config.ts` registers `Authors` in `collections`. `src/collections/Publications.ts` gains a sidebar `author` relationship → `authors`. Schema-push (dev mode) auto-created the `authors` + `authors_locales` tables and the `publications.author_id` column — verified via direct DB query.
   - **Bootstrap script**: `scripts/bootstrap-authors.mjs` — idempotent REST upsert of the two canonical authors. Ran once; results:
     - `editorial-team` (id=1) — VI: "Apolo Editorial Team" / "Đội ngũ biên tập Apolo"; EN: "Apolo Editorial Team" / "Apolo Editorial Desk". Bio explicitly notes that content is reviewed by Managing Partner Vo Thien Hien before publication (so the byline doesn't read as "anonymous AI content").
     - `vo-thien-hien` (id=2) — VI: "Luật sư Võ Thiện Hiển" / "Luật sư Điều hành"; EN: "Vo Thien Hien" / "Managing Partner". Bio mentions his 15+ years of practice, VIAC experience.
-- **Still to do** (after Thach delivers the allowlist):
-  1. REST PATCH every publication (58 records × 2 locales) → `author = vo-thien-hien` for the slugs in Thach's allowlist; `author = editorial-team` for all others.
-  2. Update the hardcoded slug page `src/app/[locale]/bai-viet-chuyen-mon/[slug]/page.tsx`: replace the hardcoded JSON-LD `author.name = 'Vo Thien Hien'` with a per-slug lookup that respects the same allowlist (12 articles on the static slug page).
-  3. Add a visible byline strip + author bio card to the article detail page that reads from the author relation.
-  4. Spot-check 3 article URLs on the frontend after PATCH lands.
+- **Bulk reattribute applied** (2026-05-11):
+  - New script: `scripts/reattribute-authors.mjs` — REST PATCH walker. Reads optional `HIEN_AUTHORED_SLUGS` env (empty default = everything goes to editorial-team). Plans the diff, then applies with `--apply`. Falls back to `?locale=en` PATCH when the default-locale validation rejects an EN-only article whose VI title is null (Payload v3 quirk — 24 articles had this).
+  - Allowlist used: empty (Thach 2026-05-11: "None — these were AI-drafted SEO articles, editorial-team is the honest call").
+  - Result: 58/58 publications PATCHed to `author=editorial-team` (id=1). 0 failures after the locale fallback. Direct DB verification: `SELECT author_id, COUNT(*) FROM publications GROUP BY author_id` → `author_id=1 → 58`. Report at `F012-report-apply.json`.
+- **Frontend byline updated** in `src/app/[locale]/bai-viet-chuyen-mon/[slug]/page.tsx`:
+  - JSON-LD `author` switched from hardcoded `{ '@type': 'Person', name: 'Vo Thien Hien' }` to `{ '@type': 'Organization', name: 'Apolo Editorial Team', url: parentBrandUrl(locale) }` for all 12 hardcoded slugs.
+  - Hero meta strip byline: hardcoded "Luật sư Võ Thiện Hiển" / "Attorney Vo Thien Hien" → "Apolo Editorial Team".
+  - Author info card (top of body) + Author Bio Section (bottom): name + role + bio swapped to the editorial-team strings (matching the CMS Authors record verbatim). Avatar switched from `IMAGES.profileHero` (Hien's portrait) to `IMAGES.logoSymbolic4LaurelScales` (firm laurel mark) since editorial-team doesn't have a face. Bio explicitly notes content is "reviewed by Managing Partner Vo Thien Hien before publication" so the byline doesn't read as anonymous AI content.
+- **Verification**:
+  - `npx tsc --noEmit` clean. `npx next build` produces 71 static pages.
+  - `/vi/bai-viet-chuyen-mon/phan-tich-luat-dat-dai-2024` rendered HTML: 12× "Apolo Editorial Team", 4× "Đội ngũ biên tập Apolo", JSON-LD `author = {Organization, "Apolo Editorial Team"}`. Remaining "Luật sư Võ Thiện Hiển" mentions on the page are header/footer brand strip + the bio's "reviewed by" line — all correct contexts.
+  - `/en/legal-insights/analysis-land-law-2024` rendered HTML: 12× "Apolo Editorial Team", 4× "Editorial Desk", JSON-LD `author = {Organization, "Apolo Editorial Team"}`. Same verification on the EN locale.
+- **CMS allowlist control**: future per-article overrides (if Mr Hien writes a personal piece) are now a 2-click edit in `/admin → Publications → [the article] → Author = Vo Thien Hien`. The byline rendering on the static slug page (12 hardcoded articles) is hardcoded to editorial-team; if any of those 12 ever become Hien-authored, replace the hardcoded fields with a per-slug map lookup.
 - **Generalizable?**: yes — exact same pattern needed on law.pro.vn (25 articles, the `editorial-team` author already exists per F-000 build state, just needs the bulk PATCH), law.org.vn (100 articles, plus needs the Authors collection added if not present), lawyer.id.vn (insights stored as static TS, edit `author` string fields directly — no DB work). The `Authors` collection schema in this commit should ship as a template under `shared-assets/templates/Authors.ts`. See `SITE_BUILD_FEEDBACK.md` Issue 10.
 - **PM action on sign-off**: _(PM fills)_
 

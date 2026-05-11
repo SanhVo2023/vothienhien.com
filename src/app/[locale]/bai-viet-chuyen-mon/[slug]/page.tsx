@@ -330,11 +330,13 @@ export default async function PublicationDetailPage({ params }: Props) {
       headline: content.title,
       datePublished: content.date,
       image: heroImage.src,
+      // F-012: default byline = Apolo Editorial Team. Articles personally
+      // authored by Mr Hien (per Thach/Hien allowlist) would override this;
+      // current allowlist is empty (no slug on this page is Hien-authored).
       author: {
-        '@type': 'Person',
-        name: 'Vo Thien Hien',
-        jobTitle: isVi ? 'Luật sư Điều hành' : 'Managing Partner',
-        url: 'https://vothienhien.com',
+        '@type': 'Organization',
+        name: 'Apolo Editorial Team',
+        url: parentBrandUrl(locale),
       },
       publisher: {
         '@type': 'Organization',
@@ -390,7 +392,7 @@ export default async function PublicationDetailPage({ params }: Props) {
           <div className="flex items-center justify-center gap-4 mt-6 text-white/60 text-sm">
             <span>{content.date}</span>
             <span className="w-1 h-1 bg-accent rounded-full" />
-            <span>{isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}</span>
+            <span>Apolo Editorial Team</span>
           </div>
 
           <div className="flex justify-center mt-6">
@@ -399,25 +401,23 @@ export default async function PublicationDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Author Info with Photo */}
+      {/* Author Info — editorial-team byline (F-012) */}
       <section className="bg-surface border-b border-border-gold/20">
         <div className="max-w-3xl mx-auto px-6 py-6">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 border-2 border-accent/30">
+            <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 border-2 border-accent/30 bg-primary flex items-center justify-center">
               <Image
-                src={IMAGES.profileHero.cdn}
-                alt={isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}
-                width={56}
-                height={56}
-                className="object-cover w-full h-full"
+                src={IMAGES.logoSymbolic4LaurelScales.cdn}
+                alt="Apolo Editorial Team"
+                width={48}
+                height={48}
+                className="object-contain"
               />
             </div>
             <div>
-              <p className="font-heading font-semibold text-primary">
-                {isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}
-              </p>
+              <p className="font-heading font-semibold text-primary">Apolo Editorial Team</p>
               <p className="text-text-secondary text-sm">
-                {isVi ? 'Luật sư Điều hành - Apolo Lawyers' : 'Managing Partner - Apolo Lawyers'}
+                {isVi ? 'Đội ngũ biên tập Apolo Lawyers' : 'Apolo Lawyers Editorial Desk'}
               </p>
             </div>
           </div>
@@ -455,30 +455,30 @@ export default async function PublicationDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Author Bio Section */}
+      {/* Author Bio Section — editorial-team byline (F-012) */}
       <section className="py-16 bg-surface border-t border-border-gold/20">
         <div className="max-w-3xl mx-auto px-6">
           <div className="flex flex-col sm:flex-row items-start gap-6 p-8 bg-background border border-border-gold/20">
-            <div className="w-20 h-20 rounded-full overflow-hidden shrink-0 border-2 border-accent/30">
+            <div className="w-20 h-20 rounded-full overflow-hidden shrink-0 border-2 border-accent/30 bg-primary flex items-center justify-center">
               <Image
-                src={IMAGES.profileHero.cdn}
-                alt={isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}
-                width={80}
-                height={80}
-                className="object-cover w-full h-full"
+                src={IMAGES.logoSymbolic4LaurelScales.cdn}
+                alt="Apolo Editorial Team"
+                width={64}
+                height={64}
+                className="object-contain"
               />
             </div>
             <div>
               <p className="font-heading font-semibold text-primary text-lg">
-                {isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}
+                Apolo Editorial Team
               </p>
               <p className="text-accent text-sm font-medium mt-1">
-                {isVi ? 'Luật sư Điều hành - Apolo Lawyers' : 'Managing Partner - Apolo Lawyers'}
+                {isVi ? 'Đội ngũ biên tập Apolo Lawyers' : 'Apolo Lawyers Editorial Desk'}
               </p>
               <p className="text-text-secondary text-sm mt-3 leading-relaxed">
                 {isVi
-                  ? 'Hơn 15 năm kinh nghiệm hành nghề luật sư. Chuyên tư vấn dân sự, đất đai, doanh nghiệp và tranh tụng tại các cấp tòa án. Luật sư Hiển đã xử lý thành công hàng trăm vụ việc trong nhiều lĩnh vực pháp lý khác nhau.'
-                  : 'Over 15 years of legal practice experience. Specializing in civil, land, corporate advisory, and litigation at all court levels. Attorney Vo Thien Hien has successfully handled hundreds of matters across diverse legal domains.'}
+                  ? 'Bài viết được biên soạn bởi đội ngũ biên tập của Apolo Lawyers — gồm các luật sư cộng sự và chuyên gia nội dung, được Luật sư Điều hành Võ Thiện Hiển thẩm định nội dung pháp lý trước khi xuất bản.'
+                  : 'Authored by the Apolo Lawyers editorial team — senior associates and content specialists — with legal content reviewed by Managing Partner Vo Thien Hien before publication.'}
               </p>
             </div>
           </div>
