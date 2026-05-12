@@ -79,7 +79,10 @@ export default function HeroSection() {
           </p>
 
           {/* CTA */}
-          <div className="hero-fade pt-10" style={{ animationDelay: '1s' }}>
+          <div
+            className="hero-fade pt-10 flex justify-center md:justify-start"
+            style={{ animationDelay: '1s' }}
+          >
             <Link href="/lien-he">
               <Button variant="primary" size="lg" className="btn-shimmer">
                 {t('cta')}
@@ -88,15 +91,12 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator — arrow only */}
         <div
-          className="hero-fade absolute bottom-8 left-1/2 -translate-x-1/2 md:left-12 lg:left-16 xl:left-20 md:translate-x-0 flex flex-col items-center gap-2 scroll-indicator"
+          className="hero-fade absolute bottom-8 left-1/2 -translate-x-1/2 md:left-12 lg:left-16 xl:left-20 md:translate-x-0 scroll-indicator"
           style={{ animationDelay: '1.3s' }}
         >
-          <span className="text-[10px] uppercase tracking-[0.3em] text-accent/50 font-[family-name:var(--font-inter)]">
-            Scroll
-          </span>
-          <svg className="w-4 h-4 text-accent/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <svg className="w-4 h-4 text-accent/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
           </svg>
         </div>

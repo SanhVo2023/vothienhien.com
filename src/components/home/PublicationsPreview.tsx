@@ -8,13 +8,16 @@ import { IMAGES } from '@/lib/images';
 import SectionHeading from '@/components/ui/SectionHeading';
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
+  // Reduced travel + stagger so the entrance reads as a smooth fade rather
+  // than a "jump-then-flash" on mobile, where fast scrolling outruns a
+  // margin-based viewport trigger.
+  hidden: { opacity: 0, y: 14 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.15,
-      duration: 0.7,
+      delay: i * 0.08,
+      duration: 0.5,
       ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
     },
   }),
@@ -56,7 +59,7 @@ export default function PublicationsPreview() {
               custom={0}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: '-50px' }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={cardVariants}
               className="bg-background border border-border-gold/20 hover:shadow-lg transition-shadow duration-500 grid grid-cols-1 lg:grid-cols-2"
             >
@@ -109,7 +112,7 @@ export default function PublicationsPreview() {
                   custom={index + 1}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, margin: '-50px' }}
+                  viewport={{ once: true, amount: 0.1 }}
                   variants={cardVariants}
                   className="bg-background border border-border-gold/20 hover:shadow-lg transition-shadow duration-500 h-full"
                 >
@@ -153,7 +156,7 @@ export default function PublicationsPreview() {
           </div>
         </div>
 
-        <div className="flex justify-center mt-14">
+        <div className="flex justify-center mt-16 md:mt-20">
           <Link
             href="/bai-viet-chuyen-mon"
             className="inline-flex items-center gap-2 text-accent hover:text-accent-secondary text-sm uppercase tracking-[0.15em] font-medium transition-colors duration-300 group"

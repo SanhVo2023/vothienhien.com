@@ -10,7 +10,6 @@ import {
   CALL_CENTER_E164,
   EMAIL,
   MAIN_OFFICE,
-  PARENT_BRAND,
 } from '@/lib/address';
 
 const navItems = [
@@ -21,22 +20,11 @@ const navItems = [
   { key: 'contact' as const, href: '/lien-he' as const },
 ] as const;
 
-// Issue 13 (parent-brand cross-link rule): VN locale links to apolo.com.vn,
-// EN locale links to apololawyers.com — never cross. Internal ecosystem
-// sites (lawyersinvietnam, apololegal, etc.) are not parent brands and
-// stay visible on both locales.
-const ecosystemLinksByLocale = {
-  vi: [
-    { label: 'Apolo Lawyers', href: PARENT_BRAND.vi },
-    { label: 'Lawyers in Vietnam', href: 'https://lawyersinvietnam.com' },
-    { label: 'Apolo Legal', href: 'https://apololegal.com' },
-  ],
-  en: [
-    { label: 'Apolo Lawyers', href: PARENT_BRAND.en },
-    { label: 'Lawyers in Vietnam', href: 'https://lawyersinvietnam.com' },
-    { label: 'Apolo Legal', href: 'https://apololegal.com' },
-  ],
-} as const;
+// Ecosystem brand list. Rendered as plain labels until the sister sites
+// are live — tapping in mobile was landing on error pages and Mr Hien's
+// tester flagged it. When a property goes live, promote its entry back
+// to a link by adding an `href` and switching the JSX below.
+const ECOSYSTEM_BRANDS = ['Apolo Lawyers', 'Lawyers in Vietnam', 'Apolo Legal'] as const;
 
 export default function Footer({ locale }: { locale: string }) {
   const t = useTranslations('nav');
@@ -44,7 +32,6 @@ export default function Footer({ locale }: { locale: string }) {
   const isVi = locale === 'vi';
   const office = isVi ? MAIN_OFFICE.vi : MAIN_OFFICE.en;
   const callCenter = isVi ? CALL_CENTER.vi : CALL_CENTER.en;
-  const ecosystemLinks = isVi ? ecosystemLinksByLocale.vi : ecosystemLinksByLocale.en;
 
   return (
     <footer className="bg-primary text-white">
@@ -235,24 +222,24 @@ export default function Footer({ locale }: { locale: string }) {
         </div>
       </div>
 
-      {/* Ecosystem Links */}
+      {/* Ecosystem brands — label stacked above, names in a single row below.
+          Names are non-clickable until sister sites are deployed. */}
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
+          <div className="flex flex-col items-center gap-3">
             <span className="font-[family-name:var(--font-inter)] text-[10px] uppercase tracking-[0.3em] text-white/30">
               {locale === 'vi' ? 'Hệ sinh thái' : 'Ecosystem'}
             </span>
-            {ecosystemLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-[family-name:var(--font-inter)] text-xs tracking-wider text-white/40 transition-colors duration-300 hover:text-accent"
-              >
-                {link.label}
-              </a>
-            ))}
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+              {ECOSYSTEM_BRANDS.map((label) => (
+                <span
+                  key={label}
+                  className="font-[family-name:var(--font-inter)] text-xs tracking-wider text-white/50"
+                >
+                  {label}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

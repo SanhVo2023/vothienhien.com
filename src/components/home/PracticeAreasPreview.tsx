@@ -23,13 +23,15 @@ const practiceAreas = [
 const FEATURED_COUNT = 6;
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
+  // Matches PublicationsPreview: shorter travel and quicker stagger to keep
+  // mobile entrances smooth when the user scrolls fast.
+  hidden: { opacity: 0, y: 14 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.1,
-      duration: 0.6,
+      delay: i * 0.06,
+      duration: 0.5,
       ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
     },
   }),
@@ -69,7 +71,7 @@ export default function PracticeAreasPreview() {
                 custom={index}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: '-50px' }}
+                viewport={{ once: true, amount: 0.1 }}
                 variants={cardVariants}
                 whileHover={{ y: -4, transition: { duration: 0.3 } }}
                 className="relative bg-background border border-border-gold/30 hover:border-accent/60 hover:bg-secondary hover:text-white transition-all duration-500 overflow-hidden h-full"
@@ -119,7 +121,7 @@ export default function PracticeAreasPreview() {
           ))}
         </div>
 
-        <div className="flex justify-center mt-14">
+        <div className="flex justify-center mt-16 md:mt-20">
           <Link
             href="/linh-vuc-hanh-nghe"
             className="inline-flex items-center gap-2 text-accent hover:text-accent-secondary text-sm uppercase tracking-[0.15em] font-medium transition-colors duration-300 group"
