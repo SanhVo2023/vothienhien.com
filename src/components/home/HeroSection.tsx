@@ -10,7 +10,7 @@ export default function HeroSection() {
   const t = useTranslations('hero');
 
   return (
-    <section className="min-h-screen relative overflow-hidden flex">
+    <section className="md:min-h-screen relative overflow-hidden flex">
       {/* Left dark panel - text side */}
       <div className="relative w-full md:w-[55%] bg-primary flex items-center">
         {/* Marble texture overlay */}
@@ -29,7 +29,7 @@ export default function HeroSection() {
           />
         </div>
 
-        <div className="relative z-10 w-full px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-24 md:py-16 flex flex-col justify-center">
+        <div className="relative z-10 w-full px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-14 md:py-16 flex flex-col justify-center">
           {/* Mobile-only portrait — small screens only */}
           <div className="flex justify-center mb-10 md:hidden hero-fade" style={{ animationDelay: '0.1s' }}>
             <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-accent/40 shadow-[0_0_40px_rgba(197,165,90,0.15)]">

@@ -79,7 +79,7 @@ export default function PublicationsPreview() {
                 <span className="inline-block text-xs uppercase tracking-[0.15em] text-accent font-medium mb-3 border border-accent/40 px-3 py-1 rounded-full w-fit">
                   {articles[0].category}
                 </span>
-                <h3 className="font-[family-name:var(--font-heading)] text-xl md:text-2xl lg:text-3xl font-semibold text-primary mb-4 leading-snug group-hover:text-accent-secondary transition-colors duration-300 title-underline">
+                <h3 className="font-[family-name:var(--font-heading)] text-xl md:text-2xl lg:text-3xl font-semibold text-primary mb-4 leading-snug group-hover:text-accent-secondary transition-colors duration-300">
                   {articles[0].title}
                 </h3>
                 <p className="text-text-secondary text-sm md:text-base leading-relaxed mb-6 line-clamp-3">
@@ -132,7 +132,7 @@ export default function PublicationsPreview() {
                     <span className="inline-block text-xs uppercase tracking-[0.15em] text-accent font-medium mb-3 border border-accent/40 px-3 py-1 rounded-full">
                       {article.category}
                     </span>
-                    <h3 className="font-[family-name:var(--font-heading)] text-lg md:text-xl font-semibold text-primary mb-3 leading-snug group-hover:text-accent-secondary transition-colors duration-300 title-underline">
+                    <h3 className="font-[family-name:var(--font-heading)] text-lg md:text-xl font-semibold text-primary mb-3 leading-snug group-hover:text-accent-secondary transition-colors duration-300">
                       {article.title}
                     </h3>
                     <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-2">
