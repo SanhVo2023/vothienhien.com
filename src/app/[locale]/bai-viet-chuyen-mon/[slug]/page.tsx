@@ -274,16 +274,29 @@ function getCanonicalSlug(slug: string): string {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const isVi = locale === 'vi';
+  const localeKey: 'vi' | 'en' = isVi ? 'vi' : 'en';
   const canonical = getCanonicalSlug(slug);
-  const data = articlesData[canonical];
-  if (!data) return { title: 'Not Found' };
+  const hardcoded = articlesData[canonical];
 
-  const content = isVi ? data.vi : data.en;
+  // Hardcoded sample articles first, CMS fallback for everything else.
+  let title: string;
+  let description: string;
+  if (hardcoded) {
+    const c = isVi ? hardcoded.vi : hardcoded.en;
+    title = c.title;
+    description = (c.content[0] ?? '').slice(0, 160);
+  } else {
+    const cms = await fetchCmsArticle(slug, localeKey);
+    if (!cms) return { title: 'Not Found' };
+    title = cms.title;
+    description = (cms.content[0] ?? '').slice(0, 160);
+  }
+
   const heroImage = slugImageMap[canonical] || getArticleImage(slug);
 
   return {
-    title: `${content.title} | ${isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}`,
-    description: content.content[0].substring(0, 160),
+    title: `${title} | ${isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}`,
+    description,
     alternates: {
       canonical: isVi
         ? `/vi/bai-viet-chuyen-mon/${canonical}`
@@ -299,18 +312,108 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// Walk a Lexical JSON tree and flatten it into an ordered array of
+// paragraph-as-string entries so the existing renderer below stays untouched.
+// Headings, blockquotes, list items and table cells are surfaced as paragraphs
+// in source order; richer formatting (lists, headings, links) will be wired
+// up in a follow-up that swaps in @payloadcms/richtext-lexical/react RichText.
+type LexicalNode = { type?: string; text?: string; children?: LexicalNode[]; root?: LexicalNode };
+function flattenParagraph(node: LexicalNode): string {
+  if (!node) return '';
+  if (typeof node.text === 'string') return node.text;
+  return (node.children ?? []).map(flattenParagraph).join('');
+}
+function lexicalToParagraphs(content: { root?: LexicalNode } | null | undefined): string[] {
+  if (!content?.root?.children) return [];
+  const out: string[] = [];
+  for (const child of content.root.children) {
+    const text = flattenParagraph(child).trim();
+    if (text) out.push(text);
+  }
+  return out;
+}
+
+type CmsArticle = { title: string; category: string; date: string; content: string[]; relatedSlugs: string[] };
+
+const CATEGORY_LABELS_DETAIL: Record<string, { vi: string; en: string }> = {
+  analysis: { vi: 'Phân tích', en: 'Analysis' },
+  guide: { vi: 'Hướng dẫn', en: 'Guide' },
+  commentary: { vi: 'Bình luận', en: 'Commentary' },
+  'case-study': { vi: 'Nghiên cứu vụ việc', en: 'Case Study' },
+};
+
+async function fetchCmsArticle(slug: string, locale: 'vi' | 'en'): Promise<CmsArticle | null> {
+  const candidates = [process.env.NEXT_PUBLIC_SITE_URL, 'http://localhost:3000', 'http://localhost:3001'].filter(Boolean) as string[];
+  for (const base of candidates) {
+    try {
+      const res = await fetch(
+        `${base}/api/publications?where[slug][equals]=${encodeURIComponent(slug)}&limit=1&depth=0&locale=${locale}`,
+        { next: { revalidate: 3600 } },
+      );
+      if (!res.ok) continue;
+      const data = await res.json();
+      const doc = data?.docs?.[0];
+      if (!doc) return null;
+      const title = (doc.title ?? '').trim();
+      if (!title) return null;
+      const isoDate = doc.publishedDate as string | undefined;
+      const dateStr = isoDate
+        ? locale === 'vi'
+          ? (() => {
+              const d = new Date(isoDate);
+              return `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
+            })()
+          : new Date(isoDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+        : '';
+      return {
+        title,
+        category: CATEGORY_LABELS_DETAIL[doc.category ?? 'analysis']?.[locale] ?? (doc.category ?? ''),
+        date: dateStr,
+        content: lexicalToParagraphs(doc.content),
+        relatedSlugs: [],
+      };
+    } catch {
+      // try next base URL
+    }
+  }
+  return null;
+}
+
 export default async function PublicationDetailPage({ params }: Props) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
   const t = await getTranslations();
   const isVi = locale === 'vi';
+  const localeKey: 'vi' | 'en' = isVi ? 'vi' : 'en';
   const canonical = getCanonicalSlug(slug);
-  const data = articlesData[canonical];
+  const hardcoded = articlesData[canonical];
 
-  if (!data) notFound();
+  // Source order: hand-tuned hardcoded data first, CMS as fallback.
+  // For CMS articles, fall back to the other locale's body when the
+  // requested-locale body is empty (e.g. VI title translated but body not yet).
+  let content: CmsArticle;
+  let bodyFallbackLocale: 'vi' | 'en' | null = null;
+  if (hardcoded) {
+    const c = isVi ? hardcoded.vi : hardcoded.en;
+    content = { title: c.title, category: c.category, date: c.date, content: c.content, relatedSlugs: c.relatedSlugs };
+  } else {
+    const primary = await fetchCmsArticle(slug, localeKey);
+    if (!primary) notFound();
+    if (primary.content.length === 0) {
+      const otherLocale: 'vi' | 'en' = localeKey === 'vi' ? 'en' : 'vi';
+      const other = await fetchCmsArticle(slug, otherLocale);
+      if (other && other.content.length > 0) {
+        content = { ...primary, content: other.content };
+        bodyFallbackLocale = otherLocale;
+      } else {
+        content = primary;
+      }
+    } else {
+      content = primary;
+    }
+  }
 
-  const content = isVi ? data.vi : data.en;
   const heroImage = slugImageMap[canonical] || getArticleImage(slug);
 
   const relatedArticles = content.relatedSlugs
@@ -427,6 +530,13 @@ export default async function PublicationDetailPage({ params }: Props) {
       {/* Content */}
       <section className="py-16 md:py-24 bg-background">
         <div className="max-w-3xl mx-auto px-6">
+          {bodyFallbackLocale && (
+            <div className="mb-8 border-l-2 border-accent bg-accent/5 px-5 py-4 text-sm text-text-secondary">
+              {isVi
+                ? 'Phần nội dung đầy đủ tiếng Việt đang được biên dịch. Tạm thời hiển thị bản tiếng Anh để bạn tham khảo.'
+                : 'Vietnamese full-body translation is in progress. The English text is shown below for reference.'}
+            </div>
+          )}
           <div className="prose prose-lg max-w-none">
             {content.content.map((paragraph, i) => (
               <p key={i} className="text-text-secondary leading-relaxed mb-6">

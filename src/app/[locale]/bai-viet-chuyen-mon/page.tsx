@@ -157,14 +157,86 @@ const publications = {
   ],
 };
 
+// Map Payload `category` enum to the display label for each locale.
+const CATEGORY_LABELS: Record<string, { vi: string; en: string }> = {
+  analysis: { vi: 'Phân tích', en: 'Analysis' },
+  guide: { vi: 'Hướng dẫn', en: 'Guide' },
+  commentary: { vi: 'Bình luận', en: 'Commentary' },
+  'case-study': { vi: 'Nghiên cứu vụ việc', en: 'Case Study' },
+};
+
+type ListArticle = {
+  slug: string;
+  title: string;
+  category: string;
+  date: string;
+  excerpt: string;
+  readTime: string;
+};
+
+function formatDate(iso: string | undefined, locale: 'vi' | 'en'): string {
+  if (!iso) return '';
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return '';
+  return locale === 'vi'
+    ? `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`
+    : d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+}
+
+function estimateReadTime(excerpt: string | undefined, locale: 'vi' | 'en'): string {
+  // Lightweight estimate from excerpt length — actual word count would need
+  // a Lexical walker; this is close enough for the listing card chip.
+  const words = (excerpt ?? '').trim().split(/\s+/).filter(Boolean).length || 200;
+  const minutes = Math.max(5, Math.round((words * 12) / 200));
+  return locale === 'vi' ? `${minutes} phút đọc` : `${minutes} min read`;
+}
+
+async function fetchCmsPublications(locale: 'vi' | 'en'): Promise<ListArticle[]> {
+  // Source of truth for the 58 imported SEO articles. Hardcoded `publications`
+  // above holds the 6 hand-tuned sample articles whose full body lives inline
+  // in [slug]/page.tsx — they're kept and merged ahead of CMS results.
+  const candidates = [process.env.NEXT_PUBLIC_SITE_URL, 'http://localhost:3000', 'http://localhost:3001'].filter(Boolean) as string[];
+  for (const base of candidates) {
+    try {
+      const res = await fetch(
+        `${base}/api/publications?limit=100&depth=0&locale=${locale}&sort=-publishedDate`,
+        { next: { revalidate: 3600 } },
+      );
+      if (!res.ok) continue;
+      const data = await res.json();
+      return (data?.docs ?? [])
+        .filter((d: { title?: string }) => Boolean(d.title?.trim()))
+        .map((d: { slug: string; title: string; excerpt?: string; category?: string; publishedDate?: string }) => ({
+          slug: d.slug,
+          title: d.title.trim(),
+          category: CATEGORY_LABELS[d.category ?? 'analysis']?.[locale] ?? d.category ?? '',
+          date: formatDate(d.publishedDate, locale),
+          excerpt: (d.excerpt ?? '').trim(),
+          readTime: estimateReadTime(d.excerpt, locale),
+        }));
+    } catch {
+      // try next base URL
+    }
+  }
+  return [];
+}
+
 export default async function PublicationsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
   const t = await getTranslations();
   const isVi = locale === 'vi';
-  const articleList = publications[isVi ? 'vi' : 'en'];
-  const categoryList = categories[isVi ? 'vi' : 'en'];
+  const localeKey: 'vi' | 'en' = isVi ? 'vi' : 'en';
+  const featured = publications[localeKey];
+  const cmsArticles = await fetchCmsPublications(localeKey);
+  // De-dupe by slug (favour the hand-tuned hardcoded entry if it ever overlaps).
+  const seen = new Set(featured.map((a) => a.slug));
+  const articleList: ListArticle[] = [
+    ...featured,
+    ...cmsArticles.filter((a) => !seen.has(a.slug)),
+  ];
+  const categoryList = categories[localeKey];
 
   const jsonLd = {
     '@context': 'https://schema.org',
