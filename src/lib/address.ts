@@ -57,6 +57,17 @@ export const EAST_SAIGON_BRANCH: { vi: OfficeBlock; en: OfficeBlock } = {
 // ─── Shared (identical on VN + EN) ─────────────────────────────────────────
 export const EMAIL = 'contact@apolo.com.vn';
 
+// ─── Mr Hien's personal contact (sidebar on /lien-he per 17/05/2026 review) ─
+// Use ONLY in the personal-contact card. Office/Footer keep the company
+// switchboard (CALL_CENTER / EMAIL above).
+export const PERSONAL_CONTACT = {
+  name: { vi: 'Luật sư Võ Thiện Hiển', en: 'Attorney Vo Thien Hien' },
+  phone: { vi: '0913.479.179', en: '(+84) 913.479.179' },
+  phoneE164: '+84913479179',
+  whatsappDigits: '84913479179',
+  email: 'hien.vo@apololawyers.com',
+} as const;
+
 // Call-center / Tổng đài tư vấn pháp luật
 export const CALL_CENTER = {
   vi: '0903.419.479',

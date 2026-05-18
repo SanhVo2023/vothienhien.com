@@ -7,12 +7,10 @@ import GoldDivider from '@/components/ui/GoldDivider';
 import ContactForm from '@/components/contact/ContactForm';
 import { IMAGES } from '@/lib/images';
 import {
-  CALL_CENTER,
-  CALL_CENTER_E164,
-  CALL_CENTER_WA,
   EAST_SAIGON_BRANCH,
   EMAIL,
   HEAD_OFFICE,
+  PERSONAL_CONTACT,
   POSTAL_ADDRESS,
   SHORT_NAME_EN,
   SHORT_NAME_VN,
@@ -53,7 +51,7 @@ export default async function ContactPage({ params }: Props) {
   const headOffice = isVi ? HEAD_OFFICE.vi : HEAD_OFFICE.en;
   const branch = isVi ? EAST_SAIGON_BRANCH.vi : EAST_SAIGON_BRANCH.en;
   const postal = isVi ? POSTAL_ADDRESS.vi : POSTAL_ADDRESS.en;
-  const callCenter = isVi ? CALL_CENTER.vi : CALL_CENTER.en;
+  const personalPhone = isVi ? PERSONAL_CONTACT.phone.vi : PERSONAL_CONTACT.phone.en;
   const firmName = isVi ? SHORT_NAME_VN : SHORT_NAME_EN;
   const brandUrl = parentBrandUrl(locale);
 
@@ -69,8 +67,8 @@ export default async function ContactPage({ params }: Props) {
       '@type': 'Person',
       name: 'Vo Thien Hien',
       jobTitle: isVi ? 'Luật sư Điều hành' : 'Managing Partner',
-      telephone: CALL_CENTER_E164,
-      email: EMAIL,
+      telephone: PERSONAL_CONTACT.phoneE164,
+      email: PERSONAL_CONTACT.email,
       url: 'https://vothienhien.com',
       worksFor: {
         '@type': 'LegalService',
@@ -198,8 +196,8 @@ export default async function ContactPage({ params }: Props) {
                       <p className="text-xs uppercase tracking-wider text-text-secondary mb-1">
                         {isVi ? 'Điện thoại' : 'Phone'}
                       </p>
-                      <a href={`tel:${CALL_CENTER_E164}`} className="text-primary hover:text-accent transition-colors">
-                        {callCenter}
+                      <a href={`tel:${PERSONAL_CONTACT.phoneE164}`} className="text-primary hover:text-accent transition-colors">
+                        {personalPhone}
                       </a>
                     </div>
                   </div>
@@ -213,16 +211,16 @@ export default async function ContactPage({ params }: Props) {
                     </div>
                     <div>
                       <p className="text-xs uppercase tracking-wider text-text-secondary mb-1">Email</p>
-                      <a href={`mailto:${EMAIL}`} className="text-primary hover:text-accent transition-colors">
-                        {EMAIL}
+                      <a href={`mailto:${PERSONAL_CONTACT.email}`} className="text-primary hover:text-accent transition-colors">
+                        {PERSONAL_CONTACT.email}
                       </a>
                     </div>
                   </div>
 
-                  {/* WhatsApp */}
+                  {/* WhatsApp — personal number per 17/05/2026 review (R13). */}
                   <div className="mt-8 pt-6 border-t border-border-gold/20">
                     <a
-                      href={`https://wa.me/${CALL_CENTER_WA}`}
+                      href={`https://wa.me/${PERSONAL_CONTACT.whatsappDigits}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-3 bg-[#25D366] text-white px-6 py-3 font-medium hover:bg-[#20BD5C] transition-colors w-full justify-center"
