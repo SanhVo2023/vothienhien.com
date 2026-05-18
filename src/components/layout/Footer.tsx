@@ -62,48 +62,35 @@ export default function Footer({ locale }: { locale: string }) {
               {tFooter('firmName')}
             </p>
 
-            {/* Firm logo */}
+            {/* "A member of" — three equal-size logos in a single row, no
+                captions. Per 17/05/2026 client review (R12): Apolo Lawyers,
+                Liên đoàn Luật sư Việt Nam, Association of European Attorneys. */}
             <div className="mt-6 pt-5 border-t border-white/10">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-white/30 mb-2">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-white/30 mb-4">
                 {locale === 'vi' ? 'Thành viên của' : 'A member of'}
               </p>
-              {/* Apolo Lawyers firm logo. Owner (F-005) will provide a revised asset;
-                  drop the new PNG at /public/asset/logo-transparent.png to swap. */}
-              <Image
-                src="/asset/logo-transparent.png"
-                alt="Apolo Lawyers - Solicitors & Litigators"
-                width={140}
-                height={56}
-                className="opacity-60 hover:opacity-90 transition-opacity duration-300"
-              />
-              {/* Institution logos */}
-              <div className="mt-4 flex items-center gap-5">
-                <div className="flex flex-col items-center gap-1">
-                  <Image
-                    src="/asset/logo-lsvn.png"
-                    alt={locale === 'vi' ? 'Liên đoàn Luật sư Việt Nam' : 'VN Bar Federation'}
-                    width={48}
-                    height={36}
-                    className="opacity-60 hover:opacity-90 transition-opacity duration-300 object-contain"
-                    style={{ height: '36px', width: 'auto' }}
-                  />
-                  <span className="text-[9px] text-white/30 text-center">
-                    {locale === 'vi' ? 'Liên đoàn LSVN' : 'VN Bar Federation'}
-                  </span>
-                </div>
-                <div className="flex flex-col items-center gap-1">
-                  <Image
-                    src="/asset/logo-ccbe.png"
-                    alt={locale === 'vi' ? 'Hiệp hội Luật sư Châu Âu' : 'European Bar Association'}
-                    width={48}
-                    height={36}
-                    className="opacity-60 hover:opacity-90 transition-opacity duration-300 object-contain"
-                    style={{ height: '36px', width: 'auto' }}
-                  />
-                  <span className="text-[9px] text-white/30 text-center">
-                    {locale === 'vi' ? 'Hiệp hội LS Châu Âu' : 'European Bar Association'}
-                  </span>
-                </div>
+              <div className="flex items-center gap-6">
+                <Image
+                  src="/asset/logo-transparent.png"
+                  alt="Apolo Lawyers - Solicitors & Litigators"
+                  width={56}
+                  height={56}
+                  className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 object-contain"
+                />
+                <Image
+                  src="/asset/logo-lsvn.png"
+                  alt={locale === 'vi' ? 'Liên đoàn Luật sư Việt Nam' : 'Vietnam Bar Federation'}
+                  width={56}
+                  height={56}
+                  className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 object-contain"
+                />
+                <Image
+                  src="/asset/logo-aea.png"
+                  alt="Association of European Attorneys"
+                  width={64}
+                  height={48}
+                  className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 object-contain"
+                />
               </div>
             </div>
           </div>
