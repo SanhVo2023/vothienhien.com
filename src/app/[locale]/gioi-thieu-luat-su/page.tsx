@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? 'Giới Thiệu Luật Sư Võ Thiện Hiển | Apolo Lawyers'
       : 'Attorney Profile - Vo Thien Hien | Apolo Lawyers',
     description: isVi
-      ? 'Tìm hiểu về Luật sư Võ Thiện Hiển - Luật sư Điều hành tại Công ty Luật TNHH Apolo Lawyers. Hơn 15 năm kinh nghiệm trong lĩnh vực pháp luật dân sự, đất đai và doanh nghiệp.'
-      : 'Learn about Attorney Vo Thien Hien - Managing Partner at Apolo Lawyers LLC. Over 15 years of experience in civil law, land disputes, and corporate advisory in Vietnam.',
+      ? 'Tìm hiểu về Luật sư Võ Thiện Hiển - Luật sư Điều hành tại Công ty Luật Apolo Lawyers. Hơn 20 năm kinh nghiệm trong tố tụng, trọng tài, giải quyết tranh chấp và tư vấn pháp lý tại Việt Nam.'
+      : 'Learn about Attorney Vo Thien Hien (Henry Vo) — Managing Partner at Apolo Lawyers. More than 20 years of legal practice in litigation, arbitration, dispute resolution and legal advisory in Vietnam.',
     alternates: {
       canonical: isVi ? '/vi/gioi-thieu-luat-su' : '/en/lawyer-profile',
       languages: {
@@ -36,20 +36,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const timelineData = {
   vi: [
-    { year: '2008', title: 'Tốt nghiệp Cử nhân Luật', description: 'Đại học Luật TP. Hồ Chí Minh - Bằng Cử nhân Luật, xếp loại Giỏi' },
-    { year: '2010', title: 'Chứng chỉ Hành nghề Luật sư', description: 'Hoàn thành khóa đào tạo nghề luật sư tại Học viện Tư pháp và được cấp Chứng chỉ hành nghề' },
-    { year: '2011', title: 'Gia nhập Đoàn Luật sư', description: 'Trở thành thành viên Đoàn Luật sư TP. Hồ Chí Minh' },
-    { year: '2014', title: 'Luật sư Thành viên', description: 'Trở thành Luật sư Thành viên tại Công ty Luật TNHH Apolo Lawyers' },
-    { year: '2018', title: 'Thạc sĩ Luật Kinh tế', description: 'Hoàn thành chương trình Thạc sĩ Luật Kinh tế tại Đại học Luật TP. Hồ Chí Minh' },
-    { year: '2020', title: 'Luật sư Điều hành', description: 'Được bổ nhiệm làm Luật sư Điều hành, dẫn dắt đội ngũ luật sư và mở rộng lĩnh vực hành nghề' },
+    { year: '2005', title: 'Bắt đầu hoạt động trong lĩnh vực pháp luật', description: 'Bắt đầu công tác trong lĩnh vực pháp luật, xây dựng nền tảng thực tiễn trong tư vấn pháp lý, xử lý tranh chấp và hỗ trợ tố tụng tại Việt Nam.' },
+    { year: '2010', title: 'Tranh chấp dân sự và thương mại giá trị lớn', description: 'Tham gia các vụ việc dân sự, thương mại và doanh nghiệp có giá trị lên đến khoảng 200 tỷ đồng, đòi hỏi phân tích chứng cứ, nghĩa vụ hợp đồng và chiến lược tố tụng phù hợp.' },
+    { year: '2015', title: 'Vụ án phức tạp về hình sự, dân sự và thương mại', description: 'Tham gia các vụ án hình sự nghiêm trọng, tranh chấp dân sự trên 100 tỷ đồng, hồ sơ hôn nhân và tài sản khoảng 16.500 tỷ đồng, cùng tranh chấp thương mại từ 5 triệu USD đến 8 triệu USD.' },
+    { year: '2018', title: 'Luật sư Điều hành tại Apolo Lawyers', description: 'Giữ vai trò Luật sư Điều hành tại Apolo Lawyers, phụ trách định hướng chuyên môn, chiến lược xử lý hồ sơ và trực tiếp tham gia các vụ việc trọng yếu trong nước và quốc tế.' },
+    { year: '2020', title: 'Đầu tư, M&A và vụ việc có yếu tố quốc tế', description: 'Hỗ trợ khách hàng nước ngoài trong các hồ sơ tranh chấp, đầu tư, FDI, M&A, trọng tài và lao động; bao gồm dự án 5-20 triệu USD, giao dịch M&A 10-50 triệu USD và một phần thủ tục rút vốn của nhà đầu tư Pháp có quy mô đầu tư khoảng 1 tỷ USD tại Việt Nam.' },
+    { year: '2025', title: 'Định vị Apolo Lawyers trong tố tụng và trọng tài', description: 'Tập trung định vị Apolo Lawyers trong tố tụng, trọng tài và tranh chấp phức tạp, trên nền tảng kinh nghiệm hơn 500 vụ việc tại Tòa án, hơn 100 vụ việc trọng tài, hơn 300 hồ sơ tư vấn, giải quyết tranh chấp và đội ngũ nhân sự giỏi chuyên môn.' },
   ],
   en: [
-    { year: '2008', title: 'Bachelor of Laws', description: 'Ho Chi Minh City University of Law - Bachelor of Laws, Honors' },
-    { year: '2010', title: 'Legal Practice Certificate', description: 'Completed professional legal training at the Judicial Academy and obtained Legal Practice Certificate' },
-    { year: '2011', title: 'Bar Association Membership', description: 'Admitted to the Ho Chi Minh City Bar Association' },
-    { year: '2014', title: 'Partner', description: 'Became a Partner at Apolo Lawyers LLC' },
-    { year: '2018', title: 'Master of Economic Law', description: 'Completed Master of Economic Law program at Ho Chi Minh City University of Law' },
-    { year: '2020', title: 'Managing Partner', description: 'Appointed Managing Partner, leading the legal team and expanding practice areas' },
+    { year: '2005', title: 'Entry into Legal Practice', description: 'Began working in the legal field, building practical foundations in legal advisory work, dispute handling and litigation support in Vietnam.' },
+    { year: '2010', title: 'High Value Civil and Commercial Disputes', description: 'Participated in civil, commercial and corporate matters with values of up to approximately VND 200 billion, requiring evidence analysis, contractual assessment and appropriate litigation strategy.' },
+    { year: '2015', title: 'Complex Criminal, Civil and Commercial Matters', description: 'Participated in serious criminal cases, civil disputes exceeding VND 100 billion, family and asset matters valued at approximately VND 16.5 trillion, and commercial disputes ranging from USD 5 million to USD 8 million.' },
+    { year: '2018', title: 'Managing Partner at Apolo Lawyers', description: 'Served as Managing Partner of Apolo Lawyers, overseeing professional direction, case strategy and direct involvement in significant domestic and international matters.' },
+    { year: '2020', title: 'Investment, M&A and International Matters', description: 'Supported foreign clients in disputes, investment, FDI, M&A, arbitration and labour matters, including projects valued at USD 5-20 million, M&A transactions valued at USD 10-50 million, and part of the legal procedures for the withdrawal of capital by a French investor with an investment scale of approximately USD 1 billion in Vietnam.' },
+    { year: '2025', title: 'Positioning Apolo Lawyers in Litigation and Arbitration', description: 'Focused on positioning Apolo Lawyers in litigation, arbitration and complex disputes, built on experience in more than 500 court cases, more than 100 arbitration matters, more than 300 advisory and dispute resolution matters, and a team of strong legal professionals.' },
   ],
 };
 
@@ -68,16 +68,16 @@ const educationData = {
 
 const memberships = {
   vi: [
-    'Đoàn Luật sư TP. Hồ Chí Minh',
+    'Đoàn Luật sư Thành phố Hồ Chí Minh',
     'Liên đoàn Luật sư Việt Nam',
-    'Hiệp hội Luật sư Châu Á - Thái Bình Dương (LAWASIA)',
-    'Câu lạc bộ Luật sư Thương mại Quốc tế',
+    'Hội Luật gia Việt Nam',
+    'Association of European Attorneys (AEA)',
   ],
   en: [
     'Ho Chi Minh City Bar Association',
     'Vietnam Bar Federation',
-    'Law Association for Asia and the Pacific (LAWASIA)',
-    'International Commercial Law Club',
+    'Vietnam Lawyers Association',
+    'Association of European Attorneys (AEA)',
   ],
 };
 
@@ -96,7 +96,9 @@ export default async function LawyerProfilePage({ params }: Props) {
       '@context': 'https://schema.org',
       '@type': 'Person',
       name: 'Vo Thien Hien',
-      alternateName: 'Võ Thiện Hiển',
+      // VI alternate name is the Vietnamese diacritic form; EN exposes the
+      // English nickname per the 17/05/2026 client review.
+      alternateName: isVi ? 'Võ Thiện Hiển' : 'Henry Vo',
       jobTitle: isVi ? 'Luật sư Điều hành' : 'Managing Partner',
       worksFor: {
         '@type': 'LegalService',
@@ -150,25 +152,37 @@ export default async function LawyerProfilePage({ params }: Props) {
             {isVi ? (
               <>
                 <p>
-                  Luật sư Võ Thiện Hiển là Luật sư Điều hành tại Công ty Luật TNHH Apolo Lawyers, một trong những công ty luật uy tín hàng đầu tại TP. Hồ Chí Minh. Với hơn 15 năm kinh nghiệm hành nghề, Luật sư Hiển đã trực tiếp tham gia giải quyết hàng trăm vụ việc pháp lý phức tạp trong các lĩnh vực dân sự, đất đai, doanh nghiệp và hình sự.
+                  Luật sư Võ Thiện Hiển, tên tiếng Anh là Henry Vo, là luật sư Việt Nam có hơn 20 năm kinh nghiệm hành nghề trong lĩnh vực tố tụng, trọng tài, giải quyết tranh chấp và tư vấn pháp lý tại Việt Nam. Từ năm 2018, ông giữ vai trò Luật sư Điều hành tại Apolo Lawyers, phụ trách định hướng chuyên môn và trực tiếp tham gia xử lý các vụ việc có yếu tố trong nước và nước ngoài.
                 </p>
                 <p>
-                  Tốt nghiệp xuất sắc từ Đại học Luật TP. Hồ Chí Minh và hoàn thành chương trình Thạc sĩ Luật Kinh tế, Luật sư Hiển kết hợp nền tảng học thuật vững chắc với kinh nghiệm thực tiễn phong phú. Ông được biết đến với phong cách tư vấn chuyên nghiệp, tận tâm và luôn đặt quyền lợi của khách hàng lên hàng đầu.
+                  Trong quá trình hành nghề, Luật sư Võ Thiện Hiển đã tham gia hơn 500 vụ việc tại Tòa án, hơn 100 vụ việc trọng tài và hơn 300 hồ sơ tư vấn, hỗ trợ giải quyết tranh chấp. Kinh nghiệm thực tiễn này giúp ông tiếp cận vụ việc từ nhiều góc độ, bao gồm pháp lý, chứng cứ, thủ tục, đàm phán và khả năng thi hành kết quả giải quyết tranh chấp.
                 </p>
                 <p>
-                  Ngoài hoạt động hành nghề, Luật sư Hiển còn tích cực tham gia các hoạt động đào tạo pháp luật, viết bài nghiên cứu chuyên môn và đóng góp ý kiến cho các dự thảo văn bản pháp luật. Ông là thành viên của nhiều tổ chức nghề nghiệp trong nước và quốc tế.
+                  Hoạt động hành nghề của ông tập trung vào các lĩnh vực dân sự, thương mại, doanh nghiệp, đất đai, lao động, hôn nhân và gia đình, hình sự, trọng tài và các vấn đề pháp lý có yếu tố nước ngoài. Trong các vụ việc có yếu tố quốc tế, ông phối hợp cùng đội ngũ pháp lý sử dụng tiếng Anh để hỗ trợ khách hàng nước ngoài tiếp cận pháp luật và thủ tục tại Việt Nam một cách rõ ràng, thực tế và thận trọng.
+                </p>
+                <p>
+                  Luật sư Võ Thiện Hiển có nền tảng đào tạo pháp luật tại Trường Đại học Luật Thành phố Hồ Chí Minh và Học viện Tư pháp. Ông có Chứng chỉ hành nghề luật sư do Bộ Tư pháp cấp, Thẻ luật sư do Liên đoàn Luật sư Việt Nam cấp, là thành viên Đoàn Luật sư Thành phố Hồ Chí Minh, Hội Luật gia Việt Nam và Association of European Attorneys.
+                </p>
+                <p>
+                  Cách tiếp cận của ông chú trọng vào việc đánh giá chứng cứ, phân tích rủi ro, xây dựng chiến lược xử lý hồ sơ và giúp khách hàng hiểu rõ vị thế pháp lý của mình trước khi lựa chọn phương án phù hợp.
                 </p>
               </>
             ) : (
               <>
                 <p>
-                  Attorney Vo Thien Hien is the Managing Partner at Apolo Lawyers LLC, one of the leading law firms in Ho Chi Minh City, Vietnam. With over 15 years of legal practice, Attorney Vo Thien Hien has directly handled hundreds of complex legal matters across civil law, land disputes, corporate advisory, and criminal defense.
+                  Attorney Vo Thien Hien, also known as Henry Vo, is a Vietnamese attorney with more than 20 years of legal practice experience in litigation, arbitration, dispute resolution and legal advisory work in Vietnam. Since 2018, he has served as the Managing Partner of Apolo Lawyers, overseeing professional direction and directly handling matters involving both domestic and foreign elements.
                 </p>
                 <p>
-                  Having graduated with honors from Ho Chi Minh City University of Law and completed a Master of Economic Law, Attorney Vo Thien Hien combines a strong academic foundation with extensive practical experience. He is recognized for his professional, dedicated approach and unwavering commitment to protecting his clients&apos; interests.
+                  Throughout his legal career, Attorney Vo Thien Hien has been involved in more than 500 court cases, more than 100 arbitration matters and more than 300 advisory and dispute resolution matters. This practical experience allows him to approach each matter from multiple perspectives, including legal analysis, evidence, procedure, negotiation and the enforceability of dispute resolution outcomes.
                 </p>
                 <p>
-                  Beyond his legal practice, Attorney Vo Thien Hien actively participates in legal education, publishes professional legal articles, and contributes to legislative drafting consultations. He holds memberships in numerous domestic and international professional organizations.
+                  His practice focuses on civil, commercial, corporate, land, labour, family, criminal, arbitration and foreign related legal matters. In matters involving international clients, he works together with an English speaking legal team to help foreign clients understand Vietnamese law and procedures in a clear, practical and careful manner.
+                </p>
+                <p>
+                  Attorney Vo Thien Hien received his legal education from Ho Chi Minh City University of Law and the Judicial Academy of Vietnam. He holds a Lawyer Practising Certificate issued by the Ministry of Justice of Vietnam and a Lawyer Card issued by the Vietnam Bar Federation. He is a member of the Ho Chi Minh City Bar Association, the Vietnam Lawyers Association and the Association of European Attorneys.
+                </p>
+                <p>
+                  His approach focuses on evidence assessment, risk analysis, case strategy and helping clients understand their legal position before choosing an appropriate course of action.
                 </p>
               </>
             )}
