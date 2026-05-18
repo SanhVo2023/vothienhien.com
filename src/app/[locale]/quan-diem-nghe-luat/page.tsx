@@ -47,7 +47,7 @@ const perspectives = {
     {
       slug: 'dao-duc-nghe-luat-su',
       title: 'Đạo đức nghề nghiệp - nền tảng của nghề luật sư',
-      excerpt: 'Trong hành trình hơn 15 năm hành nghề, tôi nhận ra rằng đạo đức nghề nghiệp không chỉ là nghĩa vụ mà còn là nền tảng tạo nên giá trị bền vững cho người luật sư. Một luật sư giỏi không chỉ cần giỏi về chuyên môn mà còn phải có lòng trung thực và sự liêm chính.',
+      excerpt: 'Trong hành trình hơn 20 năm hành nghề, tôi nhận ra rằng đạo đức nghề nghiệp không chỉ là nghĩa vụ mà còn là nền tảng tạo nên giá trị bền vững cho người luật sư. Một luật sư giỏi không chỉ cần giỏi về chuyên môn mà còn phải có lòng trung thực và sự liêm chính.',
       date: '20/02/2024',
     },
     {

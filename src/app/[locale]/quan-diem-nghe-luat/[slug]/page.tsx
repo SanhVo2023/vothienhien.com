@@ -33,7 +33,7 @@ const perspectivesData: Record<string, { vi: PerspectiveData; en: PerspectiveDat
       title: 'Đạo đức nghề nghiệp - nền tảng của nghề luật sư',
       date: '20/02/2024',
       content: [
-        'Trong hành trình hơn 15 năm hành nghề luật sư, tôi đã chứng kiến nhiều sự thay đổi trong nghề. Nhưng có một điều luôn không thay đổi, đó là giá trị của đạo đức nghề nghiệp. Đây là nền tảng mà mỗi luật sư cần xây dựng và bảo vệ suốt sự nghiệp của mình.',
+        'Trong hành trình hơn 20 năm hành nghề luật sư, tôi đã chứng kiến nhiều sự thay đổi trong nghề. Nhưng có một điều luôn không thay đổi, đó là giá trị của đạo đức nghề nghiệp. Đây là nền tảng mà mỗi luật sư cần xây dựng và bảo vệ suốt sự nghiệp của mình.',
         'Đạo đức nghề nghiệp không đơn thuần là việc tuân thủ các quy tắc ứng xử do Liên đoàn Luật sư ban hành. Nó còn là cam kết cá nhân của mỗi luật sư với sự trung thực, liêm chính và công bằng trong mọi hành động.',
         'Tôi tin rằng một luật sư thực sự giỏi là người đặt lợi ích chính đáng của khách hàng lên hàng đầu, nhưng không bao giờ vi phạm pháp luật hay đạo đức để đạt được mục đích. Ranh giới này đôi khi rất mong manh, và chỉ có những người có bản lĩnh đạo đức vững vàng mới có thể vượt qua.',
         'Trong nhiều vụ việc, tôi đã từ chối đại diện cho những khách hàng muốn tôi sử dụng những phương pháp không chính đáng. Mặc dù điều này có thể khiến tôi mất đi một số khách hàng, nhưng nó giúp tôi xây dựng được uy tín và sự tin tưởng lâu dài từ cộng đồng và đồng nghiệp.',
@@ -301,8 +301,8 @@ export default async function PerspectiveDetailPage({ params }: Props) {
               </p>
               <p className="text-text-secondary text-sm mt-2 leading-relaxed">
                 {isVi
-                  ? 'Hơn 15 năm kinh nghiệm hành nghề luật sư. Chuyên tư vấn dân sự, đất đai, doanh nghiệp và tranh tụng tại các cấp tòa án.'
-                  : 'Over 15 years of legal practice experience. Specializing in civil, land, corporate advisory, and litigation at all court levels.'}
+                  ? 'Hơn 20 năm kinh nghiệm hành nghề luật sư. Chuyên tư vấn dân sự, đất đai, doanh nghiệp và tranh tụng tại các cấp tòa án.'
+                  : 'Over 20 years of legal practice experience. Specializing in civil, land, corporate advisory, and litigation at all court levels.'}
               </p>
             </div>
           </div>
@@ -359,8 +359,8 @@ export default async function PerspectiveDetailPage({ params }: Props) {
               </p>
               <p className="text-text-secondary text-sm mt-3 leading-relaxed">
                 {isVi
-                  ? 'Hơn 15 năm kinh nghiệm hành nghề luật sư. Chuyên tư vấn dân sự, đất đai, doanh nghiệp và tranh tụng tại các cấp tòa án. Luật sư Hiển đã xử lý thành công hàng trăm vụ việc trong nhiều lĩnh vực pháp lý khác nhau.'
-                  : 'Over 15 years of legal practice experience. Specializing in civil, land, corporate advisory, and litigation at all court levels. Attorney Vo Thien Hien has successfully handled hundreds of matters across diverse legal domains.'}
+                  ? 'Hơn 20 năm kinh nghiệm hành nghề luật sư. Chuyên tư vấn dân sự, đất đai, doanh nghiệp và tranh tụng tại các cấp tòa án. Luật sư Hiển đã xử lý thành công hàng trăm vụ việc trong nhiều lĩnh vực pháp lý khác nhau.'
+                  : 'Over 20 years of legal practice experience. Specializing in civil, land, corporate advisory, and litigation at all court levels. Attorney Vo Thien Hien has successfully handled hundreds of matters across diverse legal domains.'}
               </p>
             </div>
           </div>

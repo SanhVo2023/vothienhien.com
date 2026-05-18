@@ -9,7 +9,18 @@ import { IMAGES } from '@/lib/images';
 
 type Props = {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ cat?: string }>;
 };
+
+// Maps URL `?cat=...` slugs to the matching display label per locale. Keeping
+// the URL slugs locale-agnostic so a `?cat=analysis` link works regardless of
+// which locale the visitor lands in.
+const CATEGORY_FILTERS: { slug: string; vi: string; en: string }[] = [
+  { slug: 'analysis', vi: 'Phân tích', en: 'Analysis' },
+  { slug: 'guide', vi: 'Hướng dẫn', en: 'Guide' },
+  { slug: 'commentary', vi: 'Bình luận', en: 'Commentary' },
+  { slug: 'case-study', vi: 'Nghiên cứu vụ việc', en: 'Case Study' },
+];
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -34,11 +45,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
-
-const categories = {
-  vi: ['Phân tích', 'Hướng dẫn', 'Bình luận'],
-  en: ['Analysis', 'Guide', 'Commentary'],
-};
 
 // Thumbnail images mapped by article index
 const articleThumbnails = [
@@ -221,8 +227,9 @@ async function fetchCmsPublications(locale: 'vi' | 'en'): Promise<ListArticle[]>
   return [];
 }
 
-export default async function PublicationsPage({ params }: Props) {
+export default async function PublicationsPage({ params, searchParams }: Props) {
   const { locale } = await params;
+  const { cat: activeCategorySlug } = await searchParams;
   setRequestLocale(locale);
 
   const t = await getTranslations();
@@ -230,13 +237,20 @@ export default async function PublicationsPage({ params }: Props) {
   const localeKey: 'vi' | 'en' = isVi ? 'vi' : 'en';
   const featured = publications[localeKey];
   const cmsArticles = await fetchCmsPublications(localeKey);
-  // De-dupe by slug (favour the hand-tuned hardcoded entry if it ever overlaps).
   const seen = new Set(featured.map((a) => a.slug));
-  const articleList: ListArticle[] = [
+  const allArticles: ListArticle[] = [
     ...featured,
     ...cmsArticles.filter((a) => !seen.has(a.slug)),
   ];
-  const categoryList = categories[localeKey];
+
+  // Server-side category filter via ?cat=<slug>. Active filter compares the
+  // article's display category label to the slug's localized label.
+  const activeFilter = activeCategorySlug
+    ? CATEGORY_FILTERS.find((f) => f.slug === activeCategorySlug)
+    : null;
+  const articleList = activeFilter
+    ? allArticles.filter((a) => a.category === activeFilter[localeKey])
+    : allArticles;
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -280,21 +294,36 @@ export default async function PublicationsPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Category Tabs */}
+      {/* Category Tabs — server-side filter via ?cat=<slug>. */}
       <section className="bg-background border-b border-border-gold/20">
         <div className="max-w-5xl mx-auto px-6">
           <div className="flex gap-8 overflow-x-auto py-4">
-            <button className="text-sm uppercase tracking-wider font-medium text-accent border-b-2 border-accent pb-2 whitespace-nowrap">
+            <Link
+              href="/bai-viet-chuyen-mon"
+              className={`text-sm uppercase tracking-wider font-medium pb-2 border-b-2 whitespace-nowrap transition-colors ${
+                !activeFilter
+                  ? 'text-accent border-accent'
+                  : 'text-text-secondary hover:text-accent border-transparent hover:border-accent/30'
+              }`}
+            >
               {isVi ? 'Tất cả' : 'All'}
-            </button>
-            {categoryList.map((cat) => (
-              <button
-                key={cat}
-                className="text-sm uppercase tracking-wider font-medium text-text-secondary hover:text-accent pb-2 border-b-2 border-transparent hover:border-accent/30 transition-colors whitespace-nowrap"
-              >
-                {cat}
-              </button>
-            ))}
+            </Link>
+            {CATEGORY_FILTERS.map((f) => {
+              const isActive = activeFilter?.slug === f.slug;
+              return (
+                <Link
+                  key={f.slug}
+                  href={{ pathname: '/bai-viet-chuyen-mon', query: { cat: f.slug } }}
+                  className={`text-sm uppercase tracking-wider font-medium pb-2 border-b-2 whitespace-nowrap transition-colors ${
+                    isActive
+                      ? 'text-accent border-accent'
+                      : 'text-text-secondary hover:text-accent border-transparent hover:border-accent/30'
+                  }`}
+                >
+                  {f[localeKey]}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -302,6 +331,21 @@ export default async function PublicationsPage({ params }: Props) {
       {/* Publications Grid */}
       <section className="py-20 md:py-28 bg-background">
         <div className="max-w-5xl mx-auto px-6">
+          {articleList.length === 0 && (
+            <div className="text-center py-16">
+              <p className="text-text-secondary text-base">
+                {isVi
+                  ? 'Chưa có bài viết nào trong chuyên mục này.'
+                  : 'No articles in this category yet.'}
+              </p>
+              <Link
+                href="/bai-viet-chuyen-mon"
+                className="inline-block mt-6 text-accent hover:text-accent-secondary text-sm uppercase tracking-wider"
+              >
+                {isVi ? '← Xem tất cả bài viết' : '← View all articles'}
+              </Link>
+            </div>
+          )}
           <div className="grid gap-8 md:grid-cols-2">
             {articleList.map((article, index) => {
               const thumb = getArticleThumbnail(index);
