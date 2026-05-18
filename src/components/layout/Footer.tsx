@@ -232,6 +232,17 @@ export default function Footer({ locale }: { locale: string }) {
       </div>
 
       {/* Copyright */}
+      {/* Legal disclaimer — required wording per 17/05/2026 client review (R8). */}
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-4xl px-6 py-5 lg:px-8">
+          <p className="text-center font-[family-name:var(--font-inter)] text-[11px] leading-relaxed text-white/40 italic">
+            {locale === 'vi'
+              ? 'Thông tin trên website chỉ có giá trị tham khảo, không thay thế cho ý kiến tư vấn pháp lý và không làm phát sinh quan hệ tư vấn giữa luật sư và khách hàng.'
+              : 'The information on this website is provided for reference purposes only, does not constitute legal advice, and does not create an attorney-client relationship.'}
+          </p>
+        </div>
+      </div>
+
       <div className="gold-divider mx-6 lg:mx-8" />
       <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
         <p className="text-center font-[family-name:var(--font-inter)] text-xs tracking-wider text-white/30">
