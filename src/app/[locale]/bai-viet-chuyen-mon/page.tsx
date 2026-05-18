@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Thumbnail images mapped by article index
+// Fallback rotation used only when a slug-specific image isn't found in IMAGES.
 const articleThumbnails = [
   { src: IMAGES.articleLandDispute.cdn, alt: IMAGES.articleLandDispute.alt },
   { src: IMAGES.articleCorporateLaw.cdn, alt: IMAGES.articleCorporateLaw.alt },
@@ -56,9 +56,20 @@ const articleThumbnails = [
   { src: IMAGES.articleCorporateLaw.cdn, alt: IMAGES.articleCorporateLaw.alt },
 ];
 
-function getArticleThumbnail(index: number) {
+// Per-slug image lookup — `IMAGES['article' + PascalCase(slug)]`, populated by
+// tools/image-generator-ui /batch for the 58 SEO articles. Falls back to the
+// index-cycling thumbnails for older sample articles whose images live under
+// shorter keys (articleCorporateLaw, articleLandDispute, …).
+function articleThumbForSlug(slug: string, index: number) {
+  const key = ('article-' + slug)
+    .split('-')
+    .map((p, i) => (i === 0 ? p : p.charAt(0).toUpperCase() + p.slice(1)))
+    .join('') as keyof typeof IMAGES;
+  const direct = IMAGES[key];
+  if (direct) return { src: direct.cdn, alt: direct.alt };
   return articleThumbnails[index % articleThumbnails.length];
 }
+
 
 const publications = {
   vi: [
@@ -348,7 +359,7 @@ export default async function PublicationsPage({ params, searchParams }: Props) 
           )}
           <div className="grid gap-8 md:grid-cols-2">
             {articleList.map((article, index) => {
-              const thumb = getArticleThumbnail(index);
+              const thumb = articleThumbForSlug(article.slug, index);
               return (
                 <Link
                   key={article.slug}

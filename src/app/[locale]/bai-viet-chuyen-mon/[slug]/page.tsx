@@ -21,8 +21,21 @@ interface ArticleData {
   relatedSlugs: string[];
 }
 
-// Map slugs to hero images based on topic
+// Map slugs to hero images. Per-slug images for the 58 SEO articles were
+// generated via tools/image-generator-ui and live in IMAGES under the
+// `article${PascalCase(slug)}` key. If a slug-specific image exists, use it;
+// otherwise fall back to topical heuristics and finally a generic frame.
+function articleKey(slug: string): string {
+  return ('article-' + slug)
+    .split('-')
+    .map((p, i) => (i === 0 ? p : p.charAt(0).toUpperCase() + p.slice(1)))
+    .join('');
+}
+
 function getArticleImage(slug: string): { src: string; alt: string } {
+  const key = articleKey(slug) as keyof typeof IMAGES;
+  const direct = IMAGES[key];
+  if (direct) return { src: direct.cdn, alt: direct.alt };
   if (slug.includes('doanh-nghiep') || slug.includes('corporate')) {
     return { src: IMAGES.articleCorporateLaw.cdn, alt: IMAGES.articleCorporateLaw.alt };
   }
