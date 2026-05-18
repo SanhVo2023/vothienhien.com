@@ -10,9 +10,9 @@ import {
   CALL_CENTER,
   CALL_CENTER_E164,
   CALL_CENTER_WA,
-  EAST_SAIGON_BRANCH_EN,
+  EAST_SAIGON_BRANCH,
   EMAIL,
-  MAIN_OFFICE,
+  HEAD_OFFICE,
   POSTAL_ADDRESS,
   SHORT_NAME_EN,
   SHORT_NAME_VN,
@@ -50,7 +50,8 @@ export default async function ContactPage({ params }: Props) {
 
   const t = await getTranslations();
   const isVi = locale === 'vi';
-  const office = isVi ? MAIN_OFFICE.vi : MAIN_OFFICE.en;
+  const headOffice = isVi ? HEAD_OFFICE.vi : HEAD_OFFICE.en;
+  const branch = isVi ? EAST_SAIGON_BRANCH.vi : EAST_SAIGON_BRANCH.en;
   const postal = isVi ? POSTAL_ADDRESS.vi : POSTAL_ADDRESS.en;
   const callCenter = isVi ? CALL_CENTER.vi : CALL_CENTER.en;
   const firmName = isVi ? SHORT_NAME_VN : SHORT_NAME_EN;
@@ -167,15 +168,6 @@ export default async function ContactPage({ params }: Props) {
                         {isVi ? 'Công ty' : 'Firm'}
                       </p>
                       <p className="text-primary font-medium">{firmName}</p>
-                      <div className="mt-3">
-                        <Image
-                          src="/asset/logo-transparent.png"
-                          alt="Apolo Lawyers - Solicitors & Litigators"
-                          width={120}
-                          height={48}
-                          className="opacity-80"
-                        />
-                      </div>
                     </div>
                   </div>
 
@@ -191,7 +183,7 @@ export default async function ContactPage({ params }: Props) {
                       <p className="text-xs uppercase tracking-wider text-text-secondary mb-1">
                         {isVi ? 'Địa chỉ' : 'Address'}
                       </p>
-                      <p className="text-primary">{office.address}</p>
+                      <p className="text-primary">{headOffice.address}</p>
                     </div>
                   </div>
 
@@ -209,15 +201,6 @@ export default async function ContactPage({ params }: Props) {
                       <a href={`tel:${CALL_CENTER_E164}`} className="text-primary hover:text-accent transition-colors">
                         {callCenter}
                       </a>
-                      {!isVi && (
-                        <a
-                          href={`tel:${CALL_CENTER_E164}`}
-                          className="block text-text-secondary text-sm hover:text-accent transition-colors mt-1"
-                        >
-                          {/* EN hotline — surface alongside the call center */}
-                          {office.hotline ? `Hotline: ${office.hotline}` : null}
-                        </a>
-                      )}
                     </div>
                   </div>
 
@@ -276,65 +259,56 @@ export default async function ContactPage({ params }: Props) {
             subtitle={isVi ? 'Văn phòng' : 'Office'}
             title={isVi ? 'Địa chỉ văn phòng' : 'Office Location'}
           />
+          {/* Head Office + Branch, both locales (17/05/2026 client review).
+              Format per R17: company short name, address, single-line phones,
+              email. No business hours, no hotline labels. */}
           <div className="mt-12 grid md:grid-cols-2 gap-8">
             <div className="bg-background border border-border-gold/20 p-8">
-              <h3 className="font-heading font-semibold text-primary text-lg mb-4">
-                {isVi ? 'Văn phòng TP. Hồ Chí Minh' : 'Ho Chi Minh City Office'}
+              <p className="text-[11px] uppercase tracking-[0.25em] text-accent font-medium mb-2">
+                {headOffice.name}
+              </p>
+              <h3 className="font-heading font-semibold text-primary text-lg mb-3">
+                {firmName}
               </h3>
-              <div className="space-y-3 text-text-secondary">
-                <p>{office.address}</p>
-              </div>
-              <div className="mt-4 pt-4 border-t border-border-gold/20 space-y-2 text-sm text-text-secondary">
-                {office.phones.map((p) => (
-                  <p key={p}>
-                    <span className="font-medium text-primary">{isVi ? 'Điện thoại:' : 'Phone:'}</span> {p}
-                  </p>
-                ))}
-                {!isVi && office.hotline && (
-                  <p>
-                    <span className="font-medium text-primary">Hotline:</span> {office.hotline}
-                  </p>
-                )}
-                <p>
-                  <span className="font-medium text-primary">{isVi ? 'Giờ làm việc:' : 'Business hours:'}</span>{' '}
-                  {isVi ? 'Thứ 2 - Thứ 6, 8:00 - 17:30' : 'Monday - Friday, 8:00 AM - 5:30 PM'}
-                </p>
-              </div>
+              <p className="text-text-secondary">{headOffice.address}</p>
+              <p className="mt-3 text-text-secondary text-sm">
+                {headOffice.phones.join('  ')}
+              </p>
+              <p className="mt-1 text-text-secondary text-sm">
+                <a href={`mailto:${EMAIL}`} className="hover:text-accent transition-colors">
+                  {EMAIL}
+                </a>
+              </p>
             </div>
-            <div className="bg-background border border-border-gold/20 overflow-hidden relative">
-              <Image
-                src={IMAGES.mapHcmcOffice.cdn}
-                alt={IMAGES.mapHcmcOffice.alt}
-                width={600}
-                height={400}
-                className="object-cover w-full h-full"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+            <div className="bg-background border border-border-gold/20 p-8">
+              <p className="text-[11px] uppercase tracking-[0.25em] text-accent font-medium mb-2">
+                {isVi ? 'Chi nhánh' : 'Branch'}
+              </p>
+              <h3 className="font-heading font-semibold text-primary text-lg mb-3">
+                {branch.name}
+              </h3>
+              <p className="text-text-secondary">{branch.address}</p>
+              <p className="mt-3 text-text-secondary text-sm">
+                {branch.phones.join('  ')}
+              </p>
+              <p className="mt-1 text-text-secondary text-sm">
+                <a href={`mailto:${EMAIL}`} className="hover:text-accent transition-colors">
+                  {EMAIL}
+                </a>
+              </p>
             </div>
           </div>
 
-          {/* East Saigon branch — EN locale only per Mr Hien (address.txt rule) */}
-          {!isVi && (
-            <div className="mt-8 bg-background border border-border-gold/20 p-8">
-              <h3 className="font-heading font-semibold text-primary text-lg mb-4">
-                {EAST_SAIGON_BRANCH_EN.name}
-              </h3>
-              <div className="space-y-3 text-text-secondary">
-                <p>{EAST_SAIGON_BRANCH_EN.address}</p>
-              </div>
-              <div className="mt-4 pt-4 border-t border-border-gold/20 space-y-2 text-sm text-text-secondary">
-                {EAST_SAIGON_BRANCH_EN.phones.map((p) => (
-                  <p key={p}>
-                    <span className="font-medium text-primary">Phone:</span> {p}
-                  </p>
-                ))}
-                <p>
-                  <span className="font-medium text-primary">Hotline:</span>{' '}
-                  {EAST_SAIGON_BRANCH_EN.hotline}
-                </p>
-              </div>
-            </div>
-          )}
+          {/* HCMC map — moved below the address blocks since both offices are now shown */}
+          <div className="mt-8 bg-background border border-border-gold/20 overflow-hidden relative h-[280px] md:h-[360px]">
+            <Image
+              src={IMAGES.mapHcmcOffice.cdn}
+              alt={IMAGES.mapHcmcOffice.alt}
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
         </div>
       </section>
     </>

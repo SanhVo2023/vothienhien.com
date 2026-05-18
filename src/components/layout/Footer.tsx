@@ -9,7 +9,7 @@ import {
   CALL_CENTER_WA,
   CALL_CENTER_E164,
   EMAIL,
-  MAIN_OFFICE,
+  HEAD_OFFICE,
 } from '@/lib/address';
 
 const navItems = [
@@ -30,7 +30,7 @@ export default function Footer({ locale }: { locale: string }) {
   const t = useTranslations('nav');
   const tFooter = useTranslations('footer');
   const isVi = locale === 'vi';
-  const office = isVi ? MAIN_OFFICE.vi : MAIN_OFFICE.en;
+  const office = isVi ? HEAD_OFFICE.vi : HEAD_OFFICE.en;
   const callCenter = isVi ? CALL_CENTER.vi : CALL_CENTER.en;
 
   return (

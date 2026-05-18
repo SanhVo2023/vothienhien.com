@@ -21,33 +21,38 @@ export const SHORT_NAME_EN = 'APOLO LAWYERS - Solicitors & Litigators';
 type OfficeBlock = {
   readonly name: string;
   readonly address: string;
+  /** Phones rendered as a single line, joined with two spaces. Order matches xlsx. */
   readonly phones: readonly string[];
-  readonly hotline?: string;
 };
 
-// ─── Main office (rendered on both VN and EN, locale-specific text) ────────
-export const MAIN_OFFICE: { vi: OfficeBlock; en: OfficeBlock } = {
+// ─── Head office (rendered on both VN and EN per 17/05/2026 client review) ─
+export const HEAD_OFFICE: { vi: OfficeBlock; en: OfficeBlock } = {
   vi: {
-    name: 'Văn phòng chính',
-    address: '108 Trần Đình Xu, Phường Cầu Ông Lãnh, TP. Hồ Chí Minh',
-    phones: ['(028) 66.701.709', '0908.043.086'],
+    name: 'Trụ sở chính',
+    address: '108 Trần Đình Xu, Phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh',
+    phones: ['(028) 66.701.709', '0903.419.479'],
   },
   en: {
-    name: 'Main Office',
+    name: 'Head Office',
     address: '108 Tran Dinh Xu Street, Cau Ong Lanh Ward, Ho Chi Minh City, Vietnam',
-    phones: ['(+8428) 66.701.709', '(+84) 908.043.086'],
-    hotline: '(+84) 903.600.347',
+    phones: ['(+8428) 66.701.709', '(+84) 903.419.479'],
   },
 };
 
-// ─── East Saigon branch (EN-only — surfaced on EN locale only per Mr Hien) ─
-export const EAST_SAIGON_BRANCH_EN = {
-  name: 'EAST SAI GON BRANCH - APOLO LAWYERS LAWFIRM',
-  address:
-    '9th/F, Tower K&M Building, 33 Ung Van Khiem Street, Thanh My Tay Ward, Ho Chi Minh City, Vietnam',
-  phones: ['(+8428) 35.059.349', '(+84) 908.097.068'],
-  hotline: '(+84) 979.48.98.79',
-} as const;
+// ─── East Saigon branch (now rendered on BOTH locales per 17/05/2026 review) ─
+export const EAST_SAIGON_BRANCH: { vi: OfficeBlock; en: OfficeBlock } = {
+  vi: {
+    name: 'Chi nhánh Đông Sài Gòn - Công ty Luật Apolo Lawyers',
+    address: 'Tầng 9, Tòa nhà K&M, 33 Ung Văn Khiêm, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh',
+    phones: ['(028) 35.059.349', '0903.419.479'],
+  },
+  en: {
+    name: 'EAST SAI GON BRANCH - APOLO LAWYERS LAWFIRM',
+    address:
+      '9th/F, Tower K&M Building, 33 Ung Van Khiem Street, Thanh My Tay Ward, Ho Chi Minh City, Vietnam',
+    phones: ['(+8428) 35.059.349', '(+84) 903.419.479'],
+  },
+};
 
 // ─── Shared (identical on VN + EN) ─────────────────────────────────────────
 export const EMAIL = 'contact@apolo.com.vn';
