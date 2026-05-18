@@ -1,0 +1,556 @@
+{
+  "timestamp": "2026-05-18T09:04:54.123Z",
+  "mode": "dry-run",
+  "totals": {
+    "vi": 58,
+    "en": 58
+  },
+  "autoFixed": [],
+  "manualReview": [
+    {
+      "id": 38,
+      "slug": "work-permit-requirements-vietnam-complete-guide",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 37,
+      "slug": "banking-finance-regulations-vietnam-foreign-investors",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "en-short-content(454w)",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 36,
+      "slug": "environmental-law-compliance-vietnam-industrial-projects",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "en-short-content(455w)",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 35,
+      "slug": "vietnam-e-commerce-regulations-legal-compliance",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "en-short-content(474w)",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 34,
+      "slug": "joint-ventures-vietnam-legal-structure-governance-exit",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "en-short-content(497w)",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 33,
+      "slug": "inheritance-law-vietnam-rights-foreign-heirs",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 32,
+      "slug": "data-privacy-law-vietnam-pdpd-compliance-guide",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "en-short-content(488w)",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 31,
+      "slug": "vietnam-construction-law-permits-contracts-disputes",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "en-short-content(427w)",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 30,
+      "slug": "protecting-trade-secrets-vietnam-legal-framework",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "en-short-content(443w)",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 29,
+      "slug": "tax-obligations-foreign-companies-operating-vietnam",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 28,
+      "slug": "vietnam-franchise-law-foreign-franchisors",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "en-short-content(435w)",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 27,
+      "slug": "dispute-resolution-vietnam-litigation-arbitration-mediation",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "en-short-content(477w)",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 26,
+      "slug": "understanding-vietnam-labor-law-guide-foreign-employers",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "en-short-content(470w)",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 25,
+      "slug": "vietnam-real-estate-purchase-agreement-foreign-buyers",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "en-short-content(451w)",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 24,
+      "slug": "quy-trinh-giam-doc-tham-tai-tham-to-tung-dan-su",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(479w)",
+        "en-short-content(479w)"
+      ]
+    },
+    {
+      "id": 23,
+      "slug": "phap-luat-hop-dong-dien-tu-tai-viet-nam",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(437w)",
+        "en-short-content(437w)",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 22,
+      "slug": "huong-dan-khieu-nai-quyet-dinh-hanh-chinh-dat-dai",
+      "issues": [
+        "missing-featuredImage",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 21,
+      "slug": "giai-quyet-tranh-chap-giua-thanh-vien-cong-ty-tnhh",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(461w)",
+        "en-short-content(461w)"
+      ]
+    },
+    {
+      "id": 20,
+      "slug": "quyen-so-huu-tri-tue-thoi-dai-so-bao-ve-tac-pham",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(420w)",
+        "en-short-content(420w)"
+      ]
+    },
+    {
+      "id": 19,
+      "slug": "boi-thuong-tai-nan-giao-thong-quy-dinh-thuc-tien",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(458w)",
+        "en-short-content(458w)",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 18,
+      "slug": "phap-luat-cho-vay-ngang-hang-p2p-lending-viet-nam",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(445w)",
+        "en-short-content(445w)",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 17,
+      "slug": "quy-trinh-thi-hanh-an-dan-su-tu-ban-an-den-thuc-thi",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(455w)",
+        "en-short-content(455w)"
+      ]
+    },
+    {
+      "id": 16,
+      "slug": "luat-nha-o-2023-thay-doi-anh-huong-nguoi-mua-nha",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(383w)",
+        "en-short-content(383w)",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 15,
+      "slug": "giai-quyet-tranh-chap-bang-hoa-giai",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(475w)",
+        "en-short-content(475w)"
+      ]
+    },
+    {
+      "id": 14,
+      "slug": "thu-tuc-xin-cap-phep-xay-dung-huong-dan",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(433w)",
+        "en-short-content(433w)"
+      ]
+    },
+    {
+      "id": 13,
+      "slug": "toi-pham-cong-nghe-cao-thuc-trang-phong-chong",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(443w)",
+        "en-short-content(443w)"
+      ]
+    },
+    {
+      "id": 12,
+      "slug": "tranh-chap-hop-dong-thue-nha-quyen-nghia-vu",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(454w)",
+        "en-short-content(454w)",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 11,
+      "slug": "bao-hiem-xa-hoi-mot-lan-dieu-kien-thu-tuc",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(470w)",
+        "en-short-content(470w)",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 10,
+      "slug": "hop-dong-dat-coc-mua-bat-dong-san-rui-ro",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(445w)",
+        "en-short-content(445w)",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 9,
+      "slug": "pha-san-doanh-nghiep-quy-trinh-phap-ly-he-qua",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(437w)",
+        "en-short-content(437w)"
+      ]
+    },
+    {
+      "id": 8,
+      "slug": "bao-ho-nhan-hieu-tai-viet-nam-dang-ky-bao-ve",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(399w)",
+        "en-short-content(399w)"
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "thu-tuc-dang-ky-ket-hon-voi-nguoi-nuoc-ngoai",
+      "issues": [
+        "missing-featuredImage",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "trong-tai-thuong-mai-viet-nam-uu-diem-quy-trinh",
+      "issues": [
+        "missing-featuredImage"
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "luat-lao-dong-2019-quyen-loi-moi-nguoi-lao-dong",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(404w)",
+        "en-short-content(404w)"
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "giai-quyet-tranh-chap-thua-ke-tai-san",
+      "issues": [
+        "missing-featuredImage",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "quyen-nguoi-tieu-dung-phap-luat-viet-nam",
+      "issues": [
+        "missing-featuredImage",
+        "vi-short-content(398w)",
+        "en-short-content(398w)",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "thanh-lap-cong-ty-von-dau-tu-nuoc-ngoai-viet-nam",
+      "issues": [
+        "missing-featuredImage",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 1,
+      "slug": "hop-dong-mua-ban-nha-dat-dieu-khoan-quan-trong",
+      "issues": [
+        "missing-featuredImage",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 808589,
+      "slug": "how-to-choose-lawyer-vietnam-guide-international-clients",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 463102,
+      "slug": "criminal-law-vietnam-what-foreign-nationals-need-to-know",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 246691,
+      "slug": "how-to-enforce-foreign-court-judgment-in-vietnam",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 964971,
+      "slug": "resolving-commercial-disputes-vietnam-litigation-vs-arbitration",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 618091,
+      "slug": "employment-law-vietnam-guide-foreign-employers-employees",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 456708,
+      "slug": "buying-property-vietnam-foreigner-legal-rights-restrictions-process",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 497179,
+      "slug": "getting-divorced-vietnam-foreigner-guide",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 887860,
+      "slug": "protecting-intellectual-property-vietnam-practical-legal-guide",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 158092,
+      "slug": "vietnam-ma-guide-legal-framework-due-diligence-deal-structures",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 536155,
+      "slug": "setting-up-business-vietnam-foreign-investors-guide-2026",
+      "issues": [
+        "missing-featuredImage",
+        "vi-title-empty",
+        "vi-excerpt-missing-no-content"
+      ]
+    },
+    {
+      "id": 993926,
+      "slug": "khi-nao-ban-can-thue-luat-su-10-tinh-huong-pho-bien-nhat",
+      "issues": [
+        "missing-featuredImage",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 996582,
+      "slug": "quyen-cua-bi-can-bi-cao-trong-to-tung-hinh-su-viet-nam",
+      "issues": [
+        "missing-featuredImage"
+      ]
+    },
+    {
+      "id": 394841,
+      "slug": "sa-thai-trai-phap-luat-quyen-nguoi-lao-dong-va-cach-khieu-nai",
+      "issues": [
+        "missing-featuredImage",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 306311,
+      "slug": "mua-ban-sap-nhap-doanh-nghiep-ma-tai-viet-nam-quy-trinh-phap-ly",
+      "issues": [
+        "missing-featuredImage",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 247630,
+      "slug": "quyen-nuoi-con-sau-ly-hon-phap-luat-va-thuc-tien-xet-xu",
+      "issues": [
+        "missing-featuredImage",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 819329,
+      "slug": "ly-hon-co-yeu-to-nuoc-ngoai-tai-viet-nam-huong-dan-toan-dien",
+      "issues": [
+        "missing-featuredImage",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 173174,
+      "slug": "tranh-chap-dat-dai-tai-tphcm-nguyen-nhan-giai-phap-kinh-nghiem",
+      "issues": [
+        "missing-featuredImage",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 769830,
+      "slug": "luat-dat-dai-2024-nhung-thay-doi-quan-trong-nhat",
+      "issues": [
+        "missing-featuredImage",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 611585,
+      "slug": "boi-thuong-thiet-hai-ngoai-hop-dong-quyen-loi-va-cach-bao-ve",
+      "issues": [
+        "missing-featuredImage",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    },
+    {
+      "id": 495420,
+      "slug": "quy-trinh-giai-quyet-tranh-chap-hop-dong-tai-toa-an-viet-nam",
+      "issues": [
+        "missing-featuredImage",
+        "vi-old-diacritics",
+        "en-old-diacritics"
+      ]
+    }
+  ]
+}
