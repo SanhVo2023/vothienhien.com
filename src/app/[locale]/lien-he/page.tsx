@@ -109,8 +109,8 @@ export default async function ContactPage({ params }: Props) {
           </h1>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
             {isVi
-              ? 'Hãy chia sẻ vấn đề pháp lý của bạn. Chúng tôi sẵn sàng lắng nghe và hỗ trợ.'
-              : 'Share your legal matter with us. We are ready to listen and assist.'}
+              ? 'Hãy để lại thông tin vụ việc và yêu cầu pháp lý của bạn để luật sư có cơ sở xem xét, đánh giá sơ bộ và phản hồi hướng hỗ trợ phù hợp.'
+              : 'Please provide information about your matter and legal request so that the lawyer can review, make a preliminary assessment, and respond with an appropriate direction of support.'}
           </p>
           <div className="flex justify-center mt-6">
             <GoldDivider width="w-24 mx-auto" />
@@ -129,8 +129,8 @@ export default async function ContactPage({ params }: Props) {
               </h2>
               <p className="text-text-secondary mb-8">
                 {isVi
-                  ? 'Vui lòng điền đầy đủ thông tin bên dưới. Chúng tôi sẽ phản hồi trong thời gian sớm nhất.'
-                  : 'Please fill in the form below. We will respond as soon as possible.'}
+                  ? 'Vui lòng điền các thông tin cần thiết bên dưới để luật sư có thể xem xét và phản hồi phù hợp.'
+                  : 'Please complete the required information below so that the lawyer can review your matter and respond appropriately.'}
               </p>
               <ContactForm />
             </div>

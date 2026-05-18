@@ -99,7 +99,7 @@ export default function ContactForm() {
         </div>
         <h3 className="text-xl font-heading font-semibold text-primary mb-2">
           {formData.languagePreference === 'vi'
-            ? 'Cam on ban da lien he!'
+            ? 'Cảm ơn bạn đã liên hệ!'
             : 'Thank you for reaching out!'}
         </h3>
         <p className="text-text-secondary">{t('responseCommitment')}</p>
@@ -225,7 +225,7 @@ export default function ContactForm() {
           disabled={isSubmitting}
           className="w-full px-4 py-3 bg-background border border-border-gold/30 text-text-primary focus:border-accent focus:outline-none transition-colors appearance-none disabled:opacity-50"
         >
-          <option value="vi">Tieng Viet</option>
+          <option value="vi">Tiếng Việt</option>
           <option value="en">English</option>
         </select>
       </div>

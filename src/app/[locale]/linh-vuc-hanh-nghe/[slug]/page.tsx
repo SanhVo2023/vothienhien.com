@@ -651,7 +651,7 @@ const practiceAreaData: Record<string, { vi: PracticeAreaData; en: PracticeAreaD
   },
   'trong-tai-thuong-mai': {
     vi: {
-      title: 'Tranh Tụng Trọng Tài Thương Mại',
+      title: 'Tranh Tụng Tại Trọng Tài',
       subtitle: 'VIAC, ICC, SIAC — đại diện chuyên nghiệp trong trọng tài trong nước và quốc tế',
       description: [
         'Trọng tài thương mại đã trở thành phương thức giải quyết tranh chấp được ưa chuộng trong cộng đồng doanh nghiệp Việt Nam và quốc tế. Luật sư Võ Thiện Hiển có kinh nghiệm phong phú đại diện khách hàng tại Trung tâm Trọng tài Quốc tế Việt Nam (VIAC) cũng như các tổ chức trọng tài quốc tế như ICC (Phòng Thương mại Quốc tế Paris), SIAC (Trung tâm Trọng tài Quốc tế Singapore), và HKIAC (Trung tâm Trọng tài Quốc tế Hồng Kông).',

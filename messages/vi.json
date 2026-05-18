@@ -75,19 +75,19 @@
         "role": "Giám đốc, công ty phân phối nhỏ tại Quận Bình Thạnh"
       },
       {
-        "quote": "Vụ ly hôn của tôi có tranh chấp tài sản và quyền nuôi con phức tạp. Luật sư Hiển giải thích từng bước một cách bình tĩnh, đàm phán rất khéo và giúp gia đình tôi đi đến thoả thuận mà không phải ra toà.",
+        "quote": "Vụ ly hôn của tôi có tranh chấp tài sản và quyền nuôi con phức tạp. Luật sư Hiển giải thích từng bước một cách bình tĩnh, đàm phán rất khéo và giúp gia đình tôi đi đến thỏa thuận mà không phải ra tòa.",
         "author": "Trần Văn Đạt",
         "initials": "TĐ",
         "role": "Kỹ sư phần mềm, Quận 7"
       },
       {
-        "quote": "Gia đình tôi đã tranh chấp ranh giới đất với hàng xóm nhiều năm không giải quyết được. Luật sư Hiển đã làm việc với Văn phòng Đăng ký đất đai, chuẩn bị hồ sơ chỉn chu và đại diện chúng tôi hoà giải thành công tại UBND xã.",
+        "quote": "Gia đình tôi đã tranh chấp ranh giới đất với hàng xóm nhiều năm không giải quyết được. Luật sư Hiển đã làm việc với Văn phòng Đăng ký đất đai, chuẩn bị hồ sơ chỉn chu và đại diện chúng tôi hòa giải thành công tại UBND xã.",
         "author": "Lê Hoàng Anh",
         "initials": "HA",
         "role": "Hộ gia đình tại Bình Dương"
       },
       {
-        "quote": "Một nhân viên cũ khởi kiện đòi bồi thường rất lớn, trong khi chúng tôi đã làm đúng quy định. Luật sư Hiển rà soát toàn bộ hồ sơ lao động, xây dựng lập luận chặt chẽ và bảo vệ thành công công ty tôi tại toà án.",
+        "quote": "Một nhân viên cũ khởi kiện đòi bồi thường rất lớn, trong khi chúng tôi đã làm đúng quy định. Luật sư Hiển rà soát toàn bộ hồ sơ lao động, xây dựng lập luận chặt chẽ và bảo vệ thành công công ty tôi tại tòa án.",
         "author": "Phạm Quốc Bảo",
         "initials": "QB",
         "role": "Chủ cửa hàng nội thất, Quận 1"
@@ -124,7 +124,7 @@
       "commercial": "Thương mại",
       "other": "Khác"
     },
-    "responseCommitment": "Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc"
+    "responseCommitment": "Luật sư sẽ phản hồi trong thời gian sớm nhất trong giờ làm việc."
   },
   "footer": {
     "copyright": "Bản quyền",

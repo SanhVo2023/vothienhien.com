@@ -101,7 +101,7 @@ const practiceAreas = {
     },
     {
       slug: 'trong-tai-thuong-mai',
-      title: 'Tranh Tụng Trọng Tài Thương Mại',
+      title: 'Tranh Tụng Tại Trọng Tài',
       description: 'Đại diện tại VIAC, ICC, SIAC và các tổ chức trọng tài quốc tế, xử lý tranh chấp thương mại xuyên biên giới.',
     },
   ],
