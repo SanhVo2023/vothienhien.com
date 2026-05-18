@@ -6,6 +6,12 @@ export const Publications: CollectionConfig = {
     useAsTitle: 'title',
     defaultColumns: ['title', 'publishedDate', 'category'],
   },
+  // Articles are public content rendered on the site; read access is open so
+  // the sitemap and any downstream tooling can enumerate slugs without auth.
+  // Write access stays admin-only (Payload default).
+  access: {
+    read: () => true,
+  },
   fields: [
     {
       name: 'title',
