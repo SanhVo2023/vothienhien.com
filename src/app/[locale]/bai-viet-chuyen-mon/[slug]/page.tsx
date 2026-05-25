@@ -361,7 +361,7 @@ async function fetchCmsArticle(slug: string, locale: 'vi' | 'en'): Promise<CmsAr
     try {
       const res = await fetch(
         `${base}/api/publications?where[slug][equals]=${encodeURIComponent(slug)}&limit=1&depth=0&locale=${locale}`,
-        { next: { revalidate: 3600 } },
+        { next: { revalidate: 3600 }, signal: AbortSignal.timeout(6000) },
       );
       if (!res.ok) continue;
       const data = await res.json();

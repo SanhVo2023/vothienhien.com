@@ -9,7 +9,7 @@ import { IMAGES } from '@/lib/images';
 
 type Props = {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ cat?: string }>;
+  searchParams: Promise<{ cat?: string; page?: string }>;
 };
 
 // Maps URL `?cat=...` slugs to the matching display label per locale. Keeping
@@ -217,7 +217,7 @@ async function fetchCmsPublications(locale: 'vi' | 'en'): Promise<ListArticle[]>
     try {
       const res = await fetch(
         `${base}/api/publications?limit=100&depth=0&locale=${locale}&sort=-publishedDate`,
-        { next: { revalidate: 3600 } },
+        { next: { revalidate: 3600 }, signal: AbortSignal.timeout(6000) },
       );
       if (!res.ok) continue;
       const data = await res.json();
@@ -240,7 +240,8 @@ async function fetchCmsPublications(locale: 'vi' | 'en'): Promise<ListArticle[]>
 
 export default async function PublicationsPage({ params, searchParams }: Props) {
   const { locale } = await params;
-  const { cat: activeCategorySlug } = await searchParams;
+  const { cat: activeCategorySlug, page } = await searchParams;
+  const currentPage = Math.max(1, parseInt(typeof page === 'string' ? page : '1', 10) || 1);
   setRequestLocale(locale);
 
   const t = await getTranslations();
@@ -262,6 +263,14 @@ export default async function PublicationsPage({ params, searchParams }: Props) 
   const articleList = activeFilter
     ? allArticles.filter((a) => a.category === activeFilter[localeKey])
     : allArticles;
+
+  // Client review (24/05/2026): the old pager was a static placeholder. Real
+  // pagination — slice the filtered list and emit numbered links that preserve
+  // the active ?cat filter. Page 1 keeps a clean URL (no ?page).
+  const PAGE_SIZE = 12;
+  const totalPages = Math.max(1, Math.ceil(articleList.length / PAGE_SIZE));
+  const safePage = Math.min(currentPage, totalPages);
+  const pageArticles = articleList.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -358,8 +367,8 @@ export default async function PublicationsPage({ params, searchParams }: Props) 
             </div>
           )}
           <div className="grid gap-8 md:grid-cols-2">
-            {articleList.map((article, index) => {
-              const thumb = articleThumbForSlug(article.slug, index);
+            {pageArticles.map((article, index) => {
+              const thumb = articleThumbForSlug(article.slug, (safePage - 1) * PAGE_SIZE + index);
               return (
                 <Link
                   key={article.slug}
@@ -409,12 +418,37 @@ export default async function PublicationsPage({ params, searchParams }: Props) 
             })}
           </div>
 
-          {/* Pagination placeholder */}
-          <div className="mt-16 flex justify-center gap-2">
-            <span className="w-10 h-10 flex items-center justify-center bg-accent text-primary text-sm font-medium">1</span>
-            <span className="w-10 h-10 flex items-center justify-center border border-border-gold/30 text-text-secondary text-sm hover:border-accent transition-colors cursor-pointer">2</span>
-            <span className="w-10 h-10 flex items-center justify-center border border-border-gold/30 text-text-secondary text-sm hover:border-accent transition-colors cursor-pointer">3</span>
-          </div>
+          {/* Pagination — numbered links, preserves active ?cat filter. */}
+          {totalPages > 1 && (
+            <nav
+              className="mt-16 flex justify-center gap-2"
+              aria-label={isVi ? 'Phân trang' : 'Pagination'}
+            >
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => {
+                const isCurrent = n === safePage;
+                return (
+                  <Link
+                    key={n}
+                    href={{
+                      pathname: '/bai-viet-chuyen-mon',
+                      query: {
+                        ...(activeFilter ? { cat: activeFilter.slug } : {}),
+                        ...(n > 1 ? { page: String(n) } : {}),
+                      },
+                    }}
+                    aria-current={isCurrent ? 'page' : undefined}
+                    className={`w-10 h-10 flex items-center justify-center text-sm font-medium transition-colors ${
+                      isCurrent
+                        ? 'bg-accent text-primary'
+                        : 'border border-border-gold/30 text-text-secondary hover:border-accent'
+                    }`}
+                  >
+                    {n}
+                  </Link>
+                );
+              })}
+            </nav>
+          )}
         </div>
       </section>
     </>

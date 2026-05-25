@@ -1,5 +1,11 @@
 import type { MetadataRoute } from 'next';
 
+// Regenerate at runtime (ISR). At build time no server is listening on
+// NEXT_PUBLIC_SITE_URL, so the publication fetch returns nothing and the
+// sitemap ships with only the static routes; the first request after deploy
+// (live server reachable) rebuilds it with the article URLs included.
+export const revalidate = 3600;
+
 // Paired VN ↔ EN slugs for practice areas. Order matters — pairing is by
 // index. When a new practice area is added it must be appended to BOTH
 // arrays at the same position; if there's no EN equivalent yet, push the
@@ -31,11 +37,15 @@ async function fetchPublicationSlugs(siteUrl: string): Promise<string[]> {
   // REST fetch against the embedded Payload — works in build, dev and prod
   // without the local-API schema-pull race that hits getPayload() in dev.
   // Try the configured site URL first; in local dev fall back to localhost.
+  // Each attempt is hard-capped by a timeout — at build time the target port
+  // has no listener, and without this the request can stall the export past
+  // Next's 60s page-build limit instead of failing fast.
   const candidates = [siteUrl, 'http://localhost:3000', 'http://localhost:3001'];
   for (const base of candidates) {
     try {
       const res = await fetch(`${base}/api/publications?limit=500&depth=0`, {
         next: { revalidate: 3600 },
+        signal: AbortSignal.timeout(6000),
       });
       if (!res.ok) continue;
       const data = await res.json();

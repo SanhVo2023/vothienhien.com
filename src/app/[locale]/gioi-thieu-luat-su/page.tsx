@@ -53,19 +53,6 @@ const timelineData = {
   ],
 };
 
-const educationData = {
-  vi: [
-    { degree: 'Thạc sĩ Luật Kinh tế', institution: 'Đại học Luật TP. Hồ Chí Minh', year: '2018' },
-    { degree: 'Cử nhân Luật', institution: 'Đại học Luật TP. Hồ Chí Minh', year: '2008' },
-    { degree: 'Chứng chỉ Hành nghề Luật sư', institution: 'Học viện Tư pháp', year: '2010' },
-  ],
-  en: [
-    { degree: 'Master of Economic Law', institution: 'Ho Chi Minh City University of Law', year: '2018' },
-    { degree: 'Bachelor of Laws (LL.B.)', institution: 'Ho Chi Minh City University of Law', year: '2008' },
-    { degree: 'Legal Practice Certificate', institution: 'Judicial Academy', year: '2010' },
-  ],
-};
-
 const memberships = {
   vi: [
     'Đoàn Luật sư Thành phố Hồ Chí Minh',
@@ -88,7 +75,6 @@ export default async function LawyerProfilePage({ params }: Props) {
   const t = await getTranslations();
   const isVi = locale === 'vi';
   const timeline = timelineData[isVi ? 'vi' : 'en'];
-  const education = educationData[isVi ? 'vi' : 'en'];
   const membershipList = memberships[isVi ? 'vi' : 'en'];
 
   const jsonLd = [
@@ -247,38 +233,6 @@ export default async function LawyerProfilePage({ params }: Props) {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-primary/50" />
-      </section>
-
-      {/* Education & Credentials */}
-      <section className="relative py-20 md:py-28 bg-background overflow-hidden">
-        {/* Logo 2 (Classical Pillar) — decorative credentials emblem */}
-        <div className="pointer-events-none absolute right-[-120px] top-1/2 -translate-y-1/2 w-[440px] opacity-[0.04]">
-          <Image
-            src={IMAGES.logoSymbolic2Pillar.cdn}
-            alt=""
-            width={440}
-            height={440}
-            aria-hidden="true"
-          />
-        </div>
-        <div className="relative max-w-4xl mx-auto px-6">
-          <SectionHeading
-            subtitle={isVi ? 'Trình độ' : 'Qualifications'}
-            title={`${t('profile.education')} & ${t('profile.credentials')}`}
-          />
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {education.map((item) => (
-              <div
-                key={item.degree}
-                className="bg-surface border border-border-gold/30 p-8 hover:border-accent/50 transition-colors duration-300"
-              >
-                <span className="text-accent text-sm font-medium">{item.year}</span>
-                <h3 className="text-lg font-heading font-semibold text-primary mt-2">{item.degree}</h3>
-                <p className="text-text-secondary mt-2 text-sm">{item.institution}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Visual Break - Team Discussion */}

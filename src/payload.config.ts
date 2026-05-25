@@ -113,7 +113,12 @@ export default buildConfig({
   }),
 
   db: postgresAdapter({
-    push: process.env.NODE_ENV !== 'production',
+    // `push: true` made Payload run a Drizzle schema introspection ("Pulling
+    // schema from database…") on first init, which hangs indefinitely against
+    // the pooled Supabase connection — the admin panel never loads. The schema
+    // is already in place and the project rule is "no DDL outside payload
+    // migrate", so auto-push is disabled. Run `npx payload migrate` for changes.
+    push: false,
     pool: {
       connectionString: process.env.DATABASE_URI || '',
     },

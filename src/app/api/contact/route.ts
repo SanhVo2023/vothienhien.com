@@ -81,6 +81,27 @@ export async function POST(request: Request) {
       },
     });
 
+    // Mirror to centralized Apolo Contact Form Hub (fire-and-forget).
+    // Local Payload write is the source of truth; hub failure must NOT block the user.
+    if (process.env.CONTACT_HUB_URL) {
+      fetch(process.env.CONTACT_HUB_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          site: 'vothienhien.com',
+          name: body.name,
+          email: body.email,
+          phone: body.phone || '',
+          matter_type: body.matterType || 'other',
+          message: body.message,
+          language: body.language || 'vi',
+          locale: request.headers.get('accept-language') || '',
+          user_agent: request.headers.get('user-agent') || '',
+          source_url: request.headers.get('referer') || '',
+        }),
+      }).catch((err) => console.error('Contact hub mirror failed:', err));
+    }
+
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Contact form error:', error);

@@ -270,7 +270,7 @@ export default async function ContactPage({ params }: Props) {
               </h3>
               <p className="text-text-secondary">{headOffice.address}</p>
               <p className="mt-3 text-text-secondary text-sm">
-                {headOffice.phones.join('  ')}
+                {headOffice.phones.join(' · ')}
               </p>
               <p className="mt-1 text-text-secondary text-sm">
                 <a href={`mailto:${EMAIL}`} className="hover:text-accent transition-colors">
@@ -287,7 +287,7 @@ export default async function ContactPage({ params }: Props) {
               </h3>
               <p className="text-text-secondary">{branch.address}</p>
               <p className="mt-3 text-text-secondary text-sm">
-                {branch.phones.join('  ')}
+                {branch.phones.join(' · ')}
               </p>
               <p className="mt-1 text-text-secondary text-sm">
                 <a href={`mailto:${EMAIL}`} className="hover:text-accent transition-colors">
