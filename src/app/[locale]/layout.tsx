@@ -1,6 +1,7 @@
 import '../globals.css';
 import type { Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
+import { Analytics } from '@vercel/analytics/next';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
@@ -45,6 +46,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <main className="min-h-screen">{children}</main>
           <Footer locale={locale} />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
