@@ -31,7 +31,7 @@ export default async function CTASection() {
       {/* Logo 1 (Bold Scales) — large low-opacity decorative emblem */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] md:w-[680px] opacity-[0.05] pointer-events-none">
         <Image
-          src={IMAGES.logoSymbolic1Scales.cdn}
+          src={IMAGES.logoSymbolic1Scales.local}
           alt=""
           width={680}
           height={680}
@@ -44,7 +44,7 @@ export default async function CTASection() {
         <div className="flex items-center justify-center gap-4 mb-14">
           <div className="w-16 h-px bg-accent/40" />
           <Image
-            src={IMAGES.logoSymbolic4LaurelScales.cdn}
+            src={IMAGES.logoSymbolic4LaurelScales.local}
             alt=""
             width={32}
             height={32}

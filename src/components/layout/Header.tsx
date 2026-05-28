@@ -49,7 +49,7 @@ export default function Header({ locale }: { locale: string }) {
             {/* Logo */}
             <Link href="/" className="group flex items-center gap-3">
               <Image
-                src={IMAGES.logoSymbolic4LaurelScales.cdn}
+                src={IMAGES.logoSymbolic4LaurelScales.local}
                 alt="Vo Thien Hien — Managing Partner mark"
                 width={40}
                 height={40}

@@ -523,7 +523,7 @@ export default async function PublicationDetailPage({ params }: Props) {
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 border-2 border-accent/30 bg-primary flex items-center justify-center">
               <Image
-                src={IMAGES.logoSymbolic4LaurelScales.cdn}
+                src={IMAGES.logoSymbolic4LaurelScales.local}
                 alt="Apolo Editorial Team"
                 width={48}
                 height={48}
@@ -584,7 +584,7 @@ export default async function PublicationDetailPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row items-start gap-6 p-8 bg-background border border-border-gold/20">
             <div className="w-20 h-20 rounded-full overflow-hidden shrink-0 border-2 border-accent/30 bg-primary flex items-center justify-center">
               <Image
-                src={IMAGES.logoSymbolic4LaurelScales.cdn}
+                src={IMAGES.logoSymbolic4LaurelScales.local}
                 alt="Apolo Editorial Team"
                 width={64}
                 height={64}

@@ -44,7 +44,7 @@ export default function Footer({ locale }: { locale: string }) {
           <div className="lg:pr-8">
             <div className="flex items-center gap-3">
               <Image
-                src={IMAGES.logoSymbolic4LaurelScales.cdn}
+                src={IMAGES.logoSymbolic4LaurelScales.local}
                 alt="Vo Thien Hien — Managing Partner mark"
                 width={44}
                 height={44}
@@ -85,7 +85,7 @@ export default function Footer({ locale }: { locale: string }) {
                   className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 object-contain"
                 />
                 <Image
-                  src="/asset/logo-aea.png"
+                  src="/asset/logo-aea-white.png"
                   alt="Association of European Attorneys"
                   width={64}
                   height={48}

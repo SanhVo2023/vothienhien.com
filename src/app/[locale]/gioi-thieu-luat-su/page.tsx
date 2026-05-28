@@ -105,7 +105,7 @@ export default async function LawyerProfilePage({ params }: Props) {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: isVi ? 'Trang chủ' : 'Home', item: `https://vothienhien.com/${locale}` },
-        { '@type': 'ListItem', position: 2, name: isVi ? 'Giới thiệu Luật sư' : 'Lawyer Profile', item: `https://vothienhien.com/${locale}/${isVi ? 'gioi-thieu-luat-su' : 'lawyer-profile'}` },
+        { '@type': 'ListItem', position: 2, name: isVi ? 'Giới thiệu Luật sư' : 'Attorney Profile', item: `https://vothienhien.com/${locale}/${isVi ? 'gioi-thieu-luat-su' : 'lawyer-profile'}` },
       ],
     },
   ];
@@ -119,7 +119,7 @@ export default async function LawyerProfilePage({ params }: Props) {
         <div className="absolute inset-0 bg-gradient-to-br from-secondary via-primary to-black" />
         {/* Faint laurel mark */}
         <div className="pointer-events-none absolute -right-24 top-1/2 hidden w-[480px] -translate-y-1/2 opacity-[0.05] lg:block">
-          <Image src={IMAGES.logoSymbolic4LaurelScales.cdn} alt="" width={480} height={480} aria-hidden="true" />
+          <Image src={IMAGES.logoSymbolic4LaurelScales.local} alt="" width={480} height={480} aria-hidden="true" />
         </div>
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
 

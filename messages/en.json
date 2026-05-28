@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Home",
-    "profile": "Lawyer Profile",
+    "profile": "Attorney Profile",
     "practiceAreas": "Practice Areas",
     "representativeMatters": "Representative Experience",
     "publications": "Legal Insights",
@@ -125,7 +125,7 @@
       "commercial": "Commercial Disputes",
       "other": "Other"
     },
-    "responseCommitment": "The lawyer will respond as soon as possible during business hours."
+    "responseCommitment": "The attorney will respond as soon as possible during business hours."
   },
   "footer": {
     "copyright": "Copyright",

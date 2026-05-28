@@ -46,7 +46,7 @@ export default function PracticeAreasPreview() {
       {/* Logo 3 (Gavel + Open Book) — decorative section header emblem */}
       <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-8 w-[380px] md:w-[520px] opacity-[0.05]">
         <Image
-          src={IMAGES.logoSymbolic3GavelBook.cdn}
+          src={IMAGES.logoSymbolic3GavelBook.local}
           alt=""
           width={520}
           height={520}
