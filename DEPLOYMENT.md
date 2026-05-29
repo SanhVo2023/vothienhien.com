@@ -22,6 +22,7 @@ Set these in **Vercel → Project → Settings → Environment Variables**, scop
 | `NEXT_PUBLIC_SUPABASE_URL` | From `.env`. |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | From `.env`. |
 | `CONTACT_HUB_URL` | Google Apps Script endpoint that mirrors contact submissions. |
+| `HELP_PASSWORD` | Shared password for the internal staff guide at **`/admin/help`** (server-only). Defaults to `ApoloVTH@2026` if unset — override in prod. |
 
 > **Env changes do NOT apply to an existing deployment.** After editing them you
 > must **Redeploy** (Deployments → ⋯ → Redeploy, or push a commit).

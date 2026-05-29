@@ -37,6 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         vi: '/vi/lien-he',
         en: '/en/contact',
+        'x-default': '/vi/lien-he',
       },
     },
   };

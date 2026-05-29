@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         vi: '/vi/quan-diem-nghe-luat',
         en: '/en/professional-perspective',
+        'x-default': '/vi/quan-diem-nghe-luat',
       },
     },
     openGraph: {

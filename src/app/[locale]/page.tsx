@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: Props) {
       languages: {
         vi: 'https://vothienhien.com/vi',
         en: 'https://vothienhien.com/en',
+        'x-default': 'https://vothienhien.com/vi',
       },
     },
     openGraph: {

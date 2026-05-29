@@ -32,6 +32,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    // Serve the internal staff guide at /admin/help while the actual page lives
+    // OUTSIDE the Payload route group (so it never depends on Payload init / DB).
+    // beforeFiles runs before filesystem routes, so this wins over Payload's
+    // /admin/[[...segments]] catch-all.
+    return {
+      beforeFiles: [{ source: '/admin/help', destination: '/staff-help' }],
+    };
+  },
   async headers() {
     return [
       { source: '/:path*', headers: SECURITY_HEADERS },
