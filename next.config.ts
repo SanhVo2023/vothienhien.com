@@ -8,7 +8,20 @@ dns.setDefaultResultOrder('ipv4first');
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
+// Security headers applied site-wide. CSP is intentionally omitted — the
+// embedded Payload admin and Next inline runtime would need a carefully tuned
+// policy; these headers harden the public site without that risk.
+const SECURITY_HEADERS = [
+  { key: 'X-Content-Type-Options', value: 'nosniff' },
+  { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+  { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+  { key: 'X-DNS-Prefetch-Control', value: 'on' },
+  { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+  { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()' },
+];
+
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -18,6 +31,24 @@ const nextConfig: NextConfig = {
         pathname: '/vothienhien.com/**',
       },
     ],
+  },
+  async headers() {
+    return [
+      { source: '/:path*', headers: SECURITY_HEADERS },
+      // Fingerprint-free static assets in /public — safe to cache hard.
+      {
+        source: '/images/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        source: '/asset/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        source: '/:file(favicon.ico|icon.png|apple-touch-icon.png|icon-192.png|icon-512.png|site.webmanifest)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=604800' }],
+      },
+    ];
   },
 };
 

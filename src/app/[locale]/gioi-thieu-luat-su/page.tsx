@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         vi: '/vi/gioi-thieu-luat-su',
         en: '/en/lawyer-profile',
+        'x-default': '/vi/gioi-thieu-luat-su',
       },
     },
   };

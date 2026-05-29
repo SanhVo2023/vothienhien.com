@@ -317,10 +317,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         vi: `/vi/bai-viet-chuyen-mon/${canonical}`,
         en: `/en/legal-insights/${viToEn[canonical] || slug}`,
+        'x-default': `/vi/bai-viet-chuyen-mon/${canonical}`,
       },
     },
     openGraph: {
-      images: [{ url: heroImage.src, width: 1200, height: 630 }],
+      type: 'article',
+      title,
+      description,
+      locale: isVi ? 'vi_VN' : 'en_US',
+      images: [{ url: heroImage.src, width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [heroImage.src],
     },
   };
 }
