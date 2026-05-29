@@ -5,6 +5,7 @@ import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { IMAGES } from '@/lib/images';
 import Button from '@/components/ui/Button';
+import MagneticButton from '@/components/motion/MagneticButton';
 
 export default function HeroSection() {
   const t = useTranslations('hero');
@@ -29,18 +30,41 @@ export default function HeroSection() {
           />
         </div>
 
-        <div className="relative z-10 w-full px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-14 md:py-16 flex flex-col justify-center">
-          {/* Mobile-only portrait — small screens only */}
-          <div className="flex justify-center mb-10 md:hidden hero-fade" style={{ animationDelay: '0.1s' }}>
-            <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-accent/40 shadow-[0_0_40px_rgba(197,165,90,0.15)]">
-              <Image
-                src={IMAGES.heroPortrait.cdn}
-                alt={t('name')}
-                width={400}
-                height={400}
-                className="object-cover object-top w-full h-full"
-                priority
-              />
+        <div className="relative z-10 w-full px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 pt-36 pb-16 md:py-16 flex flex-col justify-center items-center text-center md:items-start md:text-left">
+          {/* Mobile-only cinematic framed portrait */}
+          <div
+            className="md:hidden relative mx-auto mb-12 w-[80vw] max-w-[330px] hero-fade"
+            style={{ animationDelay: '0.05s' }}
+          >
+            {/* Soft gold orb for depth behind the portrait */}
+            <div
+              className="gold-orb radial-gold pointer-events-none absolute -inset-8 blur-2xl opacity-80"
+              aria-hidden="true"
+            />
+            <div className="relative aspect-[4/5] overflow-hidden ring-1 ring-accent/20 shadow-[0_25px_70px_-15px_rgba(0,0,0,0.7)]">
+              <div className="absolute inset-0 hero-kenburns">
+                <Image
+                  src={IMAGES.heroPortrait.cdn}
+                  alt={t('name')}
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 80vw, 0px"
+                  className="object-cover object-top"
+                />
+              </div>
+              {/* Bottom scrim for the label */}
+              <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-primary via-primary/35 to-transparent" />
+              {/* Gold inset frame + corner accents */}
+              <div className="pointer-events-none absolute inset-3 border border-accent/25" />
+              <div className="pointer-events-none absolute top-1.5 left-1.5 w-9 h-9 border-t-2 border-l-2 border-accent/50" />
+              <div className="pointer-events-none absolute bottom-1.5 right-1.5 w-9 h-9 border-b-2 border-r-2 border-accent/50" />
+              {/* Floating label */}
+              <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
+                <span className="text-[10px] uppercase tracking-[0.28em] text-white/85 font-[family-name:var(--font-inter)] whitespace-nowrap">
+                  Managing Partner
+                </span>
+                <span className="h-px flex-1 bg-accent/40" />
+              </div>
             </div>
           </div>
 
@@ -55,7 +79,7 @@ export default function HeroSection() {
 
           {/* Name — single animated block, balanced wrapping, sized to fit */}
           <h1
-            className="hero-fade-up font-[family-name:var(--font-heading)] font-semibold text-white mt-7 md:mt-8 leading-[1.02] tracking-tight text-balance text-5xl sm:text-6xl md:text-[3.75rem] lg:text-[4.5rem] xl:text-[5.25rem] 2xl:text-[6rem] max-w-[14ch]"
+            className="hero-fade-up font-[family-name:var(--font-heading)] font-semibold text-white mt-7 md:mt-8 leading-[1.02] tracking-tight text-balance text-5xl sm:text-6xl md:text-[3.75rem] lg:text-[4.5rem] xl:text-[5.25rem] 2xl:text-[6rem] max-w-[14ch] mx-auto md:mx-0"
             style={{
               animationDelay: '0.35s',
               textShadow: '0 2px 40px rgba(197,165,90,0.12)',
@@ -66,13 +90,13 @@ export default function HeroSection() {
 
           {/* Gold rule under name */}
           <div
-            className="hero-scale-x w-24 h-[2px] bg-accent origin-left mt-6"
+            className="hero-scale-x w-24 h-[2px] bg-accent origin-left mt-6 mx-auto md:mx-0"
             style={{ animationDelay: '0.7s' }}
           />
 
           {/* Tagline */}
           <p
-            className="hero-fade text-white/65 text-base md:text-lg lg:text-[1.125rem] max-w-md leading-relaxed mt-6 font-light"
+            className="hero-fade text-white/65 text-base md:text-lg lg:text-[1.125rem] max-w-md leading-relaxed mt-6 font-light mx-auto md:mx-0"
             style={{ animationDelay: '0.85s' }}
           >
             {t('tagline')}
@@ -84,9 +108,11 @@ export default function HeroSection() {
             style={{ animationDelay: '1s' }}
           >
             <Link href="/lien-he">
-              <Button variant="primary" size="lg" className="btn-shimmer">
-                {t('cta')}
-              </Button>
+              <MagneticButton>
+                <Button variant="primary" size="lg" className="btn-shimmer">
+                  {t('cta')}
+                </Button>
+              </MagneticButton>
             </Link>
           </div>
         </div>
@@ -103,18 +129,20 @@ export default function HeroSection() {
       </div>
 
       {/* Right panel - portrait (tablet + desktop) */}
-      <div className="hidden md:block w-[45%] min-h-screen relative">
-        <div className="absolute inset-0 img-zoom hero-fade" style={{ animationDelay: '0.3s' }}>
-          <Image
-            src={IMAGES.heroPortrait.cdn}
-            alt={t('name')}
-            fill
-            className="object-cover object-top"
-            sizes="(min-width: 768px) 45vw, 0px"
-            priority
-          />
+      <div className="hidden md:block w-[45%] min-h-screen relative overflow-hidden">
+        <div className="absolute inset-0 hero-fade" style={{ animationDelay: '0.3s' }}>
+          <div className="absolute inset-0 hero-kenburns">
+            <Image
+              src={IMAGES.heroPortrait.cdn}
+              alt={t('name')}
+              fill
+              className="object-cover object-top"
+              sizes="(min-width: 768px) 45vw, 0px"
+              priority
+            />
+          </div>
           <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-primary/70 to-transparent" />
-          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-primary/30 to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-primary/40 to-transparent" />
         </div>
 
         {/* Gold inset frame */}

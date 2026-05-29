@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { IMAGES } from '@/lib/images';
 import SectionHeading from '@/components/ui/SectionHeading';
+import TiltCard from '@/components/motion/TiltCard';
 
 // Home page surfaces the first 6 for a clean 3×2 grid. The full 7-practice
 // listing (including anything beyond this slice) lives on /linh-vuc-hanh-nghe.
@@ -65,15 +66,15 @@ export default function PracticeAreasPreview() {
             <Link
               key={area.key}
               href={{ pathname: '/linh-vuc-hanh-nghe/[slug]', params: { slug: area.slug } }}
-              className="group block"
+              className="group block h-full [perspective:1000px]"
             >
+              <TiltCard max={6} className="h-full">
               <motion.div
                 custom={index}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.1 }}
                 variants={cardVariants}
-                whileHover={{ y: -4, transition: { duration: 0.3 } }}
                 className="relative bg-background border border-border-gold/30 hover:border-accent/60 hover:bg-secondary hover:text-white transition-all duration-500 overflow-hidden h-full"
               >
                 {/* Gold top border slides in on hover */}
@@ -117,6 +118,7 @@ export default function PracticeAreasPreview() {
                 {/* Gold bottom border on hover */}
                 <div className="absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </motion.div>
+              </TiltCard>
             </Link>
           ))}
         </div>

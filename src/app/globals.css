@@ -219,3 +219,36 @@ h1, h2, h3 {
 .radial-gold {
   background: radial-gradient(ellipse at center, rgba(197,165,90,0.12) 0%, transparent 70%);
 }
+
+/* Ken-Burns slow zoom for hero portraits (cinematic, premium) */
+@keyframes kenburns {
+  0%   { transform: scale(1.02) translateY(0); }
+  100% { transform: scale(1.11) translateY(-1.5%); }
+}
+.hero-kenburns {
+  animation: kenburns 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Drifting gold orb — adds depth behind the hero portrait */
+@keyframes orbDrift {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(5%, -4%) scale(1.08); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.gold-orb {
+  animation: orbDrift 20s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Accessibility: honor reduced-motion — neutralize entrance + decorative motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero-fade, .hero-fade-up, .hero-scale-x { opacity: 1 !important; transform: none !important; }
+  .hero-kenburns, .gold-orb { animation: none !important; transform: none !important; }
+}

@@ -2,6 +2,9 @@ import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { IMAGES } from '@/lib/images';
 import Button from '@/components/ui/Button';
+import ParallaxSection from '@/components/motion/ParallaxSection';
+import MagneticButton from '@/components/motion/MagneticButton';
+import ScrollReveal from '@/components/motion/ScrollReveal';
 import { CALL_CENTER_WA } from '@/lib/address';
 
 export default async function CTASection() {
@@ -9,15 +12,17 @@ export default async function CTASection() {
 
   return (
     <section className="relative py-28 md:py-36 overflow-hidden border-t border-accent/30">
-      {/* Skyline background */}
-      <Image
-        src={IMAGES.bgSkyline.cdn}
-        alt=""
-        fill
-        className="object-cover"
-        sizes="100vw"
-        aria-hidden="true"
-      />
+      {/* Skyline background — cinematic parallax (overscan so edges never show) */}
+      <ParallaxSection distance={50} className="absolute -inset-y-16 inset-x-0">
+        <Image
+          src={IMAGES.bgSkyline.cdn}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+          aria-hidden="true"
+        />
+      </ParallaxSection>
       {/* Reduced dark overlay — let the photo breathe */}
       <div className="absolute inset-0 bg-primary/60" />
       {/* Stronger radial gold glow */}
@@ -54,7 +59,7 @@ export default async function CTASection() {
           <div className="w-16 h-px bg-accent/40" />
         </div>
 
-        <div className="max-w-3xl mx-auto text-center">
+        <ScrollReveal className="max-w-3xl mx-auto text-center" y={28}>
           <h2 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
             {t('heading')}
           </h2>
@@ -64,9 +69,11 @@ export default async function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-            <Button variant="primary" size="lg" href="/lien-he" className="btn-shimmer">
-              {t('contact')}
-            </Button>
+            <MagneticButton>
+              <Button variant="primary" size="lg" href="/lien-he" className="btn-shimmer">
+                {t('contact')}
+              </Button>
+            </MagneticButton>
             <div className="whatsapp-pulse relative z-10">
               <Button
                 variant="outline"
@@ -78,7 +85,7 @@ export default async function CTASection() {
               </Button>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
