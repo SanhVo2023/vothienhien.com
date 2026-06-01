@@ -126,6 +126,7 @@ function Guide() {
             <li><a href="#buoc-6">Lưu &amp; xuất bản</a></li>
             <li><a href="#buoc-7">Kiểm tra bài đã lên web</a></li>
             <li><a href="#sua-go">Sửa hoặc gỡ bài</a></li>
+            <li><a href="#globals">Chỉnh sửa Footer &amp; Globals</a></li>
             <li><a href="#seo">Mẹo viết chuẩn SEO</a></li>
             <li><a href="#checklist">Danh sách kiểm tra trước khi đăng</a></li>
             <li><a href="#su-co">Xử lý sự cố thường gặp</a></li>
@@ -230,6 +231,22 @@ function Guide() {
             <li><b>Sửa:</b> vào <b>Publications</b> → bấm vào bài → chỉnh sửa → <b>Save</b> (chờ tối đa 1 giờ để cập nhật).</li>
             <li><b>Gỡ:</b> mở bài → bấm <b>Delete</b> ở góc trên. Bài sẽ biến mất khỏi website và sitemap trong chu kỳ làm mới kế tiếp.</li>
           </ul>
+        </section>
+
+        <section className="block" id="globals">
+          <h2>Chỉnh sửa Footer &amp; cài đặt chung (Globals)</h2>
+          <p>Ngoài bài viết, bạn có thể chỉnh nội dung cố định của trang ở mục
+            <b>Globals</b> (menu trái):</p>
+          <ul>
+            <li><b>Footer</b> — phần chân trang: <b>Description</b> (mô tả, song ngữ),
+              <b>Ecosystem Links</b> (các thương hiệu — mỗi mục cần Label + Url),
+              <b>Address</b>, <b>Copyright</b>. Trường nào để trống sẽ tự dùng nội dung mặc định.</li>
+            <li><b>Site Settings / Profile / Header</b> — tên trang, hồ sơ luật sư, menu điều hướng.</li>
+          </ul>
+          <div className="callout">
+            Các trường có biểu tượng ngôn ngữ là <b>song ngữ</b> — nhớ điền cả Tiếng Việt và English
+            (xem Bước 4). Sau khi <b>Save</b>, thay đổi hiện trên web trong vòng tối đa 1 giờ.
+          </div>
         </section>
 
         <section className="block" id="seo">

@@ -26,12 +26,32 @@ const navItems = [
 // to a link by adding an `href` and switching the JSX below.
 const ECOSYSTEM_BRANDS = ['Apolo Lawyers', 'Lawyers in Vietnam', 'Apolo Legal'] as const;
 
-export default function Footer({ locale }: { locale: string }) {
+// Editable footer content from the CMS `footer` global (Globals → Footer).
+// Every field is optional — when blank the footer falls back to the current
+// hardcoded/i18n values, so the site never breaks if the global is empty.
+export type FooterData = {
+  description?: string | null;
+  ecosystemLinks?: { label: string; url?: string | null }[] | null;
+  address1?: string | null;
+  address2?: string | null;
+  copyright?: string | null;
+} | null;
+
+export default function Footer({ locale, data }: { locale: string; data?: FooterData }) {
   const t = useTranslations('nav');
   const tFooter = useTranslations('footer');
   const isVi = locale === 'vi';
   const office = isVi ? HEAD_OFFICE.vi : HEAD_OFFICE.en;
   const callCenter = isVi ? CALL_CENTER.vi : CALL_CENTER.en;
+
+  // CMS overrides (trimmed) with fallbacks to the existing content.
+  const cmsDescription = data?.description?.trim() || tFooter('managingPartner');
+  const cmsAddress = data?.address1?.trim() || office.address;
+  const cmsAddress2 = data?.address2?.trim() || '';
+  const ecosystem =
+    data?.ecosystemLinks && data.ecosystemLinks.length > 0
+      ? data.ecosystemLinks
+      : ECOSYSTEM_BRANDS.map((label) => ({ label, url: null as string | null }));
 
   return (
     <footer className="bg-primary text-white">
@@ -56,7 +76,7 @@ export default function Footer({ locale }: { locale: string }) {
             </div>
             <div className="mt-3 h-px w-12 bg-accent/40" />
             <p className="mt-5 font-[family-name:var(--font-accent)] text-base leading-relaxed text-white/60 italic">
-              {tFooter('managingPartner')}
+              {cmsDescription}
             </p>
             <p className="mt-1 text-sm text-white/50">
               {tFooter('firmName')}
@@ -141,7 +161,10 @@ export default function Footer({ locale }: { locale: string }) {
                     d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                   />
                 </svg>
-                <span className="leading-relaxed">{office.address}</span>
+                <span className="leading-relaxed">
+                  {cmsAddress}
+                  {cmsAddress2 && <><br />{cmsAddress2}</>}
+                </span>
               </div>
 
               {/* Phone */}
@@ -218,14 +241,26 @@ export default function Footer({ locale }: { locale: string }) {
               {locale === 'vi' ? 'Hệ sinh thái' : 'Ecosystem'}
             </span>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-              {ECOSYSTEM_BRANDS.map((label) => (
-                <span
-                  key={label}
-                  className="font-[family-name:var(--font-inter)] text-xs tracking-wider text-white/50"
-                >
-                  {label}
-                </span>
-              ))}
+              {ecosystem.map((item) =>
+                item.url ? (
+                  <a
+                    key={item.label}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-[family-name:var(--font-inter)] text-xs tracking-wider text-white/50 transition-colors hover:text-accent"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <span
+                    key={item.label}
+                    className="font-[family-name:var(--font-inter)] text-xs tracking-wider text-white/50"
+                  >
+                    {item.label}
+                  </span>
+                ),
+              )}
             </div>
           </div>
         </div>
@@ -246,8 +281,12 @@ export default function Footer({ locale }: { locale: string }) {
       <div className="gold-divider mx-6 lg:mx-8" />
       <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
         <p className="text-center font-[family-name:var(--font-inter)] text-xs tracking-wider text-white/30">
-          {tFooter('copyright')} &copy; {new Date().getFullYear()} Vo Thien Hien.{' '}
-          {tFooter('allRightsReserved')}.
+          {data?.copyright?.trim() || (
+            <>
+              {tFooter('copyright')} &copy; {new Date().getFullYear()} Vo Thien Hien.{' '}
+              {tFooter('allRightsReserved')}.
+            </>
+          )}
         </p>
       </div>
     </footer>
