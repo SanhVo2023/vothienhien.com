@@ -23,6 +23,7 @@ import {
   FixedToolbarFeature,
 } from '@payloadcms/richtext-lexical'
 import { seoPlugin } from '@payloadcms/plugin-seo'
+import { s3Storage } from '@payloadcms/storage-s3'
 import sharp from 'sharp'
 
 // Collections
@@ -138,6 +139,29 @@ export default buildConfig({
         `${typeof doc?.title === 'string' ? doc.title : 'Vo Thien Hien'} | Vo Thien Hien`,
       generateDescription: ({ doc }) =>
         typeof doc?.excerpt === 'string' ? doc.excerpt : '',
+    }),
+
+    // Store Media uploads in Cloudflare R2 (S3-compatible) instead of the local
+    // filesystem — REQUIRED on Vercel, whose serverless FS is read-only (this is
+    // why uploads/saving articles-with-images failed). No `prefix` is set, so no
+    // new DB column is added (avoids a migration); files land at the bucket root
+    // and are served directly from the public R2 URL.
+    s3Storage({
+      collections: {
+        media: {
+          disablePayloadAccessControl: true,
+          generateFileURL: ({ filename }) => `${process.env.R2_PUBLIC_URL}/${filename}`,
+        },
+      },
+      bucket: process.env.R2_BUCKET_NAME || 'apolowebsite',
+      config: {
+        region: 'auto',
+        endpoint: `https://${process.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
+        credentials: {
+          accessKeyId: process.env.R2_ACCESS_KEY_ID || '',
+          secretAccessKey: process.env.R2_SECRET_ACCESS_KEY || '',
+        },
+      },
     }),
   ],
 

@@ -28,7 +28,9 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev',
-        pathname: '/vothienhien.com/**',
+        // Covers both the curated /vothienhien.com/** assets and Payload Media
+        // uploads stored at the R2 bucket root.
+        pathname: '/**',
       },
     ],
   },
