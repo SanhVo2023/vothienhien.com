@@ -189,6 +189,8 @@ type ListArticle = {
   date: string;
   excerpt: string;
   readTime: string;
+  /** CMS featuredImage URL, when set — takes precedence over the images.ts map. */
+  image?: string;
 };
 
 function formatDate(iso: string | undefined, locale: 'vi' | 'en'): string {
@@ -215,21 +217,23 @@ async function fetchCmsPublications(locale: 'vi' | 'en'): Promise<ListArticle[]>
   const candidates = [process.env.NEXT_PUBLIC_SITE_URL, 'http://localhost:3000', 'http://localhost:3001'].filter(Boolean) as string[];
   for (const base of candidates) {
     try {
+      // depth=1 so the related `featuredImage` upload is populated (with its url).
       const res = await fetch(
-        `${base}/api/publications?limit=100&depth=0&locale=${locale}&sort=-publishedDate`,
+        `${base}/api/publications?limit=100&depth=1&locale=${locale}&sort=-publishedDate`,
         { next: { revalidate: 3600 }, signal: AbortSignal.timeout(6000) },
       );
       if (!res.ok) continue;
       const data = await res.json();
       return (data?.docs ?? [])
         .filter((d: { title?: string }) => Boolean(d.title?.trim()))
-        .map((d: { slug: string; title: string; excerpt?: string; category?: string; publishedDate?: string }) => ({
+        .map((d: { slug: string; title: string; excerpt?: string; category?: string; publishedDate?: string; featuredImage?: { url?: string } }) => ({
           slug: d.slug,
           title: d.title.trim(),
           category: CATEGORY_LABELS[d.category ?? 'analysis']?.[locale] ?? d.category ?? '',
           date: formatDate(d.publishedDate, locale),
           excerpt: (d.excerpt ?? '').trim(),
           readTime: estimateReadTime(d.excerpt, locale),
+          image: d.featuredImage?.url,
         }));
     } catch {
       // try next base URL
@@ -368,7 +372,11 @@ export default async function PublicationsPage({ params, searchParams }: Props) 
           )}
           <div className="grid gap-8 md:grid-cols-2">
             {pageArticles.map((article, index) => {
-              const thumb = articleThumbForSlug(article.slug, (safePage - 1) * PAGE_SIZE + index);
+              // Prefer the CMS featuredImage (editor-managed); fall back to the
+              // per-slug images.ts map for the hand-tuned sample articles.
+              const thumb = article.image
+                ? { src: article.image, alt: article.title }
+                : articleThumbForSlug(article.slug, (safePage - 1) * PAGE_SIZE + index);
               return (
                 <Link
                   key={article.slug}

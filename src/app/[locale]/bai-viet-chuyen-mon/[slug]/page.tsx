@@ -294,6 +294,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Hardcoded sample articles first, CMS fallback for everything else.
   let title: string;
   let description: string;
+  let cmsImage: string | undefined;
   if (hardcoded) {
     const c = isVi ? hardcoded.vi : hardcoded.en;
     title = c.title;
@@ -303,9 +304,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!cms) return { title: 'Not Found' };
     title = cms.title;
     description = (cms.content[0] ?? '').slice(0, 160);
+    cmsImage = cms.image;
   }
 
-  const heroImage = slugImageMap[canonical] || getArticleImage(slug);
+  // Prefer the CMS featuredImage for the OG image; fall back to the images.ts map.
+  const heroImage = cmsImage
+    ? { src: cmsImage, alt: title }
+    : slugImageMap[canonical] || getArticleImage(slug);
 
   return {
     title: `${title} | ${isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}`,
@@ -357,7 +362,7 @@ function lexicalToParagraphs(content: { root?: LexicalNode } | null | undefined)
   return out;
 }
 
-type CmsArticle = { title: string; category: string; date: string; content: string[]; relatedSlugs: string[] };
+type CmsArticle = { title: string; category: string; date: string; content: string[]; relatedSlugs: string[]; image?: string };
 
 const CATEGORY_LABELS_DETAIL: Record<string, { vi: string; en: string }> = {
   analysis: { vi: 'Phân tích', en: 'Analysis' },
@@ -371,7 +376,7 @@ async function fetchCmsArticle(slug: string, locale: 'vi' | 'en'): Promise<CmsAr
   for (const base of candidates) {
     try {
       const res = await fetch(
-        `${base}/api/publications?where[slug][equals]=${encodeURIComponent(slug)}&limit=1&depth=0&locale=${locale}`,
+        `${base}/api/publications?where[slug][equals]=${encodeURIComponent(slug)}&limit=1&depth=1&locale=${locale}`,
         { next: { revalidate: 3600 }, signal: AbortSignal.timeout(6000) },
       );
       if (!res.ok) continue;
@@ -395,6 +400,7 @@ async function fetchCmsArticle(slug: string, locale: 'vi' | 'en'): Promise<CmsAr
         date: dateStr,
         content: lexicalToParagraphs(doc.content),
         relatedSlugs: [],
+        image: doc.featuredImage?.url,
       };
     } catch {
       // try next base URL
@@ -438,7 +444,10 @@ export default async function PublicationDetailPage({ params }: Props) {
     }
   }
 
-  const heroImage = slugImageMap[canonical] || getArticleImage(slug);
+  // Prefer the editor-managed CMS featuredImage; fall back to the images.ts map.
+  const heroImage = content.image
+    ? { src: content.image, alt: content.title }
+    : slugImageMap[canonical] || getArticleImage(slug);
 
   const relatedArticles = content.relatedSlugs
     .map((rs) => {
