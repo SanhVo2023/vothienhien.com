@@ -287,15 +287,15 @@ const CSS = `
   --cream:#FAF8F3; --line:#E7DCC2; --text:#2b2b2b; --muted:#7a7568;
 }
 *{box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--text);background:var(--cream);line-height:1.7}
+body{font-family:var(--font-body),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--text);background:var(--cream);line-height:1.7}
 code{background:#efe9da;color:#4a3f1f;padding:.1em .4em;border-radius:4px;font-size:.86em;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-word}
 a{color:var(--gold-d)}
 
 /* Gate */
 .gate{min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 30%,#1d1b14,var(--ink));padding:24px}
 .gate-card{width:100%;max-width:380px;background:#13120d;border:1px solid #322c1c;border-radius:16px;padding:40px 32px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.5)}
-.gate-mark{width:64px;height:64px;margin:0 auto 20px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:Georgia,serif;font-size:24px;letter-spacing:1px}
-.gate-title{color:#f4efe3;font-family:Georgia,serif;font-size:24px;margin:0 0 8px}
+.gate-mark{width:64px;height:64px;margin:0 auto 20px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:var(--font-heading),Georgia,serif;font-size:24px;letter-spacing:1px}
+.gate-title{color:#f4efe3;font-family:var(--font-heading),Georgia,serif;font-size:24px;margin:0 0 8px}
 .gate-sub{color:#9c9686;font-size:14px;margin:0 0 24px}
 .gate-input{width:100%;padding:13px 16px;border-radius:10px;border:1px solid #3a3322;background:#0d0c08;color:#f4efe3;font-size:15px;outline:none}
 .gate-input:focus{border-color:var(--gold)}
@@ -307,7 +307,7 @@ a{color:var(--gold-d)}
 .topbar{position:sticky;top:0;z-index:10;background:rgba(10,10,10,.96);backdrop-filter:blur(8px);border-bottom:1px solid #2a2519}
 .topbar-in{max-width:860px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:12px}
-.brand-mark{width:40px;height:40px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:Georgia,serif;font-size:15px}
+.brand-mark{width:40px;height:40px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:var(--font-heading),Georgia,serif;font-size:15px}
 .brand-text{display:flex;flex-direction:column;line-height:1.25}
 .brand-text strong{color:#f4efe3;font-size:14px;letter-spacing:1.5px}
 .brand-text small{color:var(--gold);font-size:11px;letter-spacing:.5px}
@@ -318,11 +318,11 @@ a{color:var(--gold-d)}
 .page{max-width:860px;margin:0 auto;padding:0 24px 80px}
 .hero{padding:56px 0 32px;border-bottom:1px solid var(--line)}
 .kicker{display:inline-block;color:var(--gold-d);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700}
-.hero h1{font-family:Georgia,serif;font-size:34px;line-height:1.2;color:var(--ink);margin:14px 0 16px}
+.hero h1{font-family:var(--font-heading),Georgia,serif;font-size:34px;line-height:1.2;color:var(--ink);margin:14px 0 16px}
 .lede{font-size:17px;color:#4f4a3e;margin:0;max-width:60ch}
 
-h2{font-family:Georgia,serif;font-size:24px;color:var(--ink);margin:0 0 16px}
-h3{font-family:Georgia,serif}
+h2{font-family:var(--font-heading),Georgia,serif;font-size:24px;color:var(--ink);margin:0 0 16px}
+h3{font-family:var(--font-heading),Georgia,serif}
 
 /* TOC */
 .toc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 28px;margin:32px 0}
@@ -334,7 +334,7 @@ h3{font-family:Georgia,serif}
 
 /* Steps */
 .step{display:flex;gap:20px;padding:28px 0;border-bottom:1px solid var(--line);scroll-margin-top:80px}
-.step-badge{flex:none;width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--gold);font-family:Georgia,serif;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px #efe7d4}
+.step-badge{flex:none;width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--gold);font-family:var(--font-heading),Georgia,serif;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px #efe7d4}
 .step-body{flex:1;min-width:0}
 .step-title{font-size:20px;color:var(--ink);margin:6px 0 12px}
 .step ul,.step ol{margin:10px 0;padding-left:22px}
