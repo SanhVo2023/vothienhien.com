@@ -48,9 +48,21 @@ import { Footer } from './globals/Footer'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
+// Origins the admin may send authenticated (cookie) requests from. Payload only
+// auto-trusts `serverURL` for CSRF, so the custom domain MUST be listed here or
+// every admin mutation (save/update) 403s when accessed via that domain.
+const ADMIN_ORIGINS = [
+  'https://vothienhien.com',
+  'https://www.vothienhien.com',
+  process.env.NEXT_PUBLIC_SITE_URL,
+  'http://localhost:3000',
+].filter(Boolean) as string[]
+
 export default buildConfig({
   serverURL: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
   secret: process.env.PAYLOAD_SECRET || 'default-secret-change-me',
+  cors: ADMIN_ORIGINS,
+  csrf: ADMIN_ORIGINS,
 
   admin: {
     user: Users.slug,
