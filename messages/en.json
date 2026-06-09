@@ -111,7 +111,7 @@
     "name": "Full Name",
     "email": "Email",
     "phone": "Phone Number",
-    "matterType": "Matter Type",
+    "matterType": "Type of Legal Issue",
     "message": "Message",
     "submit": "Submit Consultation Request",
     "languagePreference": "Preferred Language",

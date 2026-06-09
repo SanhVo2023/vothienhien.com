@@ -10,6 +10,7 @@ import {
   CALL_CENTER_E164,
   EMAIL,
   HEAD_OFFICE,
+  PERSONAL_CONTACT,
 } from '@/lib/address';
 
 const navItems = [
@@ -43,6 +44,7 @@ export default function Footer({ locale, data }: { locale: string; data?: Footer
   const isVi = locale === 'vi';
   const office = isVi ? HEAD_OFFICE.vi : HEAD_OFFICE.en;
   const callCenter = isVi ? CALL_CENTER.vi : CALL_CENTER.en;
+  const personalPhone = isVi ? PERSONAL_CONTACT.phone.vi : PERSONAL_CONTACT.phone.en;
 
   // CMS overrides (trimmed) with fallbacks to the existing content.
   const cmsDescription = data?.description?.trim() || tFooter('managingPartner');
@@ -93,9 +95,9 @@ export default function Footer({ locale, data }: { locale: string; data?: Footer
                 <Image
                   src="/asset/logo-transparent.png"
                   alt="Apolo Lawyers - Solicitors & Litigators"
-                  width={56}
-                  height={56}
-                  className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 object-contain"
+                  width={68}
+                  height={68}
+                  className="h-[3.6rem] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 object-contain"
                 />
                 <Image
                   src="/asset/logo-lsvn.png"
@@ -141,6 +143,22 @@ export default function Footer({ locale, data }: { locale: string; data?: Footer
             </h3>
             <div className="mt-1.5 h-px w-8 bg-accent/30" />
             <div className="mt-5 flex flex-col gap-4 text-sm text-white/60">
+              {/* Direct line — Managing Partner */}
+              <div className="border-b border-white/10 pb-4">
+                <p className="font-[family-name:var(--font-inter)] text-white/80">
+                  {isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}
+                </p>
+                <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-white/55">
+                  <a href={`tel:${PERSONAL_CONTACT.phoneE164}`} className="transition-colors hover:text-accent">
+                    {personalPhone}
+                  </a>
+                  <span className="text-white/20">·</span>
+                  <a href={`mailto:${PERSONAL_CONTACT.email}`} className="transition-colors hover:text-accent">
+                    {PERSONAL_CONTACT.email}
+                  </a>
+                </div>
+              </div>
+
               {/* Address */}
               <div className="flex gap-3">
                 <svg

@@ -1,18 +1,20 @@
 'use client';
 
 import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Button from '@/components/ui/Button';
 
 export default function ContactForm() {
   const t = useTranslations('contact');
+  const locale = useLocale();
+  const isVi = locale === 'vi';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     matterType: '',
     message: '',
-    languagePreference: 'vi',
+    languagePreference: locale, // default to the page language, not always vi
   });
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -32,18 +34,18 @@ export default function ContactForm() {
 
     // Client-side validation
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-      setError('Please fill in all required fields.');
+      setError(isVi ? 'Vui lòng điền đầy đủ các trường bắt buộc.' : 'Please fill in all required fields.');
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setError('Please enter a valid email address.');
+      setError(isVi ? 'Vui lòng nhập địa chỉ email hợp lệ.' : 'Please enter a valid email address.');
       return;
     }
 
     if (!formData.matterType) {
-      setError('Please select a matter type.');
+      setError(isVi ? 'Vui lòng chọn loại vấn đề pháp lý.' : 'Please select a type of legal issue.');
       return;
     }
 
@@ -76,14 +78,10 @@ export default function ContactForm() {
         phone: '',
         matterType: '',
         message: '',
-        languagePreference: 'vi',
+        languagePreference: locale,
       });
-    } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : 'Something went wrong. Please try again.'
-      );
+    } catch {
+      setError(isVi ? 'Đã có lỗi xảy ra. Vui lòng thử lại.' : 'Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -98,9 +96,7 @@ export default function ContactForm() {
           </svg>
         </div>
         <h3 className="text-xl font-heading font-semibold text-primary mb-2">
-          {formData.languagePreference === 'vi'
-            ? 'Cảm ơn bạn đã liên hệ!'
-            : 'Thank you for reaching out!'}
+          {isVi ? 'Cảm ơn bạn đã liên hệ!' : 'Thank you for reaching out!'}
         </h3>
         <p className="text-text-secondary">{t('responseCommitment')}</p>
       </div>
@@ -116,6 +112,7 @@ export default function ContactForm() {
         </div>
       )}
 
+      <div className="grid gap-6 sm:grid-cols-2">
       {/* Name */}
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-text-primary mb-2">
@@ -152,6 +149,9 @@ export default function ContactForm() {
         />
       </div>
 
+      </div>
+
+      <div className="grid gap-6 sm:grid-cols-2">
       {/* Phone */}
       <div>
         <label htmlFor="phone" className="block text-sm font-medium text-text-primary mb-2">
@@ -192,6 +192,8 @@ export default function ContactForm() {
           <option value="labor">{t('matterTypes.labor')}</option>
           <option value="other">{t('matterTypes.other')}</option>
         </select>
+      </div>
+
       </div>
 
       {/* Message */}
