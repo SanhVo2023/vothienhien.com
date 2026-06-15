@@ -27,36 +27,57 @@ type Moment = {
   year?: string;
 };
 
-// Mr Hien's 18 career photos (optimized to /public/images/career/ from the
+// Mr Hien's profile portraits (AI-generated from his photo, on R2) interleaved
 // originals in /assets/About). Captions come from the source filenames.
 const MOMENTS: Moment[] = [
-  { id: 1, image: '/images/career/01.webp', vi: 'Chân dung', en: 'Portrait' },
-  { id: 2, image: '/images/career/02.webp', vi: 'Tại văn phòng Apolo Lawyers', en: 'At the Apolo Lawyers Office' },
-  { id: 4, image: '/images/career/04.webp', vi: 'Làm việc tại văn phòng', en: 'Working at the Office' },
-  { id: 7, image: '/images/career/07.webp', vi: 'Trung tâm Trọng tài Quốc tế Việt Nam (VIAC)', en: 'Vietnam International Arbitration Centre (VIAC)' },
-  { id: 8, image: '/images/career/08.webp', vi: 'Buổi tọa đàm pháp lý', en: 'Legal Roundtable' },
-  { id: 9, image: '/images/career/09.webp', vi: 'Phát biểu tại tọa đàm', en: 'Speaking at a Roundtable' },
-  { id: 10, image: '/images/career/10.webp', vi: 'Tại phiên tòa', en: 'At a Court Hearing' },
-  { id: 11, image: '/images/career/11.webp', vi: 'Tại bàn nghị sự', en: 'At the Conference Table' },
-  { id: 12, image: '/images/career/12.webp', vi: 'Sự kiện M&A', en: 'M&A Event' },
-  { id: 13, image: '/images/career/13.webp', vi: 'Nhận hoa chúc mừng', en: 'Receiving Congratulations' },
-  { id: 14, image: '/images/career/14.webp', vi: 'Lễ vinh danh', en: 'Recognition Ceremony' },
-  { id: 15, image: '/images/career/15.webp', vi: 'Phiên làm việc', en: 'Working Session' },
-  { id: 16, image: '/images/career/16.webp', vi: 'Trước trụ sở tòa án', en: 'Outside the Courthouse' },
-  { id: 17, image: '/images/career/17.webp', vi: 'Trước trụ sở tòa án', en: 'Outside the Courthouse' },
-  { id: 18, image: '/images/career/18.webp', vi: 'Tại văn phòng', en: 'At the Office' },
+  { id: 1, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-01-5bb7790d.webp', vi: 'Luật sư Võ Thiện Hiển', en: 'Attorney Vo Thien Hien' },
+  { id: 2, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-02-626d5850.webp', vi: 'Tại văn phòng', en: 'At the Office' },
+  { id: 3, image: '/images/career/01.webp', vi: 'Chân dung', en: 'Portrait' },
+  { id: 4, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-03-c9686043.webp', vi: 'Chân dung chuyên nghiệp', en: 'Professional Portrait' },
+  { id: 5, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-04-d4d69a69.webp', vi: 'Tư vấn pháp lý', en: 'Legal Counsel' },
+  { id: 6, image: '/images/career/07.webp', vi: 'Trung tâm Trọng tài Quốc tế Việt Nam (VIAC)', en: 'Vietnam International Arbitration Centre (VIAC)' },
+  { id: 7, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-05-c9129090.webp', vi: 'Tại thư viện luật', en: 'In the Law Library' },
+  { id: 8, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-06-01bfcccc.webp', vi: 'Phòng họp', en: 'Meeting Room' },
+  { id: 9, image: '/images/career/10.webp', vi: 'Tại phiên tòa', en: 'At a Court Hearing' },
+  { id: 10, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-07-b94766e4.webp', vi: 'Luật sư Võ Thiện Hiển', en: 'Attorney Vo Thien Hien' },
+  { id: 11, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-08-f77a3a7d.webp', vi: 'Tại văn phòng', en: 'At the Office' },
+  { id: 12, image: '/images/career/09.webp', vi: 'Phát biểu tại tọa đàm', en: 'Speaking at a Roundtable' },
+  { id: 13, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-09-4186d466.webp', vi: 'Chân dung chuyên nghiệp', en: 'Professional Portrait' },
+  { id: 14, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-10-24675d36.webp', vi: 'Tư vấn pháp lý', en: 'Legal Counsel' },
+  { id: 15, image: '/images/career/12.webp', vi: 'Sự kiện M&A', en: 'M&A Event' },
+  { id: 16, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-11-688f8a2e.webp', vi: 'Tại thư viện luật', en: 'In the Law Library' },
+  { id: 17, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-12-de53e11e.webp', vi: 'Phòng họp', en: 'Meeting Room' },
+  { id: 18, image: '/images/career/13.webp', vi: 'Nhận hoa chúc mừng', en: 'Receiving Congratulations' },
+  { id: 19, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-13-b0f09e90.webp', vi: 'Luật sư Võ Thiện Hiển', en: 'Attorney Vo Thien Hien' },
+  { id: 20, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-14-6476ee0a.webp', vi: 'Tại văn phòng', en: 'At the Office' },
+  { id: 21, image: '/images/career/14.webp', vi: 'Lễ vinh danh', en: 'Recognition Ceremony' },
+  { id: 22, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-15-cdb4e94a.webp', vi: 'Chân dung chuyên nghiệp', en: 'Professional Portrait' },
+  { id: 23, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-16-f10cdd2b.webp', vi: 'Tư vấn pháp lý', en: 'Legal Counsel' },
+  { id: 24, image: '/images/career/16.webp', vi: 'Trước trụ sở tòa án', en: 'Outside the Courthouse' },
+  { id: 25, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-17-061f48f4.webp', vi: 'Tại thư viện luật', en: 'In the Law Library' },
+  { id: 26, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-18-16a2e1ec.webp', vi: 'Phòng họp', en: 'Meeting Room' },
+  { id: 27, image: '/images/career/17.webp', vi: 'Trước trụ sở tòa án', en: 'Outside the Courthouse' },
+  { id: 28, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-19-32856afb.webp', vi: 'Luật sư Võ Thiện Hiển', en: 'Attorney Vo Thien Hien' },
+  { id: 29, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-20-681a0ca4.webp', vi: 'Tại văn phòng', en: 'At the Office' },
+  { id: 30, image: '/images/career/18.webp', vi: 'Tại văn phòng', en: 'At the Office' },
+  { id: 31, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-21-19140394.webp', vi: 'Chân dung chuyên nghiệp', en: 'Professional Portrait' },
+  { id: 32, image: '/images/career/02.webp', vi: 'Tại văn phòng Apolo Lawyers', en: 'At the Apolo Lawyers Office' },
+  { id: 33, image: '/images/career/08.webp', vi: 'Buổi tọa đàm pháp lý', en: 'Legal Roundtable' },
 ];
 
 // Deterministic mosaic rhythm, matched to each photo's orientation so portraits
 // get tall tiles and landscapes get wide ones. Mobile stays a clean 2-col grid;
 // spans only kick in at sm/lg so the layout never breaks.
 const SPAN: Record<number, string> = {
-  2: 'sm:row-span-2',   // 03 — office portrait
-  6: 'sm:row-span-2',   // 07 — VIAC portrait
-  9: 'lg:col-span-2',   // 10 — court hearing (landscape)
-  11: 'lg:col-span-2',  // 12 — M&A event (landscape)
-  13: 'sm:row-span-2',  // 14 — recognition ceremony (tall)
-  16: 'lg:col-span-2',  // 17 — courthouse (landscape)
+  3: 'sm:row-span-2',
+  8: 'lg:col-span-2',
+  12: 'sm:row-span-2',
+  14: 'lg:col-span-2',
+  21: 'sm:row-span-2',
+  26: 'lg:col-span-2',
+  29: 'lg:col-span-2',
+  30: 'sm:row-span-2',
+  32: 'lg:col-span-2',
 };
 
 function PinIcon({ className = '' }: { className?: string }) {
