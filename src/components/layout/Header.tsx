@@ -59,7 +59,7 @@ export default function Header({ locale }: { locale: string }) {
                 <span
                   className="font-[family-name:var(--font-heading)] text-lg font-semibold tracking-[0.15em] text-accent transition-colors duration-300 group-hover:text-accent-secondary sm:text-xl"
                 >
-                  VÕ THIỆN HIỂN
+                  {locale === 'vi' ? 'VÕ THIỆN HIỂN' : 'VO THIEN HIEN'}
                 </span>
                 <span
                   className={`font-[family-name:var(--font-inter)] text-[10px] font-medium uppercase tracking-[0.3em] transition-colors duration-300 ${

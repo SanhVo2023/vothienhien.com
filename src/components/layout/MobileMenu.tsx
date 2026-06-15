@@ -86,7 +86,7 @@ export default function MobileMenu({ isOpen, onClose, locale, navItems }: Props)
               {/* Logo */}
               <div className="mt-6 mb-12">
                 <span className="font-[family-name:var(--font-heading)] text-xl font-semibold tracking-[0.15em] text-accent">
-                  VÕ THIỆN HIỂN
+                  {locale === 'vi' ? 'VÕ THIỆN HIỂN' : 'VO THIEN HIEN'}
                 </span>
                 <div className="mt-1 h-px w-12 bg-accent/40" />
               </div>

@@ -74,7 +74,7 @@ export default function Footer({ locale, data }: { locale: string; data?: Footer
                 className="rounded-full gold-glow ring-1 ring-accent/25"
               />
               <span className="font-[family-name:var(--font-heading)] text-xl font-semibold tracking-[0.15em] text-accent">
-                VÕ THIỆN HIỂN
+                {isVi ? 'VÕ THIỆN HIỂN' : 'VO THIEN HIEN'}
               </span>
             </div>
             <div className="mt-3 h-px w-12 bg-accent/40" />
