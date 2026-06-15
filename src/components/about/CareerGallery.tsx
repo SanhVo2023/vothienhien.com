@@ -31,12 +31,9 @@ type Moment = {
 // originals in /assets/About). Captions come from the source filenames.
 const MOMENTS: Moment[] = [
   { id: 1, image: '/images/career/01.webp', vi: 'Chân dung', en: 'Portrait' },
-  { id: 2, image: '/images/career/02.webp', vi: 'Tại bàn làm việc · Apolo Lawyers', en: 'At the Desk · Apolo Lawyers' },
-  { id: 3, image: '/images/career/03.webp', vi: 'Tại văn phòng Apolo Lawyers', en: 'At the Apolo Lawyers Office' },
+  { id: 2, image: '/images/career/02.webp', vi: 'Tại văn phòng Apolo Lawyers', en: 'At the Apolo Lawyers Office' },
   { id: 4, image: '/images/career/04.webp', vi: 'Làm việc tại văn phòng', en: 'Working at the Office' },
-  { id: 5, image: '/images/career/05.webp', vi: 'Tại bàn làm việc', en: 'At the Desk' },
-  { id: 6, image: '/images/career/06.webp', vi: 'Trung tâm Trọng tài Quốc tế Việt Nam (VIAC)', en: 'Vietnam International Arbitration Centre (VIAC)' },
-  { id: 7, image: '/images/career/07.webp', vi: 'Tại VIAC', en: 'At VIAC' },
+  { id: 7, image: '/images/career/07.webp', vi: 'Trung tâm Trọng tài Quốc tế Việt Nam (VIAC)', en: 'Vietnam International Arbitration Centre (VIAC)' },
   { id: 8, image: '/images/career/08.webp', vi: 'Buổi tọa đàm pháp lý', en: 'Legal Roundtable' },
   { id: 9, image: '/images/career/09.webp', vi: 'Phát biểu tại tọa đàm', en: 'Speaking at a Roundtable' },
   { id: 10, image: '/images/career/10.webp', vi: 'Tại phiên tòa', en: 'At a Court Hearing' },
@@ -112,7 +109,9 @@ function Tile({
           alt={caption}
           fill
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+          // Bias the crop toward the upper third so faces stay in frame on the
+          // taller/wider mosaic tiles (object-cover otherwise center-crops heads).
+          className="object-cover object-[center_28%] transition-transform duration-700 ease-out group-hover:scale-[1.06]"
         />
       ) : (
         // On-brand placeholder until the real photo is wired in.

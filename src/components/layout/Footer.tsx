@@ -11,6 +11,7 @@ import {
   EMAIL,
   HEAD_OFFICE,
   PERSONAL_CONTACT,
+  protectAddress,
 } from '@/lib/address';
 
 const navItems = [
@@ -48,7 +49,7 @@ export default function Footer({ locale, data }: { locale: string; data?: Footer
 
   // CMS overrides (trimmed) with fallbacks to the existing content.
   const cmsDescription = data?.description?.trim() || tFooter('managingPartner');
-  const cmsAddress = data?.address1?.trim() || office.address;
+  const cmsAddress = protectAddress(data?.address1?.trim() || office.address);
   const cmsAddress2 = data?.address2?.trim() || '';
   const ecosystem =
     data?.ecosystemLinks && data.ecosystemLinks.length > 0
@@ -91,28 +92,37 @@ export default function Footer({ locale, data }: { locale: string; data?: Footer
               <p className="text-[10px] uppercase tracking-[0.2em] text-white/30 mb-4">
                 {locale === 'vi' ? 'Thành viên của' : 'A member of'}
               </p>
-              <div className="flex items-center gap-6">
-                <Image
-                  src="/asset/logo-transparent.png"
-                  alt="Apolo Lawyers - Solicitors & Litigators"
-                  width={68}
-                  height={68}
-                  className="h-[3.6rem] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 object-contain"
-                />
-                <Image
-                  src="/asset/logo-lsvn.png"
-                  alt={locale === 'vi' ? 'Liên đoàn Luật sư Việt Nam' : 'Vietnam Bar Federation'}
-                  width={56}
-                  height={56}
-                  className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 object-contain"
-                />
-                <Image
-                  src="/asset/logo-aea-white.png"
-                  alt="Association of European Attorneys"
-                  width={64}
-                  height={48}
-                  className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 object-contain"
-                />
+              {/* Each logo sits in a shared 64px-tall box, vertically centered,
+                  so the three align on one axis despite different aspect ratios.
+                  Apolo is kept the largest (~+20%) per client review. */}
+              <div className="flex items-center gap-7">
+                <div className="flex h-16 items-center">
+                  <Image
+                    src="/asset/logo-transparent.png"
+                    alt="Apolo Lawyers - Solicitors & Litigators"
+                    width={72}
+                    height={72}
+                    className="max-h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 object-contain"
+                  />
+                </div>
+                <div className="flex h-16 items-center">
+                  <Image
+                    src="/asset/logo-lsvn.png"
+                    alt={locale === 'vi' ? 'Liên đoàn Luật sư Việt Nam' : 'Vietnam Bar Federation'}
+                    width={52}
+                    height={52}
+                    className="max-h-[3.25rem] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 object-contain"
+                  />
+                </div>
+                <div className="flex h-16 items-center">
+                  <Image
+                    src="/asset/logo-aea-white.png"
+                    alt="Association of European Attorneys"
+                    width={68}
+                    height={51}
+                    className="max-h-11 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -179,9 +189,9 @@ export default function Footer({ locale, data }: { locale: string; data?: Footer
                     d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                   />
                 </svg>
-                <span className="leading-relaxed">
+                <span className="leading-relaxed [text-wrap:pretty]">
                   {cmsAddress}
-                  {cmsAddress2 && <><br />{cmsAddress2}</>}
+                  {cmsAddress2 && <><br />{protectAddress(cmsAddress2)}</>}
                 </span>
               </div>
 

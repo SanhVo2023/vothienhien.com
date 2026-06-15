@@ -15,6 +15,7 @@ import {
   SHORT_NAME_EN,
   SHORT_NAME_VN,
   parentBrandUrl,
+  protectAddress,
 } from '@/lib/address';
 
 type Props = {
@@ -182,7 +183,7 @@ export default async function ContactPage({ params }: Props) {
                       <p className="text-xs uppercase tracking-wider text-text-secondary mb-1">
                         {isVi ? 'Địa chỉ' : 'Address'}
                       </p>
-                      <p className="text-primary">{headOffice.address}</p>
+                      <p className="text-primary [text-wrap:pretty]">{protectAddress(headOffice.address)}</p>
                     </div>
                   </div>
 
@@ -269,7 +270,7 @@ export default async function ContactPage({ params }: Props) {
               <h3 className="font-heading font-semibold text-primary text-lg mb-3">
                 {firmName}
               </h3>
-              <p className="text-text-secondary">{headOffice.address}</p>
+              <p className="text-text-secondary [text-wrap:pretty]">{protectAddress(headOffice.address)}</p>
               <p className="mt-3 text-text-secondary text-sm">
                 {headOffice.phones.join(' · ')}
               </p>
@@ -286,7 +287,7 @@ export default async function ContactPage({ params }: Props) {
               <h3 className="font-heading font-semibold text-primary text-lg mb-3">
                 {branch.name}
               </h3>
-              <p className="text-text-secondary">{branch.address}</p>
+              <p className="text-text-secondary [text-wrap:pretty]">{protectAddress(branch.address)}</p>
               <p className="mt-3 text-text-secondary text-sm">
                 {branch.phones.join(' · ')}
               </p>

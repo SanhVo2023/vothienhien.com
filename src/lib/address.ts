@@ -9,6 +9,22 @@
  * EN content links to apololawyers.com ONLY. Never cross.
  */
 
+/**
+ * Make an address wrap "cleverly": keep each comma-separated segment (street,
+ * ward, city) on one line by turning its internal spaces into non-breaking
+ * spaces. Lines then break only after commas, so a ward/city name like
+ * "Thành phố Hồ Chí Minh" or "Ho Chi Minh City" never splits mid-phrase.
+ */
+export function protectAddress(address: string): string {
+  const NBSP = String.fromCharCode(160); // non-breaking space
+  // Each comma segment becomes unbreakable (internal spaces -> NBSP); the normal
+  // space after each comma stays a valid line-break point.
+  return address
+    .split(',')
+    .map((seg) => seg.trim().replace(/\s+/g, NBSP))
+    .join(', ');
+}
+
 // ─── Company name ──────────────────────────────────────────────────────────
 export const COMPANY_NAME_VN =
   'Công ty Luật Apolo Lawyers, thuộc Đoàn Luật sư TP. Hồ Chí Minh, trực thuộc Liên đoàn Luật sư Việt Nam';
