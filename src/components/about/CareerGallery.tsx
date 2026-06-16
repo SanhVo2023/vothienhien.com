@@ -33,7 +33,7 @@ type Moment = {
 // size, well-spaced, clearly visible at a glance, no photos with other people).
 // Uniform grid — every tile the same size; no mosaic spans.
 const MOMENTS: Moment[] = [
-  { id: 1, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/career/hien-signing-office-fb008030.webp', vi: 'Ký kết hồ sơ pháp lý', en: 'Signing Legal Documents', pos: 'center 26%' },
+  { id: 1, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/career/hien-contract-review-2a1dde5a.webp', vi: 'Rà soát hợp đồng thương mại', en: 'Reviewing a Commercial Contract', pos: 'center 30%' },
   { id: 2, image: '/images/career/07.webp', vi: 'Trung tâm Trọng tài Quốc tế Việt Nam (VIAC)', en: 'Vietnam International Arbitration Centre (VIAC)', pos: 'center 30%' },
   { id: 3, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/career/hien-court-luxury-c98ac5fd.webp', vi: 'Tại phiên tòa', en: 'At a Court Hearing', pos: 'center 32%' },
   { id: 4, image: '/images/career/12.webp', vi: 'Diễn đàn M&A Việt Nam', en: 'Vietnam M&A Forum', pos: 'center 26%' },
