@@ -35,7 +35,7 @@ type Moment = {
 const MOMENTS: Moment[] = [
   { id: 1, image: '/images/career/02.webp', vi: 'Tại văn phòng Apolo Lawyers', en: 'At the Apolo Lawyers Office', pos: 'center 28%' },
   { id: 2, image: '/images/career/07.webp', vi: 'Trung tâm Trọng tài Quốc tế Việt Nam (VIAC)', en: 'Vietnam International Arbitration Centre (VIAC)', pos: 'center 30%' },
-  { id: 3, image: '/images/career/09.webp', vi: 'Tại phiên tòa', en: 'At a Court Hearing', pos: 'center 32%' },
+  { id: 3, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/career/hien-court-luxury-c98ac5fd.webp', vi: 'Tại phiên tòa', en: 'At a Court Hearing', pos: 'center 32%' },
   { id: 4, image: '/images/career/12.webp', vi: 'Diễn đàn M&A Việt Nam', en: 'Vietnam M&A Forum', pos: 'center 26%' },
   { id: 5, image: '/images/career/05.webp', vi: 'Tại bàn làm việc', en: 'At His Desk', pos: 'center 38%' },
   { id: 6, image: '/images/career/18.webp', vi: 'Văn phòng Apolo Lawyers', en: 'Apolo Lawyers Office', pos: 'center 36%' },
