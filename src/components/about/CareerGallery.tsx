@@ -25,60 +25,21 @@ type Moment = {
   vi: string;
   en: string;
   year?: string;
+  /** object-position for the tile crop, so the face always stays in frame. */
+  pos?: string;
 };
 
-// Mr Hien's profile portraits (AI-generated from his photo, on R2) interleaved
-// originals in /assets/About). Captions come from the source filenames.
+// Curated real, SOLO photos of Mr Hien only (Mr Hien feedback 2026-06-16: equal
+// size, well-spaced, clearly visible at a glance, no photos with other people).
+// Uniform grid — every tile the same size; no mosaic spans.
 const MOMENTS: Moment[] = [
-  { id: 1, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-01-1a9bbedf.webp', vi: 'Luật sư Võ Thiện Hiển', en: 'Attorney Vo Thien Hien' },
-  { id: 2, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-02-c8527244.webp', vi: 'Tại văn phòng', en: 'At the Office' },
-  { id: 3, image: '/images/career/07.webp', vi: 'Trung tâm Trọng tài Quốc tế Việt Nam (VIAC)', en: 'Vietnam International Arbitration Centre (VIAC)' },
-  { id: 4, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-03-a827cb0f.webp', vi: 'Tại văn phòng', en: 'At the Office' },
-  { id: 5, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-04-5f6ef60e.webp', vi: 'Tại thư viện luật', en: 'In the Law Library' },
-  { id: 6, image: '/images/career/10.webp', vi: 'Tại phiên tòa', en: 'At a Court Hearing' },
-  { id: 7, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-05-2ceff79a.webp', vi: 'Chân dung chuyên nghiệp', en: 'Professional Portrait' },
-  { id: 8, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-06-31e64f64.webp', vi: 'Nghiên cứu hồ sơ', en: 'Reviewing a Case File' },
-  { id: 9, image: '/images/career/09.webp', vi: 'Phát biểu tại tọa đàm', en: 'Speaking at a Roundtable' },
-  { id: 10, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-07-d3401241.webp', vi: 'Phát biểu chuyên môn', en: 'Speaking Engagement' },
-  { id: 11, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-08-eae6f979.webp', vi: 'Nghiên cứu pháp lý', en: 'Legal Research' },
-  { id: 12, image: '/images/career/12.webp', vi: 'Sự kiện M&A', en: 'M&A Event' },
-  { id: 13, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-09-0d360c76.webp', vi: 'Phòng họp', en: 'In a Meeting' },
-  { id: 14, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-10-ff36d12c.webp', vi: 'Trình bày', en: 'Presenting' },
-  { id: 15, image: '/images/career/13.webp', vi: 'Nhận hoa chúc mừng', en: 'Receiving Congratulations' },
-  { id: 16, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-11-affd35ac.webp', vi: 'Tại văn phòng', en: 'At Work' },
-  { id: 17, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-12-280bb113.webp', vi: 'Gặp gỡ khách hàng', en: 'Client Meeting' },
-  { id: 18, image: '/images/career/14.webp', vi: 'Lễ vinh danh', en: 'Recognition Ceremony' },
-  { id: 19, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-13-baa4e2cd.webp', vi: 'Nghiên cứu hợp đồng', en: 'Reviewing a Contract' },
-  { id: 20, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-14-ba944010.webp', vi: 'Tại thư viện luật', en: 'In the Law Library' },
-  { id: 21, image: '/images/career/16.webp', vi: 'Trước trụ sở tòa án', en: 'Outside the Courthouse' },
-  { id: 22, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-15-1839b50d.webp', vi: 'Tư vấn pháp lý', en: 'Legal Consultation' },
-  { id: 23, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-16-a23f9344.webp', vi: 'Tại văn phòng', en: 'At the Office' },
-  { id: 24, image: '/images/career/17.webp', vi: 'Trước trụ sở tòa án', en: 'Outside the Courthouse' },
-  { id: 25, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-17-c8fb68a5.webp', vi: 'Phòng họp', en: 'In the Boardroom' },
-  { id: 26, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-18-713d5a44.webp', vi: 'Chuẩn bị hồ sơ', en: 'Preparing Documents' },
-  { id: 27, image: '/images/career/18.webp', vi: 'Tại văn phòng', en: 'At the Office' },
-  { id: 28, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-19-79501d5d.webp', vi: 'Tại văn phòng', en: 'At the Office' },
-  { id: 29, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-20-cd6212a7.webp', vi: 'Ghi chú', en: 'Taking Notes' },
-  { id: 30, image: '/images/career/08.webp', vi: 'Buổi tọa đàm pháp lý', en: 'Legal Roundtable' },
-  { id: 31, image: 'https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/profile/hien-v2-21-ae4b5e90.webp', vi: 'Tư vấn pháp lý', en: 'Legal Counsel' },
-  { id: 32, image: '/images/career/01.webp', vi: 'Chân dung', en: 'Portrait' },
-  { id: 33, image: '/images/career/02.webp', vi: 'Tại văn phòng Apolo Lawyers', en: 'At the Apolo Lawyers Office' },
+  { id: 1, image: '/images/career/02.webp', vi: 'Tại văn phòng Apolo Lawyers', en: 'At the Apolo Lawyers Office', pos: 'center 28%' },
+  { id: 2, image: '/images/career/07.webp', vi: 'Trung tâm Trọng tài Quốc tế Việt Nam (VIAC)', en: 'Vietnam International Arbitration Centre (VIAC)', pos: 'center 30%' },
+  { id: 3, image: '/images/career/09.webp', vi: 'Tại phiên tòa', en: 'At a Court Hearing', pos: 'center 32%' },
+  { id: 4, image: '/images/career/12.webp', vi: 'Diễn đàn M&A Việt Nam', en: 'Vietnam M&A Forum', pos: 'center 26%' },
+  { id: 5, image: '/images/career/05.webp', vi: 'Tại bàn làm việc', en: 'At His Desk', pos: 'center 38%' },
+  { id: 6, image: '/images/career/18.webp', vi: 'Văn phòng Apolo Lawyers', en: 'Apolo Lawyers Office', pos: 'center 36%' },
 ];
-
-// Deterministic mosaic rhythm, matched to each photo's orientation so portraits
-// get tall tiles and landscapes get wide ones. Mobile stays a clean 2-col grid;
-// spans only kick in at sm/lg so the layout never breaks.
-const SPAN: Record<number, string> = {
-  4: 'sm:row-span-2',
-  5: 'lg:col-span-2',
-  11: 'lg:col-span-2',
-  13: 'sm:row-span-2',
-  22: 'sm:row-span-2',
-  23: 'lg:col-span-2',
-  26: 'lg:col-span-2',
-  29: 'lg:col-span-2',
-  31: 'sm:row-span-2',
-};
 
 function PinIcon({ className = '' }: { className?: string }) {
   return (
@@ -117,11 +78,11 @@ function Tile({
     <motion.button
       type="button"
       onClick={onOpen}
-      className={`group relative overflow-hidden bg-secondary ring-1 ring-border-gold/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent ${SPAN[index] ?? ''}`}
+      className="group relative aspect-[4/5] overflow-hidden rounded-sm bg-secondary ring-1 ring-border-gold/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.6, delay: (index % 4) * 0.06, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.6, delay: (index % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
       aria-label={`${caption}${moment.year ? ` — ${moment.year}` : ''}`}
     >
       {moment.image ? (
@@ -129,10 +90,10 @@ function Tile({
           src={moment.image}
           alt={caption}
           fill
-          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-          // Bias the crop toward the upper third so faces stay in frame on the
-          // taller/wider mosaic tiles (object-cover otherwise center-crops heads).
-          className="object-cover object-[center_28%] transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+          sizes="(max-width: 640px) 50vw, 33vw"
+          // Per-image crop bias so the face always stays in frame.
+          style={{ objectPosition: moment.pos ?? 'center 28%' }}
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
         />
       ) : (
         // On-brand placeholder until the real photo is wired in.
@@ -198,7 +159,7 @@ export default function CareerGallery({ locale }: { locale: string }) {
 
   return (
     <>
-      <div className="grid grid-flow-row-dense auto-rows-[150px] grid-cols-2 gap-3 sm:auto-rows-[185px] sm:grid-cols-3 md:gap-4 lg:auto-rows-[210px] lg:grid-cols-4">
+      <div className="mx-auto grid max-w-5xl grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 md:gap-6">
         {MOMENTS.map((m, i) => (
           <Tile key={m.id} moment={m} index={i} isVi={isVi} onOpen={() => setActive(i)} />
         ))}
