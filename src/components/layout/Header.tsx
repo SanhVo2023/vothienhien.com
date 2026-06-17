@@ -41,7 +41,7 @@ export default function Header({ locale }: { locale: string }) {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
           scrolled
             ? 'bg-primary/95 backdrop-blur-md border-b border-accent/15'
-            : 'bg-transparent'
+            : 'bg-transparent [text-shadow:0_1px_6px_rgba(0,0,0,0.55)]'
         }`}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -63,7 +63,7 @@ export default function Header({ locale }: { locale: string }) {
                 </span>
                 <span
                   className={`font-[family-name:var(--font-inter)] text-[10px] font-medium uppercase tracking-[0.3em] transition-colors duration-300 ${
-                    scrolled ? 'text-white/60' : 'text-text-secondary/80'
+                    scrolled ? 'text-white/60' : 'text-white/55'
                   }`}
                 >
                   <span className={locale === 'vi' ? 'tracking-[0.45em]' : ''}>{locale === 'vi' ? 'LUẬT SƯ' : 'ATTORNEY AT LAW'}</span>
@@ -84,7 +84,7 @@ export default function Header({ locale }: { locale: string }) {
                         ? 'text-accent'
                         : scrolled
                           ? 'text-white/80 hover:text-accent'
-                          : 'text-text-primary/90 hover:text-accent'
+                          : 'text-white/85 hover:text-accent'
                     }`}
                   >
                     {t(item.key)}
@@ -107,7 +107,7 @@ export default function Header({ locale }: { locale: string }) {
                       ? 'text-accent'
                       : scrolled
                         ? 'text-white/60 hover:text-accent'
-                        : 'text-text-secondary/80 hover:text-accent'
+                        : 'text-white/70 hover:text-accent'
                   }`}
                 >
                   VI
@@ -126,7 +126,7 @@ export default function Header({ locale }: { locale: string }) {
                       ? 'text-accent'
                       : scrolled
                         ? 'text-white/60 hover:text-accent'
-                        : 'text-text-secondary/80 hover:text-accent'
+                        : 'text-white/70 hover:text-accent'
                   }`}
                 >
                   EN
@@ -141,7 +141,7 @@ export default function Header({ locale }: { locale: string }) {
               >
                 <span
                   className={`block h-px w-6 transition-colors duration-300 ${
-                    scrolled ? 'bg-white/90' : 'bg-text-primary/90'
+                    scrolled ? 'bg-white/90' : 'bg-white/90'
                   }`}
                 />
                 <span
@@ -151,7 +151,7 @@ export default function Header({ locale }: { locale: string }) {
                 />
                 <span
                   className={`block h-px w-6 transition-colors duration-300 ${
-                    scrolled ? 'bg-white/90' : 'bg-text-primary/90'
+                    scrolled ? 'bg-white/90' : 'bg-white/90'
                   }`}
                 />
               </button>
