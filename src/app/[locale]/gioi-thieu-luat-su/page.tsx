@@ -7,6 +7,7 @@ import GoldDivider from '@/components/ui/GoldDivider';
 import Button from '@/components/ui/Button';
 import CareerGallery from '@/components/about/CareerGallery';
 import ProfileStats from '@/components/about/ProfileStats';
+import ScrollReveal, { StaggerReveal } from '@/components/motion/ScrollReveal';
 import { Link } from '@/i18n/navigation';
 import { IMAGES } from '@/lib/images';
 import { SHORT_NAME_VN, SHORT_NAME_EN, parentBrandUrl } from '@/lib/address';
@@ -126,7 +127,7 @@ export default async function LawyerProfilePage({ params }: Props) {
 
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:py-28 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           {/* Text */}
-          <div>
+          <ScrollReveal y={28}>
             <span className="text-sm font-medium uppercase tracking-[0.3em] text-accent">
               {isVi ? 'Hồ sơ Luật sư' : 'Attorney Profile'}
             </span>
@@ -152,7 +153,7 @@ export default async function LawyerProfilePage({ params }: Props) {
                 </li>
               ))}
             </ul>
-          </div>
+          </ScrollReveal>
 
           {/* Portrait */}
           <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
@@ -160,12 +161,12 @@ export default async function LawyerProfilePage({ params }: Props) {
             <div className="absolute -bottom-4 -right-4 h-24 w-24 border-b-2 border-r-2 border-accent" aria-hidden="true" />
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
-                src="/images/career/01.webp"
+                src="https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/career/hien-about-indoor-371d154d.webp"
                 alt={isVi ? 'Luật sư Võ Thiện Hiển' : 'Attorney Vo Thien Hien'}
                 fill
                 priority
                 sizes="(max-width: 1024px) 24rem, 36vw"
-                className="object-cover"
+                className="object-cover object-[center_22%]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
             </div>
@@ -208,7 +209,7 @@ export default async function LawyerProfilePage({ params }: Props) {
             </div>
 
             {/* Bio text */}
-            <div>
+            <ScrollReveal delay={0.1}>
               <SectionHeading
                 align="left"
                 subtitle={isVi ? 'Tiểu sử' : 'Biography'}
@@ -253,7 +254,7 @@ export default async function LawyerProfilePage({ params }: Props) {
                   </>
                 )}
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -261,15 +262,17 @@ export default async function LawyerProfilePage({ params }: Props) {
       {/* ──────────────────── Career Moments gallery ──────────────────── */}
       <section className="bg-surface py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-6">
-          <SectionHeading
-            subtitle={isVi ? 'Hành trình' : 'Journey'}
-            title={isVi ? 'Khoảnh khắc sự nghiệp' : 'Career Moments'}
-            description={
-              isVi
-                ? 'Những dấu mốc và khoảnh khắc đáng nhớ trong hành trình hành nghề của Luật sư Võ Thiện Hiển.'
-                : 'Milestones and memorable moments across Attorney Vo Thien Hien’s career in practice.'
-            }
-          />
+          <ScrollReveal>
+            <SectionHeading
+              subtitle={isVi ? 'Hành trình' : 'Journey'}
+              title={isVi ? 'Khoảnh khắc sự nghiệp' : 'Career Moments'}
+              description={
+                isVi
+                  ? 'Những dấu mốc và khoảnh khắc đáng nhớ trong hành trình hành nghề của Luật sư Võ Thiện Hiển.'
+                  : 'Milestones and memorable moments across Attorney Vo Thien Hien’s career in practice.'
+              }
+            />
+          </ScrollReveal>
           <div className="mt-14">
             <CareerGallery locale={locale} />
           </div>
@@ -296,11 +299,11 @@ export default async function LawyerProfilePage({ params }: Props) {
                   <div className="absolute left-4 z-10 mt-2 h-3 w-3 -translate-x-1.5 rounded-full bg-accent ring-4 ring-accent/20 md:left-1/2" />
 
                   {/* Content */}
-                  <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
+                  <ScrollReveal className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
                     <span className="font-[family-name:var(--font-inter)] text-lg font-semibold text-accent">{item.year}</span>
                     <h3 className="mt-1 font-heading text-xl font-semibold text-primary">{item.title}</h3>
                     <p className="mt-2 text-text-secondary">{item.description}</p>
-                  </div>
+                  </ScrollReveal>
                 </div>
               ))}
             </div>
@@ -319,7 +322,7 @@ export default async function LawyerProfilePage({ params }: Props) {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-primary/85" />
-        <div className="relative mx-auto max-w-3xl px-6 text-center text-white">
+        <ScrollReveal className="relative mx-auto max-w-3xl px-6 text-center text-white">
           <span className="font-heading text-6xl leading-none text-accent">“</span>
           <p className="-mt-4 font-heading text-2xl font-light leading-relaxed md:text-3xl">
             {isVi
@@ -332,14 +335,16 @@ export default async function LawyerProfilePage({ params }: Props) {
           <p className="mt-6 text-sm uppercase tracking-[0.25em] text-white/60">
             {isVi ? 'Võ Thiện Hiển · Luật sư Điều hành' : 'Vo Thien Hien · Managing Partner'}
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ─────────────────────── Memberships ─────────────────────── */}
       <section className="bg-surface py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-6">
-          <SectionHeading subtitle={isVi ? 'Tổ chức' : 'Organizations'} title={t('profile.memberships')} />
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
+          <ScrollReveal>
+            <SectionHeading subtitle={isVi ? 'Tổ chức' : 'Organizations'} title={t('profile.memberships')} />
+          </ScrollReveal>
+          <StaggerReveal className="mt-12 grid gap-4 md:grid-cols-2">
             {membershipList.map((item) => (
               <div
                 key={item}
@@ -353,13 +358,13 @@ export default async function LawyerProfilePage({ params }: Props) {
                 <span className="font-medium text-text-primary">{item}</span>
               </div>
             ))}
-          </div>
+          </StaggerReveal>
         </div>
       </section>
 
       {/* ───────────────────────── CTA ───────────────────────── */}
       <section className="bg-primary py-20 text-center text-white md:py-28">
-        <div className="mx-auto max-w-3xl px-6">
+        <ScrollReveal className="mx-auto max-w-3xl px-6">
           <h2 className="mb-4 font-heading text-3xl font-semibold md:text-4xl">
             {isVi ? 'Cần tư vấn pháp lý?' : 'Need Legal Counsel?'}
           </h2>
@@ -380,7 +385,7 @@ export default async function LawyerProfilePage({ params }: Props) {
               </Button>
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </>
   );
