@@ -163,7 +163,7 @@ export default function Footer({ locale, data }: { locale: string; data?: Footer
                     {personalPhone}
                   </a>
                   <span className="text-white/20">·</span>
-                  <a href={`mailto:${PERSONAL_CONTACT.email}`} className="transition-colors hover:text-accent">
+                  <a href={`mailto:${PERSONAL_CONTACT.email}`} className="break-words transition-colors hover:text-accent">
                     {PERSONAL_CONTACT.email}
                   </a>
                 </div>
@@ -189,7 +189,7 @@ export default function Footer({ locale, data }: { locale: string; data?: Footer
                     d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                   />
                 </svg>
-                <span className="leading-relaxed [text-wrap:pretty]">
+                <span className="leading-relaxed break-words [text-wrap:pretty]">
                   {cmsAddress}
                   {cmsAddress2 && <><br />{protectAddress(cmsAddress2)}</>}
                 </span>
@@ -233,7 +233,7 @@ export default function Footer({ locale, data }: { locale: string; data?: Footer
                 </svg>
                 <a
                   href={`mailto:${EMAIL}`}
-                  className="transition-colors hover:text-accent"
+                  className="break-words transition-colors hover:text-accent"
                 >{EMAIL}</a>
               </div>
 

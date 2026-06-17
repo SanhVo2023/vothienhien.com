@@ -31,7 +31,7 @@
     "latestPublications": "Latest Publications",
     "latestPublicationsSubtitle": "Insights & Thought Leadership",
     "latestPublicationsDescription": "Sharing legal knowledge and in-depth perspectives",
-    "about": "About Vo Thien Hien",
+    "about": "About Attorney Vo Thien Hien",
     "contact": "Contact Us"
   },
   "practiceAreas": {
@@ -122,7 +122,7 @@
       "corporate": "Corporate",
       "criminal": "Criminal",
       "labor": "Labor",
-      "commercial": "Commercial Disputes",
+      "commercial": "Commercial",
       "other": "Other"
     },
     "responseCommitment": "The attorney will respond as soon as possible during business hours."

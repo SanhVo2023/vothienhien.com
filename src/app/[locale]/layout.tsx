@@ -1,5 +1,5 @@
 import '../globals.css';
-import type { Viewport } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { Analytics } from '@vercel/analytics/next';
 import { getMessages, setRequestLocale } from 'next-intl/server';
@@ -40,6 +40,23 @@ export const viewport: Viewport = {
   initialScale: 1,
   viewportFit: 'cover',
 };
+
+// Locale-aware title template so English pages never carry Vietnamese diacritics
+// in the brand suffix ("Vo Thien Hien", not "Võ Thiện Hiển"). Overrides the
+// root layout's template for every page under /[locale].
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isEn = locale === 'en';
+  const brand = isEn ? 'Vo Thien Hien — Apolo Lawyers' : 'Võ Thiện Hiển — Apolo Lawyers';
+  return {
+    title: {
+      template: `%s | ${brand}`,
+      default: isEn
+        ? 'Vo Thien Hien — Managing Partner, Apolo Lawyers'
+        : 'Luật sư Võ Thiện Hiển — Luật sư Điều hành, Apolo Lawyers',
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

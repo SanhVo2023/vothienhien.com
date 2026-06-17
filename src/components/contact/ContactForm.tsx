@@ -174,24 +174,37 @@ export default function ContactForm() {
         <label htmlFor="matterType" className="block text-sm font-medium text-text-primary mb-2">
           {t('matterType')} <span className="text-accent">*</span>
         </label>
-        <select
-          id="matterType"
-          name="matterType"
-          required
-          value={formData.matterType}
-          onChange={handleChange}
-          disabled={isSubmitting}
-          className="w-full px-4 py-3 bg-background border border-border-gold/30 text-text-primary focus:border-accent focus:outline-none transition-colors appearance-none disabled:opacity-50"
-        >
-          <option value="">{t('matterType')}</option>
-          <option value="civil">{t('matterTypes.civil')}</option>
-          <option value="land">{t('matterTypes.land')}</option>
-          <option value="family">{t('matterTypes.family')}</option>
-          <option value="corporate">{t('matterTypes.corporate')}</option>
-          <option value="criminal">{t('matterTypes.criminal')}</option>
-          <option value="labor">{t('matterTypes.labor')}</option>
-          <option value="other">{t('matterTypes.other')}</option>
-        </select>
+        <div className="relative">
+          <select
+            id="matterType"
+            name="matterType"
+            required
+            value={formData.matterType}
+            onChange={handleChange}
+            disabled={isSubmitting}
+            className="w-full px-4 py-3 pr-11 bg-background border border-border-gold/30 text-text-primary focus:border-accent focus:outline-none transition-colors appearance-none disabled:opacity-50"
+          >
+            <option value="">{t('matterType')}</option>
+            <option value="civil">{t('matterTypes.civil')}</option>
+            <option value="land">{t('matterTypes.land')}</option>
+            <option value="family">{t('matterTypes.family')}</option>
+            <option value="corporate">{t('matterTypes.corporate')}</option>
+            <option value="criminal">{t('matterTypes.criminal')}</option>
+            <option value="labor">{t('matterTypes.labor')}</option>
+            <option value="other">{t('matterTypes.other')}</option>
+          </select>
+          {/* Custom dropdown chevron (appearance-none removes the native one) */}
+          <svg
+            aria-hidden="true"
+            className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-accent/70"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="1.8"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
       </div>
 
       </div>
@@ -219,17 +232,29 @@ export default function ContactForm() {
         <label htmlFor="languagePreference" className="block text-sm font-medium text-text-primary mb-2">
           {t('languagePreference')}
         </label>
-        <select
-          id="languagePreference"
-          name="languagePreference"
-          value={formData.languagePreference}
-          onChange={handleChange}
-          disabled={isSubmitting}
-          className="w-full px-4 py-3 bg-background border border-border-gold/30 text-text-primary focus:border-accent focus:outline-none transition-colors appearance-none disabled:opacity-50"
-        >
-          <option value="vi">Tiếng Việt</option>
-          <option value="en">English</option>
-        </select>
+        <div className="relative">
+          <select
+            id="languagePreference"
+            name="languagePreference"
+            value={formData.languagePreference}
+            onChange={handleChange}
+            disabled={isSubmitting}
+            className="w-full px-4 py-3 pr-11 bg-background border border-border-gold/30 text-text-primary focus:border-accent focus:outline-none transition-colors appearance-none disabled:opacity-50"
+          >
+            <option value="vi">Tiếng Việt</option>
+            <option value="en">English</option>
+          </select>
+          <svg
+            aria-hidden="true"
+            className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-accent/70"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="1.8"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
       </div>
 
       {/* Submit */}

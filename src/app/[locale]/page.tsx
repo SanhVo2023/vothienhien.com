@@ -17,7 +17,10 @@ export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'meta' });
   return {
-    title: t('defaultTitle'),
+    // `absolute` so the root template's brand suffix isn't appended on top of the
+    // brand already in defaultTitle (avoids redundant double-branding + keeps the
+    // EN home title free of Vietnamese diacritics).
+    title: { absolute: t('defaultTitle') },
     description: t('defaultDescription'),
     alternates: {
       canonical: 'https://vothienhien.com',

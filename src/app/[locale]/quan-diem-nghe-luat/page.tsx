@@ -74,7 +74,7 @@ const perspectives = {
     {
       slug: 'legal-ethics-foundation',
       title: 'Professional ethics - the foundation of legal practice',
-      excerpt: 'In my 15+ year journey in legal practice, I\'ve realized that professional ethics is not merely an obligation but the foundation that creates lasting value for a lawyer. A great lawyer needs not only professional expertise but also integrity and honesty.',
+      excerpt: 'In my 20+ year journey in legal practice, I\'ve realized that professional ethics is not merely an obligation but the foundation that creates lasting value for a lawyer. A great lawyer needs not only professional expertise but also integrity and honesty.',
       date: '02/20/2024',
     },
     {
