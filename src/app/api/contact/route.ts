@@ -65,6 +65,20 @@ export async function POST(request: Request) {
       );
     }
 
+    // Bound input sizes — a public endpoint must not let anyone store oversized
+    // payloads in the DB (abuse / storage exhaustion).
+    if (
+      typeof body.name !== 'string' || body.name.length > 200 ||
+      typeof body.email !== 'string' || body.email.length > 200 ||
+      (body.phone && (typeof body.phone !== 'string' || body.phone.length > 40)) ||
+      typeof body.message !== 'string' || body.message.length > 5000
+    ) {
+      return NextResponse.json(
+        { error: 'One or more fields exceed the allowed length' },
+        { status: 400 }
+      );
+    }
+
     const payload = await getPayload({ config });
 
     await payload.create({
@@ -84,7 +98,7 @@ export async function POST(request: Request) {
     // Mirror to centralized Apolo Contact Form Hub (fire-and-forget).
     // Local Payload write is the source of truth; hub failure must NOT block the user.
     if (process.env.CONTACT_HUB_URL) {
-      fetch(process.env.CONTACT_HUB_URL, {
+      void fetch(process.env.CONTACT_HUB_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
